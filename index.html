@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f6674">
+  <meta name="description" content="Carte mentale éditoriale STUDCORP : structuration du blog, mots-clés et contenus.">
+  <title>Carte mentale éditoriale — STUDCORP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand-button" id="refreshBtn" type="button" title="Actualiser la page" aria-label="Actualiser la page">
+      <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+        <path d="M22 2 41 13v18L22 42 3 31V13z" fill="#2f6674"/>
+        <path d="M22 2 22 22 3 13z" fill="#8ecece"/>
+        <path d="M22 22 41 13v18L22 42z" fill="#4b8791"/>
+        <path d="M22 22 3 31V13z" fill="#d9efef"/>
+        <path d="M22 2 41 13 22 22 3 13z" fill="#6ba3ac"/>
+      </svg>
+      <span class="brand-word">STUD<span>CORP</span></span>
+    </button>
+    <div class="topbar-title">
+      <h1>Carte mentale éditoriale</h1>
+      <p>Structuration du blog · mots-clés · pages et articles</p>
+    </div>
+    <div class="topbar-right">
+      <span class="save-status" id="saveStatus" role="status"><span class="status-dot"></span> Enregistré sur cet appareil</span>
+      <button class="button button-soft" id="toggleAIPanel" type="button"><span aria-hidden="true">✦</span> Agent IA</button>
+    </div>
+  </header>
+
+  <div class="toolbar" role="toolbar" aria-label="Outils de la carte mentale">
+    <label class="search-box" for="searchInput">
+      <span aria-hidden="true">⌕</span>
+      <input id="searchInput" type="search" placeholder="Rechercher une section, un article, un mot-clé…" autocomplete="off">
+      <kbd>⌘ K</kbd>
+    </label>
+    <div class="toolbar-actions">
+      <button class="button button-soft" id="collapseAllBtn" type="button" title="Replier tous les contenus">Replier tout</button>
+      <button class="button button-soft" id="expandAllBtn" type="button" title="Afficher tous les contenus">Tout ouvrir</button>
+      <button class="button button-primary" id="addSectionBtn" type="button"><span aria-hidden="true">＋</span> Section</button>
+      <button class="button button-soft" id="exportBtn" type="button">Exporter</button>
+      <button class="button button-soft" id="importBtn" type="button">Importer</button>
+      <input id="importInput" type="file" accept="application/json,.json" hidden>
+    </div>
+  </div>
+
+  <main class="workspace">
+    <section class="map-column" aria-label="Carte mentale">
+      <div class="map-intro">
+        <div>
+          <div class="eyebrow">VUE D’ENSEMBLE</div>
+          <p>Choisis une étiquette pour modifier son titre, ses notes ou ses informations. Les modifications sont sauvegardées automatiquement.</p>
+        </div>
+        <div class="map-counts" id="mapCounts"></div>
+      </div>
+      <div class="map-stage" id="mapStage">
+        <svg id="connectors" class="connectors" aria-hidden="true"></svg>
+        <div class="root-wrap" id="rootWrap"></div>
+        <div class="branches" id="branches"></div>
+      </div>
+      <div class="mobile-hint"><span aria-hidden="true">↔</span> Sur téléphone, ouvre une section puis une sous-thématique pour parcourir la carte plus facilement.</div>
+    </section>
+
+    <aside class="side-column" id="sideColumn">
+      <section class="panel legend-panel" aria-labelledby="legendTitle">
+        <div class="panel-heading">
+          <div><div class="eyebrow">REPÈRES VISUELS</div><h2 id="legendTitle">Légende</h2></div>
+          <button class="icon-button" id="addLegendBtn" type="button" title="Ajouter une entrée à la légende" aria-label="Ajouter une entrée à la légende">＋</button>
+        </div>
+        <p class="panel-help">Modifie les libellés et les couleurs. La carte se met à jour immédiatement.</p>
+        <div id="legendEditor" class="legend-editor"></div>
+      </section>
+
+      <section class="panel inspector-panel" aria-labelledby="inspectorTitle">
+        <div class="panel-heading">
+          <div><div class="eyebrow">ÉDITION</div><h2 id="inspectorTitle">Fiche de l’étiquette</h2></div>
+          <button class="icon-button" id="clearSelectionBtn" type="button" title="Fermer la fiche" aria-label="Fermer la fiche">×</button>
+        </div>
+        <div id="inspectorBody" class="inspector-body">
+          <div class="empty-state"><span class="empty-icon">↖</span><strong>Sélectionne une étiquette</strong><p>Ses informations, ses liens et ses notes apparaîtront ici.</p></div>
+        </div>
+      </section>
+
+      <section class="panel ai-panel" id="aiPanel" aria-labelledby="aiTitle">
+        <div class="panel-heading">
+          <div><div class="eyebrow">ASSISTANT ÉDITORIAL</div><h2 id="aiTitle">Agent IA</h2></div>
+          <button class="icon-button" id="aiSettingsToggle" type="button" title="Paramètres de l’agent IA" aria-label="Paramètres de l’agent IA">⚙</button>
+        </div>
+        <p class="panel-help">Pose une question ou demande une nouvelle organisation. L’agent te présentera une proposition à valider avant de toucher à la carte.</p>
+        <div class="ai-settings" id="aiSettings" hidden>
+          <div class="field"><label for="apiBaseInput">URL de l’API ou du proxy sécurisé</label><input id="apiBaseInput" type="url" placeholder="https://ton-worker.workers.dev/v1"></div>
+          <div class="field"><label for="apiModelInput">Modèle</label><input id="apiModelInput" type="text" placeholder="gpt-4o-mini"></div>
+          <div class="field"><label for="apiKeyInput">Clé API (facultative avec un proxy)</label><input id="apiKeyInput" type="password" placeholder="Laisser vide avec un proxy sécurisé" autocomplete="off"></div>
+          <div class="settings-row"><button class="button button-primary button-small" id="saveAISettingsBtn" type="button">Enregistrer</button><button class="button button-quiet button-small" id="clearAIKeyBtn" type="button">Effacer la clé</button></div>
+          <p class="security-note">Conseillé : utilise le proxy Cloudflare fourni dans le dossier worker, avec la clé enregistrée comme secret serveur. Une clé saisie ici reste accessible au navigateur : ne l’utilise pas sur une version publique et ne l’ajoute jamais au dépôt.</p>
+        </div>
+        <div class="ai-mode" id="aiMode"></div>
+        <div class="ai-chat" id="aiChat" aria-live="polite">
+          <div class="chat-message assistant-message"><span class="chat-avatar">✦</span><div><strong>Bonjour !</strong><p>Je peux proposer une nouvelle section, regrouper des articles, réorganiser les branches ou harmoniser la légende avec la direction artistique actuelle.</p><p class="example-prompts">Exemple : « Propose une sous-section SEO pour les articles sur le visa étudiant et indique les changements de légende nécessaires. »</p></div></div>
+        </div>
+        <form id="aiForm" class="ai-form">
+          <label class="sr-only" for="aiPrompt">Question pour l’agent IA</label>
+          <textarea id="aiPrompt" rows="3" placeholder="Que veux-tu modifier ou organiser ?" required></textarea>
+          <div class="ai-form-bottom"><span id="proposalHint">Aucune modification n’est appliquée sans ton accord.</span><button class="button button-primary" id="askAIBtn" type="submit">Proposer <span aria-hidden="true">↗</span></button></div>
+        </form>
+        <div id="proposalBox" class="proposal-box" hidden></div>
+      </section>
+      <div class="storage-note"><span aria-hidden="true">▣</span><div><strong>Sauvegarde locale</strong><p>Les changements persistent sur ce navigateur. Exporte régulièrement un fichier JSON pour faire une copie ou transférer la carte sur un autre appareil.</p></div></div>
+    </aside>
+  </main>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

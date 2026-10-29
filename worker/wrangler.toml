@@ -1,0 +1,8 @@
+name = "studcorp-carte-mentale-ai"
+main = "worker.js"
+compatibility_date = "2026-10-29"
+
+# Définis les secrets dans le tableau de bord Cloudflare ou avec wrangler :
+# npx wrangler secret put OPENAI_API_KEY
+# npx wrangler secret put ALLOWED_ORIGIN
+# Optionnel : npx wrangler secret put OPENAI_MODEL

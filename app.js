@@ -1,0 +1,967 @@
+(() => {
+  'use strict';
+
+  const STORAGE_KEY = 'studcorpMindmap.v1';
+  const AI_CONFIG_KEY = 'studcorpMindmap.aiConfig.v1';
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+  const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
+  const html = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const safeColor = (value) => /^#[0-9a-f]{6}$/i.test(String(value || '')) ? value : '#4AA6B6';
+  const allowedTypes = () => [...new Set((state.legend || []).map((entry) => entry.type).concat(['root','theme','subtheme','volume','page','hub','article']))];
+  const typeLabel = (type) => (state.legend.find((entry) => entry.type === type) || {label: type === 'root' ? 'Centre de la carte' : type}).label;
+  const typeColor = (type) => safeColor((state.legend.find((entry) => entry.type === type) || {}).color || (type === 'root' ? '#2F6674' : '#4AA6B6'));
+  const slug = (s) => String(s || 'noeud').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'noeud';
+  const makeId = (prefix = 'node') => `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
+
+  let state;
+  let selectedNodeId = null;
+  let searchTerm = '';
+  let pendingProposal = null;
+  let lastAskedPrompt = '';
+  let savingTimer = null;
+  let busyAI = false;
+  let aiConfig = {baseUrl: 'https://api.openai.com/v1', model: 'gpt-4o-mini', apiKey: ''};
+  let toastTimer = null;
+
+  function initialState() {
+    const initial = deepClone(window.STUDCORP_INITIAL_DATA || {});
+    if (!initial.root || !Array.isArray(initial.root.children)) throw new Error('Les données de départ sont introuvables. Vérifie que data.js est bien présent.');
+    return initial;
+  }
+
+  function loadState() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed && parsed.root && Array.isArray(parsed.root.children) && Array.isArray(parsed.legend)) return parsed;
+      }
+    } catch (error) {
+      console.warn('Impossible de lire la sauvegarde locale :', error);
+    }
+    return initialState();
+  }
+
+  function loadAIConfig() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(AI_CONFIG_KEY) || '{}');
+      aiConfig = {...aiConfig, ...parsed};
+    } catch (_) { /* use defaults */ }
+    $('#apiBaseInput').value = aiConfig.baseUrl || 'https://api.openai.com/v1';
+    $('#apiModelInput').value = aiConfig.model || 'gpt-4o-mini';
+    $('#apiKeyInput').value = aiConfig.apiKey || '';
+    updateAIMode();
+  }
+
+  function flushSave(showToast = false) {
+    clearTimeout(savingTimer);
+    const status = $('#saveStatus');
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      if (status) {
+        status.classList.remove('saving', 'error');
+        status.innerHTML = '<span class="status-dot"></span> Enregistré sur cet appareil';
+      }
+      if (showToast) toast('Modifications enregistrées sur cet appareil.');
+      return true;
+    } catch (error) {
+      if (status) {
+        status.classList.remove('saving');
+        status.classList.add('error');
+        status.innerHTML = '<span class="status-dot"></span> Sauvegarde impossible';
+      }
+      toast('Le navigateur ne permet pas de sauvegarder. Exporte un JSON pour conserver tes changements.', 'error');
+      return false;
+    }
+  }
+
+  function saveState(showToast = false) {
+    const status = $('#saveStatus');
+    if (status) {
+      status.classList.add('saving');
+      status.classList.remove('error');
+      status.innerHTML = '<span class="status-dot"></span> Sauvegarde…';
+    }
+    clearTimeout(savingTimer);
+    savingTimer = setTimeout(() => flushSave(showToast), 120);
+  }
+
+  function findNode(id, node = state.root) {
+    if (!node) return null;
+    if (node.id === id) return node;
+    for (const child of node.children || []) {
+      const found = findNode(id, child);
+      if (found) return found;
+    }
+    return null;
+  }
+
+  function findParent(id, node = state.root, parent = null) {
+    if (!node) return null;
+    if (node.id === id) return parent;
+    for (const child of node.children || []) {
+      const found = findParent(id, child, node);
+      if (found) return found;
+    }
+    return null;
+  }
+
+  function allNodes(node = state.root, acc = []) {
+    if (!node) return acc;
+    acc.push(node);
+    (node.children || []).forEach((child) => allNodes(child, acc));
+    return acc;
+  }
+
+  function allDescendantCount(node) {
+    let count = 0;
+    (node.children || []).forEach((child) => { count += 1 + allDescendantCount(child); });
+    return count;
+  }
+
+  function leafCount(node, predicate) {
+    let n = 0;
+    for (const item of node.children || []) {
+      if (!item.children || !item.children.length) {
+        if (!predicate || predicate(item)) n++;
+      } else n += leafCount(item, predicate);
+    }
+    return n;
+  }
+
+  function textForSearch(node) {
+    const meta = Object.entries(node.meta || {}).map(([key, value]) => `${key} ${value ?? ''}`).join(' ');
+    return `${node.label || ''} ${node.note || ''} ${meta}`.toLocaleLowerCase('fr');
+  }
+
+  function subtreeMatches(node) {
+    if (!searchTerm) return true;
+    if (textForSearch(node).includes(searchTerm)) return true;
+    return (node.children || []).some(subtreeMatches);
+  }
+
+  function nodeDimClass(node) {
+    return searchTerm && !subtreeMatches(node) ? ' is-dimmed' : (searchTerm ? ' is-match' : '');
+  }
+
+  function titleWithNote(node) {
+    const noteIcon = node.note && node.note.trim() ? '<span class="note-mark" title="Une note est renseignée">✎</span>' : '';
+    return `${html(node.label || 'Étiquette sans titre')}${noteIcon}`;
+  }
+
+  function linkIsValid(url) { return /^https?:\/\//i.test(String(url || '')); }
+
+  function renderRoot() {
+    const root = state.root;
+    $('#rootWrap').innerHTML = `
+      <button type="button" class="root-card" id="root-card" data-select-id="${html(root.id)}" style="--node-color:${typeColor('root')}">
+        <span class="node-title"><span class="root-mark">S</span>${titleWithNote(root)}</span>
+        <span class="node-subtitle">Carte éditoriale · ${state.root.children.length} branches principales</span>
+        ${root.note ? `<p class="root-note">${html(root.note)}</p>` : ''}
+      </button>`;
+  }
+
+  function renderLeaf(node) {
+    const color = typeColor(node.type);
+    const volume = node.meta && node.meta.searchVolume;
+    const url = node.meta && node.meta.url;
+    const query = node.meta && node.meta.query;
+    const category = node.meta && node.meta.currentCategory;
+    const noteLabel = node.note && node.note.trim() ? '<span class="leaf-badge">✎ note</span>' : '';
+    let metaBadges = '';
+    if (volume) metaBadges += `<span class="leaf-badge volume">${html(volume)} recherches</span>`;
+    if (node.meta && node.meta.publicationDate) metaBadges += `<span class="leaf-badge">${html(node.meta.publicationDate)}</span>`;
+    if (category) metaBadges += `<span class="leaf-badge">${html(category)}</span>`;
+    if (query && node.type !== 'volume') metaBadges += `<span class="leaf-badge">${html(query)}</span>`;
+    metaBadges += noteLabel;
+    const link = linkIsValid(url) ? `<a class="leaf-link" href="${html(url)}" target="_blank" rel="noopener noreferrer" title="Ouvrir la page">Ouvrir la page ↗</a>` : '';
+    return `
+      <div class="leaf-node${node.id === selectedNodeId ? ' is-selected' : ''}${nodeDimClass(node)}" data-select-id="${html(node.id)}" style="--node-color:${color}" role="button" tabindex="0" aria-label="Modifier ${html(node.label)}">
+        <span class="leaf-accent"></span>
+        <span class="leaf-content">
+          <span class="leaf-title">${titleWithNote(node)}</span>
+          ${(metaBadges || link || node.type) ? `<span class="leaf-meta"><span class="leaf-badge">${html(typeLabel(node.type))}</span>${metaBadges}${link}</span>` : ''}
+        </span>
+      </div>`;
+  }
+
+  function renderSubtheme(node) {
+    const isOpen = node.expanded !== false;
+    const color = typeColor(node.type);
+    const children = node.children || [];
+    const childrenHtml = isOpen ? `
+      <div class="leaf-list">
+        ${children.map(renderLeafOrNested).join('')}
+        <button class="add-inline" type="button" data-action="add-leaf" data-parent-id="${html(node.id)}"><span aria-hidden="true">＋</span> Ajouter une étiquette</button>
+      </div>` : '';
+    return `
+      <div class="subtheme${nodeDimClass(node)}" data-subtheme-id="${html(node.id)}" style="--node-color:${color}">
+        <div class="subtheme-head">
+          <button class="subtheme-toggle" type="button" data-action="toggle-node" data-node-id="${html(node.id)}" title="${isOpen ? 'Replier' : 'Déplier'}">${isOpen ? '⌄' : '›'}</button>
+          <button class="subtheme-title" type="button" data-select-id="${html(node.id)}">${titleWithNote(node)} <span class="node-count">${children.length}</span></button>
+          <div class="subtheme-tools">
+            <button class="icon-button" type="button" data-action="add-leaf" data-parent-id="${html(node.id)}" title="Ajouter une étiquette" aria-label="Ajouter une étiquette">＋</button>
+            <button class="icon-button" type="button" data-select-id="${html(node.id)}" title="Modifier la sous-thématique" aria-label="Modifier la sous-thématique">✎</button>
+          </div>
+        </div>
+        ${childrenHtml}
+      </div>`;
+  }
+
+  function renderLeafOrNested(node) {
+    if ((node.type === 'subtheme' && !(node.meta && node.meta.isKeyword)) || (node.children && node.children.length)) return renderSubtheme(node);
+    return renderLeaf(node);
+  }
+
+  function renderSection(section) {
+    const isOpen = section.expanded !== false;
+    const color = typeColor(section.type);
+    const children = section.children || [];
+    const body = isOpen ? `
+      <div class="branch-body">
+        ${children.map(renderLeafOrNested).join('')}
+        <button class="add-inline" type="button" data-action="add-subtheme" data-parent-id="${html(section.id)}"><span aria-hidden="true">＋</span> Ajouter une sous-section</button>
+      </div>` : '';
+    return `
+      <article class="branch-card${nodeDimClass(section)}" data-branch-id="${html(section.id)}" style="--node-color:${color}">
+        <header class="branch-head" data-connector-id="${html(section.id)}">
+          <button class="branch-toggle" type="button" data-action="toggle-node" data-node-id="${html(section.id)}" title="${isOpen ? 'Replier la section' : 'Ouvrir la section'}">${isOpen ? '⌄' : '›'}</button>
+          <button class="branch-name" type="button" data-select-id="${html(section.id)}">${titleWithNote(section)}</button>
+          <span class="node-count">${children.length}</span>
+          <div class="branch-tools">
+            <button class="icon-button" type="button" data-action="add-subtheme" data-parent-id="${html(section.id)}" title="Ajouter une sous-section" aria-label="Ajouter une sous-section">＋</button>
+            <button class="icon-button" type="button" data-select-id="${html(section.id)}" title="Modifier la section" aria-label="Modifier la section">✎</button>
+          </div>
+        </header>
+        ${body}
+      </article>`;
+  }
+
+  function renderMap() {
+    renderRoot();
+    $('#branches').innerHTML = state.root.children.map(renderSection).join('');
+    const nodes = allNodes();
+    const contentLabels = nodes.filter((n) => ['article','page','hub','volume'].includes(n.type) || (n.meta && n.meta.isKeyword)).length;
+    $('#mapCounts').innerHTML = `
+      <span class="count-chip"><strong>${state.root.children.length}</strong> sections</span>
+      <span class="count-chip"><strong>${nodes.filter((n) => n.type === 'subtheme').length}</strong> sous-thèmes</span>
+      <span class="count-chip"><strong>${contentLabels}</strong> étiquettes</span>`;
+    requestAnimationFrame(drawConnectors);
+  }
+
+  function drawConnectors() {
+    const stage = $('#mapStage');
+    const svg = $('#connectors');
+    const rootCard = $('#root-card');
+    if (!stage || !svg || !rootCard) return;
+    const s = stage.getBoundingClientRect();
+    const root = rootCard.getBoundingClientRect();
+    const width = Math.max(stage.clientWidth, stage.scrollWidth);
+    const height = Math.max(stage.scrollHeight, stage.clientHeight);
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.setAttribute('width', width);
+    svg.setAttribute('height', height);
+    const sx = root.left - s.left + root.width / 2;
+    const sy = root.bottom - s.top;
+    const sectionRects = $$('.branch-card', stage).map((card) => {
+      const head = $('[data-connector-id]', card) || card;
+      const r = head.getBoundingClientRect();
+      return {x: r.left - s.left + r.width / 2, y: r.top - s.top, left:r.left-s.left, right:r.right-s.left};
+    });
+    const horizontal = sectionRects.length > 1 && sectionRects.some((r) => Math.abs(r.y - sectionRects[0].y) > 10);
+    const paths = sectionRects.map((r) => {
+      const targetY = Math.max(sy + 14, r.y + 3);
+      const bend = Math.min(targetY - 10, sy + Math.max(25, Math.min(75, (targetY - sy) * .28)));
+      return `<path d="M ${sx} ${sy} L ${sx} ${bend} C ${sx} ${bend + 12}, ${r.x} ${Math.max(bend + 12,targetY - 20)}, ${r.x} ${targetY}" fill="none" stroke="#afc8cc" stroke-width="1.5" stroke-linecap="round"/>`;
+    }).join('');
+    svg.innerHTML = `${paths}<circle cx="${sx}" cy="${sy}" r="3" fill="#88b7be"/>`;
+  }
+
+  function renderLegend() {
+    const editor = $('#legendEditor');
+    editor.innerHTML = state.legend.map((item, index) => `
+      <div class="legend-row" data-legend-type="${html(item.type)}">
+        <label class="legend-color" style="--node-color:${safeColor(item.color)}" title="Couleur pour ${html(item.label)}"><input aria-label="Couleur ${html(item.label)}" type="color" value="${safeColor(item.color)}" data-legend-index="${index}" data-legend-field="color"></label>
+        <input class="legend-label" aria-label="Libellé de légende" value="${html(item.label)}" data-legend-index="${index}" data-legend-field="label">
+        ${['theme','subtheme','volume','page','hub','article'].includes(item.type) ? '<span></span>' : `<button class="legend-remove" type="button" data-action="remove-legend" data-legend-type="${html(item.type)}" title="Supprimer cette entrée" aria-label="Supprimer cette entrée">×</button>`}
+      </div>`).join('');
+  }
+
+  function fieldHtml(label, key, value, opts = {}) {
+    const type = opts.type || 'text';
+    const placeholder = opts.placeholder ? ` placeholder="${html(opts.placeholder)}"` : '';
+    const hint = opts.hint ? `<p class="field-note">${html(opts.hint)}</p>` : '';
+    const attrs = `data-inspector-field="${html(key)}"`;
+    if (type === 'textarea') return `<div class="field"><label for="ins-${html(key)}">${html(label)}</label><textarea id="ins-${html(key)}" ${attrs}${placeholder}>${html(value || '')}</textarea>${hint}</div>`;
+    return `<div class="field"><label for="ins-${html(key)}">${html(label)}</label><input id="ins-${html(key)}" type="${type}" ${attrs} value="${html(value || '')}"${placeholder}>${hint}</div>`;
+  }
+
+  function renderInspector() {
+    const body = $('#inspectorBody');
+    const node = selectedNodeId ? findNode(selectedNodeId) : null;
+    if (!node) {
+      body.innerHTML = '<div class="empty-state"><span class="empty-icon">↖</span><strong>Sélectionne une étiquette</strong><p>Ses informations, ses liens et ses notes apparaîtront ici.</p></div>';
+      return;
+    }
+    const options = allowedTypes().filter((t) => t !== 'root').map((type) => `<option value="${html(type)}" ${node.type === type ? 'selected' : ''}>${html(typeLabel(type))}</option>`).join('');
+    const typeField = node.type === 'root' ? '' : `<div class="field"><label for="ins-type">Type de nœud</label><select id="ins-type" data-inspector-field="type">${options}</select></div>`;
+    const meta = node.meta || {};
+    const showMeta = node.type === 'article' || node.type === 'page' || node.type === 'hub' || node.type === 'volume' || Object.keys(meta).length > 0;
+    const metaFields = showMeta ? `
+      <div class="field-grid">
+        ${fieldHtml('Requête cible','meta.query',meta.query || '')}
+        ${fieldHtml('Volume de recherche','meta.searchVolume',meta.searchVolume || '')}
+      </div>
+      <div class="field-grid">
+        ${fieldHtml('Date de publication','meta.publicationDate',meta.publicationDate || '')}
+        ${fieldHtml('Rubrique actuelle','meta.currentCategory',meta.currentCategory || '')}
+      </div>
+      ${fieldHtml('Cible','meta.audience',meta.audience || '')}
+      ${fieldHtml('URL de la page','meta.url',meta.url || '', {placeholder:'https://… ou « a venir »'})}
+      ${fieldHtml('Remarque du tableur','meta.remark',meta.remark || '', {type:'textarea'})}
+      ${meta.sourceRow ? `<p class="field-note">Ligne source du tableur : ${html(meta.sourceRow)}${meta.sourceTheme ? ` · ${html(meta.sourceTheme)}` : ''}</p>` : ''}` : '';
+    const isRoot = node.id === state.root.id;
+    body.innerHTML = `
+      <div class="selected-chip"><span style="width:7px;height:7px;background:${typeColor(node.type)};border-radius:2px"></span>${html(typeLabel(node.type))} · ${html(node.id)}</div>
+      ${fieldHtml('Titre de l’étiquette','label',node.label)}
+      ${typeField}
+      ${fieldHtml('Notes / commentaires','note',node.note || '', {type:'textarea', placeholder:'Ajoute du contexte, une idée ou une action à suivre…'})}
+      ${metaFields}
+      <div class="inspector-actions">
+        ${!isRoot ? '<button class="button danger-button button-small" type="button" data-action="delete-node" data-node-id="'+html(node.id)+'">Supprimer</button>' : '<span></span>'}
+        <button class="button button-soft button-small" type="button" data-action="copy-node-link" data-node-id="${html(node.id)}">Copier l’URL</button>
+      </div>`;
+  }
+
+  function renderAll() {
+    renderMap();
+    renderLegend();
+    renderInspector();
+    updateAIMode();
+    saveState();
+  }
+
+  function toast(message, kind = '') {
+    const region = $('#toastRegion');
+    const element = document.createElement('div');
+    element.className = `toast ${kind}`;
+    element.textContent = message;
+    region.appendChild(element);
+    setTimeout(() => element.remove(), 3600);
+  }
+
+  function toggleNode(id) {
+    const node = findNode(id);
+    if (!node) return;
+    node.expanded = node.expanded === false;
+    renderMap();
+    saveState();
+  }
+
+  function getSubtopics(node) {
+    return (node.children || []).filter((child) => child.type === 'subtheme');
+  }
+
+  function addSection(label) {
+    const clean = String(label || '').trim();
+    if (!clean) return;
+    const node = {id: makeId(`section-${slug(clean)}`), label: clean, type: 'theme', note: '', children: [], expanded: true, meta:{createdBy:'Utilisateur'}};
+    state.root.children.push(node);
+    selectedNodeId = node.id;
+    renderAll();
+    toast(`Section « ${clean} » ajoutée.`);
+  }
+
+  function askForLabel(message, defaultValue = '') {
+    const label = window.prompt(message, defaultValue);
+    return label === null ? null : label.trim();
+  }
+
+  function addSubtheme(parentId, label) {
+    const parent = findNode(parentId);
+    if (!parent) return;
+    const clean = String(label || '').trim();
+    if (!clean) return;
+    if (!Array.isArray(parent.children)) parent.children = [];
+    const node = {id:makeId(`sub-${slug(clean)}`),label:clean,type:'subtheme',note:'',children:[],expanded:true,meta:{createdBy:'Utilisateur'}};
+    parent.children.push(node);
+    parent.expanded = true;
+    selectedNodeId = node.id;
+    renderAll();
+    toast(`Sous-section « ${clean} » ajoutée.`);
+  }
+
+  function addLeaf(parentId, label) {
+    const parent = findNode(parentId);
+    if (!parent) return;
+    const clean = String(label || '').trim();
+    if (!clean) return;
+    if (!Array.isArray(parent.children)) parent.children = [];
+    const node = {id:makeId(`item-${slug(clean)}`),label:clean,type:'article',note:'',children:[],expanded:true,meta:{createdBy:'Utilisateur'}};
+    parent.children.push(node);
+    parent.expanded = true;
+    const parentParent = findParent(parent.id);
+    if (parentParent) parentParent.expanded = true;
+    selectedNodeId = node.id;
+    renderAll();
+    toast(`Étiquette « ${clean} » ajoutée.`);
+  }
+
+  function deleteNode(id) {
+    const node = findNode(id);
+    const parent = findParent(id);
+    if (!node || !parent) return;
+    if (!window.confirm(`Supprimer « ${node.label} » et tous ses contenus éventuels ?`)) return;
+    parent.children = (parent.children || []).filter((child) => child.id !== id);
+    selectedNodeId = null;
+    renderAll();
+    toast('Étiquette supprimée.');
+  }
+
+  function expandAll(expanded) {
+    allNodes().forEach((node) => { node.expanded = expanded; });
+    // The central node is always shown; only its child branches are folded or opened.
+    state.root.expanded = true;
+    renderMap();
+    saveState();
+    toast(expanded ? 'Toutes les sections et étiquettes sont ouvertes.' : 'Toutes les sections et étiquettes sont repliées.');
+  }
+
+  function exportState() {
+    const backup = {...deepClone(state), exportedAt: new Date().toISOString(), exportFormat: 'STUDCORP-MINDMAP-1'};
+    const blob = new Blob([JSON.stringify(backup, null, 2)], {type:'application/json;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `studcorp-carte-mentale-${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    toast('Copie JSON exportée.');
+  }
+
+  function importStateFile(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const imported = JSON.parse(String(reader.result || '{}'));
+        if (!imported.root || !Array.isArray(imported.root.children) || !Array.isArray(imported.legend)) throw new Error('Structure de fichier invalide.');
+        if (!window.confirm('Remplacer la carte actuelle par le contenu de ce fichier JSON ?')) return;
+        state = imported;
+        selectedNodeId = null;
+        pendingProposal = null;
+        $('#proposalBox').hidden = true;
+        renderAll();
+        toast('Carte importée et sauvegardée.');
+      } catch (error) {
+        toast(`Import impossible : ${error.message || 'fichier invalide'}`, 'error');
+      } finally {
+        $('#importInput').value = '';
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function updateInspectorValue(target, field, value) {
+    if (!target) return;
+    if (field.startsWith('meta.')) {
+      const key = field.slice(5);
+      if (!target.meta) target.meta = {};
+      target.meta[key] = value;
+      return;
+    }
+    if (field === 'type') {
+      if (value !== 'root' && allowedTypes().includes(value)) target.type = value;
+      return;
+    }
+    if (field === 'label' || field === 'note') target[field] = value;
+  }
+
+  function onInspectorInput(event) {
+    const field = event.target.dataset.inspectorField;
+    if (!field || !selectedNodeId) return;
+    const target = findNode(selectedNodeId);
+    if (!target) return;
+    updateInspectorValue(target, field, event.target.value);
+    if (field === 'type') renderInspector();
+    renderMap();
+    saveState();
+  }
+
+  function onLegendInput(event) {
+    const field = event.target.dataset.legendField;
+    if (!field) return;
+    const idx = Number(event.target.dataset.legendIndex);
+    const item = state.legend[idx];
+    if (!item) return;
+    if (field === 'color') {
+      item.color = safeColor(event.target.value);
+      const parent = event.target.closest('.legend-row .legend-color');
+      if (parent) parent.style.setProperty('--node-color', item.color);
+    } else if (field === 'label') {
+      item.label = event.target.value;
+    }
+    renderMap();
+    saveState();
+  }
+
+  function addLegendEntry() {
+    const label = askForLabel('Nom de la nouvelle entrée de légende :', 'Nouvelle catégorie');
+    if (!label) return;
+    const type = `custom-${slug(label)}-${Math.random().toString(36).slice(2,5)}`;
+    const colors = ['#8ECECE','#D65A0A','#F3A477','#536DFF','#28A745'];
+    state.legend.push({type,label,color:colors[state.legend.length % colors.length],description:'Entrée personnalisée'});
+    renderLegend();
+    renderInspector();
+    saveState();
+    toast('Entrée ajoutée à la légende. Tu peux l’assigner depuis la fiche d’une étiquette.');
+  }
+
+  function removeLegendEntry(type) {
+    if (['theme','subtheme','volume','page','hub','article'].includes(type)) return;
+    const item = state.legend.find((x) => x.type === type);
+    if (!item || !window.confirm(`Supprimer l’entrée « ${item.label} » de la légende ? Les étiquettes concernées passeront en « Article / contenu ».`)) return;
+    state.legend = state.legend.filter((x) => x.type !== type);
+    allNodes().forEach((node) => { if (node.type === type) node.type = 'article'; });
+    renderAll();
+  }
+
+  function updateAIMode() {
+    const mode = $('#aiMode');
+    if (!mode) return;
+    const base = (aiConfig.baseUrl || 'https://api.openai.com/v1').replace(/\/+$/, '');
+    const isDefaultOpenAI = base === 'https://api.openai.com/v1';
+    if (aiConfig.apiKey && aiConfig.apiKey.trim()) {
+      mode.classList.add('connected');
+      mode.textContent = `IA connectée · clé stockée dans ce navigateur`;
+    } else if (!isDefaultOpenAI) {
+      mode.classList.add('connected');
+      mode.textContent = `Proxy IA configuré · ${aiConfig.model || 'modèle du proxy'}`;
+    } else {
+      mode.classList.remove('connected');
+      mode.textContent = 'Mode local · configure un proxy IA pour le langage libre';
+    }
+  }
+
+  function compactMap() {
+    const walk = (node, path = []) => ({
+      id: node.id,
+      label: node.label,
+      type: node.type,
+      path: [...path, node.label].join(' > '),
+      note: node.note || '',
+      meta: Object.fromEntries(['query','currentCategory','audience','url','remark','searchVolume','publicationDate','sourceTheme','sourceRow'].filter((k) => node.meta && node.meta[k]).map((k) => [k,node.meta[k]])),
+      children: (node.children || []).map((child) => walk(child, [...path,node.label]))
+    });
+    return {root: walk(state.root), legend: state.legend.map(({type,label,color}) => ({type,label,color}))};
+  }
+
+  const SYSTEM_PROMPT = `Tu es l'agent éditorial et SEO de STUDCORP. Tu aides à organiser la carte mentale d'un blog qui s'adresse aux étudiants français et internationaux. Tu dois préserver les contenus existants et ne jamais supprimer ou renommer des nœuds sans demande explicite. Propose une organisation claire, maintiens les sujets proches ensemble, conserve les libellés et métadonnées utiles, et respecte la direction artistique existante : bleu pétrole #2F6674, turquoise #4AA6B6 / #8ECECE, vert #28A745, orange #D65A0A et pêche #F3A477.\n\nRetourne UNIQUEMENT un objet JSON valide, sans Markdown, selon ce schéma : {"summary":"résumé bref de la proposition","rationale":"raisonnement éditorial bref","actions":[...]}. Types d'actions autorisés : {"type":"add_section","label":"...","note":"..."}; {"type":"add_subsection","parentId":"ID de section existant","label":"...","note":"..."}; {"type":"add_node","parentId":"ID existant","label":"...","nodeType":"article|page|hub|volume|subtheme|...","note":"...","meta":{"query":"..."}}; {"type":"update_node","targetId":"ID existant","label":"...","note":"...","nodeType":"...","meta":{"remark":"..."}}; {"type":"move_node","targetId":"ID existant","newParentId":"ID existant"}; {"type":"remove_node","targetId":"ID existant"}; {"type":"update_legend","items":[{"type":"type existant ou nouveau","label":"...","color":"#RRGGBB"}]}. Les propriétés non nécessaires peuvent être omises. Pour créer une section, privilégie une couleur/typologie existante. Pour une proposition de légende, conserve une palette harmonieuse et un contraste lisible. Pour déplacer des nœuds, réutilise les ID exacts du snapshot. Ne produis pas de texte avant/après le JSON. Si aucune modification n'est nécessaire, retourne actions: [].`;
+
+  function parseJsonResponse(text) {
+    const cleaned = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
+    try { return JSON.parse(cleaned); } catch (_) {
+      const start = cleaned.indexOf('{');
+      const end = cleaned.lastIndexOf('}');
+      if (start >= 0 && end > start) return JSON.parse(cleaned.slice(start, end + 1));
+      throw new Error('La réponse de l’agent n’est pas un JSON exploitable. Réessaie avec une demande plus précise.');
+    }
+  }
+
+  function findByLabel(label) {
+    const wanted = String(label || '').trim().toLocaleLowerCase('fr');
+    if (!wanted) return null;
+    return allNodes().find((node) => String(node.label || '').trim().toLocaleLowerCase('fr') === wanted) ||
+      allNodes().find((node) => String(node.label || '').toLocaleLowerCase('fr').includes(wanted));
+  }
+
+  function localProposal(prompt) {
+    const text = String(prompt || '').trim();
+    const lower = text.toLocaleLowerCase('fr');
+    const actions = [];
+    let summary = 'Aucune modification préparée en mode local.';
+    let rationale = 'Le mode local sait proposer quelques opérations simples. Pour analyser librement les contenus et élaborer des réorganisations plus complexes, configure une API IA dans les paramètres.';
+    const secMatch = text.match(/(?:ajoute|ajouter|crée|créer|création)\s+(?:moi\s+)?(?:une\s+)?(?:nouvelle\s+)?section\s+(?:intitulée?\s+)?[«"']?(.+?)[»"']?\s*$/i) ||
+      text.match(/(?:section)\s+[«"'](.+?)[»"']/i);
+    if (secMatch && secMatch[1]) {
+      const label = secMatch[1].replace(/[»"']+$/,'').trim();
+      actions.push({type:'add_section', label, note:'Section proposée en mode local à partir de la demande utilisateur.'});
+      summary = `Ajouter une section « ${label} » à la carte.`;
+      rationale = 'La section sera créée au niveau racine, dans la même famille visuelle que les autres thématiques.';
+      return {summary,rationale,actions,localMode:true};
+    }
+    const subMatch = text.match(/(?:ajoute|ajouter|crée|créer|propose)\s+(?:moi\s+)?(?:une\s+)?(?:nouvelle\s+)?(?:sous-section|sous-thématique|sous-thème)\s+[«"']?(.+?)[»"']?\s+(?:dans|sous|au sein de)\s+[«"']?(.+?)[»"']?\s*$/i);
+    if (subMatch) {
+      const label = subMatch[1].replace(/[»"']+$/,'').trim();
+      const parentLabel = subMatch[2].replace(/[»"']+$/,'').trim();
+      const parent = findByLabel(parentLabel);
+      if (parent) {
+        actions.push({type:'add_subsection',parentId:parent.id,label,note:'Sous-section proposée en mode local.'});
+        summary = `Ajouter « ${label} » sous « ${parent.label} ».`;
+        rationale = 'La sous-section sera insérée dans la branche existante trouvée dans la carte.';
+      } else {
+        rationale = `Je n’ai pas trouvé de branche correspondant à « ${parentLabel} ». Précise le libellé exact de la section.`;
+      }
+      return {summary,rationale,actions,localMode:true};
+    }
+    if (lower.includes('légende') || lower.includes('legende')) {
+      actions.push({type:'update_legend',items:state.legend.filter((x) => ['theme','subtheme','volume','page','hub','article'].includes(x.type)).map((x) => ({type:x.type,label:x.label,color:x.color}))});
+      summary = 'Prévisualiser les entrées actuelles de la légende et leur palette STUDCORP.';
+      rationale = 'La palette existante est déjà cohérente avec l’identité visuelle. Ce mode local peut la réappliquer, mais ne peut pas interpréter une demande de création complexe.';
+      return {summary,rationale,actions,localMode:true};
+    }
+    const addNodeMatch = text.match(/(?:ajoute|ajouter|crée|créer)\s+(?:moi\s+)?(?:une\s+)?(?:étiquette|article|mot-clé|mot cle)\s+[«"']?(.+?)[»"']?\s+(?:dans|sous|à)\s+[«"']?(.+?)[»"']?\s*$/i);
+    if (addNodeMatch) {
+      const label = addNodeMatch[1].replace(/[»"']+$/,'').trim();
+      const parentLabel = addNodeMatch[2].replace(/[»"']+$/,'').trim();
+      const parent = findByLabel(parentLabel);
+      if (parent) {
+        actions.push({type:'add_node',parentId:parent.id,label,nodeType:'article',note:'Étiquette créée en mode local.'});
+        summary = `Ajouter l’étiquette « ${label} » sous « ${parent.label} ».`;
+        rationale = 'L’étiquette sera modifiable depuis sa fiche après validation.';
+      } else {
+        rationale = `Je n’ai pas trouvé « ${parentLabel} » dans la carte. Essaie avec le nom exact de la section ou de la sous-section.`;
+      }
+      return {summary,rationale,actions,localMode:true};
+    }
+    return {summary,rationale,actions,localMode:true};
+  }
+
+  async function requestAI(prompt) {
+    const base = (aiConfig.baseUrl || 'https://api.openai.com/v1').replace(/\/+$/,'');
+    const hasKey = Boolean(aiConfig.apiKey && aiConfig.apiKey.trim());
+    const isDefaultOpenAI = base === 'https://api.openai.com/v1';
+    if (!hasKey && isDefaultOpenAI) return localProposal(prompt);
+    const snapshot = compactMap();
+    const userMessage = `DEMANDE UTILISATEUR\n${prompt}\n\nÉTAT ACTUEL DE LA CARTE (IDs inclus)\n${JSON.stringify(snapshot)}${pendingProposal ? `\n\nPROPOSITION PRÉCÉDENTE À AJUSTER (ne l'applique pas, propose une nouvelle version)\n${JSON.stringify(pendingProposal)}` : ''}`;
+    const headers = {'Content-Type':'application/json'};
+    if (hasKey) headers.Authorization = `Bearer ${aiConfig.apiKey}`;
+    const response = await fetch(`${base}/chat/completions`, {
+      method:'POST',
+      headers,
+      body:JSON.stringify({
+        model:aiConfig.model || 'gpt-4o-mini',
+        temperature:0.35,
+        response_format:{type:'json_object'},
+        messages:[{role:'system',content:SYSTEM_PROMPT},{role:'user',content:userMessage}]
+      })
+    });
+    const body = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      const message = body && body.error && body.error.message ? body.error.message : `Erreur API (${response.status}).`;
+      throw new Error(message);
+    }
+    const content = body && body.choices && body.choices[0] && body.choices[0].message ? body.choices[0].message.content : '';
+    const proposal = parseJsonResponse(content);
+    if (!Array.isArray(proposal.actions)) proposal.actions = [];
+    proposal.summary = String(proposal.summary || 'Proposition prête à examiner.');
+    proposal.rationale = String(proposal.rationale || '');
+    proposal.localMode = false;
+    return proposal;
+  }
+
+  function addChatMessage(role, content) {
+    const message = document.createElement('div');
+    if (role === 'user') {
+      message.className = 'chat-message user-message';
+      message.innerHTML = `<p>${html(content)}</p>`;
+    } else {
+      message.className = 'chat-message assistant-message';
+      message.innerHTML = `<span class="chat-avatar">✦</span><div><strong>${role === 'error' ? 'Problème rencontré' : 'Agent'}</strong><p>${html(content)}</p></div>`;
+      if (role === 'error') message.classList.add('error-message');
+    }
+    $('#aiChat').appendChild(message);
+    $('#aiChat').scrollTop = $('#aiChat').scrollHeight;
+  }
+
+  function actionDescription(action) {
+    const byId = (id) => findNode(id);
+    const target = byId(action.targetId);
+    const parent = byId(action.parentId);
+    const newParent = byId(action.newParentId);
+    switch (action.type) {
+      case 'add_section': return `<strong>Ajouter une section</strong> : ${html(action.label || 'Nouvelle section')}`;
+      case 'add_subsection': return `<strong>Ajouter une sous-section</strong> : ${html(action.label || '')}${parent ? ` <span>dans « ${html(parent.label)} »</span>` : ''}`;
+      case 'add_node': return `<strong>Ajouter une étiquette</strong> : ${html(action.label || '')}${parent ? ` <span>sous « ${html(parent.label)} »</span>` : ''}`;
+      case 'update_node': return `<strong>Modifier</strong> : ${html(target ? target.label : action.targetId || 'étiquette')} ${action.label ? `→ « ${html(action.label)} »` : ''}`;
+      case 'move_node': return `<strong>Déplacer</strong> : ${html(target ? target.label : action.targetId || '')}${newParent ? ` <span>vers « ${html(newParent.label)} »</span>` : ''}`;
+      case 'remove_node': return `<strong>Supprimer</strong> : ${html(target ? target.label : action.targetId || '')}`;
+      case 'update_legend': return `<strong>Modifier la légende</strong> : ${Array.isArray(action.items) ? action.items.length : 0} entrée(s) proposée(s)`;
+      default: return `<strong>Action inconnue</strong> : ${html(action.type || 'sans type')}`;
+    }
+  }
+
+  function renderProposal(proposal) {
+    pendingProposal = proposal;
+    const box = $('#proposalBox');
+    const actions = Array.isArray(proposal.actions) ? proposal.actions : [];
+    box.hidden = false;
+    box.innerHTML = `
+      <div class="proposal-head"><h3>Proposition à valider</h3><span class="leaf-badge">${actions.length} action(s)</span></div>
+      <p class="proposal-summary">${html(proposal.summary || 'Proposition de modification.')}</p>
+      ${proposal.rationale ? `<p class="proposal-summary">${html(proposal.rationale)}</p>` : ''}
+      ${proposal.localMode ? '<p class="proposal-summary"><strong>Mode local :</strong> ces règles simples ne remplacent pas une IA générative. Configure une API pour les demandes de rédaction ou de réorganisation complexes.</p>' : ''}
+      <div class="proposal-actions">${actions.length ? actions.map((a) => `<div class="proposal-action">${actionDescription(a)}</div>`).join('') : '<div class="proposal-action">Aucune action à appliquer pour le moment.</div>'}</div>
+      <div class="proposal-footer">
+        <button class="button button-primary" type="button" data-action="accept-proposal" ${actions.length ? '' : 'disabled'}>Accepter & appliquer</button>
+        <button class="button button-soft" type="button" data-action="reject-proposal">Refuser</button>
+      </div>`;
+    $('#proposalHint').textContent = actions.length ? 'La proposition attend ton accord.' : 'Aucune modification à valider.';
+    $('#aiChat').scrollTop = $('#aiChat').scrollHeight;
+  }
+
+  async function onAskAI(event) {
+    event.preventDefault();
+    if (busyAI) return;
+    const prompt = $('#aiPrompt').value.trim();
+    if (!prompt) return;
+    lastAskedPrompt = prompt;
+    addChatMessage('user', prompt);
+    $('#aiPrompt').value = '';
+    busyAI = true;
+    const btn = $('#askAIBtn');
+    btn.disabled = true;
+    btn.innerHTML = 'Préparation…';
+    try {
+      const proposal = await requestAI(prompt);
+      renderProposal(proposal);
+      const summary = proposal.actions && proposal.actions.length ? `${proposal.summary} ${proposal.actions.length} modification(s) proposée(s), en attente de validation.` : `${proposal.summary} ${proposal.rationale || ''}`;
+      addChatMessage('assistant', summary.trim());
+    } catch (error) {
+      addChatMessage('error', `${error.message || 'Erreur inconnue.'} Vérifie la clé, le modèle, l’URL et les droits d’accès du fournisseur. Si l’API bloque les appels depuis le navigateur, utilise un proxy serveur sécurisé.`);
+      toast('L’agent IA n’a pas pu répondre.', 'error');
+    } finally {
+      busyAI = false;
+      btn.disabled = false;
+      btn.innerHTML = 'Proposer <span aria-hidden="true">↗</span>';
+    }
+  }
+
+  function resolveTarget(action) {
+    return (action.targetId && findNode(action.targetId)) || findByLabel(action.targetLabel || action.target || '');
+  }
+
+  function createNodeForAction(action, kind) {
+    const label = String(action.label || '').trim();
+    if (!label) return null;
+    const type = action.nodeType || (kind === 'section' ? 'theme' : kind === 'subsection' ? 'subtheme' : 'article');
+    return {id:makeId(`${kind}-${slug(label)}`),label,type:allowedTypes().includes(type) ? type : (kind === 'section' ? 'theme' : kind === 'subsection' ? 'subtheme' : 'article'),note:String(action.note || ''),children:[],expanded:true,meta:action.meta && typeof action.meta === 'object' ? action.meta : {createdBy:'Agent IA'}};
+  }
+
+  function applyAction(action) {
+    if (!action || typeof action !== 'object') return 'Action ignorée.';
+    if (action.type === 'add_section') {
+      const node = createNodeForAction(action,'section');
+      if (!node) return 'Section ignorée : titre manquant.';
+      state.root.children.push(node);
+      selectedNodeId = node.id;
+      return `Section ajoutée : ${node.label}`;
+    }
+    if (action.type === 'add_subsection') {
+      const parent = findNode(action.parentId) || findByLabel(action.parentLabel || '');
+      const node = createNodeForAction(action,'subsection');
+      if (!parent || !node) return 'Sous-section ignorée : parent ou titre introuvable.';
+      if (!Array.isArray(parent.children)) parent.children = [];
+      parent.children.push(node); parent.expanded = true;
+      selectedNodeId = node.id;
+      return `Sous-section ajoutée : ${node.label}`;
+    }
+    if (action.type === 'add_node') {
+      const parent = findNode(action.parentId) || findByLabel(action.parentLabel || '');
+      const node = createNodeForAction(action,'node');
+      if (!parent || !node) return 'Étiquette ignorée : parent ou titre introuvable.';
+      if (!Array.isArray(parent.children)) parent.children = [];
+      parent.children.push(node); parent.expanded = true;
+      const parentParent = findParent(parent.id); if (parentParent) parentParent.expanded = true;
+      selectedNodeId = node.id;
+      return `Étiquette ajoutée : ${node.label}`;
+    }
+    if (action.type === 'update_node') {
+      const node = resolveTarget(action);
+      if (!node) return `Modification ignorée : nœud introuvable (${action.targetId || action.targetLabel || ''}).`;
+      if (action.label !== undefined) node.label = String(action.label);
+      if (action.note !== undefined) node.note = String(action.note);
+      if (action.nodeType && allowedTypes().includes(action.nodeType)) node.type = action.nodeType;
+      if (action.meta && typeof action.meta === 'object') node.meta = {...(node.meta || {}), ...action.meta};
+      selectedNodeId = node.id;
+      return `Étiquette modifiée : ${node.label}`;
+    }
+    if (action.type === 'move_node') {
+      const node = resolveTarget(action);
+      const oldParent = node ? findParent(node.id) : null;
+      const newParent = findNode(action.newParentId) || findByLabel(action.newParentLabel || '');
+      if (!node || !oldParent || !newParent || node.id === state.root.id || node.id === newParent.id) return 'Déplacement ignoré : nœud ou destination introuvable.';
+      if (allNodes(node).some((item) => item.id === newParent.id)) return 'Déplacement ignoré : impossible de déplacer un nœud dans son propre descendant.';
+      oldParent.children = oldParent.children.filter((child) => child.id !== node.id);
+      if (!Array.isArray(newParent.children)) newParent.children = [];
+      newParent.children.push(node); newParent.expanded = true;
+      selectedNodeId = node.id;
+      return `Déplacement effectué : ${node.label}`;
+    }
+    if (action.type === 'remove_node') {
+      const node = resolveTarget(action);
+      const parent = node ? findParent(node.id) : null;
+      if (!node || !parent) return 'Suppression ignorée : nœud introuvable.';
+      parent.children = parent.children.filter((child) => child.id !== node.id);
+      if (selectedNodeId === node.id) selectedNodeId = null;
+      return `Nœud supprimé : ${node.label}`;
+    }
+    if (action.type === 'update_legend') {
+      if (!Array.isArray(action.items)) return 'Légende ignorée : liste invalide.';
+      action.items.forEach((suggested) => {
+        if (!suggested || !suggested.type) return;
+        const existing = state.legend.find((entry) => entry.type === suggested.type);
+        const normalizedColor = safeColor(suggested.color || (existing && existing.color) || '#4AA6B6');
+        if (existing) {
+          if (suggested.label) existing.label = String(suggested.label);
+          existing.color = normalizedColor;
+        } else {
+          state.legend.push({type:String(suggested.type),label:String(suggested.label || suggested.type),color:normalizedColor,description:'Entrée ajoutée par l’agent IA'});
+        }
+      });
+      return 'Légende mise à jour.';
+    }
+    return `Type d’action inconnu : ${action.type || '(sans type)'}`;
+  }
+
+  function acceptProposal() {
+    if (!pendingProposal || !Array.isArray(pendingProposal.actions) || !pendingProposal.actions.length) return;
+    const actions = pendingProposal.actions;
+    const results = [];
+    actions.forEach((action) => results.push(applyAction(action)));
+    const summary = pendingProposal.summary || 'Proposition appliquée.';
+    pendingProposal = null;
+    $('#proposalBox').hidden = true;
+    renderAll();
+    addChatMessage('assistant', `Proposition appliquée. ${summary}`);
+    toast(`${results.filter((x) => !x.includes('ignorée')).length} action(s) appliquée(s).`);
+  }
+
+  function rejectProposal() {
+    pendingProposal = null;
+    $('#proposalBox').hidden = true;
+    $('#proposalHint').textContent = 'Proposition refusée. La carte n’a pas été modifiée.';
+    addChatMessage('assistant', 'D’accord, je n’ai rien appliqué. Tu peux préciser une autre organisation dans le champ ci-dessous.');
+    toast('Proposition refusée : la carte reste inchangée.');
+  }
+
+  // Delegated interactions.
+  document.addEventListener('click', (event) => {
+    const select = event.target.closest('[data-select-id]');
+    const actionEl = event.target.closest('[data-action]');
+    if (actionEl) {
+      const action = actionEl.dataset.action;
+      const id = actionEl.dataset.nodeId;
+      const parentId = actionEl.dataset.parentId;
+      if (action === 'toggle-node') { toggleNode(id); return; }
+      if (action === 'add-subtheme') {
+        const label = askForLabel('Nom de la sous-section à ajouter :');
+        if (label) addSubtheme(parentId, label);
+        return;
+      }
+      if (action === 'add-leaf') {
+        const label = askForLabel('Titre de la nouvelle étiquette :');
+        if (label) addLeaf(parentId, label);
+        return;
+      }
+      if (action === 'delete-node') { deleteNode(id); return; }
+      if (action === 'copy-node-link') {
+        const node = findNode(id);
+        const text = node && node.meta && node.meta.url && linkIsValid(node.meta.url) ? node.meta.url : (node ? node.label : '');
+        if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => toast('Lien ou titre copié.')).catch(() => toast(text));
+        else toast(text);
+        return;
+      }
+      if (action === 'remove-legend') { removeLegendEntry(actionEl.dataset.legendType); return; }
+      if (action === 'accept-proposal') { acceptProposal(); return; }
+      if (action === 'reject-proposal') { rejectProposal(); return; }
+    }
+    if (select) {
+      selectedNodeId = select.dataset.selectId;
+      renderInspector();
+      renderMap();
+      return;
+    }
+  });
+
+  document.addEventListener('input', (event) => {
+    if (event.target.dataset.inspectorField) { onInspectorInput(event); return; }
+    if (event.target.dataset.legendField) { onLegendInput(event); return; }
+    if (event.target.id === 'searchInput') {
+      searchTerm = event.target.value.trim().toLocaleLowerCase('fr');
+      renderMap();
+    }
+  });
+
+  document.addEventListener('change', (event) => {
+    if (event.target.dataset.inspectorField && event.target.dataset.inspectorField === 'type') {
+      renderInspector(); renderMap(); saveState();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.target.matches('[data-select-id]') && (event.key === 'Enter' || event.key === ' ')) {
+      event.preventDefault();
+      event.target.click();
+    }
+    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+      event.preventDefault(); $('#searchInput').focus();
+    }
+    if (event.key === 'Escape' && document.activeElement === $('#searchInput')) {
+      $('#searchInput').value = ''; searchTerm = ''; renderMap();
+    }
+  });
+
+  $('#refreshBtn').addEventListener('click', () => {
+    flushSave();
+    window.location.reload();
+  });
+  $('#collapseAllBtn').addEventListener('click', () => expandAll(false));
+  $('#expandAllBtn').addEventListener('click', () => expandAll(true));
+  $('#addSectionBtn').addEventListener('click', () => {
+    const label = askForLabel('Nom de la nouvelle section principale :');
+    if (label) addSection(label);
+  });
+  $('#addLegendBtn').addEventListener('click', addLegendEntry);
+  $('#exportBtn').addEventListener('click', exportState);
+  $('#importBtn').addEventListener('click', () => $('#importInput').click());
+  $('#importInput').addEventListener('change', (event) => importStateFile(event.target.files && event.target.files[0]));
+  $('#clearSelectionBtn').addEventListener('click', () => { selectedNodeId = null; renderInspector(); renderMap(); });
+  $('#toggleAIPanel').addEventListener('click', () => {
+    $('#aiPanel').scrollIntoView({behavior:'smooth',block:'center'});
+    $('#aiPanel').classList.add('ai-highlight');
+    setTimeout(() => $('#aiPanel').classList.remove('ai-highlight'), 1200);
+  });
+  $('#aiSettingsToggle').addEventListener('click', () => { $('#aiSettings').hidden = !$('#aiSettings').hidden; });
+  $('#saveAISettingsBtn').addEventListener('click', () => {
+    aiConfig = {
+      baseUrl: ($('#apiBaseInput').value.trim() || 'https://api.openai.com/v1'),
+      model: ($('#apiModelInput').value.trim() || 'gpt-4o-mini'),
+      apiKey: $('#apiKeyInput').value.trim()
+    };
+    localStorage.setItem(AI_CONFIG_KEY, JSON.stringify(aiConfig));
+    updateAIMode();
+    toast(aiConfig.apiKey ? 'Paramètres IA enregistrés dans ce navigateur.' : 'Mode local activé : aucune clé API enregistrée.');
+    $('#aiSettings').hidden = true;
+  });
+  $('#clearAIKeyBtn').addEventListener('click', () => {
+    aiConfig.apiKey = '';
+    $('#apiKeyInput').value = '';
+    localStorage.setItem(AI_CONFIG_KEY, JSON.stringify(aiConfig));
+    updateAIMode();
+    toast('Clé API effacée du navigateur.');
+  });
+  $('#aiForm').addEventListener('submit', onAskAI);
+  window.addEventListener('resize', () => requestAnimationFrame(drawConnectors));
+  window.addEventListener('pagehide', () => { flushSave(); });
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushSave(); });
+
+  // Initialisation.
+  try {
+    state = loadState();
+    loadAIConfig();
+    renderAll();
+  } catch (error) {
+    document.body.innerHTML = `<main style="font:16px system-ui;padding:30px;color:#244e58"><h1>Impossible d’ouvrir la carte</h1><p>${html(error.message || error)}</p><p>Vérifie que <code>index.html</code>, <code>styles.css</code>, <code>data.js</code> et <code>app.js</code> se trouvent dans le même dossier.</p></main>`;
+  }
+})();
