@@ -14,14 +14,6 @@ Application web statique et responsive créée à partir de `Tableau blanc.pdf` 
 
 Le site ne nécessite ni installation ni compilation : ouvre `index.html` dans un navigateur récent. Pour un usage durable, recommande GitHub Pages (voir ci-dessous). Les fonctions principales sont intégrées aux fichiers, sans dépendance à un framework externe.
 
-## Publier sur GitHub Pages
-
-1. Crée un dépôt GitHub, par exemple `studcorp-carte-mentale`.
-2. Dépose **tous** les fichiers de ce dossier à la racine du dépôt : `index.html`, `styles.css`, `app.js`, `data.js`, `.nojekyll` et `README.md`.
-3. Dans le dépôt, ouvre **Settings → Pages**.
-4. Dans la partie de publication, choisis **Deploy from a branch**, puis `main` et `/ (root)`, et enregistre.
-5. Ouvre l’URL Pages donnée par GitHub. Chaque appareil aura son propre stockage local.
-
 ## Sauvegarde et transfert des modifications
 
 - Les changements de la carte et de la légende sont sauvegardés automatiquement dans le `localStorage` du navigateur.
