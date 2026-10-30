@@ -44,6 +44,7 @@ const RELEVANCE_SIGNALS = [
 ];
 
 const HIGH_SCHOOL_ONLY = /\b(lycee|colleges?|brevet|terminale|seconde|premiere|bac general|bac professionnel)\b/;
+const NON_NEWS_TITLE = /\b(offre d emploi|offres? (?:d emploi|de stage)|job dating|forum jeunesse|forum emploi|salon de l emploi|stage alternance auxiliaire|h\/f)\b/;
 const STOP_WORDS = new Set([
   "avec","dans","pour","sans","sous","chez","entre","leurs","leur","cette",
   "cela","mais","plus","moins","apres","avant","contre","depuis","selon",
@@ -101,9 +102,13 @@ function topicFor(text) {
     ["Aides et pouvoir d'achat", /\b(bourse|aide|budget|inflation|precarite|frais inscription|frais scolarite)\b/],
     ["Alternance et apprentissage", /\b(alternance|apprentissage|apprenti|contrat pro)\b/],
     ["Stages et premier emploi", /\b(stage|emploi|recrutement|diplome|salaire|carriere)\b/],
+    ["Santé et études", /\b(sante|medecine|internat|pass|las|soins)\b/],
     ["Mobilité internationale", /\b(international|erasmus|etranger|mobilite|visa)\b/],
-    ["Formations et admissions", /\b(universit|licence|master|doctorat|ecole|formation|parcoursup|admission|concours)\b/],
-    ["Vie étudiante et campus", /\b(campus|vie etudiante|association|mobilisation|etudiant)\b/]
+    ["Examens et droits étudiants", /\b(examen|concours|fraude|droit|discrimination|egalite)\b/],
+    ["Numérique et intelligence artificielle", /\b(ia|intelligence artificielle|numerique|cyber)\b/],
+    ["Formations et admissions", /\b(parcoursup|admission|candidature|inscription|licence|master|doctorat|formation)\b/],
+    ["Enseignement supérieur", /\b(universit|enseignement superieur|financement|budget|effectif|demographie)\b/],
+    ["Vie étudiante et campus", /\b(campus|vie etudiante|association|mobilisation|etudiant|journalisme)\b/]
   ];
   const found = topics.find(function (entry) { return entry[1].test(value); });
   return found ? found[0] : "Enseignement supérieur";
@@ -142,7 +147,13 @@ function parseFeed(xml, expectedSource, now) {
   const stories = [];
 
   items.forEach(function (item, position) {
-    const title = tagValue(item, "title").replace(/\s+[-–|]\s+[^-–|]{2,45}$/u, "").trim();
+    let title = tagValue(item, "title").trim();
+    const sourceSuffixes = [expectedSource.name, expectedSource.name.replace(" Étudiant", ""), expectedSource.name + " Emploi"];
+    for (const suffix of sourceSuffixes) {
+      const ending = " - " + suffix;
+      if (title.toLowerCase().endsWith(ending.toLowerCase())) title = title.slice(0, -ending.length).trim();
+    }
+    if (NON_NEWS_TITLE.test(normalize(title))) return;
     const link = tagValue(item, "link");
     const publishedAt = new Date(tagValue(item, "pubDate"));
     const source = sourceForItem(item, expectedSource);
@@ -153,8 +164,11 @@ function parseFeed(xml, expectedSource, now) {
 
     let summary = tagValue(item, "description")
       .replace(/\b(lire la suite|lire l'article|en savoir plus)\b.*$/i, "").trim();
-    if (!summary || normalize(summary) === normalize(title)) {
-      summary = "Article de " + source + " sélectionné pour sa pertinence avec les études supérieures. Ouvre la source pour en consulter les détails.";
+    const summaryNorm = normalize(summary);
+    const titleNorm = normalize(title);
+    const sourceNorm = normalize(source);
+    if (!summary || summaryNorm === titleNorm || (summaryNorm.startsWith(titleNorm) && summaryNorm.slice(titleNorm.length).trim() === sourceNorm)) {
+      summary = "";
     }
     if (summary.length > 260) summary = summary.slice(0, 257).trimEnd() + "…";
 
@@ -203,6 +217,42 @@ async function fetchSource(source, now) {
     .flatMap(function (result) { return result.value; });
 }
 
+function metaContent(html, propertyName) {
+  const tags = [...html.matchAll(/<meta\b[^>]*>/gi)].map(function (match) { return match[0]; });
+  for (const tag of tags) {
+    const name = (tag.match(/\b(?:name|property)=["']([^"']+)["']/i) || [])[1] || "";
+    if (name.toLowerCase() !== propertyName.toLowerCase()) continue;
+    const content = (tag.match(/\bcontent=["']([^"']*)["']/i) || [])[1] || "";
+    if (content) return cleanXmlText(content);
+  }
+  return "";
+}
+
+async function enrichSummary(story) {
+  try {
+    const response = await fetch(story.url, {
+      headers: { "User-Agent": "STUDCORP-Student-News-Monitor/1.0", "Accept": "text/html,application/xhtml+xml" },
+      signal: AbortSignal.timeout(12000),
+      redirect: "follow"
+    });
+    if (response.ok) {
+      const html = await response.text();
+      const description = metaContent(html, "og:description") ||
+        metaContent(html, "description") || metaContent(html, "twitter:description");
+      if (description && normalize(description) !== normalize(story.title)) {
+        story.summary = description.length > 260 ? description.slice(0, 257).trimEnd() + "…" : description;
+        return story;
+      }
+    }
+  } catch (error) {
+    console.warn("Résumé indisponible pour " + story.source + " : " + (error?.message || error));
+  }
+  if (!story.summary) {
+    story.summary = "Actualité retenue pour sa pertinence avec les études supérieures. Consulte l’article source pour les informations détaillées.";
+  }
+  return story;
+}
+
 function articleTokens(title) {
   return new Set(normalize(title).split(/\s+/).filter(function (word) {
     return word.length > 2 && !STOP_WORDS.has(word);
@@ -230,8 +280,8 @@ function chooseStories(candidates) {
   const topicCounts = new Map();
 
   for (const limits of [
-    { source: 2, topic: 2 },
-    { source: 3, topic: 3 },
+    { source: 2, topic: 1 },
+    { source: 3, topic: 2 },
     { source: Infinity, topic: Infinity }
   ]) {
     for (const story of ordered) {
@@ -273,9 +323,10 @@ async function main() {
     throw new Error("Seulement " + selected.length + " actualités exploitables. news.js est conservé sans modification.");
   }
 
+  const enriched = await Promise.all(selected.map(enrichSummary));
   const output = [
     "window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = " + JSON.stringify(now.toISOString()) + ";",
-    "window.STUDCORP_WEEKLY_NEWS = " + JSON.stringify(selected, null, 2) + ";",
+    "window.STUDCORP_WEEKLY_NEWS = " + JSON.stringify(enriched, null, 2) + ";",
     ""
   ].join("\n");
 
