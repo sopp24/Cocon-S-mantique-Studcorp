@@ -41,6 +41,20 @@
   let syncPushAgain = false;
   const MISSING = Symbol('missing-value');
 
+  // Navigation de la carte : grande surface radiale, déplacement et zoom.
+  const MAP_WORLD_WIDTH = 3200;
+  const MAP_WORLD_BASE_HEIGHT = 4000;
+  const mapView = {x:0, y:0, scale:0.58, minScale:0.16, maxScale:1.35, initialized:false, dragging:false, pointerId:null, startX:0, startY:0, originX:0, originY:0};
+  const MAP_BRANCH_POSITIONS = {
+    'section-recherche-de-logement': {left:90, top:130},
+    'section-responsabilite-civile': {left:1320, top:80},
+    'section-complementaire-sante': {left:2540, top:130},
+    'section-habitation': {left:25, top:1450},
+    'section-sante-mobilite': {left:2560, top:1400},
+    'section-hors-piliers-vie-etudiante-carriere': {left:90, top:2930},
+    'section-hors-piliers-actualites-studcorp': {left:2540, top:2930}
+  };
+
   function initialState() {
     const initial = deepClone(window.STUDCORP_INITIAL_DATA || {});
     if (!initial.root || !Array.isArray(initial.root.children)) throw new Error('Les données de départ sont introuvables. Vérifie que data.js est bien présent.');
@@ -601,35 +615,163 @@
       <span class="count-chip"><strong>${state.root.children.length}</strong> sections</span>
       <span class="count-chip"><strong>${nodes.filter((n) => n.type === 'subtheme').length}</strong> sous-thèmes</span>
       <span class="count-chip"><strong>${contentLabels}</strong> étiquettes</span>`;
-    requestAnimationFrame(drawConnectors);
+    positionMapBranches();
+    requestAnimationFrame(() => {
+      if (!mapView.initialized) {
+        mapView.initialized = true;
+        centerMapOnRoot(window.matchMedia('(max-width: 740px)').matches ? 0.34 : 0.58);
+      }
+      drawConnectors();
+    });
+  }
+
+  function positionMapBranches() {
+    const world = $('#mapWorld');
+    const cards = $('.branch-card', $('#branches'));
+    if (!world) return;
+    let extraIndex = 0;
+    cards.forEach((card) => {
+      const known = MAP_BRANCH_POSITIONS[card.dataset.branchId];
+      const position = known || {left:1320 + (extraIndex % 2 ? 650 : -650), top:3650 + Math.floor(extraIndex / 2) * 520};
+      if (!known) extraIndex += 1;
+      card.style.left = `${position.left}px`;
+      card.style.top = `${position.top}px`;
+    });
+    world.style.width = `${MAP_WORLD_WIDTH}px`;
+    world.style.height = `${Math.max(MAP_WORLD_BASE_HEIGHT, 3650 + Math.ceil(extraIndex / 2) * 520)}px`;
+  }
+
+  function updateMapTransform() {
+    const world = $('#mapWorld');
+    if (!world) return;
+    world.style.transform = `translate(${mapView.x}px, ${mapView.y}px) scale(${mapView.scale})`;
+    const label = $('#mapZoomLevel');
+    if (label) label.textContent = `${Math.round(mapView.scale * 100)}%`;
+  }
+
+  function centerMapOnRoot(scale = mapView.scale) {
+    const stage = $('#mapStage');
+    if (!stage) return;
+    mapView.scale = Math.max(mapView.minScale, Math.min(mapView.maxScale, scale));
+    const rootCenterX = MAP_WORLD_WIDTH / 2;
+    const rootCenterY = 1560;
+    mapView.x = stage.clientWidth / 2 - rootCenterX * mapView.scale;
+    mapView.y = stage.clientHeight / 2 - rootCenterY * mapView.scale;
+    updateMapTransform();
+  }
+
+  function fitMapToViewport() {
+    const stage = $('#mapStage');
+    const world = $('#mapWorld');
+    if (!stage || !world) return;
+    const scale = Math.min((stage.clientWidth - 48) / world.offsetWidth, (stage.clientHeight - 48) / world.offsetHeight);
+    mapView.scale = Math.max(mapView.minScale, Math.min(0.72, scale));
+    mapView.x = (stage.clientWidth - world.offsetWidth * mapView.scale) / 2;
+    mapView.y = (stage.clientHeight - world.offsetHeight * mapView.scale) / 2;
+    updateMapTransform();
+  }
+
+  function zoomMapAt(factor, clientX, clientY) {
+    const stage = $('#mapStage');
+    if (!stage) return;
+    const rect = stage.getBoundingClientRect();
+    const anchorX = clientX == null ? stage.clientWidth / 2 : clientX - rect.left;
+    const anchorY = clientY == null ? stage.clientHeight / 2 : clientY - rect.top;
+    const nextScale = Math.max(mapView.minScale, Math.min(mapView.maxScale, mapView.scale * factor));
+    const worldX = (anchorX - mapView.x) / mapView.scale;
+    const worldY = (anchorY - mapView.y) / mapView.scale;
+    mapView.x = anchorX - worldX * nextScale;
+    mapView.y = anchorY - worldY * nextScale;
+    mapView.scale = nextScale;
+    updateMapTransform();
+  }
+
+  function initMapNavigation() {
+    const stage = $('#mapStage');
+    if (!stage || stage.dataset.navigationReady === 'true') return;
+    stage.dataset.navigationReady = 'true';
+
+    stage.addEventListener('pointerdown', (event) => {
+      if (event.button !== 0 && event.pointerType !== 'touch') return;
+      if (event.target.closest('.map-controls, button, a, input, textarea, select, [data-select-id], [data-action]')) return;
+      mapView.dragging = true;
+      mapView.pointerId = event.pointerId;
+      mapView.startX = event.clientX;
+      mapView.startY = event.clientY;
+      mapView.originX = mapView.x;
+      mapView.originY = mapView.y;
+      stage.classList.add('is-panning');
+      try { stage.setPointerCapture(event.pointerId); } catch (_) {}
+    });
+    stage.addEventListener('pointermove', (event) => {
+      if (!mapView.dragging || event.pointerId !== mapView.pointerId) return;
+      mapView.x = mapView.originX + event.clientX - mapView.startX;
+      mapView.y = mapView.originY + event.clientY - mapView.startY;
+      updateMapTransform();
+    });
+    const stopDragging = (event) => {
+      if (event.pointerId !== mapView.pointerId) return;
+      mapView.dragging = false;
+      mapView.pointerId = null;
+      stage.classList.remove('is-panning');
+      try { stage.releasePointerCapture(event.pointerId); } catch (_) {}
+    };
+    stage.addEventListener('pointerup', stopDragging);
+    stage.addEventListener('pointercancel', stopDragging);
+    stage.addEventListener('wheel', (event) => {
+      event.preventDefault();
+      zoomMapAt(event.deltaY < 0 ? 1.08 : 0.92, event.clientX, event.clientY);
+    }, {passive:false});
+
+    $('#mapZoomIn').addEventListener('click', () => zoomMapAt(1.16));
+    $('#mapZoomOut').addEventListener('click', () => zoomMapAt(1 / 1.16));
+    $('#mapCenterBtn').addEventListener('click', () => centerMapOnRoot());
+    $('#mapFitBtn').addEventListener('click', fitMapToViewport);
   }
 
   function drawConnectors() {
-    const stage = $('#mapStage');
+    const world = $('#mapWorld');
     const svg = $('#connectors');
     const rootCard = $('#root-card');
-    if (!stage || !svg || !rootCard) return;
-    const s = stage.getBoundingClientRect();
-    const root = rootCard.getBoundingClientRect();
-    const width = Math.max(stage.clientWidth, stage.scrollWidth);
-    const height = Math.max(stage.scrollHeight, stage.clientHeight);
+    if (!world || !svg || !rootCard) return;
+    const worldRect = world.getBoundingClientRect();
+    const scale = mapView.scale || 1;
+    const width = world.offsetWidth || MAP_WORLD_WIDTH;
+    const height = world.offsetHeight || MAP_WORLD_BASE_HEIGHT;
     svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
     svg.setAttribute('width', width);
     svg.setAttribute('height', height);
-    const sx = root.left - s.left + root.width / 2;
-    const sy = root.bottom - s.top;
-    const sectionRects = $$('.branch-card', stage).map((card) => {
+
+    const rectInWorld = (element) => {
+      const rect = element.getBoundingClientRect();
+      return {
+        left:(rect.left - worldRect.left) / scale,
+        top:(rect.top - worldRect.top) / scale,
+        width:rect.width / scale,
+        height:rect.height / scale
+      };
+    };
+    const root = rectInWorld(rootCard);
+    const rootCenter = {x:root.left + root.width / 2, y:root.top + root.height / 2};
+    const paths = $('.branch-card', $('#branches')).map((card) => {
       const head = $('[data-connector-id]', card) || card;
-      const r = head.getBoundingClientRect();
-      return {x: r.left - s.left + r.width / 2, y: r.top - s.top, left:r.left-s.left, right:r.right-s.left};
-    });
-    const horizontal = sectionRects.length > 1 && sectionRects.some((r) => Math.abs(r.y - sectionRects[0].y) > 10);
-    const paths = sectionRects.map((r) => {
-      const targetY = Math.max(sy + 14, r.y + 3);
-      const bend = Math.min(targetY - 10, sy + Math.max(25, Math.min(75, (targetY - sy) * .28)));
-      return `<path d="M ${sx} ${sy} L ${sx} ${bend} C ${sx} ${bend + 12}, ${r.x} ${Math.max(bend + 12,targetY - 20)}, ${r.x} ${targetY}" fill="none" stroke="#afc8cc" stroke-width="1.5" stroke-linecap="round"/>`;
+      const target = rectInWorld(head);
+      const targetCenter = {x:target.left + target.width / 2, y:target.top + target.height / 2};
+      const dx = targetCenter.x - rootCenter.x;
+      const dy = targetCenter.y - rootCenter.y;
+      const rootFactor = Math.min((root.width / 2) / Math.max(Math.abs(dx), 0.001), (root.height / 2) / Math.max(Math.abs(dy), 0.001));
+      const targetFactor = Math.min((target.width / 2) / Math.max(Math.abs(dx), 0.001), (target.height / 2) / Math.max(Math.abs(dy), 0.001));
+      const sx = rootCenter.x + dx * rootFactor;
+      const sy = rootCenter.y + dy * rootFactor;
+      const tx = targetCenter.x - dx * targetFactor;
+      const ty = targetCenter.y - dy * targetFactor;
+      const c1x = sx + (tx - sx) * 0.34;
+      const c1y = sy + (ty - sy) * 0.34;
+      const c2x = tx - (tx - sx) * 0.34;
+      const c2y = ty - (ty - sy) * 0.34;
+      return `<path d="M ${sx.toFixed(1)} ${sy.toFixed(1)} C ${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${tx.toFixed(1)} ${ty.toFixed(1)}" fill="none" stroke="#9bbbc1" stroke-width="3" stroke-linecap="round"/>`;
     }).join('');
-    svg.innerHTML = `${paths}<circle cx="${sx}" cy="${sy}" r="3" fill="#88b7be"/>`;
+    svg.innerHTML = paths;
   }
 
   function renderLegend() {
@@ -1328,7 +1470,11 @@
     toast('Clé API effacée du navigateur.');
   });
   $('#aiForm').addEventListener('submit', onAskAI);
-  window.addEventListener('resize', () => requestAnimationFrame(drawConnectors));
+  initMapNavigation();
+  window.addEventListener('resize', () => requestAnimationFrame(() => {
+    if (!mapView.initialized) centerMapOnRoot(window.matchMedia('(max-width: 740px)').matches ? 0.34 : 0.58);
+    drawConnectors();
+  }));
   window.addEventListener('pagehide', () => { flushSave(); });
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushSave(); });
 
