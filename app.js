@@ -629,7 +629,7 @@
 
   function positionMapBranches() {
     const world = $('#mapWorld');
-    const cards = $('.branch-card', $('#branches'));
+    const cards = $$('.branch-card', $('#branches'));
     if (!world) return;
     let extraIndex = 0;
     cards.forEach((card) => {
