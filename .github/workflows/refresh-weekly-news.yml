@@ -1,0 +1,44 @@
+name: Actualiser les actualités étudiantes
+
+on:
+  schedule:
+    - cron: "0 0,12 * * *"
+      timezone: "Europe/Paris"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualisation-actualites-etudiantes
+  cancel-in-progress: false
+
+jobs:
+  refresh-news:
+    name: Collecter et classer les actualités
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Configurer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Collecter les actualités des sept derniers jours
+        run: node .github/scripts/refresh-weekly-news.mjs
+
+      - name: Publier la nouvelle sélection
+        run: |
+          if git diff --quiet -- news.js; then
+            echo "La sélection est identique : aucun commit nécessaire."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.js
+          git commit -m "Actualise la veille étudiante"
+          git push
