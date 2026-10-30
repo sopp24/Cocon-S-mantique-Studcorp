@@ -49,7 +49,7 @@
   const MAP_ROOT_LEFT = 980;
   const MAP_ROOT_TOP = 1320;
   const MAP_ROOT_WIDTH = 640;
-  const mapView = {x:0, y:0, scale:0.56, minScale:0.16, maxScale:1.6, initialized:false, dragging:false, pointerId:null, startX:0, startY:0, originX:0, originY:0, suppressClick:false};
+  const mapView = {x:0, y:0, scale:0.66, minScale:0.16, maxScale:1.6, initialized:false, dragging:false, pointerId:null, startX:0, startY:0, originX:0, originY:0, suppressClick:false, lastStageWidth:0, lastStageHeight:0};
   const mapPointers = new Map();
   let mapPinch = null;
   let mapNodeDrag = null;
@@ -645,7 +645,7 @@
     requestAnimationFrame(() => {
       if (!mapView.initialized) {
         mapView.initialized = true;
-        centerMapOnRoot(window.matchMedia('(max-width: 740px)').matches ? 0.32 : 0.56);
+        centerMapOnRoot(getResponsiveInitialScale());
       }
       drawConnectors();
     });
@@ -681,6 +681,18 @@
     if (label) label.textContent = `${Math.round(mapView.scale * 100)}%`;
   }
 
+  function getResponsiveInitialScale() {
+    const width = $('#mapStage')?.clientWidth || window.innerWidth;
+    if (width <= 740) return 0.62;
+    if (width <= 1050) return 0.64;
+    return 0.68;
+  }
+
+  function rememberMapViewportSize(stage) {
+    mapView.lastStageWidth = stage.clientWidth;
+    mapView.lastStageHeight = stage.clientHeight;
+  }
+
   function centerMapOnRoot(scale = mapView.scale) {
     const stage = $('#mapStage');
     if (!stage) return;
@@ -689,6 +701,7 @@
     const rootCenterY = MAP_ROOT_TOP + 75;
     mapView.x = stage.clientWidth / 2 - rootCenterX * mapView.scale;
     mapView.y = stage.clientHeight / 2 - rootCenterY * mapView.scale;
+    rememberMapViewportSize(stage);
     updateMapTransform();
   }
 
@@ -700,6 +713,7 @@
     mapView.scale = Math.max(mapView.minScale, Math.min(0.8, scale));
     mapView.x = (stage.clientWidth - world.offsetWidth * mapView.scale) / 2;
     mapView.y = (stage.clientHeight - world.offsetHeight * mapView.scale) / 2;
+    rememberMapViewportSize(stage);
     updateMapTransform();
   }
 
@@ -1673,7 +1687,19 @@
   $('#aiForm').addEventListener('submit', onAskAI);
   initMapNavigation();
   window.addEventListener('resize', () => requestAnimationFrame(() => {
-    if (!mapView.initialized) centerMapOnRoot(window.matchMedia('(max-width: 740px)').matches ? 0.34 : 0.58);
+    const stage = $('#mapStage');
+    if (!stage) return;
+    if (!mapView.initialized) {
+      mapView.initialized = true;
+      centerMapOnRoot(getResponsiveInitialScale());
+    } else {
+      const previousWidth = mapView.lastStageWidth || stage.clientWidth;
+      const previousHeight = mapView.lastStageHeight || stage.clientHeight;
+      mapView.x += (stage.clientWidth - previousWidth) / 2;
+      mapView.y += (stage.clientHeight - previousHeight) / 2;
+      rememberMapViewportSize(stage);
+      updateMapTransform();
+    }
     drawConnectors();
   }));
   window.addEventListener('pagehide', () => { flushSave(); });
