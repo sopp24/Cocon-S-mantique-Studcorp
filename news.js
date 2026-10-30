@@ -1,63 +1,83 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = null;
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-10-30T14:07:47.145Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
-    source:"L'Étudiant", date:"30 oct. 2026", topic:"Bourses et pouvoir d’achat",
-    title:"Les bourses étudiantes seront indexées sur l’inflation dès 2027",
-    summary:"Les bourses sur critères sociaux et leurs barèmes doivent suivre l’inflation à partir de la rentrée 2027. L’annonce prévoit une première enveloppe supplémentaire de 37 millions d’euros, mais doit encore être inscrite dans le budget.",
-    url:"https://www.letudiant.fr/lifestyle/aides-financieres/les-bourses-augmenteront-desormais-selon-l-inflation.html"
+    "source": "L'Étudiant",
+    "date": "30 oct. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "Aix-Marseille Université lance un \"Campus des Transitions industrielles\" pour la décarbonation",
+    "summary": "Aix-Marseille Université lance un \"Campus des Transitions industrielles\" pour la décarbonation L'Etudiant",
+    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNYXlnZGVrLUZnSDNVUm0yRHdQRDBIUXVxcTNHN1p2LWczXzYwSldmc3RHMzN0emJaMHJNQjF5UVd3M0xoc1JNd1AyblZCMl9DNmdkMjZkUmJBQnNDUkJkel9pNFdsNm9PUGVCbTNlc0lhekpnaV9nMXVRby02dnFGOTNVYUF1cVhOalhFNDcyQ1A4TTUyenZ6eTNxRWxxSTh1QnhiNmdkRW5DLU1haUdoVjVKcEJ4VG1yaEtjNTBGRmotM0xwQTEwSXRHQWY2ODFEeWhBMHpueEIyTU5qbUtKNkFYSkVINFFMbzBONFdn?oc=5"
   },
   {
-    source:"L'Étudiant", date:"27 oct. 2026", topic:"Alternance et rémunération",
-    title:"Alternance : les salaires des apprentis pourraient encore baisser",
-    summary:"Un amendement au budget de la Sécurité sociale prévoit d’élargir les cotisations sur les salaires des apprentis. Selon l’ANAF, la baisse nette pourrait atteindre 48 à 89 euros par mois : une évolution envisagée, à distinguer d’une mesure définitivement entrée en vigueur.",
-    url:"https://www.letudiant.fr/etudes/alternance/alternance-pourquoi-les-salaires-des-apprentis-pourraient-encore-baisser.html"
+    "source": "franceinfo",
+    "date": "30 oct. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "Le président de France Universités n'est \"pas certain\" que les étudiants soient devant leurs professeurs lundi",
+    "summary": "Le président de France Universités n'est \"pas certain\" que les étudiants soient devant leurs professeurs lundi franceinfo",
+    "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQb3FfaTAtTkg2VE5JMWlmQXFTdFNTS2tCU1E3Snhnc2JBQ3ZwM0xYcV9aQjI4N1ZXeU1xNUp4ZmxCUmFWOUZrY2NiWTltYWRtbF94SGRFQ0Z1VzdxXzgzNmRZUVA3RXJ3LWFsOVJKa0RmaVRNM2NjdzhhcVV2MmFtajI1OGg0MWo3ZEFCdXhtMmM0clUtVEQxV2c3RzBscE1mU0VPNk1zbjFWY0FsanNEQXVuWjZUVDl0ZnNWZmJoYkJsOVhOdUNkYXlRMmtrb25iRFZaM1dYWHdGdGo0X2NaeVJzd3lISVVuSWQtbzk1Y1lfOFBUbUFUag?oc=5"
   },
   {
-    source:"Le Parisien Étudiant", date:"24 oct. 2026", topic:"Études de santé",
-    title:"La nouvelle licence portail santé remplacera les PASS et LAS dès 2027",
-    summary:"Un décret officialise une voie d’accès réorganisée aux études de santé à partir de la rentrée 2027. Le dispositif prévoit notamment deux possibilités de candidature et des passerelles élargies.",
-    url:"https://www.leparisien.fr/etudiant/etudes/universites/etudes-de-sante-le-decret-de-la-nouvelle-licence-portail-sante-qui-sappliquera-des-la-rentree-2027-est-officiel-E3SHGMHJ25CSBPAHKVKU2XE74.php"
+    "source": "Le Figaro Étudiant",
+    "date": "30 oct. 2026",
+    "topic": "Formations et admissions",
+    "title": "Parcoursup : comment nos voisins européens organisent-ils l’accès à l’université ?",
+    "summary": "Parcoursup : comment nos voisins européens organisent-ils l’accès à l’université ? Le Figaro Etudiant",
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNX2NaSlJPakdMVEo3Y3dOdUw1cFN5RU1xNFl2aUN5dDhVN0ZIWXVzN2lqS25RMkt4RGxQVU03clRFX1JxQWtvQmJMMnJqTElRX3hyYXpfTXR3NVc4ZnNMTXZnelpzbGxPRk8tQ0hiS2tDWmFQakluckc2VmpFMjV1bHNULVZnV1hPQ21FTGdWMmdlVm85VEQ2LWYwOVZjRU5nSi0zY2ZMbi1IV1dWWDhqZ2ppVmJUYjNtQ0xYTEF1Z3NMWU9JdXpYSXY5UQ?oc=5"
   },
   {
-    source:"L'Étudiant", date:"29 oct. 2026", topic:"Frais de scolarité",
-    title:"À l’UTT, la hausse des frais d’inscription pourrait être remise en question",
-    summary:"Après la mobilisation contre la hausse prévue en 2027, l’Université de technologie de Troyes ouvre une concertation avec étudiants et personnels pour étudier d’autres pistes de financement. La hausse n’est pas encore officiellement suspendue.",
-    url:"https://www.letudiant.fr/etudes/ecole-ingenieur/la-hausse-des-frais-d-inscription-a-l-utt-pourrait-etre-remise-en-question-apres-la-mobilisation-etudiante.html"
+    "source": "L'Étudiant",
+    "date": "30 oct. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "Moins d’étudiants, des parcours à repenser : le grand défi de l’enseignement supérieur",
+    "summary": "Moins d’étudiants, des parcours à repenser : le grand défi de l’enseignement supérieur L'Etudiant",
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQS3VPYlQ2SEJIRHQ1ejRKTWc0MXVlUVF6Z0RlXzdCSHFLYmdXX0FaY2FzYm1uWS0yQTdtVUtmUWxOVjlwRHlmS0pFQnRianZ2R2VOb0dEODlwYW1QblpkYkVJcjFQUkZSX0M2RU5ldXRGaHRpQ1hxeHhYR0M2X1MxSDhYRGE0azBzaEtSbUtkVW1Ubk04YVNDeFFLRE90RDZCMzdvaFpYejMzdkdyakJyc3VDenluOFBSX0lFNVVtSXNGUndscnRsMl9oNk0ydw?oc=5"
   },
   {
-    source:"Le Monde", date:"23 oct. 2026", topic:"Équité des examens",
-    title:"Internat de médecine : pas de fraude massive, mais des fragilités persistent",
-    summary:"Le rapport des inspections ne relève pas de faille systémique majeure dans les oraux du concours de l’internat, mais identifie des points de fragilité qui pourraient permettre des fraudes.",
-    url:"https://www.lemonde.fr/campus/article/2026/10/23/oraux-de-medecine-pas-de-fraude-massive-mais-la-triche-reste-possible-selon-les-inspections-generales_6799130_4401467.html"
+    "source": "Le Monde",
+    "date": "28 oct. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "Enseignement supérieur : le « sous-financement » reste sans réponse, malgré un « premier pas » gouvernemental, estiment les présidents d’universités",
+    "summary": "Enseignement supérieur : le « sous-financement » reste sans réponse, malgré un « premier pas » gouvernemental, estiment les présidents d’universités Le Monde.fr",
+    "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQVjJRdjZrUl9GaXc5T2gwZldScmZ0VDdCeVEwVEZzS2hXSXp3ZlJEVHNCNmYyWElKZE04QlktaERXXzhMLXg5cVQwVVRHZEVoRVl1UmNTTE9LX2RVUzczZEJnTUY4SG4tR09Ya1A4aXlCWFdaNTFTQ0VQWlA4T00yb0pqa2h5dG5pT3hJNzY1YVNMQjF2ZnB5STJWZVF3d0prMld6Y2tRTTliWE9lOHROZEpCaWktSF91Q1FxZXA0OVhBLVZWM2ZSZG1KblFIVmFWdWMwanJQWjlRdkgxZEVLb2V4NTN1SERHMmppc0ZDZ0FoN2lYS3ZwdnBkVlo1ZWZOR3poU3p5SGt0bGZPREFMdGNKd2NITDd1Y2Vob0htT2NEZnd4MEJ3anNiUm9kSkFHSVE?oc=5"
   },
   {
-    source:"L'Étudiant", date:"30 oct. 2026", topic:"Journalisme et liberté de la presse",
-    title:"Près de 800 étudiants en journalisme contestent le traitement médiatique des mobilisations",
-    summary:"Des étudiants de quinze écoles reconnues dénoncent une couverture qu’ils jugent sensationnaliste et demandent que les médias donnent davantage la parole aux jeunes mobilisés.",
-    url:"https://www.letudiant.fr/etudes/ecoles-specialisees/on-est-scandalises-les-etudiants-en-journalisme-denoncent-le-traitement-mediatique-des-mobilisations.html"
+    "source": "franceinfo",
+    "date": "28 oct. 2026",
+    "topic": "Formations et admissions",
+    "title": "Plateformes similaires à Parcoursup, inscriptions directes à l'université… Comment les autres pays européens organisent les admissions dans l'enseignement supérieur",
+    "summary": "Plateformes similaires à Parcoursup, inscriptions directes à l'université… Comment les autres pays européens organisent les admissions dans l'enseignement supérieur franceinfo",
+    "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOVXY0RndHMDRhRC14b0o5SFBMOVFxLUlCYlZjb0EtUWVFa3FXcmk0Q3ZtZEJKX0ZjbVRKZk9pR3pZWjZsNzJlT29JcnkzcVlyTUxuOXBtTC1QVkk3VWprdFhrRDZRVHZDc2pvalBycTZMSTlnampmWkpkeXg0VFZhQnpDcFo3bGFCejZ5dHhqMWxfajl3dEhDdThxZUZCUVZXNmQ5MnpCY2g5R210Q3p0SDkyU1FzblBFOWZqUXBhVktJSzRZc215NEFka3laRXo2RTRMajV5OHRUSmswRXp5cUV6VTd3NU5uWG1FQmdTejdQREE0OWpCbkRpYXVNUWpSbUdTR01pWV9KRWtKQmJBWTRDck5xUlZLalNoRHRTaGo0UTdMSzdaR1JpVjdta3MzTVZra0ZxRVJ2ejJUempIRDRJY1I2YWd6dm9uVG5JQ25IQUhhYVNrZmcydGk?oc=5"
   },
   {
-    source:"L'Étudiant", date:"26 oct. 2026", topic:"Emploi et intelligence artificielle",
-    title:"Jeunes diplômés en informatique : l’IA recompose le marché du premier emploi",
-    summary:"Des jeunes diplômés en maths et informatique racontent la difficulté croissante à décrocher un poste junior. Une étude citée par l’article mesure aussi un recul marqué des embauches en CDI dans les métiers les plus exposés à l’IA.",
-    url:"https://www.letudiant.fr/jobsstages/ce-que-l-ia-ne-peut-pas-faire-les-strategies-des-jeunes-diplomes-en-maths-et-en-informatique-pour-trouver-du-travail.html"
+    "source": "Le Figaro Étudiant",
+    "date": "28 oct. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "Stage & Alternance Auxiliaire de vie - 6 offres Seine-Maritime",
+    "summary": "Stage & Alternance Auxiliaire de vie - 6 offres Seine-Maritime Le Figaro Etudiant",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSjFaV1VBY0M4clJQUExnajd4Y3VVRTNVQ1Jyel9BcE11ci1Ca2RtcmNGYlJyYzFmeWIza1NNWXhNbFRVZG53UEJOV3dscktKNmdmTW5Mdy1hb1lEa3hhZ0lBak5BQU9KOTF2c0YxUWRJYXgzaUtpVVdrS0RlVlhOU0lBRnlzYTJleE5QYWRQUHNXZktDN25fZEh2Ti0?oc=5"
   },
   {
-    source:"L'Étudiant", date:"30 oct. 2026", topic:"Avenir de l’enseignement supérieur",
-    title:"Baisse démographique : les établissements du supérieur devront repenser leur offre",
-    summary:"À partir de 2030, la diminution attendue des effectifs devrait obliger les établissements à revoir leur carte de formations et leurs capacités d’accueil. L’article interroge aussi l’évolution du modèle des études.",
-    url:"https://www.letudiant.fr/educpros/enquetes/face-a-l-enjeu-de-baisse-demographique-une-linearite-du-systeme-des-etudes-a-repenser.html"
+    "source": "Ouest-France",
+    "date": "27 oct. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "« Un seul poste à souder pour trente » : à Brest, des étudiants de Kérichen dénoncent leurs conditions d’apprentissage - Ouest-France",
+    "summary": "Article de Ouest-France sélectionné pour sa pertinence avec les études supérieures. Ouvre la source pour en consulter les détails.",
+    "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxOWWNya2RGQ0RHWElubkJGZ1pZRkNZd2NSZ0J6MEptQjNWRFVKY005UkdUR3R3ZlNHcE1COC1SMVYwQWNDbVpDNzY4cUNvM29YbzBoTWF5UXA2ODdJTVRaSE8ycVJqRW9vNWwyMzR2aEppZE1uRHdFWHJ5aG96TjBUVWFRamVpYURxYlVhbzFHRTc4dDFJd1p5YzRad19iMUpMY3gxS1BOa0JwczgyWDFyOWxEbHZDNnFubUVuX3k3ZW1PZTQxWWhoWnZrVF9BTks3MWljaXh5aFJJeFBWOW1fbTZOQlRXZjhmNHBHbUYwZGtLMWFHQnF3OHV5eGIzMzRTLWNLNk0wZjJZTHhWMDUyckZmSmltM3NXa3NZ?oc=5"
   },
   {
-    source:"Le Parisien", date:"26 oct. 2026", topic:"Logement étudiant",
-    title:"À Paris, les 300 chambres de la Maison de la Chine restent inoccupées",
-    summary:"Inaugurée au sein de la Cité internationale universitaire, la résidence n’a toujours accueilli aucun étudiant. Un blocage administratif entre la France et la Chine empêche l’ouverture de ces logements.",
-    url:"https://www.leparisien.fr/paris-75/cest-revoltant-a-paris-un-immeuble-flambant-neuf-de-300-chambres-reste-desert-depuis-trois-ans-26-10-2026-MYVBP2CVMFBVRG4TKQ5ZOXBMEY.php"
+    "source": "Ouest-France",
+    "date": "28 oct. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "Offre d'emploi JOB ÉTUDIANT – GARDE D’ENFANTS EN PÉRISCOLAIRE H/F - Beauvais (60) - Ouest-France Emploi",
+    "summary": "Article de Ouest-France sélectionné pour sa pertinence avec les études supérieures. Ouvre la source pour en consulter les détails.",
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWnE1VzgtM3pJWkg5ZUlael82Y2VmQ2Z1cTRCdjlHQXZxOTVEZlBNcklJN0xZZ2wzWTItSUFsZ2hONmlNMC1JVElySXQ1djZxRnpmR0pFRk5QSWxBNXlrOEN3cWp5OXNkUlBpSXg2ZERnajY5SUFYMEFna1dNVkNwbEc2QVlDeDdIMVdpNGp1TF82NDBtU0lMU2MyejVORG5US0Zvd3pn?oc=5"
   },
   {
-    source:"L'Étudiant", date:"29 oct. 2026", topic:"Entrée dans la vie professionnelle",
-    title:"70 élèves avocats prêtent serment après sept années d’études",
-    summary:"À Douai, la prestation de serment marque la dernière étape avant l’exercice de la profession pour 70 élèves avocats. Un reportage sur la transition entre formation longue et entrée dans le métier.",
-    url:"https://www.letudiant.fr/etudes/ecoles-specialisees/un-accomplissement-apres-sept-annees-d-etudes-la-prestation-de-serment-rite-de-passage-solennel-pour-les-eleves-avocats.html"
+    "source": "Le Parisien Étudiant",
+    "date": "28 oct. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "Forum Jeunesse Val d'Europe 2027 : emploi, stage, formations... pour accompagner les étudiants et jeunes dans leur projet professionnel.",
+    "summary": "Forum Jeunesse Val d'Europe 2027 : emploi, stage, formations... pour accompagner les étudiants et jeunes dans leur projet professionnel. Le Parisien",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSGd5LUlLc1dRTFhHVFN4aHRNeTh6OUF4bmdGMVFJbGJpLVU0RHFVMU5QZnZhU29GdkptdmM3QjVMODFDY3h3NlA1T1M5cnhBN3RpWnV6cDNFTWF3Qm5HSDVLOElBcF9jTDhnUGo3bXVxRWw3bEVrRWVMU0lBT25ZWi1JVkN6R0NaUE93VQ?oc=5"
   }
 ];
