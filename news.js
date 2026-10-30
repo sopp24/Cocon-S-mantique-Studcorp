@@ -39,13 +39,13 @@ window.STUDCORP_WEEKLY_NEWS = [
     source:"Le Monde", date:"23 oct. 2026", topic:"Études de santé",
     title:"Concours de l’internat : pas de fraude massive, mais des fragilités persistent",
     summary:"Le rapport des inspections ne relève pas de faille systémique majeure dans les oraux de médecine, mais identifie des points faibles qui laissent possibles certaines fraudes.",
-    url:"https://www.lemonde.fr/etudes-superieures/"
+    url:"https://www.lemonde.fr/etudes-de-sante/"
   },
   {
     source:"Ouest-France", date:"26 oct. 2026", topic:"Logement étudiant",
     title:"À Paris, 300 logements de la Maison de la Chine restent inoccupés",
     summary:"Inaugurée en 2024 à la Cité internationale universitaire, la résidence n’accueille toujours pas de résidents en raison de difficultés administratives et de gouvernance.",
-    url:"https://www.ouest-france.fr/education/etudiant/archives/"
+    url:"https://www.ouest-france.fr/ile-de-france/paris-75000/faits-divers/"
   },
   {
     source:"Ouest-France", date:"27 oct. 2026", topic:"Vie de campus",
@@ -57,6 +57,6 @@ window.STUDCORP_WEEKLY_NEWS = [
     source:"Ouest-France", date:"26 oct. 2026", topic:"Financement des universités",
     title:"L’université d’Angers alerte sur un financement de l’État insuffisant",
     summary:"Sa présidente juge les moyens publics trop faibles au regard des besoins et des enjeux, alors que l’établissement prépare sa campagne de recrutement.",
-    url:"https://www.ouest-france.fr/education/etudiant/universites/"
+    url:"https://www.ouest-france.fr/pays-de-la-loire/angers-49000/archives/"
   }
 ];
