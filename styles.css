@@ -573,7 +573,6 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .map-world {
   will-change: auto;
   text-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
 }
 .workspace {
   width: 100%;
