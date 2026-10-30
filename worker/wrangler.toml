@@ -1,0 +1,17 @@
+name = "studcorp-carte-mentale-ai"
+main = "worker.js"
+compatibility_date = "2026-10-29"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "MINDMAP_SYNC"
+class_name = "MindMapSync"
+
+[exports.MindMapSync]
+type = "durable-object"
+storage = "sqlite"
+
+# Secrets à configurer avec Wrangler :
+# npx wrangler secret put ALLOWED_ORIGIN
+# npx wrangler secret put GEMINI_API_KEY
+# Optionnel : npx wrangler secret put GEMINI_MODEL
