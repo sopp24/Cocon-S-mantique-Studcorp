@@ -1076,9 +1076,21 @@
     if (!clean) return;
     const node = {id: makeId(`section-${slug(clean)}`), label: clean, type: 'theme', note: '', children: [], expanded: true, meta:{createdBy:'Utilisateur'}};
     state.root.children.push(node);
+    ensureMapLayout();
     selectedNodeId = node.id;
     renderAll();
-    toast(`Section « ${clean} » ajoutée.`);
+    requestAnimationFrame(() => {
+      const stage = $('#mapStage');
+      const card = $('.branch-card', $('#branches')).find((item) => item.dataset.branchId === node.id);
+      if (!stage || !card) return;
+      const branchCenterX = (Number.parseFloat(card.style.left) || 0) + card.offsetWidth / 2;
+      const branchCenterY = (Number.parseFloat(card.style.top) || 0) + card.offsetHeight / 2;
+      mapView.x = stage.clientWidth / 2 - branchCenterX * mapView.scale;
+      mapView.y = stage.clientHeight / 2 - branchCenterY * mapView.scale;
+      rememberMapViewportSize(stage);
+      updateMapTransform();
+    });
+    toast(`Thématique « ${clean} » créée. Tu peux maintenant ajouter ses sous-sections et ses étiquettes.`);
   }
 
   function askForLabel(message, defaultValue = '') {
@@ -1653,7 +1665,7 @@
   $('#collapseAllBtn').addEventListener('click', () => expandAll(false));
   $('#expandAllBtn').addEventListener('click', () => expandAll(true));
   $('#addSectionBtn').addEventListener('click', () => {
-    const label = askForLabel('Nom de la nouvelle section principale :');
+    const label = askForLabel('Nom de la nouvelle thématique :');
     if (label) addSection(label);
   });
   $('#addLegendBtn').addEventListener('click', addLegendEntry);
