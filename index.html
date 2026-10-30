@@ -57,12 +57,21 @@
         </div>
         <div class="map-counts" id="mapCounts"></div>
       </div>
-      <div class="map-stage" id="mapStage">
-        <svg id="connectors" class="connectors" aria-hidden="true"></svg>
-        <div class="root-wrap" id="rootWrap"></div>
-        <div class="branches" id="branches"></div>
+      <div class="map-stage" id="mapStage" aria-label="Carte mentale navigable. Faites glisser pour vous déplacer et utilisez la molette ou les boutons pour zoomer.">
+        <div class="map-controls" role="group" aria-label="Navigation dans la carte mentale">
+          <button class="map-control-button" id="mapZoomOut" type="button" aria-label="Dézoomer" title="Dézoomer">−</button>
+          <span class="map-zoom-level" id="mapZoomLevel" aria-live="polite">58%</span>
+          <button class="map-control-button" id="mapZoomIn" type="button" aria-label="Zoomer" title="Zoomer">＋</button>
+          <button class="map-control-button map-control-wide" id="mapCenterBtn" type="button" title="Recentrer sur STUDCORP">Recentrer</button>
+          <button class="map-control-button map-control-wide" id="mapFitBtn" type="button" title="Afficher toute la carte">Tout voir</button>
+        </div>
+        <div class="map-world" id="mapWorld">
+          <svg id="connectors" class="connectors" aria-hidden="true"></svg>
+          <div class="root-wrap" id="rootWrap"></div>
+          <div class="branches" id="branches"></div>
+        </div>
       </div>
-      <div class="mobile-hint"><span aria-hidden="true">↔</span> Sur téléphone, ouvre une section puis une sous-thématique pour parcourir la carte plus facilement.</div>
+      <div class="mobile-hint"><span aria-hidden="true">↔</span> Fais glisser la carte pour te déplacer. Utilise les boutons + et − ou la molette pour zoomer et dézoomer.</div>
     </section>
 
     <aside class="side-column" id="sideColumn">
