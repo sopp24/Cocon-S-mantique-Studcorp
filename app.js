@@ -1016,6 +1016,18 @@
     const stories = Array.isArray(window.STUDCORP_WEEKLY_NEWS) ? window.STUDCORP_WEEKLY_NEWS : [];
     const highlights = $('#weeklyNewsHighlights');
     const list = $('#weeklyNewsList');
+    const periodLabel = $('.news-period');
+    const updatedAt = window.STUDCORP_WEEKLY_NEWS_UPDATED_AT;
+    if (periodLabel && updatedAt) {
+      const updatedDate = new Date(updatedAt);
+      if (!Number.isNaN(updatedDate.getTime())) {
+        const formatted = new Intl.DateTimeFormat('fr-FR', {
+          day:'numeric', month:'short', hour:'2-digit', minute:'2-digit',
+          timeZone:'Europe/Paris', hourCycle:'h23'
+        }).format(updatedDate);
+        periodLabel.textContent = 'MAJ ' + formatted;
+      }
+    }
     if (!highlights || !list || !stories.length) return;
     const card = (story, index, compact = false) => `
       <article class="news-item${compact ? ' news-item-compact' : ''}">
