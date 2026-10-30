@@ -491,3 +491,9 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
   .news-highlights { padding: 0 12px; }
   .news-item { padding: 9px 0; }
 }
+
+@media (min-width: 741px) and (max-width: 1050px) {
+  .side-column { grid-template-columns: minmax(0, 1.25fr) minmax(260px, 1fr); }
+  .side-column > .ai-panel { grid-column: auto; }
+  .side-column > .news-panel { grid-column: auto; }
+}
