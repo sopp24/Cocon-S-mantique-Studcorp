@@ -148,8 +148,12 @@ function parseFeed(xml, expectedSource, now) {
 
   items.forEach(function (item, position) {
     let title = tagValue(item, "title").trim();
-    title = title.replace(/\s+[-–—|]\s+(?:L'?Etudiant|Le Figaro Etudiant|Le Parisien(?: Etudiant)?|Ouest-France(?: Emploi)?|Le Monde(?:\.fr)?|Franceinfo|Les Echos|Le Point|Libération|Mediapart|L'Express|Sud Ouest|France 24|Le Nouvel Obs)\s*$/i, "").trim();
-    if (NON_NEWS_TITLE.test(normalize(title))) return;
+    title = title.replace(/\s+[-–—|]\s+(?:L['’]?[ÉE]tudiant|Le Figaro [ÉE]tudiant|Le Parisien(?: [ÉE]tudiant)?|Ouest-France(?: Emploi)?|Le Monde(?:\.fr)?|Franceinfo|Les Echos|Le Point|Libération|Mediapart|L'Express|Sud Ouest|France 24|Le Nouvel Obs)\s*$/i, "").trim();
+    const normalizedTitle = normalize(title);
+    const titleSeparators = (title.match(/\s[-–—|]\s/g) || []).length;
+    const trainingListing = /^(bachelor|bts|but|mba)\b/.test(normalizedTitle) ||
+      (/^(licence|master)\b/.test(normalizedTitle) && titleSeparators >= 2);
+    if (NON_NEWS_TITLE.test(normalizedTitle) || trainingListing) return;
     const link = tagValue(item, "link");
     const publishedAt = new Date(tagValue(item, "pubDate"));
     const source = sourceForItem(item, expectedSource);
@@ -240,8 +244,8 @@ function chooseStories(candidates) {
   const topicCounts = new Map();
 
   for (const limits of [
-    { source: 2, topic: 1 },
-    { source: 3, topic: 2 },
+    { source: 1, topic: 1 },
+    { source: 2, topic: 2 },
     { source: Infinity, topic: Infinity }
   ]) {
     for (const story of ordered) {
