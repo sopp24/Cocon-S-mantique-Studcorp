@@ -140,9 +140,6 @@ function formatDate(date) {
 function parseFeed(xml, expectedSource, now) {
   const items = [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(function (match) { return match[1]; });
   const stories = [];
-  if (expectedSource.domain === "lemonde.fr") {
-    console.log("Diagnostic RSS — éléments reçus : " + items.length + "; extrait : " + (items[0] || xml).slice(0, 1800));
-  }
 
   items.forEach(function (item, position) {
     const title = tagValue(item, "title").replace(/\s+[-–|]\s+[^-–|]{2,45}$/u, "").trim();
@@ -178,8 +175,8 @@ function parseFeed(xml, expectedSource, now) {
   return stories;
 }
 
-async function fetchSource(source, now) {
-  const query = "(" + SEARCH_TERMS + ") site:" + (source.queryDomain || source.domain) + " when:7d";
+async function fetchOneQuery(source, now, searchTerm) {
+  const query = "site:" + (source.queryDomain || source.domain) + " " + searchTerm + " when:7d";
   const url = new URL("https://news.google.com/rss/search");
   url.searchParams.set("q", query);
   url.searchParams.set("hl", "fr");
@@ -195,6 +192,15 @@ async function fetchSource(source, now) {
   });
   if (!response.ok) throw new Error(source.name + ": réponse HTTP " + response.status);
   return parseFeed(await response.text(), source, now);
+}
+
+async function fetchSource(source, now) {
+  const results = await Promise.allSettled([
+    fetchOneQuery(source, now, '"étudiant"'),
+    fetchOneQuery(source, now, "université")
+  ]);
+  return results.filter(function (result) { return result.status === "fulfilled"; })
+    .flatMap(function (result) { return result.value; });
 }
 
 function articleTokens(title) {
