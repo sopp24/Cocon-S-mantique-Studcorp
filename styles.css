@@ -88,9 +88,9 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .subtheme-head { display: flex; align-items: flex-start; gap: 5px; }
 .subtheme-toggle { width: 18px; height: 22px; flex: 0 0 18px; padding: 0; margin-top: 1px; background: transparent; color: var(--node-color); border: 0; border-radius: 4px; }
 .subtheme-toggle:hover { background: #e9f5f6; }
-.subtheme-title { cursor: pointer; flex: 1; min-width: 0; text-align: left; background: transparent; border: 0; color: #397f8c; font-size: 10.5px; line-height: 1.4; font-weight: 770; padding: 4px 4px 5px 2px; overflow-wrap: anywhere; }
+.subtheme-title { cursor: pointer; flex: 1; min-width: 0; text-align: left; background: transparent; border: 0; color: #F3A477; font-size: 10.5px; line-height: 1.4; font-weight: 770; padding: 4px 4px 5px 2px; overflow-wrap: anywhere; }
 .subtheme-title:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.subtheme[data-subtheme-id^="keywords-"] .subtheme-title { color: #F3A477; }
+.subtheme[data-subtheme-id^="keywords-"] .subtheme-title { color: #397f8c; }
 .subtheme-tools { display: flex; gap: 0; flex: 0 0 auto; }
 .subtheme-tools .icon-button { width: 22px; height: 24px; font-size: 13px; }
 .leaf-list { border-left: 1px solid #d1e4e6; margin: 0 0 1px 8px; padding: 4px 0 3px 11px; display: grid; gap: 5px; }
