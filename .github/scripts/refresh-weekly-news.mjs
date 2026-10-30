@@ -140,6 +140,9 @@ function formatDate(date) {
 function parseFeed(xml, expectedSource, now) {
   const items = [...xml.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/gi)].map(function (match) { return match[1]; });
   const stories = [];
+  if (expectedSource.domain === "lemonde.fr") {
+    console.log("Diagnostic RSS — éléments reçus : " + items.length + "; extrait : " + (items[0] || xml).slice(0, 1800));
+  }
 
   items.forEach(function (item, position) {
     const title = tagValue(item, "title").replace(/\s+[-–|]\s+[^-–|]{2,45}$/u, "").trim();
