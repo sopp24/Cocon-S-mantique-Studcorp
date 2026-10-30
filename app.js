@@ -591,7 +591,7 @@
       <div class="subtheme${nodeDimClass(node)}" data-subtheme-id="${html(node.id)}" style="--node-color:${color};${mapOffsetStyle(node.id)}">
         <div class="subtheme-head">
           <button class="subtheme-toggle" type="button" data-action="toggle-node" data-node-id="${html(node.id)}" title="${isOpen ? 'Replier' : 'Déplier'}">${isOpen ? '⌄' : '›'}</button>
-          <button class="subtheme-title" type="button" data-select-id="${html(node.id)}" data-map-drag="subtheme" data-map-node-id="${html(node.id)}" title="Faire glisser pour déplacer ce groupe">${titleWithNote(node)} <span class="node-count">${children.length}</span></button>
+          <button class="subtheme-title" type="button" data-action="toggle-node" data-node-id="${html(node.id)}" data-map-drag="subtheme" data-map-node-id="${html(node.id)}" aria-expanded="${isOpen}" title="${isOpen ? 'Cliquer pour replier · glisser pour déplacer' : 'Cliquer pour déplier · glisser pour déplacer'}">${titleWithNote(node)} <span class="node-count">${children.length}</span></button>
           <div class="subtheme-tools">
             <button class="icon-button" type="button" data-action="add-leaf" data-parent-id="${html(node.id)}" title="Ajouter une étiquette" aria-label="Ajouter une étiquette">＋</button>
             <button class="icon-button" type="button" data-select-id="${html(node.id)}" title="Modifier la sous-thématique" aria-label="Modifier la sous-thématique">✎</button>
@@ -619,7 +619,7 @@
       <article class="branch-card${nodeDimClass(section)}" data-branch-id="${html(section.id)}" style="--node-color:${color}">
         <header class="branch-head" data-connector-id="${html(section.id)}">
           <button class="branch-toggle" type="button" data-action="toggle-node" data-node-id="${html(section.id)}" title="${isOpen ? 'Replier la section' : 'Ouvrir la section'}">${isOpen ? '⌄' : '›'}</button>
-          <button class="branch-name" type="button" data-select-id="${html(section.id)}" data-map-drag="branch" data-map-node-id="${html(section.id)}" title="Faire glisser pour déplacer cette branche">${titleWithNote(section)}</button>
+          <button class="branch-name" type="button" data-action="toggle-node" data-node-id="${html(section.id)}" data-map-drag="branch" data-map-node-id="${html(section.id)}" aria-expanded="${isOpen}" title="${isOpen ? 'Cliquer pour replier · glisser pour déplacer' : 'Cliquer pour déplier · glisser pour déplacer'}">${titleWithNote(section)}</button>
           <span class="node-count">${children.length}</span>
           <div class="branch-tools">
             <button class="icon-button" type="button" data-action="add-subtheme" data-parent-id="${html(section.id)}" title="Ajouter une sous-section" aria-label="Ajouter une sous-section">＋</button>
@@ -630,7 +630,20 @@
       </article>`;
   }
 
+  function applyBubbleLayoutDefaults() {
+    if (Number(state.bubbleLayoutVersion) >= 1) return;
+    const collapseNested = (parent) => {
+      (parent.children || []).forEach((child) => {
+        if (Array.isArray(child.children) && child.children.length) child.expanded = false;
+        collapseNested(child);
+      });
+    };
+    collapseNested(state.root);
+    state.bubbleLayoutVersion = 1;
+  }
+
   function renderMap() {
+    applyBubbleLayoutDefaults();
     renderRoot();
     $('#branches').innerHTML = state.root.children.map(renderSection).join('');
     const nodes = allNodes();

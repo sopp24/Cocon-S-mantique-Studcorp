@@ -259,3 +259,116 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .is-map-dragging { z-index: 30 !important; cursor: grabbing !important; }
 .connector-main { fill:none; stroke:#9bbbc1; stroke-width:3.2; stroke-linecap:round; opacity:.98; }
 .branch-connectors .connector-inner { fill:none; stroke:#b5cbd0; stroke-width:2.2; stroke-linecap:round; opacity:.95; }
+
+
+/* Hiérarchie en bulles imbriquées : grande thématique > sous-thématique > contenu. */
+.branch-card {
+  border: 2px solid color-mix(in srgb, var(--node-color) 30%, white);
+  border-top: 2px solid color-mix(in srgb, var(--node-color) 30%, white);
+  border-radius: 26px;
+  padding: 9px;
+  background: color-mix(in srgb, var(--node-color) 6%, white);
+  box-shadow: 0 8px 22px rgba(33,78,89,.09);
+}
+.branch-head {
+  align-items: center;
+  gap: 10px;
+  padding: 11px 13px;
+  border: 0;
+  border-radius: 17px;
+  background: var(--node-color);
+}
+.branch-toggle {
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.38);
+  background: rgba(255,255,255,.12);
+}
+.branch-toggle:hover { background: rgba(255,255,255,.22); }
+.branch-name {
+  color: #fff;
+  padding: 2px 0;
+  cursor: pointer;
+}
+.branch-name:hover { text-decoration: underline; text-underline-offset: 3px; }
+.branch-head > .node-count {
+  color: var(--node-color);
+  background: #fff;
+  border-radius: 999px;
+  padding: 1px 8px;
+  line-height: 21px;
+}
+.branch-tools .icon-button { color: #fff; }
+.branch-tools .icon-button:hover {
+  color: var(--ming);
+  background: #fff;
+  border-color: rgba(255,255,255,.55);
+}
+.branch-body {
+  padding: 12px 3px 3px;
+  gap: 12px;
+}
+.subtheme {
+  margin: 0;
+  padding: 8px;
+  border: 1.5px solid color-mix(in srgb, var(--node-color) 28%, white);
+  border-radius: 19px;
+  background: color-mix(in srgb, var(--node-color) 5%, white);
+  box-shadow: 0 3px 10px rgba(33,78,89,.045);
+}
+.subtheme-head {
+  align-items: center;
+  gap: 6px;
+  padding: 3px 5px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--node-color) 9%, white);
+}
+.subtheme-toggle {
+  width: 26px;
+  height: 26px;
+  flex-basis: 26px;
+  margin: 0;
+  border: 1px solid color-mix(in srgb, var(--node-color) 25%, white);
+  border-radius: 50%;
+  background: #fff;
+  font-size: 15px;
+}
+.subtheme-title {
+  padding: 5px 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.subtheme-title:hover { text-decoration: underline; text-underline-offset: 3px; }
+.subtheme[data-subtheme-id^="keywords-"] {
+  border-color: color-mix(in srgb, #397f8c 34%, white);
+  background: color-mix(in srgb, #8ecece 13%, white);
+}
+.subtheme[data-subtheme-id^="keywords-"] .subtheme-head {
+  background: color-mix(in srgb, #8ecece 25%, white);
+}
+.leaf-list {
+  border-left: 0;
+  margin: 8px 0 0;
+  padding: 3px 2px 1px;
+  gap: 8px;
+}
+.leaf-node {
+  border-radius: 14px;
+  border-color: color-mix(in srgb, var(--node-color) 24%, #e5eded);
+  box-shadow: 0 3px 9px rgba(33,78,89,.045);
+}
+.leaf-accent {
+  width: 8px;
+  height: 8px;
+  min-height: 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+@media (max-width: 740px) {
+  .branch-card { padding: 7px; border-radius: 22px; }
+  .branch-head { padding: 10px 11px; }
+  .branch-body { padding: 10px 2px 2px; gap: 10px; }
+  .subtheme { padding: 7px; border-radius: 16px; }
+  .subtheme-head { padding: 3px; }
+  .leaf-list { margin-top: 7px; gap: 7px; }
+}
