@@ -43,23 +43,41 @@
   let syncPushAgain = false;
   const MISSING = Symbol('missing-value');
 
-  // Navigation de la carte : grande surface radiale, déplacement et zoom.
-  const MAP_WORLD_WIDTH = 3200;
-  const MAP_WORLD_BASE_HEIGHT = 4000;
-  const mapView = {x:0, y:0, scale:0.58, minScale:0.16, maxScale:1.35, initialized:false, dragging:false, pointerId:null, startX:0, startY:0, originX:0, originY:0};
+  // Navigation radiale : surface resserrée, panoramique, zoom et déplacement des bulles.
+  const MAP_WORLD_WIDTH = 2600;
+  const MAP_WORLD_BASE_HEIGHT = 3400;
+  const MAP_ROOT_LEFT = 980;
+  const MAP_ROOT_TOP = 1320;
+  const MAP_ROOT_WIDTH = 640;
+  const mapView = {x:0, y:0, scale:0.56, minScale:0.16, maxScale:1.6, initialized:false, dragging:false, pointerId:null, startX:0, startY:0, originX:0, originY:0, suppressClick:false};
+  const mapPointers = new Map();
+  let mapPinch = null;
+  let mapNodeDrag = null;
   const MAP_BRANCH_POSITIONS = {
-    'section-recherche-de-logement': {left:90, top:130},
-    'section-responsabilite-civile': {left:1320, top:80},
-    'section-complementaire-sante': {left:2540, top:130},
-    'section-habitation': {left:25, top:1450},
-    'section-sante-mobilite': {left:2560, top:1400},
-    'section-hors-piliers-vie-etudiante-carriere': {left:90, top:2930},
-    'section-hors-piliers-actualites-studcorp': {left:2540, top:2930}
+    'section-recherche-de-logement': {left:80, top:100},
+    'section-responsabilite-civile': {left:980, top:70},
+    'section-complementaire-sante': {left:1840, top:100},
+    'section-habitation': {left:25, top:1320},
+    'section-sante-mobilite': {left:1915, top:1320},
+    'section-hors-piliers-vie-etudiante-carriere': {left:100, top:2450},
+    'section-hors-piliers-actualites-studcorp': {left:1850, top:2450}
   };
+
+  function ensureMapLayout() {
+    if (!state.mapLayout || typeof state.mapLayout !== 'object' || Array.isArray(state.mapLayout)) state.mapLayout = {};
+  }
+
+  function mapOffsetStyle(id) {
+    const offset = state.mapLayout && state.mapLayout[id] || {};
+    const dx = Number.isFinite(Number(offset.dx)) ? Number(offset.dx) : 0;
+    const dy = Number.isFinite(Number(offset.dy)) ? Number(offset.dy) : 0;
+    return `--drag-x:${dx}px;--drag-y:${dy}px`;
+  }
 
   function initialState() {
     const initial = deepClone(window.STUDCORP_INITIAL_DATA || {});
     if (!initial.root || !Array.isArray(initial.root.children)) throw new Error('Les données de départ sont introuvables. Vérifie que data.js est bien présent.');
+    if (!initial.mapLayout || typeof initial.mapLayout !== 'object' || Array.isArray(initial.mapLayout)) initial.mapLayout = {};
     return initial;
   }
 
@@ -68,7 +86,10 @@
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (parsed && parsed.root && Array.isArray(parsed.root.children) && Array.isArray(parsed.legend)) return parsed;
+        if (parsed && parsed.root && Array.isArray(parsed.root.children) && Array.isArray(parsed.legend)) {
+          if (!parsed.mapLayout || typeof parsed.mapLayout !== 'object' || Array.isArray(parsed.mapLayout)) parsed.mapLayout = {};
+          return parsed;
+        }
       }
     } catch (error) {
       console.warn('Impossible de lire la sauvegarde locale :', error);
@@ -547,7 +568,7 @@
     metaBadges += noteLabel;
     const link = linkIsValid(url) ? `<a class="leaf-link" href="${html(url)}" target="_blank" rel="noopener noreferrer" title="Ouvrir la page">Ouvrir la page ↗</a>` : '';
     return `
-      <div class="leaf-node${node.id === selectedNodeId ? ' is-selected' : ''}${nodeDimClass(node)}" data-select-id="${html(node.id)}" style="--node-color:${color}" role="button" tabindex="0" aria-label="Modifier ${html(node.label)}">
+      <div class="leaf-node${node.id === selectedNodeId ? ' is-selected' : ''}${nodeDimClass(node)}" data-select-id="${html(node.id)}" data-map-drag="leaf" data-map-node-id="${html(node.id)}" style="--node-color:${color};${mapOffsetStyle(node.id)}" role="button" tabindex="0" aria-label="Déplacer ou modifier ${html(node.label)}">
         <span class="leaf-accent"></span>
         <span class="leaf-content">
           <span class="leaf-title">${titleWithNote(node)}</span>
@@ -566,10 +587,10 @@
         <button class="add-inline" type="button" data-action="add-leaf" data-parent-id="${html(node.id)}"><span aria-hidden="true">＋</span> Ajouter une étiquette</button>
       </div>` : '';
     return `
-      <div class="subtheme${nodeDimClass(node)}" data-subtheme-id="${html(node.id)}" style="--node-color:${color}">
+      <div class="subtheme${nodeDimClass(node)}" data-subtheme-id="${html(node.id)}" style="--node-color:${color};${mapOffsetStyle(node.id)}">
         <div class="subtheme-head">
           <button class="subtheme-toggle" type="button" data-action="toggle-node" data-node-id="${html(node.id)}" title="${isOpen ? 'Replier' : 'Déplier'}">${isOpen ? '⌄' : '›'}</button>
-          <button class="subtheme-title" type="button" data-select-id="${html(node.id)}">${titleWithNote(node)} <span class="node-count">${children.length}</span></button>
+          <button class="subtheme-title" type="button" data-select-id="${html(node.id)}" data-map-drag="subtheme" data-map-node-id="${html(node.id)}" title="Faire glisser pour déplacer ce groupe">${titleWithNote(node)} <span class="node-count">${children.length}</span></button>
           <div class="subtheme-tools">
             <button class="icon-button" type="button" data-action="add-leaf" data-parent-id="${html(node.id)}" title="Ajouter une étiquette" aria-label="Ajouter une étiquette">＋</button>
             <button class="icon-button" type="button" data-select-id="${html(node.id)}" title="Modifier la sous-thématique" aria-label="Modifier la sous-thématique">✎</button>
@@ -595,9 +616,10 @@
       </div>` : '';
     return `
       <article class="branch-card${nodeDimClass(section)}" data-branch-id="${html(section.id)}" style="--node-color:${color}">
+        <svg class="branch-connectors" aria-hidden="true"></svg>
         <header class="branch-head" data-connector-id="${html(section.id)}">
           <button class="branch-toggle" type="button" data-action="toggle-node" data-node-id="${html(section.id)}" title="${isOpen ? 'Replier la section' : 'Ouvrir la section'}">${isOpen ? '⌄' : '›'}</button>
-          <button class="branch-name" type="button" data-select-id="${html(section.id)}">${titleWithNote(section)}</button>
+          <button class="branch-name" type="button" data-select-id="${html(section.id)}" data-map-drag="branch" data-map-node-id="${html(section.id)}" title="Faire glisser pour déplacer cette branche">${titleWithNote(section)}</button>
           <span class="node-count">${children.length}</span>
           <div class="branch-tools">
             <button class="icon-button" type="button" data-action="add-subtheme" data-parent-id="${html(section.id)}" title="Ajouter une sous-section" aria-label="Ajouter une sous-section">＋</button>
@@ -617,11 +639,12 @@
       <span class="count-chip"><strong>${state.root.children.length}</strong> sections</span>
       <span class="count-chip"><strong>${nodes.filter((n) => n.type === 'subtheme').length}</strong> sous-thèmes</span>
       <span class="count-chip"><strong>${contentLabels}</strong> étiquettes</span>`;
+    ensureMapLayout();
     positionMapBranches();
     requestAnimationFrame(() => {
       if (!mapView.initialized) {
         mapView.initialized = true;
-        centerMapOnRoot(window.matchMedia('(max-width: 740px)').matches ? 0.34 : 0.58);
+        centerMapOnRoot(window.matchMedia('(max-width: 740px)').matches ? 0.32 : 0.56);
       }
       drawConnectors();
     });
@@ -631,16 +654,22 @@
     const world = $('#mapWorld');
     const cards = $$('.branch-card', $('#branches'));
     if (!world) return;
+    ensureMapLayout();
     let extraIndex = 0;
     cards.forEach((card) => {
-      const known = MAP_BRANCH_POSITIONS[card.dataset.branchId];
-      const position = known || {left:1320 + (extraIndex % 2 ? 650 : -650), top:3650 + Math.floor(extraIndex / 2) * 520};
+      const id = card.dataset.branchId;
+      const saved = state.mapLayout[id];
+      const known = MAP_BRANCH_POSITIONS[id];
+      const fallback = {left:100 + (extraIndex % 2 ? 1750 : 0), top:2920 + Math.floor(extraIndex / 2) * 520};
+      const position = saved && Number.isFinite(Number(saved.x)) && Number.isFinite(Number(saved.y))
+        ? {left:Number(saved.x),top:Number(saved.y)}
+        : (known || fallback);
       if (!known) extraIndex += 1;
       card.style.left = `${position.left}px`;
       card.style.top = `${position.top}px`;
     });
     world.style.width = `${MAP_WORLD_WIDTH}px`;
-    world.style.height = `${Math.max(MAP_WORLD_BASE_HEIGHT, 3650 + Math.ceil(extraIndex / 2) * 520)}px`;
+    world.style.height = `${Math.max(MAP_WORLD_BASE_HEIGHT, 2920 + Math.ceil(extraIndex / 2) * 520)}px`;
   }
 
   function updateMapTransform() {
@@ -655,8 +684,8 @@
     const stage = $('#mapStage');
     if (!stage) return;
     mapView.scale = Math.max(mapView.minScale, Math.min(mapView.maxScale, scale));
-    const rootCenterX = MAP_WORLD_WIDTH / 2;
-    const rootCenterY = 1560;
+    const rootCenterX = MAP_ROOT_LEFT + MAP_ROOT_WIDTH / 2;
+    const rootCenterY = MAP_ROOT_TOP + 75;
     mapView.x = stage.clientWidth / 2 - rootCenterX * mapView.scale;
     mapView.y = stage.clientHeight / 2 - rootCenterY * mapView.scale;
     updateMapTransform();
@@ -667,7 +696,7 @@
     const world = $('#mapWorld');
     if (!stage || !world) return;
     const scale = Math.min((stage.clientWidth - 48) / world.offsetWidth, (stage.clientHeight - 48) / world.offsetHeight);
-    mapView.scale = Math.max(mapView.minScale, Math.min(0.72, scale));
+    mapView.scale = Math.max(mapView.minScale, Math.min(0.8, scale));
     mapView.x = (stage.clientWidth - world.offsetWidth * mapView.scale) / 2;
     mapView.y = (stage.clientHeight - world.offsetHeight * mapView.scale) / 2;
     updateMapTransform();
@@ -688,6 +717,109 @@
     updateMapTransform();
   }
 
+  function setDraggedBubblePosition(drag) {
+    const position = state.mapLayout[drag.id] || {};
+    if (drag.kind === 'branch') {
+      const x = Number.isFinite(Number(position.x)) ? Number(position.x) : drag.initial.x;
+      const y = Number.isFinite(Number(position.y)) ? Number(position.y) : drag.initial.y;
+      drag.element.style.left = `${x}px`;
+      drag.element.style.top = `${y}px`;
+    } else {
+      const dx = Number.isFinite(Number(position.dx)) ? Number(position.dx) : 0;
+      const dy = Number.isFinite(Number(position.dy)) ? Number(position.dy) : 0;
+      drag.element.style.setProperty('--drag-x', `${dx}px`);
+      drag.element.style.setProperty('--drag-y', `${dy}px`);
+    }
+  }
+
+  function startMapBubbleDrag(event, handle) {
+    if (event.button !== 0 && event.pointerType !== 'touch') return;
+    const kind = handle.dataset.mapDrag;
+    const id = handle.dataset.mapNodeId;
+    if (!kind || !id) return;
+    if (event.target.closest('a, .branch-toggle, .subtheme-toggle, .branch-tools, .subtheme-tools, .icon-button, .add-inline')) return;
+    const element = kind === 'branch' ? handle.closest('.branch-card')
+      : kind === 'subtheme' ? handle.closest('.subtheme')
+      : handle.closest('.leaf-node');
+    if (!element) return;
+
+    event.stopPropagation();
+    ensureMapLayout();
+    const current = state.mapLayout[id] || {};
+    const initial = kind === 'branch'
+      ? {x:Number.isFinite(Number(current.x)) ? Number(current.x) : Number.parseFloat(element.style.left) || MAP_BRANCH_POSITIONS[id]?.left || 0,
+         y:Number.isFinite(Number(current.y)) ? Number(current.y) : Number.parseFloat(element.style.top) || MAP_BRANCH_POSITIONS[id]?.top || 0}
+      : {dx:Number(current.dx) || 0,dy:Number(current.dy) || 0};
+    mapNodeDrag = {kind,id,element,initial,startX:event.clientX,startY:event.clientY,lastX:event.clientX,lastY:event.clientY,moved:false};
+    element.classList.add('is-map-dragging');
+    if (kind === 'branch') element.style.zIndex = '12';
+    const pointerId = event.pointerId;
+
+    const move = (moveEvent) => {
+      if (!mapNodeDrag || moveEvent.pointerId !== pointerId) return;
+      if (!mapNodeDrag.moved && Math.hypot(moveEvent.clientX - mapNodeDrag.startX, moveEvent.clientY - mapNodeDrag.startY) < 4) return;
+      mapNodeDrag.moved = true;
+      const dx = (moveEvent.clientX - mapNodeDrag.lastX) / mapView.scale;
+      const dy = (moveEvent.clientY - mapNodeDrag.lastY) / mapView.scale;
+      mapNodeDrag.lastX = moveEvent.clientX;
+      mapNodeDrag.lastY = moveEvent.clientY;
+      const saved = state.mapLayout[id] || {};
+      if (kind === 'branch') {
+        saved.x = (Number.isFinite(Number(saved.x)) ? Number(saved.x) : initial.x) + dx;
+        saved.y = (Number.isFinite(Number(saved.y)) ? Number(saved.y) : initial.y) + dy;
+      } else {
+        saved.dx = (Number(saved.dx) || 0) + dx;
+        saved.dy = (Number(saved.dy) || 0) + dy;
+      }
+      state.mapLayout[id] = saved;
+      setDraggedBubblePosition(mapNodeDrag);
+      requestAnimationFrame(drawConnectors);
+    };
+
+    const finish = (finishEvent) => {
+      if (finishEvent.pointerId !== pointerId) return;
+      window.removeEventListener('pointermove', move);
+      window.removeEventListener('pointerup', finish);
+      window.removeEventListener('pointercancel', finish);
+      if (!mapNodeDrag) return;
+      const didMove = mapNodeDrag.moved;
+      element.classList.remove('is-map-dragging');
+      if (kind === 'branch') element.style.zIndex = '';
+      mapNodeDrag = null;
+      if (didMove) {
+        mapView.suppressClick = true;
+        window.setTimeout(() => { mapView.suppressClick = false; }, 500);
+        saveState();
+        commitHistoryChange();
+        drawConnectors();
+      }
+    };
+
+    window.addEventListener('pointermove', move);
+    window.addEventListener('pointerup', finish);
+    window.addEventListener('pointercancel', finish);
+  }
+
+  function connectorPath(parentRect, childRect) {
+    const parentCenter = {x:parentRect.left + parentRect.width / 2,y:parentRect.top + parentRect.height / 2};
+    const childCenter = {x:childRect.left + childRect.width / 2,y:childRect.top + childRect.height / 2};
+    const dx = childCenter.x - parentCenter.x;
+    const dy = childCenter.y - parentCenter.y;
+    const parentRatio = Math.max(Math.abs(dx) / Math.max(parentRect.width / 2, 1), Math.abs(dy) / Math.max(parentRect.height / 2, 1), 0.001);
+    const childRatio = Math.max(Math.abs(dx) / Math.max(childRect.width / 2, 1), Math.abs(dy) / Math.max(childRect.height / 2, 1), 0.001);
+    const sx = parentCenter.x + dx / parentRatio;
+    const sy = parentCenter.y + dy / parentRatio;
+    const tx = childCenter.x - dx / childRatio;
+    const ty = childCenter.y - dy / childRatio;
+    const horizontal = Math.abs(dx) >= Math.abs(dy);
+    const bend = Math.max(35, (horizontal ? Math.abs(tx - sx) : Math.abs(ty - sy)) * 0.34);
+    const c1x = horizontal ? sx + Math.sign(dx) * bend : sx;
+    const c1y = horizontal ? sy : sy + Math.sign(dy) * bend;
+    const c2x = horizontal ? tx - Math.sign(dx) * bend : tx;
+    const c2y = horizontal ? ty : ty - Math.sign(dy) * bend;
+    return `M ${sx.toFixed(1)} ${sy.toFixed(1)} C ${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${tx.toFixed(1)} ${ty.toFixed(1)}`;
+  }
+
   function initMapNavigation() {
     const stage = $('#mapStage');
     if (!stage || stage.dataset.navigationReady === 'true') return;
@@ -695,7 +827,29 @@
 
     stage.addEventListener('pointerdown', (event) => {
       if (event.button !== 0 && event.pointerType !== 'touch') return;
+      const dragHandle = event.target.closest('[data-map-drag]');
+      if (dragHandle) {
+        startMapBubbleDrag(event, dragHandle);
+        if (mapNodeDrag) return;
+      }
       if (event.target.closest('.map-controls, button, a, input, textarea, select, [data-select-id], [data-action]')) return;
+      mapPointers.set(event.pointerId, {x:event.clientX,y:event.clientY});
+      if (mapPointers.size >= 2) {
+        mapView.dragging = false;
+        mapView.pointerId = null;
+        stage.classList.remove('is-panning');
+        const points = Array.from(mapPointers.values()).slice(0,2);
+        const rect = stage.getBoundingClientRect();
+        const midX = (points[0].x + points[1].x) / 2 - rect.left;
+        const midY = (points[0].y + points[1].y) / 2 - rect.top;
+        mapPinch = {
+          distance:Math.hypot(points[1].x-points[0].x,points[1].y-points[0].y),
+          scale:mapView.scale,
+          anchorX:(midX-mapView.x)/mapView.scale,
+          anchorY:(midY-mapView.y)/mapView.scale
+        };
+        return;
+      }
       mapView.dragging = true;
       mapView.pointerId = event.pointerId;
       mapView.startX = event.clientX;
@@ -705,13 +859,30 @@
       stage.classList.add('is-panning');
       try { stage.setPointerCapture(event.pointerId); } catch (_) {}
     });
+
     stage.addEventListener('pointermove', (event) => {
+      if (mapPointers.has(event.pointerId)) mapPointers.set(event.pointerId, {x:event.clientX,y:event.clientY});
+      if (mapPinch && mapPointers.size >= 2) {
+        const points = Array.from(mapPointers.values()).slice(0,2);
+        const rect = stage.getBoundingClientRect();
+        const midX = (points[0].x + points[1].x) / 2 - rect.left;
+        const midY = (points[0].y + points[1].y) / 2 - rect.top;
+        const distance = Math.max(1, Math.hypot(points[1].x-points[0].x,points[1].y-points[0].y));
+        mapView.scale = Math.max(mapView.minScale, Math.min(mapView.maxScale, mapPinch.scale * distance / Math.max(1,mapPinch.distance)));
+        mapView.x = midX - mapPinch.anchorX * mapView.scale;
+        mapView.y = midY - mapPinch.anchorY * mapView.scale;
+        updateMapTransform();
+        return;
+      }
       if (!mapView.dragging || event.pointerId !== mapView.pointerId) return;
       mapView.x = mapView.originX + event.clientX - mapView.startX;
       mapView.y = mapView.originY + event.clientY - mapView.startY;
       updateMapTransform();
     });
+
     const stopDragging = (event) => {
+      mapPointers.delete(event.pointerId);
+      if (mapPointers.size < 2) mapPinch = null;
       if (event.pointerId !== mapView.pointerId) return;
       mapView.dragging = false;
       mapView.pointerId = null;
@@ -722,7 +893,7 @@
     stage.addEventListener('pointercancel', stopDragging);
     stage.addEventListener('wheel', (event) => {
       event.preventDefault();
-      zoomMapAt(event.deltaY < 0 ? 1.08 : 0.92, event.clientX, event.clientY);
+      zoomMapAt(event.deltaY < 0 ? 1.09 : 0.91, event.clientX, event.clientY);
     }, {passive:false});
 
     $('#mapZoomIn').addEventListener('click', () => zoomMapAt(1.16));
@@ -744,38 +915,50 @@
     svg.setAttribute('width', width);
     svg.setAttribute('height', height);
 
-    const rectInWorld = (element) => {
+    const toWorldRect = (element) => {
       const rect = element.getBoundingClientRect();
-      return {
-        left:(rect.left - worldRect.left) / scale,
-        top:(rect.top - worldRect.top) / scale,
-        width:rect.width / scale,
-        height:rect.height / scale
-      };
+      return {left:(rect.left-worldRect.left)/scale,top:(rect.top-worldRect.top)/scale,width:rect.width/scale,height:rect.height/scale};
     };
-    const root = rectInWorld(rootCard);
-    const rootCenter = {x:root.left + root.width / 2, y:root.top + root.height / 2};
-    const paths = $('.branch-card', $('#branches')).map((card) => {
+    const rootRect = toWorldRect(rootCard);
+    const globalPaths = $$('.branch-card', $('#branches')).map((card) => {
       const head = $('[data-connector-id]', card) || card;
-      const target = rectInWorld(head);
-      const targetCenter = {x:target.left + target.width / 2, y:target.top + target.height / 2};
-      const dx = targetCenter.x - rootCenter.x;
-      const dy = targetCenter.y - rootCenter.y;
-      const rootFactor = Math.min((root.width / 2) / Math.max(Math.abs(dx), 0.001), (root.height / 2) / Math.max(Math.abs(dy), 0.001));
-      const targetFactor = Math.min((target.width / 2) / Math.max(Math.abs(dx), 0.001), (target.height / 2) / Math.max(Math.abs(dy), 0.001));
-      const sx = rootCenter.x + dx * rootFactor;
-      const sy = rootCenter.y + dy * rootFactor;
-      const tx = targetCenter.x - dx * targetFactor;
-      const ty = targetCenter.y - dy * targetFactor;
-      const c1x = sx + (tx - sx) * 0.34;
-      const c1y = sy + (ty - sy) * 0.34;
-      const c2x = tx - (tx - sx) * 0.34;
-      const c2y = ty - (ty - sy) * 0.34;
-      return `<path d="M ${sx.toFixed(1)} ${sy.toFixed(1)} C ${c1x.toFixed(1)} ${c1y.toFixed(1)}, ${c2x.toFixed(1)} ${c2y.toFixed(1)}, ${tx.toFixed(1)} ${ty.toFixed(1)}" fill="none" stroke="#9bbbc1" stroke-width="3" stroke-linecap="round"/>`;
+      return `<path class="connector-main" d="${connectorPath(rootRect,toWorldRect(head))}"/>`;
     }).join('');
-    svg.innerHTML = paths;
-  }
+    svg.innerHTML = globalPaths;
 
+    // Chaque niveau visible est relié à son parent : section -> sous-section -> étiquette/article.
+    $$('.branch-card', $('#branches')).forEach((card) => {
+      const inner = $('.branch-connectors', card);
+      if (!inner) return;
+      const cardRect = card.getBoundingClientRect();
+      const cardWidth = Math.max(1, card.clientWidth);
+      const cardHeight = Math.max(1, card.clientHeight);
+      inner.setAttribute('viewBox', `0 0 ${cardWidth} ${cardHeight}`);
+      inner.setAttribute('width', cardWidth);
+      inner.setAttribute('height', cardHeight);
+      const toCardRect = (element) => {
+        const rect = element.getBoundingClientRect();
+        return {left:(rect.left-cardRect.left)/scale,top:(rect.top-cardRect.top)/scale,width:rect.width/scale,height:rect.height/scale};
+      };
+      const sectionNode = findNode(card.dataset.branchId);
+      if (!sectionNode) { inner.innerHTML = ''; return; }
+      const elements = new Map();
+      elements.set(sectionNode.id, $('[data-connector-id]', card) || card);
+      $$('.subtheme', card).forEach((group) => elements.set(group.dataset.subthemeId, $('.subtheme-head', group) || group));
+      $$('.leaf-node', card).forEach((leaf) => elements.set(leaf.dataset.selectId, leaf));
+      const paths = [];
+      const visit = (parentNode) => {
+        for (const child of parentNode.children || []) {
+          const parentElement = elements.get(parentNode.id);
+          const childElement = elements.get(child.id);
+          if (parentElement && childElement) paths.push(`<path class="connector-inner" d="${connectorPath(toCardRect(parentElement),toCardRect(childElement))}"/>`);
+          visit(child);
+        }
+      };
+      visit(sectionNode);
+      inner.innerHTML = paths.join('');
+    });
+  }
   function renderLegend() {
     const editor = $('#legendEditor');
     editor.innerHTML = state.legend.map((item, index) => `
@@ -1355,6 +1538,12 @@
 
   // Delegated interactions.
   document.addEventListener('click', (event) => {
+    if (mapView.suppressClick) {
+      mapView.suppressClick = false;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      return;
+    }
     const select = event.target.closest('[data-select-id]');
     const actionEl = event.target.closest('[data-action]');
     if (actionEl) {
@@ -1492,6 +1681,7 @@
   // Initialisation.
   try {
     state = loadState();
+    ensureMapLayout();
     loadAIConfig();
     resetHistory();
     renderAll();
