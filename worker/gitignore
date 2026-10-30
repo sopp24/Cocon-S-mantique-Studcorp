@@ -1,0 +1,20 @@
+# Dependances Node.js
+node_modules/
+
+# Configuration et secrets locaux
+.dev.vars
+.env
+.env.*
+!.env.example
+
+# Fichiers temporaires Wrangler
+.wrangler/
+
+# Journaux
+*.log
+npm-debug.log*
+
+# Fichiers macOS
+.DS_Store
+.AppleDouble
+.LSOverride
