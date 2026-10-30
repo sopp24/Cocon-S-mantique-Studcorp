@@ -8,9 +8,11 @@
   const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
   const html = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const safeColor = (value) => /^#[0-9a-f]{6}$/i.test(String(value || '')) ? value : '#4AA6B6';
-  const allowedTypes = () => [...new Set((state.legend || []).map((entry) => entry.type).concat(['root','theme','subtheme','volume','page','hub','article']))];
-  const typeLabel = (type) => (state.legend.find((entry) => entry.type === type) || {label: type === 'root' ? 'Centre de la carte' : type}).label;
-  const typeColor = (type) => safeColor((state.legend.find((entry) => entry.type === type) || {}).color || (type === 'root' ? '#2F6674' : '#4AA6B6'));
+  const DEFAULT_TYPE_LABELS = {root:'Centre de la carte',theme:'Thématique',subtheme:'Grande recherche',volume:'Volume de recherche',page:'Requête cible',hub:'Requête cible secondaire',article:'Page / article'};
+  const DEFAULT_TYPE_COLORS = {root:'#2F6674',theme:'#2F6674',subtheme:'#4AA6B6',volume:'#536DFF',page:'#28A745',hub:'#D65A0A',article:'#F3A477'};
+  const allowedTypes = () => [...new Set((state.legend || []).map((entry) => entry.type).concat(['theme','subtheme']))];
+  const typeLabel = (type) => (state.legend.find((entry) => entry.type === type) || {label: DEFAULT_TYPE_LABELS[type] || type}).label;
+  const typeColor = (type) => safeColor((state.legend.find((entry) => entry.type === type) || {}).color || DEFAULT_TYPE_COLORS[type] || '#4AA6B6');
   const slug = (s) => String(s || 'noeud').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'noeud';
   const makeId = (prefix = 'node') => `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
 
@@ -780,7 +782,7 @@
       <div class="legend-row" data-legend-type="${html(item.type)}">
         <label class="legend-color" style="--node-color:${safeColor(item.color)}" title="Couleur pour ${html(item.label)}"><input aria-label="Couleur ${html(item.label)}" type="color" value="${safeColor(item.color)}" data-legend-index="${index}" data-legend-field="color"></label>
         <input class="legend-label" aria-label="Libellé de légende" value="${html(item.label)}" data-legend-index="${index}" data-legend-field="label">
-        ${['theme','subtheme','volume','page','hub','article'].includes(item.type) ? '<span></span>' : `<button class="legend-remove" type="button" data-action="remove-legend" data-legend-type="${html(item.type)}" title="Supprimer cette entrée" aria-label="Supprimer cette entrée">×</button>`}
+        <button class="legend-remove" type="button" data-action="remove-legend" data-legend-type="${html(item.type)}" title="Supprimer « ${html(item.label)} »" aria-label="Supprimer ${html(item.label)}">×</button>
       </div>`).join('');
   }
 
@@ -800,7 +802,7 @@
       body.innerHTML = '<div class="empty-state"><span class="empty-icon">↖</span><strong>Sélectionne une étiquette</strong><p>Ses informations, ses liens et ses notes apparaîtront ici.</p></div>';
       return;
     }
-    const options = allowedTypes().filter((t) => t !== 'root').map((type) => `<option value="${html(type)}" ${node.type === type ? 'selected' : ''}>${html(typeLabel(type))}</option>`).join('');
+    const options = [...new Set(allowedTypes().concat(node.type || []))].filter((t) => t !== 'root').map((type) => `<option value="${html(type)}" ${node.type === type ? 'selected' : ''}>${html(typeLabel(type))}</option>`).join('');
     const typeField = node.type === 'root' ? '' : `<div class="field"><label for="ins-type">Type de nœud</label><select id="ins-type" data-inspector-field="type">${options}</select></div>`;
     const meta = node.meta || {};
     const showMeta = node.type === 'article' || node.type === 'page' || node.type === 'hub' || node.type === 'volume' || Object.keys(meta).length > 0;
@@ -1015,12 +1017,21 @@
   }
 
   function removeLegendEntry(type) {
-    if (['theme','subtheme','volume','page','hub','article'].includes(type)) return;
     const item = state.legend.find((x) => x.type === type);
-    if (!item || !window.confirm(`Supprimer l’entrée « ${item.label} » de la légende ? Les étiquettes concernées passeront en « Article / contenu ».`)) return;
+    if (!item) return;
+    const structuralType = ['theme','subtheme'].includes(type);
+    const impact = structuralType
+      ? 'Les sections et sous-sections concernées resteront en place et conserveront leur structure, avec leur couleur par défaut.'
+      : type === 'article'
+        ? 'Les étiquettes resteront des pages ou articles et utiliseront leur couleur par défaut.'
+        : 'Les étiquettes associées seront reclassées dans la catégorie « Page / article ».';
+    if (!window.confirm(`Supprimer l’entrée « ${item.label} » de la légende ? ${impact}`)) return;
     state.legend = state.legend.filter((x) => x.type !== type);
-    allNodes().forEach((node) => { if (node.type === type) node.type = 'article'; });
+    if (!structuralType && type !== 'article') {
+      allNodes().forEach((node) => { if (node.type === type) node.type = 'article'; });
+    }
     renderAll();
+    toast(`Entrée « ${item.label} » supprimée de la légende.`);
   }
 
   function updateAIMode() {
