@@ -4,7 +4,7 @@ window.STUDCORP_INITIAL_DATA = {
     "id": "root",
     "label": "STUDCORP",
     "type": "root",
-    "note": "Carte éditoriale STUDCORP — structure reconstruite à partir du tableau blanc et des 81 lignes du tableur.",
+    "note": "Carte éditoriale STUDCORP — structure reconstruite à partir du tableau blanc et du tableur.",
     "children": [
       {
         "id": "section-recherche-de-logement",
