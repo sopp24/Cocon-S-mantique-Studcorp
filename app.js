@@ -233,7 +233,8 @@
     }
     mergedRoot.children = mergedRoot.children || [];
     const legend = mergeKeyedList(baseState && baseState.legend, localState.legend, remoteState.legend, 'type');
-    return {...deepClone(remoteState), ...deepClone(localState), root: mergedRoot, legend};
+    const mapLayout = mergeThree(baseState && baseState.mapLayout || {}, localState.mapLayout || {}, remoteState.mapLayout || {});
+    return {...deepClone(remoteState), ...deepClone(localState), root: mergedRoot, legend, mapLayout};
   }
 
   function renderExternalState() {
