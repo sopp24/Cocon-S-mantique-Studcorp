@@ -162,8 +162,8 @@ function parseFeed(xml, expectedSource, now) {
       .replace(/\b(lire la suite|lire l'article|en savoir plus)\b.*$/i, "").trim();
     const summaryNorm = normalize(summary);
     const titleNorm = normalize(title);
-    const sourceNorm = normalize(source);
-    if (!summary || summaryNorm === titleNorm || (summaryNorm.startsWith(titleNorm) && summaryNorm.slice(titleNorm.length).trim() === sourceNorm)) {
+    const summaryTail = summaryNorm.startsWith(titleNorm) ? summaryNorm.slice(titleNorm.length).trim() : "";
+    if (!summary || summaryNorm === titleNorm || (summaryTail && summaryTail.split(" ").length <= 5)) {
       summary = "";
     }
     if (summary.length > 260) summary = summary.slice(0, 257).trimEnd() + "…";
