@@ -1,3 +1,4 @@
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = null;
 window.STUDCORP_WEEKLY_NEWS = [
   {
     source:"L'Étudiant", date:"30 oct. 2026", topic:"Bourses et pouvoir d’achat",
