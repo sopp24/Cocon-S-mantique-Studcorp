@@ -617,7 +617,6 @@
       </div>` : '';
     return `
       <article class="branch-card${nodeDimClass(section)}" data-branch-id="${html(section.id)}" style="--node-color:${color}">
-        <svg class="branch-connectors" aria-hidden="true"></svg>
         <header class="branch-head" data-connector-id="${html(section.id)}">
           <button class="branch-toggle" type="button" data-action="toggle-node" data-node-id="${html(section.id)}" title="${isOpen ? 'Replier la section' : 'Ouvrir la section'}">${isOpen ? '⌄' : '›'}</button>
           <button class="branch-name" type="button" data-select-id="${html(section.id)}" data-map-drag="branch" data-map-node-id="${html(section.id)}" title="Faire glisser pour déplacer cette branche">${titleWithNote(section)}</button>
@@ -940,39 +939,6 @@
       return `<path class="connector-main" d="${connectorPath(rootRect,toWorldRect(head))}"/>`;
     }).join('');
     svg.innerHTML = globalPaths;
-
-    // Chaque niveau visible est relié à son parent : section -> sous-section -> étiquette/article.
-    $$('.branch-card', $('#branches')).forEach((card) => {
-      const inner = $('.branch-connectors', card);
-      if (!inner) return;
-      const cardRect = card.getBoundingClientRect();
-      const cardWidth = Math.max(1, card.clientWidth);
-      const cardHeight = Math.max(1, card.clientHeight);
-      inner.setAttribute('viewBox', `0 0 ${cardWidth} ${cardHeight}`);
-      inner.setAttribute('width', cardWidth);
-      inner.setAttribute('height', cardHeight);
-      const toCardRect = (element) => {
-        const rect = element.getBoundingClientRect();
-        return {left:(rect.left-cardRect.left)/scale,top:(rect.top-cardRect.top)/scale,width:rect.width/scale,height:rect.height/scale};
-      };
-      const sectionNode = findNode(card.dataset.branchId);
-      if (!sectionNode) { inner.innerHTML = ''; return; }
-      const elements = new Map();
-      elements.set(sectionNode.id, $('[data-connector-id]', card) || card);
-      $$('.subtheme', card).forEach((group) => elements.set(group.dataset.subthemeId, $('.subtheme-head', group) || group));
-      $$('.leaf-node', card).forEach((leaf) => elements.set(leaf.dataset.selectId, leaf));
-      const paths = [];
-      const visit = (parentNode) => {
-        for (const child of parentNode.children || []) {
-          const parentElement = elements.get(parentNode.id);
-          const childElement = elements.get(child.id);
-          if (parentElement && childElement) paths.push(`<path class="connector-inner" d="${connectorPath(toCardRect(parentElement),toCardRect(childElement))}"/>`);
-          visit(child);
-        }
-      };
-      visit(sectionNode);
-      inner.innerHTML = paths.join('');
-    });
   }
   function renderLegend() {
     const editor = $('#legendEditor');
