@@ -44,7 +44,7 @@ const RELEVANCE_SIGNALS = [
 ];
 
 const HIGH_SCHOOL_ONLY = /\b(lycee|colleges?|brevet|terminale|seconde|premiere|bac general|bac professionnel)\b/;
-const NON_NEWS_TITLE = /\b(offre d emploi|offres? (?:d emploi|de stage)|job dating|forum jeunesse|forum emploi|salon de l emploi|stage alternance auxiliaire|h\/f)\b/;
+const NON_NEWS_TITLE = /\b(offre d emploi|\d+ offres?|f h|h f|stage alternance|job dating|forum jeunesse|forum emploi|salon de l emploi)\b/;
 const STOP_WORDS = new Set([
   "avec","dans","pour","sans","sous","chez","entre","leurs","leur","cette",
   "cela","mais","plus","moins","apres","avant","contre","depuis","selon",
@@ -148,11 +148,7 @@ function parseFeed(xml, expectedSource, now) {
 
   items.forEach(function (item, position) {
     let title = tagValue(item, "title").trim();
-    const sourceSuffixes = [expectedSource.name, expectedSource.name.replace(" Étudiant", ""), expectedSource.name + " Emploi"];
-    for (const suffix of sourceSuffixes) {
-      const ending = " - " + suffix;
-      if (title.toLowerCase().endsWith(ending.toLowerCase())) title = title.slice(0, -ending.length).trim();
-    }
+    title = title.replace(/\s+[-–—|]\s+(?:L'?Etudiant|Le Figaro Etudiant|Le Parisien(?: Etudiant)?|Ouest-France(?: Emploi)?|Le Monde(?:\.fr)?|Franceinfo|Les Echos|Le Point|Libération|Mediapart|L'Express|Sud Ouest|France 24|Le Nouvel Obs)\s*$/i, "").trim();
     if (NON_NEWS_TITLE.test(normalize(title))) return;
     const link = tagValue(item, "link");
     const publishedAt = new Date(tagValue(item, "pubDate"));
@@ -215,42 +211,6 @@ async function fetchSource(source, now) {
   ]);
   return results.filter(function (result) { return result.status === "fulfilled"; })
     .flatMap(function (result) { return result.value; });
-}
-
-function metaContent(html, propertyName) {
-  const tags = [...html.matchAll(/<meta\b[^>]*>/gi)].map(function (match) { return match[0]; });
-  for (const tag of tags) {
-    const name = (tag.match(/\b(?:name|property)=["']([^"']+)["']/i) || [])[1] || "";
-    if (name.toLowerCase() !== propertyName.toLowerCase()) continue;
-    const content = (tag.match(/\bcontent=["']([^"']*)["']/i) || [])[1] || "";
-    if (content) return cleanXmlText(content);
-  }
-  return "";
-}
-
-async function enrichSummary(story) {
-  try {
-    const response = await fetch(story.url, {
-      headers: { "User-Agent": "STUDCORP-Student-News-Monitor/1.0", "Accept": "text/html,application/xhtml+xml" },
-      signal: AbortSignal.timeout(12000),
-      redirect: "follow"
-    });
-    if (response.ok) {
-      const html = await response.text();
-      const description = metaContent(html, "og:description") ||
-        metaContent(html, "description") || metaContent(html, "twitter:description");
-      if (description && normalize(description) !== normalize(story.title)) {
-        story.summary = description.length > 260 ? description.slice(0, 257).trimEnd() + "…" : description;
-        return story;
-      }
-    }
-  } catch (error) {
-    console.warn("Résumé indisponible pour " + story.source + " : " + (error?.message || error));
-  }
-  if (!story.summary) {
-    story.summary = "Actualité retenue pour sa pertinence avec les études supérieures. Consulte l’article source pour les informations détaillées.";
-  }
-  return story;
 }
 
 function articleTokens(title) {
@@ -323,10 +283,9 @@ async function main() {
     throw new Error("Seulement " + selected.length + " actualités exploitables. news.js est conservé sans modification.");
   }
 
-  const enriched = await Promise.all(selected.map(enrichSummary));
   const output = [
     "window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = " + JSON.stringify(now.toISOString()) + ";",
-    "window.STUDCORP_WEEKLY_NEWS = " + JSON.stringify(enriched, null, 2) + ";",
+    "window.STUDCORP_WEEKLY_NEWS = " + JSON.stringify(selected, null, 2) + ";",
     ""
   ].join("\n");
 
