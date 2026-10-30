@@ -1033,7 +1033,7 @@
       <article class="news-item${compact ? ' news-item-compact' : ''}">
         <div class="news-item-meta"><span>${html(story.source)}</span><time>${html(story.date)}</time></div>
         <a href="${html(story.url)}" target="_blank" rel="noopener noreferrer">${html(story.title)}</a>
-        <p>${html(story.summary)}</p>
+        ${story.summary ? `<p>${html(story.summary)}</p>` : ''}
         ${compact ? '' : `<span class="news-topic">${html(story.topic)}</span>`}
       </article>`;
     highlights.innerHTML = stories.slice(0, 3).map((story, index) => card(story, index, true)).join('');
