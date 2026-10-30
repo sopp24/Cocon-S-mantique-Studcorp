@@ -682,7 +682,11 @@
       card.style.top = `${position.top}px`;
     });
     world.style.width = `${MAP_WORLD_WIDTH}px`;
-    world.style.height = `${Math.max(MAP_WORLD_BASE_HEIGHT, 2350 + Math.ceil(extraIndex / 2) * 520)}px`;
+    const contentBottom = cards.reduce((bottom, card) => {
+      const top = Number.parseFloat(card.style.top) || 0;
+      return Math.max(bottom, top + card.offsetHeight + 110);
+    }, MAP_WORLD_BASE_HEIGHT);
+    world.style.height = `${Math.max(contentBottom, 2350 + Math.ceil(extraIndex / 2) * 520)}px`;
   }
 
   function updateMapTransform() {
