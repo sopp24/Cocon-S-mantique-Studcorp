@@ -1,6 +1,9 @@
 name: Actualiser les actualités étudiantes
 
 on:
+  push:
+    paths:
+      - '.github/workflows/refresh-weekly-news.yml'
   schedule:
     - cron: "0 0,12 * * *"
       timezone: "Europe/Paris"
