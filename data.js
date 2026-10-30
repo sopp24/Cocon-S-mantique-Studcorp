@@ -14,7 +14,7 @@ window.STUDCORP_INITIAL_DATA = {
         "children": [
           {
             "id": "keywords-recherche-de-logement",
-            "label": "Mots-clés du tableau blanc",
+            "label": "Grandes recherches",
             "type": "subtheme",
             "note": "Requêtes et volumes déjà présents dans la carte initiale.",
             "children": [
@@ -196,7 +196,7 @@ window.STUDCORP_INITIAL_DATA = {
         "children": [
           {
             "id": "keywords-complementaire-sante-etudiante",
-            "label": "Mots-clés du tableau blanc",
+            "label": "Grandes recherches",
             "type": "subtheme",
             "note": "Requêtes et volumes déjà présents dans la carte initiale.",
             "children": [
@@ -390,7 +390,7 @@ window.STUDCORP_INITIAL_DATA = {
           },
           {
             "id": "keywords-assurance-sante-mobilite-etudiant",
-            "label": "Mots-clés du tableau blanc",
+            "label": "Grandes recherches",
             "type": "subtheme",
             "note": "Requêtes et volumes déjà présents dans la carte initiale.",
             "children": [
@@ -1344,7 +1344,7 @@ window.STUDCORP_INITIAL_DATA = {
         "children": [
           {
             "id": "keywords-assurance-responsabilite-civile-etudiant",
-            "label": "Mots-clés du tableau blanc",
+            "label": "Grandes recherches",
             "type": "subtheme",
             "note": "Requêtes et volumes déjà présents dans la carte initiale.",
             "children": [
@@ -1583,7 +1583,7 @@ window.STUDCORP_INITIAL_DATA = {
         "children": [
           {
             "id": "keywords-habitation",
-            "label": "Mots-clés du tableau blanc",
+            "label": "Grandes recherches",
             "type": "subtheme",
             "note": "Requêtes et volumes déjà présents dans la carte initiale.",
             "children": [
