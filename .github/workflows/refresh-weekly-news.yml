@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/refresh-weekly-news.yml'
+      - '.github/scripts/refresh-weekly-news.mjs'
   schedule:
     - cron: "0 0,12 * * *"
       timezone: "Europe/Paris"
