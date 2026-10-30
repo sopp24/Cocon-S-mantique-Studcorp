@@ -975,6 +975,8 @@
   function renderInspector() {
     const body = $('#inspectorBody');
     const node = selectedNodeId ? findNode(selectedNodeId) : null;
+    const panel = $('#inspectorPanel');
+    if (panel) panel.hidden = !node;
     if (!node) {
       body.innerHTML = '<div class="empty-state"><span class="empty-icon">↖</span><strong>Sélectionne une étiquette</strong><p>Ses informations, ses liens et ses notes apparaîtront ici.</p></div>';
       return;
@@ -1010,10 +1012,28 @@
       </div>`;
   }
 
+  function renderWeeklyNews() {
+    const stories = Array.isArray(window.STUDCORP_WEEKLY_NEWS) ? window.STUDCORP_WEEKLY_NEWS : [];
+    const highlights = $('#weeklyNewsHighlights');
+    const list = $('#weeklyNewsList');
+    if (!highlights || !list || !stories.length) return;
+    const card = (story, index, compact = false) => `
+      <article class="news-item${compact ? ' news-item-compact' : ''}">
+        <div class="news-item-meta"><span>${html(story.source)}</span><time>${html(story.date)}</time></div>
+        <a href="${html(story.url)}" target="_blank" rel="noopener noreferrer">${html(story.title)}</a>
+        <p>${html(story.summary)}</p>
+        ${compact ? '' : `<span class="news-topic">${html(story.topic)}</span>`}
+      </article>`;
+    highlights.innerHTML = stories.slice(0, 3).map((story, index) => card(story, index, true)).join('');
+    list.innerHTML = stories.slice(0, 10).map((story, index) => `
+      <div class="news-ranked"><span class="news-rank">${index + 1}</span>${card(story, index)}</div>`).join('');
+  }
+
   function renderAll() {
     renderMap();
     renderLegend();
     renderInspector();
+    renderWeeklyNews();
     updateAIMode();
     saveState();
   }
@@ -1629,6 +1649,8 @@
   $('#importBtn').addEventListener('click', () => $('#importInput').click());
   $('#importInput').addEventListener('change', (event) => importStateFile(event.target.files && event.target.files[0]));
   $('#clearSelectionBtn').addEventListener('click', () => { selectedNodeId = null; renderInspector(); renderMap(); });
+  $('#inspectorPanel').addEventListener('pointerdown', (event) => event.stopPropagation());
+  $('#inspectorPanel').addEventListener('wheel', (event) => event.stopPropagation(), {passive:true});
   $('#toggleAIPanel').addEventListener('click', () => {
     $('#aiPanel').scrollIntoView({behavior:'smooth',block:'center'});
     $('#aiPanel').classList.add('ai-highlight');

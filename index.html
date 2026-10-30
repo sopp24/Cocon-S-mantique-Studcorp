@@ -57,7 +57,25 @@
         </div>
         <div class="map-counts" id="mapCounts"></div>
       </div>
+      <section class="panel legend-panel" aria-labelledby="legendTitle">
+        <div class="panel-heading">
+          <div><div class="eyebrow">REPÈRES VISUELS</div><h2 id="legendTitle">Légende</h2></div>
+          <button class="icon-button" id="addLegendBtn" type="button" title="Ajouter une entrée à la légende" aria-label="Ajouter une entrée à la légende">＋</button>
+        </div>
+        <p class="panel-help">Modifie directement un libellé ou sa couleur. Utilise ＋ pour ajouter une entrée et × pour supprimer n’importe quelle légende, y compris celles d’origine.</p>
+        <div id="legendEditor" class="legend-editor"></div>
+      </section>
       <div class="map-stage" id="mapStage" aria-label="Carte mentale navigable. Faites glisser pour vous déplacer et utilisez la molette ou les boutons pour zoomer.">
+        <section class="panel inspector-panel" aria-labelledby="inspectorTitle">
+        <div class="panel-heading">
+          <div><div class="eyebrow">ÉDITION</div><h2 id="inspectorTitle">Fiche de l’étiquette</h2></div>
+          <button class="icon-button" id="clearSelectionBtn" type="button" title="Fermer la fiche" aria-label="Fermer la fiche">×</button>
+        </div>
+        <div id="inspectorBody" class="inspector-body">
+          <div class="empty-state"><span class="empty-icon">↖</span><strong>Sélectionne une étiquette</strong><p>Ses informations, ses liens et ses notes apparaîtront ici.</p></div>
+        </div>
+      </section>
+
         <div class="map-controls" role="group" aria-label="Navigation dans la carte mentale">
           <button class="map-control-button" id="mapZoomOut" type="button" aria-label="Dézoomer" title="Dézoomer">−</button>
           <span class="map-zoom-level" id="mapZoomLevel" aria-live="polite">58%</span>
@@ -75,25 +93,21 @@
     </section>
 
     <aside class="side-column" id="sideColumn">
-      <section class="panel legend-panel" aria-labelledby="legendTitle">
-        <div class="panel-heading">
-          <div><div class="eyebrow">REPÈRES VISUELS</div><h2 id="legendTitle">Légende</h2></div>
-          <button class="icon-button" id="addLegendBtn" type="button" title="Ajouter une entrée à la légende" aria-label="Ajouter une entrée à la légende">＋</button>
-        </div>
-        <p class="panel-help">Modifie directement un libellé ou sa couleur. Utilise ＋ pour ajouter une entrée et × pour supprimer n’importe quelle légende, y compris celles d’origine.</p>
-        <div id="legendEditor" class="legend-editor"></div>
-      </section>
 
-      <section class="panel inspector-panel" aria-labelledby="inspectorTitle">
-        <div class="panel-heading">
-          <div><div class="eyebrow">ÉDITION</div><h2 id="inspectorTitle">Fiche de l’étiquette</h2></div>
-          <button class="icon-button" id="clearSelectionBtn" type="button" title="Fermer la fiche" aria-label="Fermer la fiche">×</button>
-        </div>
-        <div id="inspectorBody" class="inspector-body">
-          <div class="empty-state"><span class="empty-icon">↖</span><strong>Sélectionne une étiquette</strong><p>Ses informations, ses liens et ses notes apparaîtront ici.</p></div>
-        </div>
-      </section>
 
+      <section class="panel news-panel" id="weeklyNewsPanel" aria-labelledby="weeklyNewsTitle">
+        <div class="panel-heading">
+          <div><div class="eyebrow">VEILLE ÉTUDIANTE · 7 JOURS</div><h2 id="weeklyNewsTitle">Les actus à retenir</h2></div>
+          <span class="news-period">23–30 oct. 2026</span>
+        </div>
+        <p class="panel-help">Trois sujets prioritaires, puis la sélection complète des dix informations étudiantes de la semaine.</p>
+        <div id="weeklyNewsHighlights" class="news-highlights"></div>
+        <details class="news-more">
+          <summary>Voir les 10 actualités et leurs sources</summary>
+          <div id="weeklyNewsList" class="news-list"></div>
+        </details>
+        <p class="news-method">Sélection éditoriale selon l’impact sur les études, la vie de campus, le budget et l’insertion. Le classement ne prétend pas mesurer les audiences privées des médias.</p>
+      </section>
       <section class="panel ai-panel" id="aiPanel" aria-labelledby="aiTitle">
         <div class="panel-heading">
           <div><div class="eyebrow">ASSISTANT ÉDITORIAL</div><h2 id="aiTitle">Agent IA</h2></div>
@@ -124,6 +138,7 @@
   </main>
   <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
   <script src="data.js"></script>
+  <script src="news.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
