@@ -497,3 +497,65 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
   .side-column > .ai-panel { grid-column: auto; }
   .side-column > .news-panel { grid-column: auto; }
 }
+
+
+/* Ajustements du tableau de bord : place utile à l'agent IA et lecture claire des actus. */
+.side-column {
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.28fr);
+  align-items: start;
+  gap: 16px;
+}
+.side-column > .news-panel { grid-column: 1; min-width: 0; }
+.side-column > .ai-panel { grid-column: 2; min-width: 0; }
+.side-column > .storage-note { grid-column: 1 / -1; }
+.ai-panel { min-height: 100%; }
+.ai-chat {
+  max-height: 640px;
+  padding: 0 16px 14px;
+  gap: 13px;
+}
+.chat-message { font-size: 11px; line-height: 1.6; }
+.chat-message strong { font-size: 11px; }
+.chat-message p { font-size: 11px; line-height: 1.6; }
+.ai-form { padding: 14px 16px 16px; }
+.ai-form textarea { min-height: 116px; font-size: 12px; line-height: 1.5; }
+.ai-form-bottom > span { max-width: 300px; font-size: 10px; }
+.proposal-box { padding: 15px 16px; }
+.news-highlights { gap: 0; }
+.news-item-compact {
+  padding: 12px 0;
+}
+.news-item-compact a { font-size: 12px; line-height: 1.45; }
+.news-item-compact p { font-size: 10px; line-height: 1.5; }
+.news-list { max-height: 650px; overflow-y: auto; overscroll-behavior: contain; }
+.news-more summary { padding: 4px 0; }
+.news-method { font-size: 9px; line-height: 1.5; }
+.inspector-panel { max-height: min(76%, 780px); }
+@media (max-width: 1050px) {
+  .side-column {
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.18fr);
+    gap: 12px;
+  }
+  .side-column > .news-panel,
+  .side-column > .ai-panel { grid-column: auto; }
+  .ai-chat { max-height: 520px; }
+}
+@media (max-width: 740px) {
+  .side-column { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .side-column > .news-panel,
+  .side-column > .ai-panel,
+  .side-column > .storage-note { grid-column: 1; }
+  .ai-chat { max-height: 440px; padding: 0 12px 12px; }
+  .ai-form { padding: 12px; }
+  .ai-form textarea { min-height: 96px; }
+  .ai-form-bottom { align-items: flex-end; }
+  .ai-form-bottom > span { max-width: 58%; }
+  .news-list { max-height: none; overflow: visible; }
+  .news-item-compact a { font-size: 11px; }
+  .legend-editor { justify-content: flex-start; }
+  .inspector-panel { max-height: 66%; }
+}
+@media (min-width: 741px) and (max-width: 1050px) {
+  .side-column > .ai-panel { grid-column: 2; }
+  .side-column > .news-panel { grid-column: 1; }
+}
