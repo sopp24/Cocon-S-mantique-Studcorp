@@ -44,23 +44,23 @@
   const MISSING = Symbol('missing-value');
 
   // Navigation radiale : surface resserrée, panoramique, zoom et déplacement des bulles.
-  const MAP_WORLD_WIDTH = 2600;
-  const MAP_WORLD_BASE_HEIGHT = 3400;
-  const MAP_ROOT_LEFT = 980;
-  const MAP_ROOT_TOP = 1320;
-  const MAP_ROOT_WIDTH = 640;
-  const mapView = {x:0, y:0, scale:0.66, minScale:0.16, maxScale:1.6, initialized:false, dragging:false, pointerId:null, startX:0, startY:0, originX:0, originY:0, suppressClick:false, lastStageWidth:0, lastStageHeight:0};
+  const MAP_WORLD_WIDTH = 2280;
+  const MAP_WORLD_BASE_HEIGHT = 2800;
+  const MAP_ROOT_LEFT = 780;
+  const MAP_ROOT_TOP = 850;
+  const MAP_ROOT_WIDTH = 700;
+  const mapView = {x:0, y:0, scale:0.82, minScale:0.16, maxScale:1.6, initialized:false, dragging:false, pointerId:null, startX:0, startY:0, originX:0, originY:0, suppressClick:false, lastStageWidth:0, lastStageHeight:0};
   const mapPointers = new Map();
   let mapPinch = null;
   let mapNodeDrag = null;
   const MAP_BRANCH_POSITIONS = {
-    'section-recherche-de-logement': {left:80, top:100},
-    'section-responsabilite-civile': {left:980, top:70},
-    'section-complementaire-sante': {left:1840, top:100},
-    'section-habitation': {left:25, top:1320},
-    'section-sante-mobilite': {left:1915, top:1320},
-    'section-hors-piliers-vie-etudiante-carriere': {left:100, top:2450},
-    'section-hors-piliers-actualites-studcorp': {left:1850, top:2450}
+    'section-recherche-de-logement': {left:20, top:45},
+    'section-responsabilite-civile': {left:780, top:45},
+    'section-complementaire-sante': {left:1540, top:45},
+    'section-habitation': {left:20, top:850},
+    'section-sante-mobilite': {left:1540, top:850},
+    'section-hors-piliers-vie-etudiante-carriere': {left:20, top:1900},
+    'section-hors-piliers-actualites-studcorp': {left:1540, top:1900}
   };
 
   function ensureMapLayout() {
@@ -661,7 +661,7 @@
       const id = card.dataset.branchId;
       const saved = state.mapLayout[id];
       const known = MAP_BRANCH_POSITIONS[id];
-      const fallback = {left:100 + (extraIndex % 2 ? 1750 : 0), top:2920 + Math.floor(extraIndex / 2) * 520};
+      const fallback = {left:20 + (extraIndex % 2 ? 1520 : 0), top:2350 + Math.floor(extraIndex / 2) * 520};
       const position = saved && Number.isFinite(Number(saved.x)) && Number.isFinite(Number(saved.y))
         ? {left:Number(saved.x),top:Number(saved.y)}
         : (known || fallback);
@@ -670,7 +670,7 @@
       card.style.top = `${position.top}px`;
     });
     world.style.width = `${MAP_WORLD_WIDTH}px`;
-    world.style.height = `${Math.max(MAP_WORLD_BASE_HEIGHT, 2920 + Math.ceil(extraIndex / 2) * 520)}px`;
+    world.style.height = `${Math.max(MAP_WORLD_BASE_HEIGHT, 2350 + Math.ceil(extraIndex / 2) * 520)}px`;
   }
 
   function updateMapTransform() {
@@ -683,9 +683,9 @@
 
   function getResponsiveInitialScale() {
     const width = $('#mapStage')?.clientWidth || window.innerWidth;
-    if (width <= 740) return 0.62;
-    if (width <= 1050) return 0.64;
-    return 0.68;
+    if (width <= 740) return 0.72;
+    if (width <= 1050) return 0.80;
+    return 0.88;
   }
 
   function rememberMapViewportSize(stage) {

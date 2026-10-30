@@ -59,23 +59,24 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .count-chip strong { color: var(--ming); }
 .map-stage { position: relative; isolation: isolate; border: 1px solid #dce8e9; background: radial-gradient(circle at 1px 1px, #d8e6e7 1px, transparent 1.25px) 0 0 / 20px 20px, #f9fcfc; border-radius: 19px; height: clamp(720px, 88vh, 1200px); min-height: 720px; padding: 0; overflow: hidden; cursor: grab; touch-action: none; user-select: none; }
 .map-stage.is-panning { cursor: grabbing; }
-.map-world { position: absolute; left: 0; top: 0; width: 2600px; height: 3400px; transform: translate(0,0) scale(.56); transform-origin: 0 0; z-index: 1; will-change: transform; }
+.map-world { position: absolute; left: 0; top: 0; width: 2280px; height: 2800px; transform: translate(0,0) scale(.82); transform-origin: 0 0; z-index: 1; will-change: transform; }
 .map-controls { position: absolute; top: 13px; right: 13px; z-index: 20; display: flex; align-items: center; gap: 5px; padding: 6px; border: 1px solid #dce8e9; border-radius: 11px; background: rgba(255,255,255,.96); box-shadow: 0 3px 12px rgba(33,78,89,.09); }
 .map-control-button { min-width: 32px; height: 31px; padding: 0 9px; border: 1px solid #dce8e9; border-radius: 7px; background: #fff; color: var(--ming); font-size: 15px; font-weight: 750; line-height: 1; cursor: pointer; }
 .map-control-button:hover { background: #eef6f6; border-color: #b9d3d7; }
 .map-control-wide { font-size: 10px; font-weight: 700; }
 .map-zoom-level { min-width: 42px; text-align: center; color: #617d84; font-size: 10px; font-weight: 750; font-variant-numeric: tabular-nums; }
 .connectors { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 0; }
-.root-wrap { display: flex; flex-direction: column; align-items: center; position: absolute; left: 980px; top: 1320px; width: 640px; z-index: 100; padding-bottom: 0; }
-.root-card { border: 2px solid var(--ming); background: #fff; border-radius: 18px; min-width: 300px; max-width: min(94%, 560px); padding: 20px 28px; box-shadow: 0 8px 18px rgba(47,102,116,.12); text-align: center; cursor: pointer; }
-.root-card .node-title { font-size: 23px; font-weight: 850; letter-spacing: -.3px; color: var(--ming); }
+.root-wrap { display: flex; flex-direction: column; align-items: center; position: absolute; left: 780px; top: 850px; width: 700px; z-index: 100; padding-bottom: 0; }
+.root-card { border: 2px solid var(--ming); background: #fff; border-radius: 20px; min-width: 380px; max-width: min(94%, 640px); padding: 24px 34px; box-shadow: 0 8px 18px rgba(47,102,116,.12); text-align: center; cursor: pointer; }
+.root-card .node-title { font-size: 27px; font-weight: 850; letter-spacing: -.3px; color: var(--ming); }
 .root-card .node-subtitle { font-size: 12px; color: #7d9296; margin-top: 6px; }
 .root-mark { width: 22px; height: 22px; display: inline-block; vertical-align: -5px; margin-right: 5px; border-radius: 7px; background: var(--half-baked); color: #25545f; font-size: 14px; line-height: 22px; }
 .root-note { color: #91a3a6; font-size: 10px; margin: 7px 0 0; }
 .branches { position: absolute; inset: 0; z-index: 2; display: block; }
-.branch-card { --node-color: var(--ming); position: absolute; width: 660px; max-width: none; min-width: 0; border: 1px solid #d7e3e4; border-top: 4px solid var(--node-color); border-radius: 17px; overflow: visible; background: rgba(255,255,255,.98); box-shadow: 0 5px 16px rgba(33,78,89,.065); }
+.branch-card { --node-color: var(--ming); position: absolute; width: 740px; max-width: none; min-width: 0; border: 1px solid #d7e3e4; border-top: 4px solid var(--node-color); border-radius: 18px; overflow: visible; background: rgba(255,255,255,.98); box-shadow: 0 5px 16px rgba(33,78,89,.065); }
 .branch-connectors { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 1; }
-.branch-head, .branch-body { position: relative; z-index: 2; }
+.branch-head, .branch-body { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 14px 18px; padding: 18px 18px 20px; }
+.branch-body > .add-inline { grid-column: 1 / -1; }
 .branch-connectors .connector-inner { fill:none; stroke:#b5cbd0; stroke-width:2.2; stroke-linecap:round; opacity:.95; }
 .branch-head { display: flex; gap: 10px; align-items: flex-start; padding: 16px 15px 16px 17px; background: color-mix(in srgb, var(--node-color) 7%, white); border-bottom: 1px solid #e8eff0; }
 .branch-toggle { min-width: 22px; width: 22px; height: 22px; border: 0; background: transparent; color: var(--node-color); border-radius: 6px; display: grid; place-items: center; flex: 0 0 auto; padding: 0; font-size: 14px; }
@@ -96,15 +97,16 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 .subtheme[data-subtheme-id^="keywords-"] .subtheme-title { color: #397f8c; }
 .subtheme-tools { display: flex; gap: 0; flex: 0 0 auto; }
 .subtheme-tools .icon-button { width: 22px; height: 24px; font-size: 13px; }
-.leaf-list { border-left: 1px solid #d1e4e6; margin: 0 0 2px 11px; padding: 7px 0 5px 14px; display: grid; gap: 8px; }
+.leaf-list { border-left: 1px solid #d1e4e6; margin: 0 0 2px 11px; padding: 7px 0 5px 14px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 8px; }
+.leaf-list > .add-inline { grid-column: 1 / -1; }
 .leaf-node { position: relative; z-index: 2; display: grid; grid-template-columns: 6px minmax(0, 1fr); gap: 9px; padding: 10px 11px 10px 9px; border: 1px solid #e5eded; background: #fff; border-radius: 10px; text-align: left; min-width: 0; box-shadow: 0 1px 2px rgba(33,78,89,.025); cursor: grab; touch-action: none; transform: translate(var(--drag-x,0px),var(--drag-y,0px)); }
 .leaf-node:hover, .leaf-node.is-selected { border-color: color-mix(in srgb, var(--node-color) 45%, #dfe9ea); background: color-mix(in srgb, var(--node-color) 5%, white); }
 .leaf-node.is-selected { box-shadow: 0 0 0 2px color-mix(in srgb, var(--node-color) 15%, transparent); }
 .leaf-accent { width: 5px; border-radius: 5px; align-self: stretch; background: var(--node-color); min-height: 28px; }
 .leaf-content { min-width: 0; }
-.leaf-title { color: #4a6268; display: block; font-size: 13px; line-height: 1.45; font-weight: 650; overflow-wrap: anywhere; }
+.leaf-title { color: #4a6268; display: block; font-size: 14px; line-height: 1.45; font-weight: 660; overflow-wrap: anywhere; }
 .leaf-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-top: 4px; }
-.leaf-badge { font-size: 8px; line-height: 16px; border-radius: 5px; padding: 0 5px; background: color-mix(in srgb, var(--node-color) 12%, white); color: color-mix(in srgb, var(--node-color) 76%, #183a41); font-weight: 720; }
+.leaf-badge { font-size: 9px; line-height: 18px; border-radius: 6px; padding: 0 6px; background: color-mix(in srgb, var(--node-color) 12%, white); color: color-mix(in srgb, var(--node-color) 76%, #183a41); font-weight: 720; }
 .leaf-badge.volume { color: #495df1; background: #edf0ff; }
 .leaf-link { font-size: 9px; color: #4e8792; text-decoration: none; overflow-wrap: anywhere; }
 .leaf-link:hover { text-decoration: underline; }
@@ -226,15 +228,15 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
   .map-control-button { min-width: 31px; height: 32px; padding: 0 8px; }
   .map-control-wide { font-size: 9px; }
   .map-zoom-level { min-width: 36px; font-size: 9px; }
-  .root-card { min-width: 280px; padding: 17px 20px; }
-  .root-card .node-title { font-size: 20px; }
-  .branch-card { width: 660px; }
+  .root-card { min-width: 360px; padding: 21px 26px; }
+  .root-card .node-title { font-size: 24px; }
+  .branch-card { width: 740px; }
   .branch-head { padding: 14px; }
   .branch-head { padding: 14px; }
   .branch-name { font-size: 16px; }
-  .branch-body { padding: 13px 12px 15px; }
+  .branch-body { padding: 15px 14px 17px; gap: 12px 14px; }
   .subtheme-title { font-size: 13px; }
-  .leaf-title { font-size: 12px; }
+  .leaf-title { font-size: 13px; }
   .side-column { grid-template-columns: minmax(0,1fr); }
   .ai-panel, .storage-note { grid-column: auto; }
   .panel-heading { padding: 13px 13px 5px; }
