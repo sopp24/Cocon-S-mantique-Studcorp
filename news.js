@@ -1,10 +1,10 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-01T01:36:06.728Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-01T16:56:19.155Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Sud Ouest",
     "date": "31 oct. 2026",
     "topic": "Vie étudiante et campus",
-    "title": "Université de La Rochelle : deux jeunes diplômés primés pour leur plateforme « loge ton étudiant »",
+    "title": "Université de La Rochelle : deux jeunes diplômés primés pour leur plateforme Loge ton étudiant",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxORjdpeHdtYzlkN3A0RFdvV19GRlB2ZW5ubmhFSXBMTGhFcV9Ld1ZUVmtZYTJnaWxZRTI1TGZyTEJFOFdLZlBjcVJGZG1ELTliZjJUc0QzRW53dGJiZlBZNUdpSTllX19reWI5SWQ5RTY1R1ZndkZPLWIzaG9DYVpSYWxreHotM1UxTkY2QnFJX01PdXBiWjdNQ2l4RjY3YVh6M3RvMUp3ZEo4RzgwNnVIWVhrZ0c2eldkTGswS1Vnc0dLSDZOYVczSno4blUtWTI2ZjVfXzhoWEpQQld3TVNDTWotWmNyUmlZc2lmMmNvbDA?oc=5"
   },
@@ -31,6 +31,14 @@ window.STUDCORP_WEEKLY_NEWS = [
     "title": "Études de santé : ce qui va changer pour les futurs étudiants dès 2027",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNTFrUTd4Mm9qaDUtbXphRDd5VEYzd2FlbE0yRXliOFZDSS1iT2RnZ3FpRWJkYzFudFRyOFBrcjlibUpUbTR3dXBqYlIyUDF0U1VaVWFuTDh6d0szZzBNMnYyekc2amduU1pkTnpTNXdhOFVSRjlMaGtOQXlmSV9LNVZmUTFIS1U2YWN6azNlQ0ZoSnhndHprbDNfZmpNQUJLczQ1Q2FUQnBCbEVGY3lmRXNlczNIb0w4STJvVVoyYmFGclQzelQ5VVUtZnN3XzQ?oc=5"
+  },
+  {
+    "source": "Le Parisien Étudiant",
+    "date": "30 oct. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "KALASH CRIMINEL - LA CARRIERE - ST HERBLAIN, 44800 - Sortir à ST HERBLAIN - Le Parisien Etudiant",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcVYzRnlralptcGNCX3I1NXBqSkZqaXlYeWo4aUU2MFpzWjR6b2ZyMDZJRlMtOUlSaDFFcGRNTWw3UUxXYlU0Tk5KTnl6ZHMwejZHaERySmRtUjhkV0ktZTRXUnduSzFpUjZ6Vmo5bFFPQXhIYUZ3cEZMSHFydDlsVXM2Ml92emQxZGxUVEdRR0JydkVidGpHMw?oc=5"
   },
   {
     "source": "Les Échos",
@@ -65,19 +73,11 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNdlZiSy1iNXMyVnVfQlJTeC1Ma0NGR21DSmpwU2djdlFJX3E2MVJhOEUtbnBjX3RvUnZfRDdHMzJRYXI4YVo3WlAxOGo0T2JUS3BUZ0NMSUJBOW1oak81aWpGb0xacjVBUDZHcHluVDdvWVFod3N1Q0ZOWW5aeWhoMUJyTG1qY3V6dU5CUTcyU2dTVTAwMkF5ZzBIOVdEaXFsNW1tVGVaNmFDTlhQVVFCRUdEdXFqMm5aQmpSX1JNTmo1V3I2b0UtZGpKbW8tZE1peWN3NVF5UDQ2NUlTWE9YNW9aeFdmX2RwNjFRZUlkbXhsR1ExYUp0Z0lRWmxqeTliVFRaRGVBazM2Z0xwZ2xKLThMVWJVaGlPNWYtSjdnaw?oc=5"
   },
   {
-    "source": "Sud Ouest",
-    "date": "27 oct. 2026",
+    "source": "Le Point",
+    "date": "30 oct. 2026",
     "topic": "Formations et admissions",
-    "title": "Université à Bordeaux : « Je n’ai pas envie de continuer », ces étudiants naufragés de Parcoursup, empêchés de rejoindre la formation de leur choix",
+    "title": "Enseignement supérieur : avant Parcoursup, il y avait le Minitel",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQT0pCQWViRVNERHFEa0djTE4wTEM0U3VHMVBFODcxaUVFNzJESmtBNEsydzJYV3dnMjNQUDZlM0UzZ0c0ZHJJNEpDTEQ5czU4SmN0d3N4c1N0azM5LVZkR3FWRldPTER0UEl4U29oM1VuNnRLZlk1RENWUklfV2xkNHg3YnBKTDBLWUJidXlGN1QtYmxsSElZeF9CRnZsd05KVFc5OG53RW1VNmhOQlFzLUw4ak9kb2hQZE00a0d3OFVleHZRbDh2QUR1Qkx1UkZlZG9QblIyRm9BdDR6UzhNblVsMmJTdnZheV9JUnF6UHdVM1RSYmZDMTA5X2pMREdXWnFWZFlYdVVnSzRXVTNybk9RWF81Q0xJTXdOcUhweWo5akl2NkVqOVlB?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "29 oct. 2026",
-    "topic": "Santé et études",
-    "title": "Cet étudiant en dernière année de médecine est l’un des 29 docteurs juniors qui vont exercer en Mayenne",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPam11OUJfME50QndvOE5OOWo3VkdMUndQNVBJUTRmRTdxOWZjMHFBWkc1MXpMdm9JZnhVZ1NCY2F1b2hJWXpzYlgyYVdqMjVUa2VKMVVHeWUyTVN5SjJHNUdIdGhrajROTC1Pb0hmUk9MZjFGMGFTNkkyNXp0UF9laGp2bHVIMVFYRGl3bThJbjBZd3ozeUdqYUZkcXpLMjVoY3ZtQ2tpRWVZUmtDRFA3V1RqLURSSFJqT0d3cjZZT2ZRc2lQc3dwVUp4ZWFQRlEzVDMwOTFhMzJxdE9CY1ZBb3ZNTDlwa09pcWViUFRoUlp0Y1V4VDFiZjJ5T3BpeDJnU2FYelBFYVBUNXJWd3ZyTnBIWTFYakhNXzhLQkJn?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdW5NVHlwYkx1dkQxWHIzWkMwSFdfLVpYMjdvcGJZV3U2c25tdW50S1U4aXhUUGc0dnFnNUUxbnBLLXQyVlI1TEI5Q3lfOEZjendnU3lzZ2cyWGpST2poNzl4cjdXeTd4OFNsSElESWhjdUhObjE5SUVDYmJFd252R3FKaDFNTUJ3MnVveUcxVjU4QTNRNU5tZzNqRDRFUXdNOFhJazkwLXJoYnM2c0ZWbGdkVWw3RUNKVTFoSg?oc=5"
   }
 ];
