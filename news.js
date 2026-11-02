@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-02T01:57:04.051Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-02T20:33:43.816Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Sud Ouest",
@@ -9,28 +9,44 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxORjdpeHdtYzlkN3A0RFdvV19GRlB2ZW5ubmhFSXBMTGhFcV9Ld1ZUVmtZYTJnaWxZRTI1TGZyTEJFOFdLZlBjcVJGZG1ELTliZjJUc0QzRW53dGJiZlBZNUdpSTllX19reWI5SWQ5RTY1R1ZndkZPLWIzaG9DYVpSYWxreHotM1UxTkY2QnFJX01PdXBiWjdNQ2l4RjY3YVh6M3RvMUp3ZEo4RzgwNnVIWVhrZ0c2eldkTGswS1Vnc0dLSDZOYVczSno4blUtWTI2ZjVfXzhoWEpQQld3TVNDTWotWmNyUmlZc2lmMmNvbDA?oc=5"
   },
   {
-    "source": "Le Monde",
-    "date": "31 oct. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "Mobilisations sociales : l’Union syndicale lycéenne et l’Union étudiante appellent à bloquer lycées et universités les 3 et 5 novembre",
+    "source": "Le Point",
+    "date": "2 nov. 2026",
+    "topic": "Logement étudiant",
+    "title": "Repas à 1 euro pour les étudiants : comment une mesure démagogique a mis les Crous à genoux",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxORHpFNUswbFlPR1c3VGNVd1NHYVF6NjhxSVE2VHpkZWlOZ1ZsZWZLdVhzUEZDa1FfM1YzQzFyVjlnSWZzY2VxNXlwbEV5YnBWTTBlOXFKaGFVNkJtQUNXMU9DdU1vX00zeWRKSnJSVk05bFRNUkhKekg0aC03dHNhUVkzdVMwN1RhWUFGY2VZc0dwbjJuZ0FFdUdLaHBBV3gzSmt1SURGSU9XYURfdm52M19iUUJkQVpuX2NSSWszTlM0ZldFTEFrRVBBTjgxRldiaGZ1VDY0emdCaG9YVzE5ZzdRcTRIZzN2YkVvSURQQ3pEUGx3TlJlTUtxQllOR09SMkNncDhxNGZxMWU1Mlc3OFBwenVSR2Q4eWE2a1N1WFZEOUFsT2xYalZR?oc=5"
-  },
-  {
-    "source": "franceinfo",
-    "date": "28 oct. 2026",
-    "topic": "Formations et admissions",
-    "title": "Plateformes similaires à Parcoursup, inscriptions directes à l'université… Comment les autres pays européens organisent les admissions dans l'enseignement supérieur",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxOVXY0RndHMDRhRC14b0o5SFBMOVFxLUlCYlZjb0EtUWVFa3FXcmk0Q3ZtZEJKX0ZjbVRKZk9pR3pZWjZsNzJlT29JcnkzcVlyTUxuOXBtTC1QVkk3VWprdFhrRDZRVHZDc2pvalBycTZMSTlnampmWkpkeXg0VFZhQnpDcFo3bGFCejZ5dHhqMWxfajl3dEhDdThxZUZCUVZXNmQ5MnpCY2g5R210Q3p0SDkyU1FzblBFOWZqUXBhVktJSzRZc215NEFka3laRXo2RTRMajV5OHRUSmswRXp5cUV6VTd3NU5uWG1FQmdTejdQREE0OWpCbkRpYXVNUWpSbUdTR01pWV9KRWtKQmJBWTRDck5xUlZLalNoRHRTaGo0UTdMSzdaR1JpVjdta3MzTVZra0ZxRVJ2ejJUempIRDRJY1I2YWd6dm9uVG5JQ25IQUhhYVNrZmcydGk?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPRFM1a3VFRTZJZEliN0U2V25IeFVXUzZCQlFERThsMmFJRGZIT0VuaEpWd3o3T3hZdzduOVVPQko4M1gxT1BRWTEzY1lZdG9vWkJpeXpnaWVKWUtfTS04TG9GZWd5UWVxMnY1aXVhUVN3MGo1aldaWXRrUDViUVRUdUNXWmxkVEdvd0ZvRmxHa1RoTW5GT19ndDFIWkpXZWJLY2ZzX2pHZHFWRXhxS01ORUY0WkIxTVJZNk9sOVo1NEtzelFvY0lxeUFmeHlRZlltM05Na00zWWtxUWc?oc=5"
   },
   {
     "source": "Ouest-France",
-    "date": "29 oct. 2026",
-    "topic": "Santé et études",
-    "title": "Cet étudiant en dernière année de médecine est l’un des 29 docteurs juniors qui vont exercer en Mayenne",
+    "date": "2 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "Des étudiants votent le blocus de la faculté Tertre de l’université de Nantes",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPam11OUJfME50QndvOE5OOWo3VkdMUndQNVBJUTRmRTdxOWZjMHFBWkc1MXpMdm9JZnhVZ1NCY2F1b2hJWXpzYlgyYVdqMjVUa2VKMVVHeWUyTVN5SjJHNUdIdGhrajROTC1Pb0hmUk9MZjFGMGFTNkkyNXp0UF9laGp2bHVIMVFYRGl3bThJbjBZd3ozeUdqYUZkcXpLMjVoY3ZtQ2tpRWVZUmtDRFA3V1RqLURSSFJqT0d3cjZZT2ZRc2lQc3dwVUp4ZWFQRlEzVDMwOTFhMzJxdE9CY1ZBb3ZNTDlwa09pcWViUFRoUlp0Y1V4VDFiZjJ5T3BpeDJnU2FYelBFYVBUNXJWd3ZyTnBIWTFYakhNXzhLQkJn?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQcU00bEdPUkJRaTQ2dFF6MjdJeEduR2t4MDVyQWJoQmUzWnU1SnJEdDA3dlpvdFppVEtWVXdlTVlycXNEN0VoOTJaalB6dHFpdzJmRkJueUdxSzBtUHFoeXh2UjdDakNuN0lMMHF6Tm9oYjUzUXJ5elN0RGV1UHlaRjdSa2lyUjJqTmVTSl9ibkZEaW5zUVMwNWo3UHFqaXFoUmo0YUNHR2tIc3UydTB6Q0txZF9xT1Q4clNTT2tXU3FCU2Q1TVpESFd2Zk1GX2k0RnlEakFPTGthLU1KNWxGbmNvN3JxUDN1OHhOUzNZUXZtWU85X1E?oc=5"
+  },
+  {
+    "source": "franceinfo",
+    "date": "2 nov. 2026",
+    "topic": "Santé et études",
+    "title": "Le président de l'université d'Aix-Marseille alerte sur la dégradation de la santé mentale des étudiants face aux blocages",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPcTJ2MjJNV3BsTzJsWl9JcEdXeHRNR2hCRm16V09OY2lYMm9oYzIyUXhldHE2dWdnWGdsN3lPUHNfX2VTRms3YlZpQkVhU1JRNHEzTEt3QXBQanpJaUdCdzdiY2ZRd0Q1WHJXMmROZGpCMkswZEhCZUtOSjFiaXNVczN6MHBSZ1pmeUwwZmF4RFkxU1RLTHE2NUIxdjlSWGlOM241eGlESW1ZR0Roc2czSVFnb3pPZEZiOHJGbjdab0htZDVqTzJQZkRSSU5Ea201Zi1IOW15WjVJbkJJQ19BSWUtMTNCZFQxSzUyeEstdlZJdTRQVENxWV92dzB2VFUtM285T2lsYnhvUUhWT0JGbUsxWEllUlZCdXJuaG1za3VNVUUx?oc=5"
+  },
+  {
+    "source": "Le Parisien Étudiant",
+    "date": "2 nov. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "« Au collège, j’avais autour de 17 de moyenne, mais je saturais de l’enseignement général » : en voie pro, ils ont choisi l’alternance pour leurs études",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxQWGY4emxuUm0yajFtbzRWSTJjQXZueDJnRzAyb2JQT09OTVlwNmdoMXVudDk0ZEZsamx1RjAzQnZlUlNTVk9HYy1PZGQwM1ctcF9ZS0JuYldaRktkRVZreFFZUXVDYWNRT3pubkxKckJQeU9HeUVTc3R6QzIzSUFoNGdmQWd5QlVYZW96aFhEZWRvdXdCYU1wMVZHSXF3T2QyTmVzUmhsYVJKM04wWmlCSmpuMHdQNEJZQTZ6ZVZzQzdGcnRrMjBfTVR1ckZYbXFRb3dRT2tnbUNVUnRYR01KdzExN2hfVldrZ1ZQQU5oQksxQzM2TGV1YzRWZGdnYXkwQV82YWEzclBvcDl0b0pseU9qTGtJRjlWZHNrUnFES2I1czVodTkyM0pzQ2xhakRXZW1kUlNsRjY0Q1VBY1lCOWVKWkpGSW8?oc=5"
+  },
+  {
+    "source": "L'Express",
+    "date": "1 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "\"Pas besoin d’un doctorat pour comprendre pourquoi Mélenchon est jugé plus dangereux que Le Pen\" : l’analyse de la politologue Sheri Berman",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNOUJTbWV1WWw2a0dULWxSZVpla3pDVjZxZHZpRTd5Wmc1dW9hSFB6WXhxUFQ2RUdoNEI0M0twenRNMERUTWJJVzVocC1raXVWWnNfeG0xcXc4X25zV201a2M5UERtcHl0cmZXYVFnOGh3TmotS3dlRDJFb3dad200UlNCRnFMT25KaXRkcWNrOXk2SWNmdmh5VlFpR0VHZU5NRzJUWmJISXJsNWZZeW9rQVk3Rk4tZjhuOTU1WVNpVXNqbXZuY0lQZjZpSEdLMFd5VzZNN0RRTHowVXdyUkxmVzMxN3FLU1g0Y1JmRVhodFB4b3c?oc=5"
   },
   {
     "source": "L'Étudiant",
@@ -41,14 +57,6 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOekNfZmtpVzFsbnpYQlZ1bmdoazNobVNqNk9rMDdtOVBGT3VUeUVFNUV1ZWJ0ai1EdWZERk9oYUVvYlZZclVDbDVINUhKZTZyWWd6d0tFZTZrQzJzMWpHQ2drRTVldEhSbDE3X3dWcE0xUFFVaUpVQ1lkOXZDNjZaeDZYQVExSGd2ZkVWckVicWhxSnNCTWIxTi0xczNPQ0pYbnR0ZVBWYktrVFF1SjBV?oc=5"
   },
   {
-    "source": "Mediapart",
-    "date": "30 oct. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "Le recul de l’apprentissage pèse sur l’emploi salarié",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVm1pVDh3WmNBbEU1WlRFZUNJTURnNXU4QVVLWlZIaUEzSWV0WWhwQllKbmJlNEw1WUdFNGJjdWtUREtTeXBvc3NnOU1YNG1kQVVDWEhQNjgzYVRuYk9ndUJaZ3RkQjRteXpZVGUwWURmZFRUYU9UQnI5ZTRTOTF2LUVfVUIzN2xxWmtremFtcHBhVjkwLXRHUFFYakQwWHVIZVBhbFAyMlhpQmhjYmc?oc=5"
-  },
-  {
     "source": "Les Échos",
     "date": "27 oct. 2026",
     "topic": "Examens et droits étudiants",
@@ -57,27 +65,19 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQY0gxUVg3dGoyVGJZTEdraHZvTVdsUEl4SHZhTzd4OWZOV0JlR1N0bGhHdDgzTFQ4UTZOdzBzazhhdjRZWldTY0xTbWdlempQQjE3SWZTQlJOMlBMT2c1dWw5MTZrZ2pHblBIcDNkUGxIY3dYeExGeVRCd3AtdENvQWVxaHZ3NWo5NkdrXzFsMk9DV1ZkNDBHV0pKblFjR256TVJNVDAzT29xX2toazZRNFlwbFQ1VnZuR2N2WlpuYkRMLWRJQldCYjU2QVMwS29LQ1dfaU15RlhTRzFQOGtqeUNnMGFnNXVJLW1kMGVZRy1lYVFocDRLZUhBNExzTmowNTFISVIyWQ?oc=5"
   },
   {
-    "source": "franceinfo",
-    "date": "31 oct. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "L'Union syndicale lycéenne et l'Union étudiante appellent à bloquer lycées et universités mardi et jeudi",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPeVU2TWo2dWZUdkRiZU9oV09jVEVqV1FpN3NPaEFyQkpqVVhrOEo1b2F4QXNENEwxeGo5NWVRUzN6Y0Z6QnE3M2FHT0FuRE1QWnlMaEFWU0NyOGhudDRVRUZDcm1VSE9GVmotMTFydFFrVWh0RU51TjNZOGFQaGhwR2FGZG5CYkhkTk1TdzlSdVJNSm55YnZOc29teElXQnFsUVNPR1V3SGRIdDVYOVRnQ3hySTZXNnlZM1dHMDJZNS1ha0lBQl85U29ad1h4endpb1MtQk1pYXBFNUZyYk1tQzk2amotZ202eF9LUXdLcTc3NkNqMWQ0b1EzOHlBcmFfUHJYdGVneEFZbGZN?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "1 nov. 2026",
+    "source": "Sud Ouest",
+    "date": "2 nov. 2026",
     "topic": "Vie étudiante et campus",
-    "title": "En Serbie, après avoir renversé le gouvernement, les sympathisants du mouvement étudiant nettoient les rues",
+    "title": "Mouvement lycéen et étudiant : à La Rochelle, les cours ont repris normalement dans les établissements scolaires et à l’université",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQMXNqenpkT1M4Vzd3N1plQ1NjcG1IeGo5REZRUW1jSkMzOHNnbG1NWnFtZUNURERYRDgxWUNnc0dNRWQzRmtKUVViU3NRdjNNTmxpNXhHSHBvbDJUVGFUZnJTZlJYckZhc3g5dE5ud2ljbmx5X0w1VVU2RE9UQkpwQ18zdlloWlZ0WW02emppOFZSQzFVc2xuLS1OVlgyZnozNGFLUHZYNG1ILWJfUF9zYUN6OFZwWjB2NXUwWjMyQTkxaVdxWkx4b1Qta3dhVGZjQUxONGZCMGZzX29rYlhYT2FiQkt0SXFJTEdfM2x4RFlvcGRNOWJWNkZWTmI2ZUZGZ1pDM3pCZFVMXzEyVmRFaGF3?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOeHlaVzU4azhUcU9rNG1BUGpCU1RYcXp2YzRKRXc3Zmc3bi1LQmZGcVNSbFhZU01PRW4tVEJQSk1LaHh4eGVFdjNfY1FUQ29PX3lwS2lveldITEtLVkE5TUNnZ1ZhR29JX01LcEFFekN2ZnVIQzZpMllKa3N5QmJRQlJlc2ZZdEJDRzZBVW81aExJQk9pWXZ0ZkFDS1p2WEZpeElLMG9lNFh2bkFDVUdXblYyaU9DQzA5UEY1VU1lYzU2WlVhakxuTG8yTUdPOHBwMnhzdnI4YVdLRlpQR2NnQmMtRDRFMUhHV0Y2UUxqZHhoZk1hZEJiTUNWaXFwTUtzMjRoV3dKRTFCd2FKcDNMVDlnNktWd0ZCamxDc1BhUQ?oc=5"
   },
   {
-    "source": "Le Point",
-    "date": "30 oct. 2026",
-    "topic": "Formations et admissions",
-    "title": "Enseignement supérieur : avant Parcoursup, il y avait le Minitel",
+    "source": "Le Parisien Étudiant",
+    "date": "2 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "Orientation des étudiants : « Il faut laisser la main aux universités », plaide le président d’Assas",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdW5NVHlwYkx1dkQxWHIzWkMwSFdfLVpYMjdvcGJZV3U2c25tdW50S1U4aXhUUGc0dnFnNUUxbnBLLXQyVlI1TEI5Q3lfOEZjendnU3lzZ2cyWGpST2poNzl4cjdXeTd4OFNsSElESWhjdUhObjE5SUVDYmJFd252R3FKaDFNTUJ3MnVveUcxVjU4QTNRNU5tZzNqRDRFUXdNOFhJazkwLXJoYnM2c0ZWbGdkVWw3RUNKVTFoSg?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNaVdZUmRyR01qby1Namc5QTdKYUw3bmtxN2dyOUlBbThod0h5anBvdi01bV9wYlVwcjdHdV9nNDhFeXhGOERCLXFFSldfb0RRd0prelJrcjlBODVESENrRl9XblJSQm8tWFExd1o3anJrZXNDR0tQb3ZKeVRjY0Y0eXVZeVJIdDh1eDZlQk9DR3BwdzB6WVpWOVJfNDJIQ212N3dMWnBQb0RpV05qeGFZb3F6QkYyOGk0U1VVNWhpMVRZNUdmUHZEMFJEZDc1djdVWmdCTm1zNnRWb1pzSUg4Rl9iUUZsX1VxcnF2MHhLX28yaDNhRk1najFyYlg?oc=5"
   }
 ];
