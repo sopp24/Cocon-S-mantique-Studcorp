@@ -133,6 +133,13 @@
   <script src="data.js"></script>
   <script src="news.js"></script>
   <script src="app.js"></script>
-<a class="sopp-home-float" href="https://sopp24.github.io/SOPP-agents/" aria-label="Retour à l’accueil de SOPP Agents" title="Retour à SOPP Agents"><img src="https://sopp24.github.io/SOPP-agents/assets/brand-mark.webp" alt="" aria-hidden="true"></a>
+<a style="display:none" class="sopp-home-float" href="https://sopp24.github.io/SOPP-agents/" aria-label="Retour à l’accueil de SOPP Agents" title="Retour à SOPP Agents"><img src="https://sopp24.github.io/SOPP-agents/assets/brand-mark.webp" alt="" aria-hidden="true"></a>
+<script>
+(() => {
+  if (new URLSearchParams(window.location.search).get("from") !== "sopp-agents") return;
+  const homeButton = document.querySelector(".sopp-home-float");
+  if (homeButton) homeButton.style.removeProperty("display");
+})();
+</script>
 </body>
 </html>
