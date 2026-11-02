@@ -133,37 +133,21 @@
   <script src="data.js"></script>
   <script src="news.js"></script>
   <script src="app.js"></script>
-<a style="display:none" class="sopp-home-float" href="https://sopp24.github.io/SOPP-agents/" aria-label="Retour à l’accueil de SOPP Agents" title="Retour à SOPP Agents"><img src="https://sopp24.github.io/SOPP-agents/assets/brand-mark.webp" alt="" aria-hidden="true"></a>
+<a style="display:none!important" aria-hidden="true" tabindex="-1" class="sopp-home-float" href="https://sopp24.github.io/SOPP-agents/" aria-label="Retour à l’accueil de SOPP Agents" title="Retour à SOPP Agents"><img src="https://sopp24.github.io/SOPP-agents/assets/brand-mark.webp" alt="" aria-hidden="true"></a>
 <script>
 (() => {
-  const showHomeShortcut = () => {
-    const button = document.querySelector(".sopp-home-float");
-    if (!button) return;
+  const button = document.querySelector(".sopp-home-float");
+  if (!button) return;
 
-    const fromQuery = new URLSearchParams(window.location.search).get("from") === "sopp-agents";
-    let fromSession = false;
-    try {
-      const expiresAt = Number(sessionStorage.getItem("soppAgentsAccessUntil") || 0);
-      fromSession = Number.isFinite(expiresAt) && expiresAt > Date.now();
-      if (fromSession) sessionStorage.removeItem("soppAgentsAccessUntil");
-    } catch (_) {}
+  // The shortcut is enabled only on links explicitly opened from SOPP Agents.
+  const openedFromLibrary =
+    new URLSearchParams(window.location.search).get("from") === "sopp-agents";
 
-    let fromReferrer = false;
-    try {
-      const referrer = new URL(document.referrer);
-      fromReferrer = referrer.origin === window.location.origin &&
-        referrer.pathname.startsWith("/SOPP-agents/");
-    } catch (_) {}
+  if (!openedFromLibrary) return;
 
-    if (fromQuery || fromSession || fromReferrer) {
-      button.style.setProperty("display", "grid", "important");
-      button.setAttribute("aria-hidden", "false");
-      button.removeAttribute("tabindex");
-    }
-  };
-
-  showHomeShortcut();
-  window.addEventListener("pageshow", showHomeShortcut);
+  button.style.setProperty("display", "grid", "important");
+  button.setAttribute("aria-hidden", "false");
+  button.removeAttribute("tabindex");
 })();
 </script>
 </body>
