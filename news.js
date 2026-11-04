@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-03T18:07:52.082Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-04T02:48:34.534Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "franceinfo",
@@ -20,7 +20,7 @@ window.STUDCORP_WEEKLY_NEWS = [
     "source": "Sud Ouest",
     "date": "3 nov. 2026",
     "topic": "Enseignement supérieur",
-    "title": "« Notre génération est en colère et cette colère est légitime » : l’université de La Rochelle bloquée par des étudiants",
+    "title": "« Notre génération est en colère et cette colère est légitime » : l’université de La Rochelle bloquée par des étudiants ce mardi 3 novembre",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPcnBUOTZ2alN1bU00UW02dnI1SFpvNXg5ZEdIU00xMkJEQjZ0R2ZtSFJXRHRtMVU4MTc0c0lNdC1oVlFrN2dPYXBLOFZobzNPLU9PMWpPU2pzY1BDUXNCclBfazFOa3Jkb0daNWktaVdNdG9FeGVFZWstZEx0ZlZEWjFJMGFFVmpGY1VLOVBtU3pKUDBiUHJZMzFsQVUtNV8wWW9GSjFPcURkN3hRRzgxRnRzejlKUXZoekVZRWswS2o4NjVOSXdvUVc4MmZHSEV2NE0xMWt1YnVjQnVZQW04U3ZPV3cxWHdEMU5mLQ?oc=5"
   },
@@ -42,11 +42,11 @@ window.STUDCORP_WEEKLY_NEWS = [
   },
   {
     "source": "Le Figaro Étudiant",
-    "date": "3 nov. 2026",
+    "date": "2 nov. 2026",
     "topic": "Formations et admissions",
-    "title": "Master Biomedical and Health Engineering",
+    "title": "Parcoursup : comment nos voisins européens organisent-ils l’accès à l’université ?",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOc1V3NWxOMVJGV3MteGlsY3lfYVBOR3ByaGhxUXBkUlZ0RnlvTHRGLU9fa2RpX0phV214Q3k2d05mYXA2YW5fVEF2eVNoMnVraVUxMGpIR25HQ01neXBmU1U2bUVxaHV0cF9UaXF3QmdfdDNDZ2dqZ3JPcmJYdFNpQmhFcG5ZNkppdlU1LWZsd3pVY0FfaGJyOGFnOG9CUEJPV0FzNDln?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNX2NaSlJPakdMVEo3Y3dOdUw1cFN5RU1xNFl2aUN5dDhVN0ZIWXVzN2lqS25RMkt4RGxQVU03clRFX1JxQWtvQmJMMnJqTElRX3hyYXpfTXR3NVc4ZnNMTXZnelpzbGxPRk8tQ0hiS2tDWmFQakluckc2VmpFMjV1bHNULVZnV1hPQ21FTGdWMmdlVm85VEQ2LWYwOVZjRU5nSi0zY2ZMbi1IV1dWWDhqZ2ppVmJUYjNtQ0xYTEF1Z3NMWU9JdXpYSXY5UQ?oc=5"
   },
   {
     "source": "L'Étudiant",
@@ -73,11 +73,11 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQajN6aE5CcFlRRkx4VXdSMFp2OGtWNXM4andaN2pOV2t4OURkZ0NCbm0tY0VvaGJnU1ZTNXNncmJjVjZLd0NReHpiLWhZZjZTcUdCbENzdFZDRXVJTFItUVBLYWo2QkktVEE2amtaeUNhZmxZRllzRXVLQWxuSkMzWk5mNUtESUpFZzI5cUk2ZEs4bVRMWGtlT3BjRU9NLURrOEpTWXY0eU5vS1VvYjgyMnJfVl9zLXl1YXp5U2x0amMyaG01aExmWEtldHJ4NEVxQ180cXVwMkF4RjhUMjdEM3NwS1NaVlpCU1BVSjFlaksyandscXc4UHNVeWVtWkxKTThtSDBsZFU5QUJ2M0R1amtvU1VpZVE?oc=5"
   },
   {
-    "source": "L'Étudiant",
-    "date": "2 nov. 2026",
-    "topic": "Aides et pouvoir d'achat",
-    "title": "Poste Etudiant - Freelance- aide aux devoirs - Tours - Tours, Centre-Val de Loire, FRA - Alpha Education",
+    "source": "Le Point",
+    "date": "30 oct. 2026",
+    "topic": "Formations et admissions",
+    "title": "Enseignement supérieur : avant Parcoursup, il y avait le Minitel",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPYjUzN01qdGJKYTdPTmJUVWI0QWpIeEZ1UzJhTG4tOXZCYVdjTTUxa2pGeE5saE9nNU9iU2NTaVVmZTlUVjIwcWwxczFtYmFkcUNrMUdWWG9TbENkSmVfb2RwRDhjdUdZanpIeHNCTHlDbV9QZV92LVc4dkR5QVFTSTBuRS1GdFRLQTA1NVdKa3pwbDdLaVR1UjA4c0FPZVBpWHdCcnduREFsZGZocXBDSlV3Z3JrM0d5QWdGcEZwOVM4U3B4emZuNVRKcw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdW5NVHlwYkx1dkQxWHIzWkMwSFdfLVpYMjdvcGJZV3U2c25tdW50S1U4aXhUUGc0dnFnNUUxbnBLLXQyVlI1TEI5Q3lfOEZjendnU3lzZ2cyWGpST2poNzl4cjdXeTd4OFNsSElESWhjdUhObjE5SUVDYmJFd252R3FKaDFNTUJ3MnVveUcxVjU4QTNRNU5tZzNqRDRFUXdNOFhJazkwLXJoYnM2c0ZWbGdkVWw3RUNKVTFoSg?oc=5"
   }
 ];
