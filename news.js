@@ -1,5 +1,13 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-04T02:48:34.534Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-04T18:18:50.054Z";
 window.STUDCORP_WEEKLY_NEWS = [
+  {
+    "source": "Ouest-France",
+    "date": "4 nov. 2026",
+    "topic": "Aides et pouvoir d'achat",
+    "title": "Un collectif d’étudiants de l’Université d’Angers dénonce « une trahison » après le vote du premier budget participatif",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQOWNsR21HaEg3V0FVQjBueUJGeW1wWFBlZk1jTGY0NWFiMFZ4aVI1N3lZVEpvbmRYWEtEaS13SGstcFQ0M1MtOUVwZXBNY2t2c2NZX1NsclNpQmZRNFdMYjFTVEpwbnk0UkUyQnJmeUxSOHp6M0Y2d1o3ZEw0b1pyMFlhNjZxLURQUWF1TEVENWFOb1BqMmhxQTFuVEtUQnNkS0x1UlZfZk1nYzJCUzJFZFZsbDdPcE11WkdQS3lxTGlGRlFQT3cySV9jZnpHVEcyOGN0eTFmeHp5ZElUWU5YbVYyanhVSVNwZlRIVXFQMjJ2OVB3TmM3LXM1RWpGcXpOVWdtVG16OEZBcFUxeV9HcEJMTExvRXppVnpRT0ltMnlDRGREejNKWjRVcGwtSFZDSnc?oc=5"
+  },
   {
     "source": "franceinfo",
     "date": "3 nov. 2026",
@@ -25,20 +33,20 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPcnBUOTZ2alN1bU00UW02dnI1SFpvNXg5ZEdIU00xMkJEQjZ0R2ZtSFJXRHRtMVU4MTc0c0lNdC1oVlFrN2dPYXBLOFZobzNPLU9PMWpPU2pzY1BDUXNCclBfazFOa3Jkb0daNWktaVdNdG9FeGVFZWstZEx0ZlZEWjFJMGFFVmpGY1VLOVBtU3pKUDBiUHJZMzFsQVUtNV8wWW9GSjFPcURkN3hRRzgxRnRzejlKUXZoekVZRWswS2o4NjVOSXdvUVc4MmZHSEV2NE0xMWt1YnVjQnVZQW04U3ZPV3cxWHdEMU5mLQ?oc=5"
   },
   {
-    "source": "Ouest-France",
-    "date": "3 nov. 2026",
-    "topic": "Aides et pouvoir d'achat",
-    "title": "Des jeunes reçoivent 2 000 € pour lutter contre la précarité menstruelle étudiante à Alençon",
+    "source": "Le Parisien Étudiant",
+    "date": "4 nov. 2026",
+    "topic": "Numérique et intelligence artificielle",
+    "title": "« C’est un cataclysme » : avec l’IA, élèves et étudiants peuvent-ils encore avoir le goût des maths ?",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQQkVYX1o2d1FSTXhfSnM3d2Z3WmNrTzBRTWNrZnZublN3UlM3RERVb2w2TXZOTGcySXhVVmdnMEV4bEk4Y0J1QUdWNFhyY3dTUlN6NXJtWWdDc0p6WUZKZ2lfbE1uLU55RmtwWklCZm5mcmNnVTBBMHBoMXo3TmRWX1BTV0NJWW9FelNRc2xRVTdzYlhhTzB0dzE4bks0WHZCWV9ndjl6ZWN1SHIyYkNQUEZhOFRUSjluTk01SndhZWxHUEsxenFoWGlsaDVIT0d2NEN1V2o1dlo3dEF0bjZ6amNkUWxhWVFjVVcwOC13eEM4NDBURTMyUXBoLVlCYVBDMDRUQg?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZTdHR0JydmoxQmtHeFlhRUNhWVRVaUNFM1h4cGRHUzc4VUdENGJRRFBEdUJZeWg2TGdQSHViUmVxMlh3emdnMDZfZXhGSmFhb3FnUktubWZxeTNlZ1o4VEh6QjJaalY2bG5XdWxTOXliR3hPNWpUYnl2UzhIV1ptVjhaSF9HeWp4MWRuS2ltazU2aTQ2TW9xcGYwNFFiTDB2cTlDbGo4emRZLXRTUG9wWlpHeXFlWmRMRkV5Nm16TjR0bTFQN3pxU1pqaEdydFcwejNjUnI3NHBwZDJJLVlIbXktemxUbGpfOUNQa202UXI0Tm4yNHlVXzhB?oc=5"
   },
   {
-    "source": "Le Parisien Étudiant",
-    "date": "2 nov. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "« Au collège, j’avais autour de 17 de moyenne, mais je saturais de l’enseignement général » : en voie pro, ils ont choisi l’alternance pour leurs études",
+    "source": "L'Étudiant",
+    "date": "4 nov. 2026",
+    "topic": "Santé et études",
+    "title": "V. Lisowski : \"Je ne suis pas certain que la licence portail santé soit plus compréhensible que le système PASS-LAS\"",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxQWGY4emxuUm0yajFtbzRWSTJjQXZueDJnRzAyb2JQT09OTVlwNmdoMXVudDk0ZEZsamx1RjAzQnZlUlNTVk9HYy1PZGQwM1ctcF9ZS0JuYldaRktkRVZreFFZUXVDYWNRT3pubkxKckJQeU9HeUVTc3R6QzIzSUFoNGdmQWd5QlVYZW96aFhEZWRvdXdCYU1wMVZHSXF3T2QyTmVzUmhsYVJKM04wWmlCSmpuMHdQNEJZQTZ6ZVZzQzdGcnRrMjBfTVR1ckZYbXFRb3dRT2tnbUNVUnRYR01KdzExN2hfVldrZ1ZQQU5oQksxQzM2TGV1YzRWZGdnYXkwQV82YWEzclBvcDl0b0pseU9qTGtJRjlWZHNrUnFES2I1czVodTkyM0pzQ2xhakRXZW1kUlNsRjY0Q1VBY1lCOWVKWkpGSW8?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQdlJBZi1tTkIxZXRHakRSRVVxWDFydDA0cFFpT2Q5ZFMxVTBCVFotcnhpbHIyVkNJT2ZmVlNlYTlONDZISnFPTWtIdVdLR3pzTW93N0Fubk9GY0VreUh3NHlnckdHNkszTUZjQW9BcUN0T29lLU1kS09mSXV0SXlKUzVuM1F1M0Q5MS1HdWJyTmQzcW41V0RYQ3p3Ul9JM3ZJVkVDdzl4WTU3ZTJwRlZFcFU1Tnc2OF92ZldWNzBZSjUydzJYT1JwU0ZZaUUydDN2ZkZMektFRUFfOUg3bUN6b0taUkNFZTlBY01BcU1oZzRENmVvbDF6aTR6UExSTmpISzhJWDNvODNOMF9ZalE?oc=5"
   },
   {
     "source": "Le Figaro Étudiant",
@@ -49,12 +57,12 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNX2NaSlJPakdMVEo3Y3dOdUw1cFN5RU1xNFl2aUN5dDhVN0ZIWXVzN2lqS25RMkt4RGxQVU03clRFX1JxQWtvQmJMMnJqTElRX3hyYXpfTXR3NVc4ZnNMTXZnelpzbGxPRk8tQ0hiS2tDWmFQakluckc2VmpFMjV1bHNULVZnV1hPQ21FTGdWMmdlVm85VEQ2LWYwOVZjRU5nSi0zY2ZMbi1IV1dWWDhqZ2ppVmJUYjNtQ0xYTEF1Z3NMWU9JdXpYSXY5UQ?oc=5"
   },
   {
-    "source": "L'Étudiant",
-    "date": "28 oct. 2026",
-    "topic": "Santé et études",
-    "title": "Études de santé : ce qui va changer pour les futurs étudiants dès 2027",
+    "source": "Mediapart",
+    "date": "30 oct. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "Le recul de l’apprentissage pèse sur l’emploi salarié",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPNTFrUTd4Mm9qaDUtbXphRDd5VEYzd2FlbE0yRXliOFZDSS1iT2RnZ3FpRWJkYzFudFRyOFBrcjlibUpUbTR3dXBqYlIyUDF0U1VaVWFuTDh6d0szZzBNMnYyekc2amduU1pkTnpTNXdhOFVSRjlMaGtOQXlmSV9LNVZmUTFIS1U2YWN6azNlQ0ZoSnhndHprbDNfZmpNQUJLczQ1Q2FUQnBCbEVGY3lmRXNlczNIb0w4STJvVVoyYmFGclQzelQ5VVUtZnN3XzQ?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVm1pVDh3WmNBbEU1WlRFZUNJTURnNXU4QVVLWlZIaUEzSWV0WWhwQllKbmJlNEw1WUdFNGJjdWtUREtTeXBvc3NnOU1YNG1kQVVDWEhQNjgzYVRuYk9ndUJaZ3RkQjRteXpZVGUwWURmZFRUYU9UQnI5ZTRTOTF2LUVfVUIzN2xxWmtremFtcHBhVjkwLXRHUFFYakQwWHVIZVBhbFAyMlhpQmhjYmc?oc=5"
   },
   {
     "source": "Sud Ouest",
@@ -71,13 +79,5 @@ window.STUDCORP_WEEKLY_NEWS = [
     "title": "\"Proposer quelque chose d'alternatif\" : à Paris, des étudiants remplacent les blocages par une \"université populaire\"",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQajN6aE5CcFlRRkx4VXdSMFp2OGtWNXM4andaN2pOV2t4OURkZ0NCbm0tY0VvaGJnU1ZTNXNncmJjVjZLd0NReHpiLWhZZjZTcUdCbENzdFZDRXVJTFItUVBLYWo2QkktVEE2amtaeUNhZmxZRllzRXVLQWxuSkMzWk5mNUtESUpFZzI5cUk2ZEs4bVRMWGtlT3BjRU9NLURrOEpTWXY0eU5vS1VvYjgyMnJfVl9zLXl1YXp5U2x0amMyaG01aExmWEtldHJ4NEVxQ180cXVwMkF4RjhUMjdEM3NwS1NaVlpCU1BVSjFlaksyandscXc4UHNVeWVtWkxKTThtSDBsZFU5QUJ2M0R1amtvU1VpZVE?oc=5"
-  },
-  {
-    "source": "Le Point",
-    "date": "30 oct. 2026",
-    "topic": "Formations et admissions",
-    "title": "Enseignement supérieur : avant Parcoursup, il y avait le Minitel",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdW5NVHlwYkx1dkQxWHIzWkMwSFdfLVpYMjdvcGJZV3U2c25tdW50S1U4aXhUUGc0dnFnNUUxbnBLLXQyVlI1TEI5Q3lfOEZjendnU3lzZ2cyWGpST2poNzl4cjdXeTd4OFNsSElESWhjdUhObjE5SUVDYmJFd252R3FKaDFNTUJ3MnVveUcxVjU4QTNRNU5tZzNqRDRFUXdNOFhJazkwLXJoYnM2c0ZWbGdkVWw3RUNKVTFoSg?oc=5"
   }
 ];
