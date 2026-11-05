@@ -1,13 +1,5 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-04T18:18:50.054Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-05T02:56:32.108Z";
 window.STUDCORP_WEEKLY_NEWS = [
-  {
-    "source": "Ouest-France",
-    "date": "4 nov. 2026",
-    "topic": "Aides et pouvoir d'achat",
-    "title": "Un collectif d’étudiants de l’Université d’Angers dénonce « une trahison » après le vote du premier budget participatif",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQOWNsR21HaEg3V0FVQjBueUJGeW1wWFBlZk1jTGY0NWFiMFZ4aVI1N3lZVEpvbmRYWEtEaS13SGstcFQ0M1MtOUVwZXBNY2t2c2NZX1NsclNpQmZRNFdMYjFTVEpwbnk0UkUyQnJmeUxSOHp6M0Y2d1o3ZEw0b1pyMFlhNjZxLURQUWF1TEVENWFOb1BqMmhxQTFuVEtUQnNkS0x1UlZfZk1nYzJCUzJFZFZsbDdPcE11WkdQS3lxTGlGRlFQT3cySV9jZnpHVEcyOGN0eTFmeHp5ZElUWU5YbVYyanhVSVNwZlRIVXFQMjJ2OVB3TmM3LXM1RWpGcXpOVWdtVG16OEZBcFUxeV9HcEJMTExvRXppVnpRT0ltMnlDRGREejNKWjRVcGwtSFZDSnc?oc=5"
-  },
   {
     "source": "franceinfo",
     "date": "3 nov. 2026",
@@ -15,6 +7,22 @@ window.STUDCORP_WEEKLY_NEWS = [
     "title": "Journée noire dans les universités : palettes, barrages filtrants, les campus de Perpignan et Montpellier perturbés par des blocages étudiants - France 3 Régions",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxNVFFDbERqLWx2M19jcUNwdWs5cE9GZklqN0ozV3NwdmFrdVFYelVkSnBxWGVQbWlxbnU2Rm1IUE5XMFRGTXRFU2JnTWVuVVAxV2lCaDJaSzg2UE9UdklUWDRiQWowaFB3cnJodzRUNk1ETHB3aTRkU0RyQXhsZUxleGlIMDRWUThKbEZJYV9qX0F1Tk0tbElmQVZ3VnU1dlMwS1cyVTBNSjVqNlhoZ0xpeURpU1pNUFJ4Z0w1c1BTZUZCc3d3OXNYRkNocE41SUViaEo1Z3ROUUxjWV9VZkx3cEpWLVJIU09ielV4WFgtSUlDYjM4Z1QzNmVDZkVkM3FQd0ZMbGlPNUt5TWZPeF96NHRoTmRZSnlXb3UyOGxXWUg2Y2xyM1ljam9kU0xIbkdwdTdaVkZlWks3M05nNHl2UGhsNEJwVDZwVXRrNzV3?oc=5"
+  },
+  {
+    "source": "Ouest-France",
+    "date": "4 nov. 2026",
+    "topic": "Aides et pouvoir d'achat",
+    "title": "Un collectif d’étudiants de l’Université d’Angers dénonce « une trahison » après le vote du premier budget participatif",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxOSVo1d0RtOGNZTWtSU1E0ZGtsMUtvUzF1NWtUMV96MUlZeGpLSU0yTjFZNkdGYU9pZklTOXpEdjdndHZ5Z1Vacjh5ZWR5WmkxSUxmd1BIc1JlV1pYcWl0WmozMUs1NE9UVmt6dlA3eGpnSktkN25uOGZpWXVKQlVWbUdKczlWb0hhVzYteDFPT3dhUjJBWEFMdWFqOWFuMXZRTlFnZWdpZThtM1ZGOVY1Q0UzQ0Q1SjU1YmlXWUpZSW1YbC1QQWdRX2E5OGdLVGdsZk1oSjFVbXhJOFY3OGppelMtbTE1SFNtT1Z4dkE2X05WOEh2ZG9KNzhWTVVKN3AwdFhxV0c0Y1ZpLXJtWHpvRlJ3dlJ6SXFmZmx0ME81Sy0xWDdaaDlvV25qVUVHWEczSThleXNhWVE5c2RTanpWcjVFRUkyVWlGYnNfX1pSVWYxSmd4bzJIbjVmRDFQOFNMdGZsNEFRenBJazJkczcwalZweEI2ZXZUUW9mY2ZacUxWSTdvM2dwd0xxaTR1b0NkaXJhRw?oc=5"
+  },
+  {
+    "source": "Sud Ouest",
+    "date": "4 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "La Rochelle : l’université fait des propositions aux étudiants en échange de la fin du blocage",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNR2lqQ0wwMkFhN1NSb2FSd1lsd2J0eE9jaHV1TURGS09YN3hySVM1NzNzYl9mX2tlaUduVlh3NFpJeFB4TDlWU1c3bHdSMU9IUndmazUxdmlLWktvNHRkZUJ2UXNublN0aTl4SFdyUTV2RUJqQ1NIaWJLZVB5Y0FENFdyaHJ1R3VYOWxVdy1GdTRBUnMyUzFrLUdJVDBCWDRBQWlfZDVJMGl5bUo4RHRDa2pEbGNQdWpKSFNqTTNCR04tZGxNTlp2aFVyZFlOS3Bzalpwb1hPMFpoRHd5UmdFLTh2RFFmVF9QY2x2TXJfMmpvNEVYcjdmUk9OTVlZaHNVUlNteGY3ek5SUmRtSU9kWkJuWmxhNTNrN21udzNrdGJKX2s?oc=5"
   },
   {
     "source": "Le Point",
@@ -25,28 +33,20 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPRFM1a3VFRTZJZEliN0U2V25IeFVXUzZCQlFERThsMmFJRGZIT0VuaEpWd3o3T3hZdzduOVVPQko4M1gxT1BRWTEzY1lZdG9vWkJpeXpnaWVKWUtfTS04TG9GZWd5UWVxMnY1aXVhUVN3MGo1aldaWXRrUDViUVRUdUNXWmxkVEdvd0ZvRmxHa1RoTW5GT19ndDFIWkpXZWJLY2ZzX2pHZHFWRXhxS01ORUY0WkIxTVJZNk9sOVo1NEtzelFvY0lxeUFmeHlRZlltM05Na00zWWtxUWc?oc=5"
   },
   {
-    "source": "Sud Ouest",
-    "date": "3 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "« Notre génération est en colère et cette colère est légitime » : l’université de La Rochelle bloquée par des étudiants ce mardi 3 novembre",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPcnBUOTZ2alN1bU00UW02dnI1SFpvNXg5ZEdIU00xMkJEQjZ0R2ZtSFJXRHRtMVU4MTc0c0lNdC1oVlFrN2dPYXBLOFZobzNPLU9PMWpPU2pzY1BDUXNCclBfazFOa3Jkb0daNWktaVdNdG9FeGVFZWstZEx0ZlZEWjFJMGFFVmpGY1VLOVBtU3pKUDBiUHJZMzFsQVUtNV8wWW9GSjFPcURkN3hRRzgxRnRzejlKUXZoekVZRWswS2o4NjVOSXdvUVc4MmZHSEV2NE0xMWt1YnVjQnVZQW04U3ZPV3cxWHdEMU5mLQ?oc=5"
-  },
-  {
     "source": "Le Parisien Étudiant",
     "date": "4 nov. 2026",
-    "topic": "Numérique et intelligence artificielle",
-    "title": "« C’est un cataclysme » : avec l’IA, élèves et étudiants peuvent-ils encore avoir le goût des maths ?",
+    "topic": "Santé et études",
+    "title": "L’impact du silence - Ma Bulle en Santé - TOULOUSE, 31300 - Sortir à TOULOUSE - Le Parisien Etudiant",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZTdHR0JydmoxQmtHeFlhRUNhWVRVaUNFM1h4cGRHUzc4VUdENGJRRFBEdUJZeWg2TGdQSHViUmVxMlh3emdnMDZfZXhGSmFhb3FnUktubWZxeTNlZ1o4VEh6QjJaalY2bG5XdWxTOXliR3hPNWpUYnl2UzhIV1ptVjhaSF9HeWp4MWRuS2ltazU2aTQ2TW9xcGYwNFFiTDB2cTlDbGo4emRZLXRTUG9wWlpHeXFlWmRMRkV5Nm16TjR0bTFQN3pxU1pqaEdydFcwejNjUnI3NHBwZDJJLVlIbXktemxUbGpfOUNQa202UXI0Tm4yNHlVXzhB?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1yc2xBMUZVLTEzMGtvRzBKRUV5REs5VVRUVFp0ZmtYVlAxcmdka0ozS21RRDdDaVM2SDJDY2FfME84WllYUkxEYmRSSzYyQmgtQTJURVlWWE5sZzJGbXh6UGhsTzlFTEgyZE9mSVpQVVhacjdlVjFqTnJKaTZQSEk?oc=5"
   },
   {
     "source": "L'Étudiant",
     "date": "4 nov. 2026",
-    "topic": "Santé et études",
-    "title": "V. Lisowski : \"Je ne suis pas certain que la licence portail santé soit plus compréhensible que le système PASS-LAS\"",
+    "topic": "Stages et premier emploi",
+    "title": "\"J’ai l’impression de ne pas contribuer à la société\" : le mal-être des jeunes diplômés sans emploi",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQdlJBZi1tTkIxZXRHakRSRVVxWDFydDA0cFFpT2Q5ZFMxVTBCVFotcnhpbHIyVkNJT2ZmVlNlYTlONDZISnFPTWtIdVdLR3pzTW93N0Fubk9GY0VreUh3NHlnckdHNkszTUZjQW9BcUN0T29lLU1kS09mSXV0SXlKUzVuM1F1M0Q5MS1HdWJyTmQzcW41V0RYQ3p3Ul9JM3ZJVkVDdzl4WTU3ZTJwRlZFcFU1Tnc2OF92ZldWNzBZSjUydzJYT1JwU0ZZaUUydDN2ZkZMektFRUFfOUg3bUN6b0taUkNFZTlBY01BcU1oZzRENmVvbDF6aTR6UExSTmpISzhJWDNvODNOMF9ZalE?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQN3dLX1psRTNMOVF2ZHFaN1h4SkFhWkVHcGlzampEZEhqM3dNQldudTI0SDBvci1udDBqYWxRTFhzWldmVE01WVhJNjZldlgtVTg3M3o0SkJMNFE2TThOR25NRThSUVhKelpkaGx4WldOd0lfb051c2ZhQXlVd0RyTFBaVmZyR01hTXpDZndYTkJqMS1nSjFMU0F2WFJmSUFvNzhhT2d2OC11WmJGamZVQVEwU0dQSl9Pb0o5YnV6by1VaTRaUEZHV0VxZVJuZmdYNVE?oc=5"
   },
   {
     "source": "Le Figaro Étudiant",
