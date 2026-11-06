@@ -1,5 +1,13 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-05T18:22:54.315Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-06T02:56:14.183Z";
 window.STUDCORP_WEEKLY_NEWS = [
+  {
+    "source": "Ouest-France",
+    "date": "5 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "Université Bretagne-Sud : les bâtiments Paquebot et Kerjulaude fermés après des blocages étudiants",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPN09lUksySjBUbl8xb01ZNGxFdy14dVNVbV84TTZPTm04aHgtVW9RTGR3a2pPSnE2MF9nS1RWSFp5MjA0OExSaDdqWnFySG9mb1QtTUZuajRMVE9jNXBsMk9oYW9OS3F0azNabVZLLVNpY3loUHRwU1ZoNzBVQXptWFpWN3RVMzQ0VjBlZWY3MUdIa0FjMUhUQ2dIUThOeGZfSWxRV0dCbVl5aF9INnc2M2REQ2ZHTmotM3R6UWZvcDRaa1lhYVo3bFZ5R1ZLNGM4MDZYcDAtQmp3dmRjbzUtbFVQa3FsZ0NqWWJleWFxZm9IbHllUS1WVFdFMDZHZl9O?oc=5"
+  },
   {
     "source": "Le Figaro Étudiant",
     "date": "5 nov. 2026",
@@ -15,22 +23,6 @@ window.STUDCORP_WEEKLY_NEWS = [
     "title": "Journée noire dans les universités : palettes, barrages filtrants, les campus de Perpignan et Montpellier perturbés par des blocages étudiants - France 3 Régions",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxNVFFDbERqLWx2M19jcUNwdWs5cE9GZklqN0ozV3NwdmFrdVFYelVkSnBxWGVQbWlxbnU2Rm1IUE5XMFRGTXRFU2JnTWVuVVAxV2lCaDJaSzg2UE9UdklUWDRiQWowaFB3cnJodzRUNk1ETHB3aTRkU0RyQXhsZUxleGlIMDRWUThKbEZJYV9qX0F1Tk0tbElmQVZ3VnU1dlMwS1cyVTBNSjVqNlhoZ0xpeURpU1pNUFJ4Z0w1c1BTZUZCc3d3OXNYRkNocE41SUViaEo1Z3ROUUxjWV9VZkx3cEpWLVJIU09ielV4WFgtSUlDYjM4Z1QzNmVDZkVkM3FQd0ZMbGlPNUt5TWZPeF96NHRoTmRZSnlXb3UyOGxXWUg2Y2xyM1ljam9kU0xIbkdwdTdaVkZlWks3M05nNHl2UGhsNEJwVDZwVXRrNzV3?oc=5"
-  },
-  {
-    "source": "Sud Ouest",
-    "date": "4 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "La Rochelle : l’université fait des propositions aux étudiants en échange de la fin du blocage",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNR2lqQ0wwMkFhN1NSb2FSd1lsd2J0eE9jaHV1TURGS09YN3hySVM1NzNzYl9mX2tlaUduVlh3NFpJeFB4TDlWU1c3bHdSMU9IUndmazUxdmlLWktvNHRkZUJ2UXNublN0aTl4SFdyUTV2RUJqQ1NIaWJLZVB5Y0FENFdyaHJ1R3VYOWxVdy1GdTRBUnMyUzFrLUdJVDBCWDRBQWlfZDVJMGl5bUo4RHRDa2pEbGNQdWpKSFNqTTNCR04tZGxNTlp2aFVyZFlOS3Bzalpwb1hPMFpoRHd5UmdFLTh2RFFmVF9QY2x2TXJfMmpvNEVYcjdmUk9OTVlZaHNVUlNteGY3ek5SUmRtSU9kWkJuWmxhNTNrN21udzNrdGJKX2s?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "4 nov. 2026",
-    "topic": "Aides et pouvoir d'achat",
-    "title": "Un collectif d’étudiants de l’Université d’Angers dénonce « une trahison » après le vote du premier budget participatif",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQOWNsR21HaEg3V0FVQjBueUJGeW1wWFBlZk1jTGY0NWFiMFZ4aVI1N3lZVEpvbmRYWEtEaS13SGstcFQ0M1MtOUVwZXBNY2t2c2NZX1NsclNpQmZRNFdMYjFTVEpwbnk0UkUyQnJmeUxSOHp6M0Y2d1o3ZEw0b1pyMFlhNjZxLURQUWF1TEVENWFOb1BqMmhxQTFuVEtUQnNkS0x1UlZfZk1nYzJCUzJFZFZsbDdPcE11WkdQS3lxTGlGRlFQT3cySV9jZnpHVEcyOGN0eTFmeHp5ZElUWU5YbVYyanhVSVNwZlRIVXFQMjJ2OVB3TmM3LXM1RWpGcXpOVWdtVG16OEZBcFUxeV9HcEJMTExvRXppVnpRT0ltMnlDRGREejNKWjRVcGwtSFZDSnc?oc=5"
   },
   {
     "source": "Le Point",
@@ -65,19 +57,27 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQdlJBZi1tTkIxZXRHakRSRVVxWDFydDA0cFFpT2Q5ZFMxVTBCVFotcnhpbHIyVkNJT2ZmVlNlYTlONDZISnFPTWtIdVdLR3pzTW93N0Fubk9GY0VreUh3NHlnckdHNkszTUZjQW9BcUN0T29lLU1kS09mSXV0SXlKUzVuM1F1M0Q5MS1HdWJyTmQzcW41V0RYQ3p3Ul9JM3ZJVkVDdzl4WTU3ZTJwRlZFcFU1Tnc2OF92ZldWNzBZSjUydzJYT1JwU0ZZaUUydDN2ZkZMektFRUFfOUg3bUN6b0taUkNFZTlBY01BcU1oZzRENmVvbDF6aTR6UExSTmpISzhJWDNvODNOMF9ZalE?oc=5"
   },
   {
-    "source": "Mediapart",
-    "date": "30 oct. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "Le recul de l’apprentissage pèse sur l’emploi salarié",
+    "source": "Ouest-France",
+    "date": "5 nov. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "Mobilisation lycéenne et étudiante : des bâtiments de l’Université Bretagne Sud ferment à Lorient",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVm1pVDh3WmNBbEU1WlRFZUNJTURnNXU4QVVLWlZIaUEzSWV0WWhwQllKbmJlNEw1WUdFNGJjdWtUREtTeXBvc3NnOU1YNG1kQVVDWEhQNjgzYVRuYk9ndUJaZ3RkQjRteXpZVGUwWURmZFRUYU9UQnI5ZTRTOTF2LUVfVUIzN2xxWmtremFtcHBhVjkwLXRHUFFYakQwWHVIZVBhbFAyMlhpQmhjYmc?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOYVJic19MS0FzbHdKZV9MZ2J6Sk56VXpDdmdXVjRmRTZla2FXUXVzeFZUMjQ1eXZfbEplRk9JcTFQeEw2d3ZxSk5Db3BzRVJqUkdZdkZZOU1TMU54bTZhcjVEWUEtdHJEOEREOTg1N3ZEZ0Y2RktSQm91dXh6QU9SS2kwQ3BibXFsbUlCbGxhbWVvR3BvSGVnR1hrekVjSUxjaVJZNTFrejE1RHpvR3NVY2ExdV9fRGYzdTlObndKN3FPbkZBS1QyNUJwcTlqQTR2QTF4TEZiZ1lUaVFCdVRjaGJKVjFZcENuX1hyS1lIcG1MclRPUVFWSEdNaW1LckhOb3lIWmx0MEo4RTAxMVRV?oc=5"
   },
   {
     "source": "Sud Ouest",
-    "date": "31 oct. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Université de La Rochelle : deux jeunes diplômés primés pour leur plateforme Loge ton étudiant",
+    "date": "4 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "La Rochelle : l’université fait des propositions aux étudiants en échange de la fin du blocage",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxORjdpeHdtYzlkN3A0RFdvV19GRlB2ZW5ubmhFSXBMTGhFcV9Ld1ZUVmtZYTJnaWxZRTI1TGZyTEJFOFdLZlBjcVJGZG1ELTliZjJUc0QzRW53dGJiZlBZNUdpSTllX19reWI5SWQ5RTY1R1ZndkZPLWIzaG9DYVpSYWxreHotM1UxTkY2QnFJX01PdXBiWjdNQ2l4RjY3YVh6M3RvMUp3ZEo4RzgwNnVIWVhrZ0c2eldkTGswS1Vnc0dLSDZOYVczSno4blUtWTI2ZjVfXzhoWEpQQld3TVNDTWotWmNyUmlZc2lmMmNvbDA?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNR2lqQ0wwMkFhN1NSb2FSd1lsd2J0eE9jaHV1TURGS09YN3hySVM1NzNzYl9mX2tlaUduVlh3NFpJeFB4TDlWU1c3bHdSMU9IUndmazUxdmlLWktvNHRkZUJ2UXNublN0aTl4SFdyUTV2RUJqQ1NIaWJLZVB5Y0FENFdyaHJ1R3VYOWxVdy1GdTRBUnMyUzFrLUdJVDBCWDRBQWlfZDVJMGl5bUo4RHRDa2pEbGNQdWpKSFNqTTNCR04tZGxNTlp2aFVyZFlOS3Bzalpwb1hPMFpoRHd5UmdFLTh2RFFmVF9QY2x2TXJfMmpvNEVYcjdmUk9OTVlZaHNVUlNteGY3ek5SUmRtSU9kWkJuWmxhNTNrN21udzNrdGJKX2s?oc=5"
+  },
+  {
+    "source": "franceinfo",
+    "date": "2 nov. 2026",
+    "topic": "Santé et études",
+    "title": "Le président de l'université d'Aix-Marseille alerte sur la dégradation de la santé mentale des étudiants face aux blocages",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPcTJ2MjJNV3BsTzJsWl9JcEdXeHRNR2hCRm16V09OY2lYMm9oYzIyUXhldHE2dWdnWGdsN3lPUHNfX2VTRms3YlZpQkVhU1JRNHEzTEt3QXBQanpJaUdCdzdiY2ZRd0Q1WHJXMmROZGpCMkswZEhCZUtOSjFiaXNVczN6MHBSZ1pmeUwwZmF4RFkxU1RLTHE2NUIxdjlSWGlOM241eGlESW1ZR0Roc2czSVFnb3pPZEZiOHJGbjdab0htZDVqTzJQZkRSSU5Ea201Zi1IOW15WjVJbkJJQ19BSWUtMTNCZFQxSzUyeEstdlZJdTRQVENxWV92dzB2VFUtM285T2lsYnhvUUhWT0JGbUsxWEllUlZCdXJuaG1za3VNVUUx?oc=5"
   }
 ];
