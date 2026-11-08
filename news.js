@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-08T01:55:53.845Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-08T16:49:15.362Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Les Échos",
@@ -57,14 +57,6 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOVGVQSmVHMWVTOXFIa3lnQXlTYV85U29OMGhqTkY1ZjExNC1OOEF0d2VuLS03M0NmWFo1TVpjSlgyTE5PSXktTGEwUnNqVi02U3Fqb09FeDZ4N0lGRWF0Um1YRExJazFOaU8wTFRCck9VTXRCRWlrOF9EbjVhRGhQeVQ1RXpRNnlBNjhOZzh6ejE1SDdVcUdCYzJlVGNhVWY3MEJxSmx5bl9VaHpwT2dIX01hV2M0eC03eGZfaXFkZW9ZZklkM29MNlZoUGEyb1BGdnY1djFKZUlRcm9yRXBHT3NXQnpkMVQyWTFYQ1lwMzJWVmlzd1Z5Q3FpZHRFaDNrUVE?oc=5"
   },
   {
-    "source": "L'Étudiant",
-    "date": "7 nov. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "Vendeur / Vendeuse en ALTERNANCE #edu16127 - Saint-Paul, Réunion, REU - EDUCATIS FORMA",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSTRzWmNtVjBqZ3ZvRlQwaWlYcjJqRjNvSXU3MFpsX0d5UzJsMXBUWlZUQ3h1RjFzZ3FwSC1jTTg5UnNoRkFsZ2NxMWFjMmFoXzBJbmllcUJJb3lwN3hKbm1ROEp4NjV3cGdGS3lzVHpfNS1QWVY3dDE5NDJlU2U2WjlGODlvZFhwZzhuWnRCMThKMXVucHRKdnVGQzFnb3puaEJUNVg1dFFhTWZRZ2dKa2xZalphUklOTXFSb0pIMDBHX2M?oc=5"
-  },
-  {
     "source": "Le Parisien Étudiant",
     "date": "4 nov. 2026",
     "topic": "Numérique et intelligence artificielle",
@@ -79,5 +71,13 @@ window.STUDCORP_WEEKLY_NEWS = [
     "title": "Mobilisation sociale : des présidents d’université appellent à une « action urgente » en faveur des étudiants et lycéens",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxObU9CRlZhNWlyajFFYUdLYXc4TnNBNWM1SkZLZnFuY2xfekZuel81V2g5Ujg0VXJodzlkZFo1Vml3Rnh5YkRkRzA1UGYxOWVDMDFxb3RXaGs2RFVFanlZT1dvYS1lQmxRb2toRF9tSTU3SU5ORDB0YVJiY0xtY2RvRVBVTVdLbVpHSUtPWlM1akVHamlrbTQ1VTdRWE96M3lsdDJreTl1cUtoTDFJN3RPUGJWWFBQWVJTSmVaRVlObEZzNDU5UWEweG9aQl90N3RsWTRkRHR2OHNvU1ZPcmFmZkhnQVl6aFFUX2FTTUdwRVN6Yy10cXJiY2JxSjZpZUhL?oc=5"
+  },
+  {
+    "source": "Brut",
+    "date": "4 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "L'Union syndicale lycéenne et l'Union étudiante appellent à bloquer lycées et universités mardi et jeudi - Brut",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPaFpNNFhEN19Vc25PWV9FalNOMlNUR1g1ZEhqTW5UcGRWZUQ4MVRLTVFvb1JpUTY5MU1iU0Q5eFpGalJXS3c2NlFwelRzcUJON0RwTGU4Q0NTcHBEQXBFQ2FCdTZ2S2h0ZGs4M1BFUFktMnhCUWtjUFRwYmZ4Sm1oXzlwczk3NVdRWUVzdmV0b2ZldjFqdlBYMlFENGdfQlVCMWdPYjd3allyRVdLTXpfcjY0LVFwZkw2Z01LQ2UxdW1pLWxXQXMzMDYwcXJvVlR0U21nc0NRZTEzWU9nbTdfMGcwVWxLYTBRX1E?oc=5"
   }
 ];
