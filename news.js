@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-07T16:40:20.302Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-08T01:55:53.845Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Les Échos",
@@ -73,11 +73,11 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZTdHR0JydmoxQmtHeFlhRUNhWVRVaUNFM1h4cGRHUzc4VUdENGJRRFBEdUJZeWg2TGdQSHViUmVxMlh3emdnMDZfZXhGSmFhb3FnUktubWZxeTNlZ1o4VEh6QjJaalY2bG5XdWxTOXliR3hPNWpUYnl2UzhIV1ptVjhaSF9HeWp4MWRuS2ltazU2aTQ2TW9xcGYwNFFiTDB2cTlDbGo4emRZLXRTUG9wWlpHeXFlWmRMRkV5Nm16TjR0bTFQN3pxU1pqaEdydFcwejNjUnI3NHBwZDJJLVlIbXktemxUbGpfOUNQa202UXI0Tm4yNHlVXzhB?oc=5"
   },
   {
-    "source": "franceinfo",
-    "date": "3 nov. 2026",
+    "source": "Sud Ouest",
+    "date": "6 nov. 2026",
     "topic": "Vie étudiante et campus",
-    "title": "Journée noire dans les universités : palettes, barrages filtrants, les campus de Perpignan et Montpellier perturbés par des blocages étudiants - France 3 Régions",
+    "title": "Mobilisation sociale : des présidents d’université appellent à une « action urgente » en faveur des étudiants et lycéens",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMizgJBVV95cUxNVFFDbERqLWx2M19jcUNwdWs5cE9GZklqN0ozV3NwdmFrdVFYelVkSnBxWGVQbWlxbnU2Rm1IUE5XMFRGTXRFU2JnTWVuVVAxV2lCaDJaSzg2UE9UdklUWDRiQWowaFB3cnJodzRUNk1ETHB3aTRkU0RyQXhsZUxleGlIMDRWUThKbEZJYV9qX0F1Tk0tbElmQVZ3VnU1dlMwS1cyVTBNSjVqNlhoZ0xpeURpU1pNUFJ4Z0w1c1BTZUZCc3d3OXNYRkNocE41SUViaEo1Z3ROUUxjWV9VZkx3cEpWLVJIU09ielV4WFgtSUlDYjM4Z1QzNmVDZkVkM3FQd0ZMbGlPNUt5TWZPeF96NHRoTmRZSnlXb3UyOGxXWUg2Y2xyM1ljam9kU0xIbkdwdTdaVkZlWks3M05nNHl2UGhsNEJwVDZwVXRrNzV3?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxObU9CRlZhNWlyajFFYUdLYXc4TnNBNWM1SkZLZnFuY2xfekZuel81V2g5Ujg0VXJodzlkZFo1Vml3Rnh5YkRkRzA1UGYxOWVDMDFxb3RXaGs2RFVFanlZT1dvYS1lQmxRb2toRF9tSTU3SU5ORDB0YVJiY0xtY2RvRVBVTVdLbVpHSUtPWlM1akVHamlrbTQ1VTdRWE96M3lsdDJreTl1cUtoTDFJN3RPUGJWWFBQWVJTSmVaRVlObEZzNDU5UWEweG9aQl90N3RsWTRkRHR2OHNvU1ZPcmFmZkhnQVl6aFFUX2FTTUdwRVN6Yy10cXJiY2JxSjZpZUhL?oc=5"
   }
 ];
