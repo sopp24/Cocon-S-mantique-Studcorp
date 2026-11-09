@@ -1,12 +1,12 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-08T16:49:15.362Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-09T02:10:34.442Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
-    "source": "Les Échos",
-    "date": "7 nov. 2026",
+    "source": "franceinfo",
+    "date": "8 nov. 2026",
     "topic": "Enseignement supérieur",
-    "title": "« De plus en plus d'étudiants sont en détresse, comme pendant le Covid », faute de pouvoir aller en cours : le cri d'alarme d'un président d'université",
+    "title": "Le ministre de l'Enseignement supérieur exclut tout semestre validé d'office pour les étudiants pendant la mobilisation sociale en cours",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOSDNDQWVQZC03YUhoZ2M2T2lZSGVfOFVseWZhdF9MbjNFTk8xTDN0ZDNKdndQdzIxN0RBWnhjcFZ0R0hLNkpBNEFjRVZjSEtfTS1WMXhoUGlnZnI3R2NEOHFvc0VxVENGQzg5a0JlbW1SNG4zM3lwbmlBR05WanNhNWdQSEEzTTU4VkpTVC1xVGZSYTk4ekNmaURzMWlhMDZVb2s5akNEcnVmbkdMUVRZMFRaUHBmNzlGU2U5UVJOMHVZUUMyMXVZbkNrVDMwU2t2R3FjOVJvejBGQks2bEE3YVc3UnRmM1FaUkRwNjNqNjFudDNPQ21jdDhCZVd1QjBVN0VBTVlBenB0MTQxdU15Q092NWJWN2hlbVpjbEtac294OVY0SFE?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOX014NTdTc0w0cm1hRGQ5dFN6QkZHNVFoRU9ZMUpsZmlfN1RfeXBRb2dpUERUMVA1YzRac240eXRLRVRpMWpBRlpJZUZIUEF3YmtpaEhQbXQtbzlSTnJzUUlsalp5TS1BSDB0eTRNaXdKcFcxdzJLMGw1U1BleV9SUlJxTk1ORS1xOW9NRXlWYm9Ld01EblVhNEo3NlBDaVBiNXVmQVdNbDBkaTBmMkFvZS1CdjhJZm9JVUJKRW1wLTF6MWlpX21zbkJMcUV1NXk1V1AtUEYtMkFwWnhVOVpwTlpOLWtaOVlvN2oxZkUtUmU2ZThNNVFHNnhVbk81bHhrbVZQWDdpSUw5WkNlbTJDNU51RHFzaElqWjBiX0hkMVlfZzZkT2JFamV0UFBqUHpfTldWckFyZw?oc=5"
   },
   {
     "source": "Le Monde",
@@ -41,20 +41,12 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQOWNsR21HaEg3V0FVQjBueUJGeW1wWFBlZk1jTGY0NWFiMFZ4aVI1N3lZVEpvbmRYWEtEaS13SGstcFQ0M1MtOUVwZXBNY2t2c2NZX1NsclNpQmZRNFdMYjFTVEpwbnk0UkUyQnJmeUxSOHp6M0Y2d1o3ZEw0b1pyMFlhNjZxLURQUWF1TEVENWFOb1BqMmhxQTFuVEtUQnNkS0x1UlZfZk1nYzJCUzJFZFZsbDdPcE11WkdQS3lxTGlGRlFQT3cySV9jZnpHVEcyOGN0eTFmeHp5ZElUWU5YbVYyanhVSVNwZlRIVXFQMjJ2OVB3TmM3LXM1RWpGcXpOVWdtVG16OEZBcFUxeV9HcEJMTExvRXppVnpRT0ltMnlDRGREejNKWjRVcGwtSFZDSnc?oc=5"
   },
   {
-    "source": "franceinfo",
-    "date": "2 nov. 2026",
-    "topic": "Santé et études",
-    "title": "Le président de l'université d'Aix-Marseille alerte sur la dégradation de la santé mentale des étudiants face aux blocages",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPcTJ2MjJNV3BsTzJsWl9JcEdXeHRNR2hCRm16V09OY2lYMm9oYzIyUXhldHE2dWdnWGdsN3lPUHNfX2VTRms3YlZpQkVhU1JRNHEzTEt3QXBQanpJaUdCdzdiY2ZRd0Q1WHJXMmROZGpCMkswZEhCZUtOSjFiaXNVczN6MHBSZ1pmeUwwZmF4RFkxU1RLTHE2NUIxdjlSWGlOM241eGlESW1ZR0Roc2czSVFnb3pPZEZiOHJGbjdab0htZDVqTzJQZkRSSU5Ea201Zi1IOW15WjVJbkJJQ19BSWUtMTNCZFQxSzUyeEstdlZJdTRQVENxWV92dzB2VFUtM285T2lsYnhvUUhWT0JGbUsxWEllUlZCdXJuaG1za3VNVUUx?oc=5"
-  },
-  {
-    "source": "Sud Ouest",
-    "date": "6 nov. 2026",
+    "source": "L'Étudiant",
+    "date": "7 nov. 2026",
     "topic": "Formations et admissions",
-    "title": "Parcoursup : Sébastien Lecornu va échanger lundi avec les lycéens et les étudiants, avant la réunion sur l’avenir de la plateforme",
+    "title": "Agenda des journées portes ouvertes de l'enseignement supérieur proposant Formation continue - Page 32",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOVGVQSmVHMWVTOXFIa3lnQXlTYV85U29OMGhqTkY1ZjExNC1OOEF0d2VuLS03M0NmWFo1TVpjSlgyTE5PSXktTGEwUnNqVi02U3Fqb09FeDZ4N0lGRWF0Um1YRExJazFOaU8wTFRCck9VTXRCRWlrOF9EbjVhRGhQeVQ1RXpRNnlBNjhOZzh6ejE1SDdVcUdCYzJlVGNhVWY3MEJxSmx5bl9VaHpwT2dIX01hV2M0eC03eGZfaXFkZW9ZZklkM29MNlZoUGEyb1BGdnY1djFKZUlRcm9yRXBHT3NXQnpkMVQyWTFYQ1lwMzJWVmlzd1Z5Q3FpZHRFaDNrUVE?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNdE5zS2o1SGhXX2VjWWlwN00ybExMOFJJc2s3bDNwS0dPenR6ZTl3VWRqbFV1eWxSVU5lR3B1ajYteGZJemszaV9KLU9QZlR3dFUzc2xmY0o0MlhkdVQ3NTBVcmtTUmQ4ZE9iVHF0SmdOYUk0UEN6dnBTaUNDLVRvWlg0VnBqVXBqVTlvY0daTkZ1V1UtUFFiYnRid3JvemlCOGs3YlpkRG5LUHVUdE9zT1hKdUJZRWZkX0R1VXM4LWU5bnMzRTBWZVBn?oc=5"
   },
   {
     "source": "Le Parisien Étudiant",
@@ -65,19 +57,27 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZTdHR0JydmoxQmtHeFlhRUNhWVRVaUNFM1h4cGRHUzc4VUdENGJRRFBEdUJZeWg2TGdQSHViUmVxMlh3emdnMDZfZXhGSmFhb3FnUktubWZxeTNlZ1o4VEh6QjJaalY2bG5XdWxTOXliR3hPNWpUYnl2UzhIV1ptVjhaSF9HeWp4MWRuS2ltazU2aTQ2TW9xcGYwNFFiTDB2cTlDbGo4emRZLXRTUG9wWlpHeXFlWmRMRkV5Nm16TjR0bTFQN3pxU1pqaEdydFcwejNjUnI3NHBwZDJJLVlIbXktemxUbGpfOUNQa202UXI0Tm4yNHlVXzhB?oc=5"
   },
   {
-    "source": "Sud Ouest",
-    "date": "6 nov. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Mobilisation sociale : des présidents d’université appellent à une « action urgente » en faveur des étudiants et lycéens",
+    "source": "Les Échos",
+    "date": "7 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "« De plus en plus d'étudiants sont en détresse, comme pendant le Covid », faute de pouvoir aller en cours : le cri d'alarme d'un président d'université",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxObU9CRlZhNWlyajFFYUdLYXc4TnNBNWM1SkZLZnFuY2xfekZuel81V2g5Ujg0VXJodzlkZFo1Vml3Rnh5YkRkRzA1UGYxOWVDMDFxb3RXaGs2RFVFanlZT1dvYS1lQmxRb2toRF9tSTU3SU5ORDB0YVJiY0xtY2RvRVBVTVdLbVpHSUtPWlM1akVHamlrbTQ1VTdRWE96M3lsdDJreTl1cUtoTDFJN3RPUGJWWFBQWVJTSmVaRVlObEZzNDU5UWEweG9aQl90N3RsWTRkRHR2OHNvU1ZPcmFmZkhnQVl6aFFUX2FTTUdwRVN6Yy10cXJiY2JxSjZpZUhL?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOSDNDQWVQZC03YUhoZ2M2T2lZSGVfOFVseWZhdF9MbjNFTk8xTDN0ZDNKdndQdzIxN0RBWnhjcFZ0R0hLNkpBNEFjRVZjSEtfTS1WMXhoUGlnZnI3R2NEOHFvc0VxVENGQzg5a0JlbW1SNG4zM3lwbmlBR05WanNhNWdQSEEzTTU4VkpTVC1xVGZSYTk4ekNmaURzMWlhMDZVb2s5akNEcnVmbkdMUVRZMFRaUHBmNzlGU2U5UVJOMHVZUUMyMXVZbkNrVDMwU2t2R3FjOVJvejBGQks2bEE3YVc3UnRmM1FaUkRwNjNqNjFudDNPQ21jdDhCZVd1QjBVN0VBTVlBenB0MTQxdU15Q092NWJWN2hlbVpjbEtac294OVY0SFE?oc=5"
   },
   {
-    "source": "Brut",
-    "date": "4 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "L'Union syndicale lycéenne et l'Union étudiante appellent à bloquer lycées et universités mardi et jeudi - Brut",
+    "source": "Le Monde",
+    "date": "6 nov. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "Mobilisation étudiante : à Paris, des responsables d’université défilent pour réclamer une « action urgente » de l’Etat et le déblocage d’1 milliard d’euros",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPaFpNNFhEN19Vc25PWV9FalNOMlNUR1g1ZEhqTW5UcGRWZUQ4MVRLTVFvb1JpUTY5MU1iU0Q5eFpGalJXS3c2NlFwelRzcUJON0RwTGU4Q0NTcHBEQXBFQ2FCdTZ2S2h0ZGs4M1BFUFktMnhCUWtjUFRwYmZ4Sm1oXzlwczk3NVdRWUVzdmV0b2ZldjFqdlBYMlFENGdfQlVCMWdPYjd3allyRVdLTXpfcjY0LVFwZkw2Z01LQ2UxdW1pLWxXQXMzMDYwcXJvVlR0U21nc0NRZTEzWU9nbTdfMGcwVWxLYTBRX1E?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxOcC0xZnQxLTVzRldBSWt2djgzY3FlbENKUHhOdm14QWRnZkloWW9jeVFYbVhUQUFqR0VoeEF5Z3pQWmVGOHZmWXRIYW1aUDdVZ2dXcTV1Tk1fTFEtV01YVUk2a0p5cVQxei1pZ2NFUmJYN29PQTlzT2xCX2lJUE9nT3AtLVZVdzdCNHhmLXVwU2RDVDcxUnJ0SWwyU1VvODdNRFctOEFmaUVGT2pEWWZIeTdFTk9uZnBGRnRyX2hMcFF3dWJrbldRSFRRMmxkQlM3bmNwMUpuQjF3NU5uX1R1WVVkUjhIRDhDbXVmOE1BTW9GcTItNjFaRm42WXFQSDUxV2JOV2tyVm9xRmhKMTFfVEU3elZpV21kd1UtbUt3VXl6LVIxRzJfeW5TVXMzQVFDcUpLeFU4eHFTYUUwQnJwVGdrSQ?oc=5"
+  },
+  {
+    "source": "Ouest-France",
+    "date": "7 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "« En Mayenne, il y a presque tout » : en 15 ans, l’offre de formation pour les étudiants s’est largement étendue",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxOYW9TNDlna19HZ0RxcjRnaklaVHg1dVBNVmtRaW5WUG1GUnhYRzlzWnNfS2pQUzN1X3BOcE9reGR3YXBWUzEwZjhoUERMSm1peEVzNGxjX2p6ZU56SDNvY3V5dU9DeFJGUTVzemVHdDVVS0JQSDBPWFlWeXdBdW1UT29KQ0wxVGJOX3ltR2c2WW5EODFUcTRDQTl5SmJuUU5ZNDJ2SWtMRWVvblBxVVlnM2FwdXhkYXVvZFVranFVaVpjVkp6clJJWTVwazhwcnNISlJ3UnZMREdrMzVSZkZ5Z0psMGNHTm13ZUJGM3BNQzNMbUFfOUg1SlhIcVoxSlNfQTFiZHlzVXRHaWhlMHFpNnNsRTlGT2luTU9qU0lvMkYyQ3M?oc=5"
   }
 ];
