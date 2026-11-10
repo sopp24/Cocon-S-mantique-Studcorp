@@ -1,5 +1,13 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-09T21:10:24.103Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-10T04:24:09.849Z";
 window.STUDCORP_WEEKLY_NEWS = [
+  {
+    "source": "franceinfo",
+    "date": "9 nov. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "\"Il n'est jamais trop tard pour arrêter\" : avec le Mois sans tabac, l'université de Bordeaux lance un campus non-fumeur pour aider les étudiants - France 3 Régions",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxOU0lKQWRhVUIzcHJPQ3lSQWlRT2ZYQ2puMU1Mc194TVlBdXpHRDI0dldRczZOWHAybjRnczBSUzVjWnJ3dGt2VEJJaTAtbWpLdDhYVnZ1bV8wZUtQRVlGY0xfdWNmcWF3SURtdmlkcU5sbmNNeDhhWUhPMEVINm11Q3VrRHRTSVpvdFFneWtWclFsUERqQlNZUF9JVVNJNWFCZUNQYk55T3lIekdWeVJpUU5DbUhlZENSSW5YZ1FlRlR0Mzd0S05HdVRwZmp4WmJadF81VEFhNHhSTXY4aGVFVG5pRHd1SXdQVTVmaWNYdWVqckFKX21wWW5VMGR4N0RrZWJYdmlOM0p2Q1JUX3Rkd2k3ZHJjMzFpM1JFSFdLVldPX2cyampwUTF2cnlmbF90a2F2Q09PNmloaU0zSjVDb19Oa1lBNDNRVnc?oc=5"
+  },
   {
     "source": "Sud Ouest",
     "date": "9 nov. 2026",
@@ -7,22 +15,6 @@ window.STUDCORP_WEEKLY_NEWS = [
     "title": "La Rochelle : sans garantie sur d’éventuels blocus étudiants, l’université maintient ses bâtiments fermés",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOZS0zdC0tRm9UcU5PbElSYnRiWXhzOE9LZXNOQlZYZGk4QnlKbDQxN3dSdXNIM3c1c21hd3MzSUttd3phZmp2VkhWazVGWlJuNUJibzRiX21velFObDdtZjlBUW8tZmM3dXlIOWFlR2RzOGpEVDBBeF9DUjUtOWQ5XzlIR1B2Y3RDQUctdXNidm94RlByQlBYVmI0SDlhSDc0YzVSQnB3WDdFMmlyOEV6VVFlZEpaUGt3RzhFX0lYZi0yZFFsSm4weTZoNUZfWXNJeHBLa1B4eFN0Q3g4ZWJsWUxkc25LQS1acElEbWRPSEdOTWx2dDlxTmtQT2ZIVnhjRnc?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "9 nov. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Le cortège étudiant marche sur Nantes université, sa présidente évacuée",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOWmE0VDMxcWlTMVJYS202NkpwV3lfNGxQNjhvUmhnbmtmTW5aTTVaVENEVGRSVTVRczBlbGdlYWgtNnVxb1AyanNsOHNaV0FaeGRxa3Fwdk1ubkRyVFZmaV9lM1o4U3h4aHF2bHlzZXF6eFhkZDdNMUxNZnVhZExhSTBObGg3VGR2SWl1XzhUU2FxVDY4eTJ5SndHTUg5OEx3aDJUM3BLMjI4NjQ5d2lXY0dobTlyY0x6V092SGVEVVhvWTFLdVFBYllTamVCbjBZTkRMNFBrenFDVmtsVGJCVDZSaVZ4YlZVYnc?oc=5"
-  },
-  {
-    "source": "franceinfo",
-    "date": "9 nov. 2026",
-    "topic": "Santé et études",
-    "title": "\"Mes journées ne ressemblent plus à grand-chose\" : deux étudiants racontent l'impact des blocus universitaires sur leur santé mentale",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQTnVzblA4LS1lM2puQUp3X3RFcnFOZWpXS0gxLXh4VTJ5U0o4Ym5vQlNwaU1QalFEcktvLUJsZ2diRFJrQWZaMC14UWNtbjZPYTZXeEFhcFE0VEZUY0FySWVBamhZbGdWeWZjUEIxZnpmSjIyM0QwNFM5eEpIZE00ejFRc2dweUFuMmVDNF9mNGh1MUhDMWk3WHFsYUhqUnlJU3gzSHRLX09XUVphQWVmaVRLdFNuZjVMSWstTmd3TGN1WGc3OEREQlJVb0dBdTl1NXhQdkVsSlcwemFLRXl3NDZ4S1BCbUpBTWpkckNadHZNMlluWGJNWW5DLU9qTmp4YWZsd0NmMkF2NjJzeHI4d0ZRbS1felQtV3BqNW5NSkpqNDNqTnhiZGtFOG90ZHpoMXNlTGtUd0JSN2FSMUE?oc=5"
   },
   {
     "source": "Le Figaro Étudiant",
@@ -42,42 +34,50 @@ window.STUDCORP_WEEKLY_NEWS = [
   },
   {
     "source": "Le Parisien Étudiant",
-    "date": "4 nov. 2026",
-    "topic": "Numérique et intelligence artificielle",
-    "title": "« C’est un cataclysme » : avec l’IA, élèves et étudiants peuvent-ils encore avoir le goût des maths ?",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZTdHR0JydmoxQmtHeFlhRUNhWVRVaUNFM1h4cGRHUzc4VUdENGJRRFBEdUJZeWg2TGdQSHViUmVxMlh3emdnMDZfZXhGSmFhb3FnUktubWZxeTNlZ1o4VEh6QjJaalY2bG5XdWxTOXliR3hPNWpUYnl2UzhIV1ptVjhaSF9HeWp4MWRuS2ltazU2aTQ2TW9xcGYwNFFiTDB2cTlDbGo4emRZLXRTUG9wWlpHeXFlWmRMRkV5Nm16TjR0bTFQN3pxU1pqaEdydFcwejNjUnI3NHBwZDJJLVlIbXktemxUbGpfOUNQa202UXI0Tm4yNHlVXzhB?oc=5"
-  },
-  {
-    "source": "L'Étudiant",
-    "date": "3 nov. 2026",
-    "topic": "Aides et pouvoir d'achat",
-    "title": "Aide aux devoirs - temps partiel - job étudiant - Freelance - Ploemeur - Ploemeur, Bretagne, FRA - Alpha Education",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOYno0c2xlWFNIS2ZVYUhZZkxDbGpKeFNhTjlwX19lUnNwTlRQRW5mVHAwYktsazh5T3dJTVo2WHZvdWpfenN3WC13VjRhOU5sZG1UUTB0QTFBWXhma1BFQ1piX2stMms4RWZhdVhmY2RZVF9aZW40X0JPSU15U1F1dWpYa3dBUmNYYVM2MTZkcGVtdngxeHZobTZ5QTdTajcydWhRTWM5d0lfZXptdTBVV0l4dGNjQ3FiMXJyVXB1T0RBSmNFVGFOamFfUGxSOUdqRHc5dTI2cVRXZ0VnTGxjeFpR?oc=5"
-  },
-  {
-    "source": "franceinfo",
-    "date": "9 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "Un groupe d'une trentaine d'étudiants envahit les locaux de la présidence de l'Université de Lorraine - France 3 Régions",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOU09oUGJqaklYR2Flc013RzEtOE1zNlVhc3kyajNsQmRQOGZoZFBLOGlGbTQ2cHp6ZElFRUFOQ2hsaDAxazVManZRMEkyNXg5cEtfcUdfRFk0Qmx2RHl0LXViRnRsUTRhZXhUVzBjTTk1YThWYmVybjhlNHVDRHR5Mzl3RVc2VmxqWjhCaEVWT0ZWSlQtOS1Tb0xqRGZjVUZWZ0JrWVozanMtalRqLTF1M1AzSmt5MFJMMjEybzN6NHFDdFdCWUZuS1NXd05PX3Y0TktUU19CdUVaamI1VFVXWm1fVTNQU3VMNTZ5MS0zOUxPaGhaXzVqUlQxOElud3MzSEkzTjRVcjkzWmJzOWdTaVN4a29ZUQ?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "9 nov. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Occupé par des étudiants, un campus de Rennes 2 finalement évacué par les forces de l’ordre",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPaWVwdEZwVzNPNXdlTTYxckk0bVFEMFZqc0NmQnZjb0FmV3NscTVIWkY1U0ZyMWVWa1dTZ2FBQkhRcExrQjVybGg2Tk04WkJBakdTTEVIVEJzZG81d2M3VGY3VXRDdkdBa2ltV0loV01tODF5bERJTkhSVTRUQU9HYTFvMEVEbXNXcHRoQjRTcWlVS0JRb2RNSTdPUkx5a05wLWNOMDlJWjZTLXFyN2dCS25rbnR0emd3VDhWbXRJTWIxSG0tWFhfaEhCZ1pjYWJSS2NpRUZSR210Z2JualY5akRqSDFHMk84RXlRZ2pUdktHYnpwZldFTGhENEZvZXFhY1RvUTQ2aDd5M1pzdkpCdjZRUQ?oc=5"
-  },
-  {
-    "source": "Le Parisien Étudiant",
     "date": "9 nov. 2026",
     "topic": "Santé et études",
     "title": "« J’essaie de me dire qu’en tant que médecin, on fait de notre mieux » : comment les étudiants en santé affrontent la mort de ceux qu’ils soignent",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxObEROTmhxTFZjdnVlRDVWN2FoLVU1eDM0X1JXNlpVV1Q4SWVxbnpsYk1XMkh2dXAxQnlhZ0N5OWRjTFh5TDhVQ2paYWQ3ank0T05WRG03Zy1CTXAyWXprdmhkRG8yVFQ0U2NPQUx5M1BOaWdMWmFxQW42NTBrWjc5UXpvYWNNVDBvLUozVXJOOGZVc3RUOFA1MFdtdThCNmdvN2I2emIyNmo1ZTJFYmVTajl1aUxpYUhqcnZPcnlfUFpjV3FxUm9qSzQ5RVI1QTlfSUdZclBQUnZ5eDdNWlBOc3FRaGVOTVNpbzNsdThMYjZQQ29DbEVjYlB4NzltV2F5dWMxV2RFb2lQTjVPMUotVmhMMW8tWU16c2lIRks1Vm1sRm51U19hOFdSVFI0Wi12cDhOcHhzaTE?oc=5"
+  },
+  {
+    "source": "Ouest-France",
+    "date": "4 nov. 2026",
+    "topic": "Aides et pouvoir d'achat",
+    "title": "Un collectif d’étudiants de l’Université d’Angers dénonce « une trahison » après le vote du premier budget participatif",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxQOWNsR21HaEg3V0FVQjBueUJGeW1wWFBlZk1jTGY0NWFiMFZ4aVI1N3lZVEpvbmRYWEtEaS13SGstcFQ0M1MtOUVwZXBNY2t2c2NZX1NsclNpQmZRNFdMYjFTVEpwbnk0UkUyQnJmeUxSOHp6M0Y2d1o3ZEw0b1pyMFlhNjZxLURQUWF1TEVENWFOb1BqMmhxQTFuVEtUQnNkS0x1UlZfZk1nYzJCUzJFZFZsbDdPcE11WkdQS3lxTGlGRlFQT3cySV9jZnpHVEcyOGN0eTFmeHp5ZElUWU5YbVYyanhVSVNwZlRIVXFQMjJ2OVB3TmM3LXM1RWpGcXpOVWdtVG16OEZBcFUxeV9HcEJMTExvRXppVnpRT0ltMnlDRGREejNKWjRVcGwtSFZDSnc?oc=5"
+  },
+  {
+    "source": "L'Étudiant",
+    "date": "8 nov. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "L'annuaire des formations en alternance : explorez, comparez, choisissez votre avenir à Bouvresse (60) - Page 10",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaHRSTThPcG5WQnR2U1ZCcnBsbWNyTnpUX1VkUGRtdXltOTBacEFEc0NTRWVVM2xtdVNWbTZKY2NmUFJ1ZV9mcjdxMkp1M2Z5UTAzOUdqTDFLX1BsS0g4VERaYUNBU3ZUd1lTVDl1c2EzOC1hTV9zcEhaam0zbVpfc2dzd0dLM2dfWUNtYndBdFVEdzcx?oc=5"
+  },
+  {
+    "source": "franceinfo",
+    "date": "8 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "Le ministre de l'Enseignement supérieur exclut tout semestre validé d'office pour les étudiants pendant la mobilisation sociale en cours",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOX014NTdTc0w0cm1hRGQ5dFN6QkZHNVFoRU9ZMUpsZmlfN1RfeXBRb2dpUERUMVA1YzRac240eXRLRVRpMWpBRlpJZUZIUEF3YmtpaEhQbXQtbzlSTnJzUUlsalp5TS1BSDB0eTRNaXdKcFcxdzJLMGw1U1BleV9SUlJxTk1ORS1xOW9NRXlWYm9Ld01EblVhNEo3NlBDaVBiNXVmQVdNbDBkaTBmMkFvZS1CdjhJZm9JVUJKRW1wLTF6MWlpX21zbkJMcUV1NXk1V1AtUEYtMkFwWnhVOVpwTlpOLWtaOVlvN2oxZkUtUmU2ZThNNVFHNnhVbk81bHhrbVZQWDdpSUw5WkNlbTJDNU51RHFzaElqWjBiX0hkMVlfZzZkT2JFamV0UFBqUHpfTldWckFyZw?oc=5"
+  },
+  {
+    "source": "Ouest-France",
+    "date": "9 nov. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "Le cortège étudiant marche sur Nantes université, sa présidente évacuée",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOWmE0VDMxcWlTMVJYS202NkpwV3lfNGxQNjhvUmhnbmtmTW5aTTVaVENEVGRSVTVRczBlbGdlYWgtNnVxb1AyanNsOHNaV0FaeGRxa3Fwdk1ubkRyVFZmaV9lM1o4U3h4aHF2bHlzZXF6eFhkZDdNMUxNZnVhZExhSTBObGg3VGR2SWl1XzhUU2FxVDY4eTJ5SndHTUg5OEx3aDJUM3BLMjI4NjQ5d2lXY0dobTlyY0x6V092SGVEVVhvWTFLdVFBYllTamVCbjBZTkRMNFBrenFDVmtsVGJCVDZSaVZ4YlZVYnc?oc=5"
+  },
+  {
+    "source": "Le Monde",
+    "date": "10 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "Mobilisation lycéenne et étudiante : l’intersyndicale claque la porte du comité de réforme de Parcoursup à Matignon",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQWVNQWHZIQUhtdEw1ckFBbmtobmR0S2U0VEVuUFV3d2V2OFppVWxKWkdsTzRqZUtRVGxqYmE5S1dTeFNIV003MHN4X3dOZG9QckpUcnl1TUpiTkVoSk96TnRRM1N5MnI4a08xWl9DeWI2Si1fNVNqWG04NUQ5T1VGMUpOcmhPWFUyUzBwcUc5UHFzeUthNUhqUUpuNTdpeW5sLUJra0NpUTl0ZDZFZ21RYTdMSEZiRERYZndWZzAwR0VGMjBpMEdkZjJyeU9LcTVBcHAyOU5RZzEydnJtSnp3MENfUm9wQmdfQTZEQXdhbk5TNFVIY3VFWVY5RW5LTHk0OVVUd1BmYjNrWmVoOS10bQ?oc=5"
   }
 ];
