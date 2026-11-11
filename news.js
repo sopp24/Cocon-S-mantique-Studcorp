@@ -1,20 +1,28 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-11T02:20:45.837Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-11T18:10:47.016Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
-    "source": "Ouest-France",
-    "date": "10 nov. 2026",
+    "source": "Sud Ouest",
+    "date": "11 nov. 2026",
     "topic": "Enseignement supérieur",
-    "title": "L’université de Tours aurait appelé la police pour déloger des étudiants, un syndicat réclame la démission du président",
+    "title": "« On ne s’attendait pas à être délogés après seulement une nuit d’occupation » : une trentaine d’étudiants de l’Université de Bordeaux évacués par les gendarmes",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxQaHdiUmJxbkNMNVVtTU5KVlNNRHBtQnNYWUdLNU1heG5rREVDTFRLNTlTcnJZSFk5cDRraEdZR0tXYWlyQ2ZveFNUaXprM2ppS1g5TjlJT09ET1dNeWVscnM2UWZLWDdia2VrazRncHhjQnFlaUptU2hGVUh3NmZsNDlEMzM0T09aWERBRUlsOHZBc082ZDE4cFpwTHdlaXRGOWYydURGMVNBUVU3QTVENzFGOTlpRjA3RERpU0xBVDNtVWJPVHBxUnE3R2h6Ry1SbmpmamxOUW5TSDNLaU00UTdTUzN3RVlfR0djX1hfNThyR1RIaXJ6QW9NcldxSXo5LUR2c1lXSzhsUF9ZRnR6S2xvWEd2cUJhZGFoY3JJWlE4QU5oeTQzeGlzTlM?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPWGd6bHhYbENNV2xsSXJ5Ql9RdEticzZiVlNGd19aTldYTUV3NVcyZUY1QXplVGdHaExZWHhLVFI1T0NrNTEycElTbS1HUzAxOGt3N21Jd0pWYVZTQWRuY25ENFNpZ3k4N2lKckZHNU9BQ2ViNDhIbUNJV2U1WUpBUzBRWVcya2o2bWM1Q2NtcWoyUjBiUnBSS3lPSFMxTzAzMVB2TGhaNXVvZFdtTVJOV1pGRzlHVmpXeExiUy1IRmdkTXl1VHlqQUFuRjl3TnBHTHpiMC1mVG9NOEVfWV9pTlhWNWMzelpZa2lCNVFYLVUzUTFNaVJGWlpIVm1ERUxFRkU3SnNZUG5yZDRGT2R2c24tbmR0MkM4b1lqVUx5MlNnRzQ4UjlZVmNvdUlLbk5KODRROGln?oc=5"
+  },
+  {
+    "source": "Le Point",
+    "date": "11 nov. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "Universités bloquées, intimidation, cours empêchés… Dans les coulisses du mouvement étudiant",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQX3dsUUt0dEhOb3lFeTE2ZlhEUDhubWpoUkFGWGY1Wnh0bGNwNGI2WnhRVWtoYXpTUklRdDhxdkZ6OUhXSFhnUklEcXF2Z2NFVllQTG0xSmZXZkluVDU2VkVCSGdQTU4xRFgxZWo0d2dobklSMUJJeW9oNHNtTklBdmlQSmVkRWhoeU1lZ0pEdlBxdnFNSUpqOGdpRGRibHVHWFNwbzJKbXRsd2cyRUVzSUd3aHlrSGFPSl92QV9taVpYR1M1TDNYZG1qMW41RV9BRkhuZG9QTVNmUEhYTUYxSUNB?oc=5"
   },
   {
     "source": "franceinfo",
-    "date": "10 nov. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Mobilisation étudiante : une professeure de l'université Cergy-Paris, accusée d'avoir proféré des \"propos racistes\" a été suspendue - France 3 Régions",
+    "date": "9 nov. 2026",
+    "topic": "Santé et études",
+    "title": "\"Mes journées ne ressemblent plus à grand-chose\" : deux étudiants racontent l'impact des blocus universitaires sur leur santé mentale",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxOU21NMnQzSG16NVpWdjdjTFhuelNFRFVpb0dGYnl6SmpDeHpiaEFpaFlJV1ZmVEVBLWdydkRpemxuaG00Y1lwNWs5clhLcVI3QnRxejAtTWQzaGkzT2g0aldTdUNzeGc4RlFMVDFKX01ZMFRERTlUSEc0Vm1pUFhyWXVHWjZEbnN6MXZsdkQ3Q2pkYmdScERod2JHRk0yVjdSMmVIZ2gwc3loU1Z4dGpFcFROY0V5T0xKZjB4Q0YtMEVaaldKZ0tHY3ppMnF5T242Zm9XMVFvNlZTLUtFbVAxVUdCM3VJaWRtUE9CbExPaGtfcExjMGFXdWUtMkI5aDlDb0NvSS1QTFh2ZjcwQmhOMS0xdE1DeElkRndDVGtKbnBZM0MzNzZ3Z25NT2JqRE1qUHc?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQTnVzblA4LS1lM2puQUp3X3RFcnFOZWpXS0gxLXh4VTJ5U0o4Ym5vQlNwaU1QalFEcktvLUJsZ2diRFJrQWZaMC14UWNtbjZPYTZXeEFhcFE0VEZUY0FySWVBamhZbGdWeWZjUEIxZnpmSjIyM0QwNFM5eEpIZE00ejFRc2dweUFuMmVDNF9mNGh1MUhDMWk3WHFsYUhqUnlJU3gzSHRLX09XUVphQWVmaVRLdFNuZjVMSWstTmd3TGN1WGc3OEREQlJVb0dBdTl1NXhQdkVsSlcwemFLRXl3NDZ4S1BCbUpBTWpkckNadHZNMlluWGJNWW5DLU9qTmp4YWZsd0NmMkF2NjJzeHI4d0ZRbS1felQtV3BqNW5NSkpqNDNqTnhiZGtFOG90ZHpoMXNlTGtUd0JSN2FSMUE?oc=5"
   },
   {
     "source": "L'Étudiant",
@@ -33,6 +41,14 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPNk5hR2s1WndodThDQnRnYjJmTkRJcHdXbDRrWGtQSzRTWDV6cXU3eGI1bnh6WW8taVRsemUteVBtdmxES0hZak9zZVNoNktCblREZU1XMW9iQmpxZXpnX1VtdWYtNEpvVkpzWWxBTE1obWFRSzQ5NjkzR3gwU2hQVTVWckhHMGg3VzVZdE1adzNhdlBnMmcxMldXakdUdUNrTVJFNzFMcXFyMVk5X041VzQya0hXNjZfaGxzTFF0aTFsVFVFX3Z4WkhLYkk2ZkxrQ3lGdmNPZkpjbnFyeElOWFBaenY?oc=5"
   },
   {
+    "source": "Ouest-France",
+    "date": "10 nov. 2026",
+    "topic": "Logement étudiant",
+    "title": "Plus de 200 logements pour les étudiants et les jeunes actifs : une nouvelle résidence ouvre aux portes d’Angers",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNMzdsdUZ4a0pVUkk1d1N4TjMwMTZTb2lXNzNlQi1fem8tc0I5U3ZKVFNvR3U0d3pNQURLd1hwWGh4QUtKQnpoYjV6bWVWNGhVQjE4YUhpd0U1UWo1cml0UDZVQkMtUEwwOTVELW9oQ0RhTGZ1RGw0WFcxNEwyVEFQN1RXSV9ZS1E4UWVWTjNCRFo2ekRBbFV5b3lZS2VyV2NYV1A0VTFUNmR2dXJGZGcxWkhCaWRlXzN4YjFzZ09EZ0JkWC05c3BOWkVWUUkzVm5ZM2ZVNlBxQUYtVnhObDhoTjV1NWtvMkVlZC1yRUtBTk9CdEhLZW9yNTBWMnVoSUhidHI3ZGNOdXV3dDFsVEl3Z0Q4aEJJSXVOLUJR?oc=5"
+  },
+  {
     "source": "Les Échos",
     "date": "9 nov. 2026",
     "topic": "Formations et admissions",
@@ -41,12 +57,12 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOQnNnTUxKTlBkWEZHdXFYdll1YkpkY2RpeVFnWko1blpJWFNXUDE2RkNIaXVLbWNJVGJnbkJ6MmtHUm5rRUFWaVVraHZFbDdCYnR1eld4WHl3djVaNlZTRUlnWnprOWY0QzZoYU52cXhnZmhqaG5ScTV1bFVJWmRMbzJITDN3MnlsMkw3eTM5aTQxbk9feEJRVjJVWHBZd2E5dDM2cGlGU21VVDluUG5QSEVDN1dYUHdVdjFGd3VpbW0zREU4a1MwcE9ZWFBKR083QjVIQlNlYw?oc=5"
   },
   {
-    "source": "Le Parisien Étudiant",
-    "date": "9 nov. 2026",
-    "topic": "Santé et études",
-    "title": "« J’essaie de me dire qu’en tant que médecin, on fait de notre mieux » : comment les étudiants en santé affrontent la mort de ceux qu’ils soignent",
+    "source": "Ouest-France",
+    "date": "11 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "L’Union Pirate arrive en tête des élections étudiantes de l’Université de Caen Normandie",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxObEROTmhxTFZjdnVlRDVWN2FoLVU1eDM0X1JXNlpVV1Q4SWVxbnpsYk1XMkh2dXAxQnlhZ0N5OWRjTFh5TDhVQ2paYWQ3ank0T05WRG03Zy1CTXAyWXprdmhkRG8yVFQ0U2NPQUx5M1BOaWdMWmFxQW42NTBrWjc5UXpvYWNNVDBvLUozVXJOOGZVc3RUOFA1MFdtdThCNmdvN2I2emIyNmo1ZTJFYmVTajl1aUxpYUhqcnZPcnlfUFpjV3FxUm9qSzQ5RVI1QTlfSUdZclBQUnZ5eDdNWlBOc3FRaGVOTVNpbzNsdThMYjZQQ29DbEVjYlB4NzltV2F5dWMxV2RFb2lQTjVPMUotVmhMMW8tWU16c2lIRks1Vm1sRm51U19hOFdSVFI0Wi12cDhOcHhzaTE?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOQThJeWdmXzg0SlVvTHVOeFFnVlljNlB6T3ZhVDVmX01VTzFCd0hUTmVCNFZXYkEtbXNTWThBdWlYd1dpODJGY1VyTXVsdmhRQWRkcEFXOU5xMTNLYTV6QzJFOTdmZk5JTzFmQVdzQUptWm1jemlDR2xFUTdqamFyUmdaanBnbXVoVGN1YzdNYmt2RFdWd05zYVFuTURJaXF1SnNDd190QjIxdUJUTmU0cVdCaXptRTgyQ0JBd09teWJZSFRoenFseWlTeVpUV0ZBbElHMXNEaEp4N0JrU0pld2N5a2FNU1FCd3dfeDRWNDU1bDFQRm42ZmlvczREUUpqSmc?oc=5"
   },
   {
     "source": "Le Monde",
@@ -58,26 +74,10 @@ window.STUDCORP_WEEKLY_NEWS = [
   },
   {
     "source": "franceinfo",
-    "date": "8 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "Le ministre de l'Enseignement supérieur exclut tout semestre validé d'office pour les étudiants pendant la mobilisation sociale en cours",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOX014NTdTc0w0cm1hRGQ5dFN6QkZHNVFoRU9ZMUpsZmlfN1RfeXBRb2dpUERUMVA1YzRac240eXRLRVRpMWpBRlpJZUZIUEF3YmtpaEhQbXQtbzlSTnJzUUlsalp5TS1BSDB0eTRNaXdKcFcxdzJLMGw1U1BleV9SUlJxTk1ORS1xOW9NRXlWYm9Ld01EblVhNEo3NlBDaVBiNXVmQVdNbDBkaTBmMkFvZS1CdjhJZm9JVUJKRW1wLTF6MWlpX21zbkJMcUV1NXk1V1AtUEYtMkFwWnhVOVpwTlpOLWtaOVlvN2oxZkUtUmU2ZThNNVFHNnhVbk81bHhrbVZQWDdpSUw5WkNlbTJDNU51RHFzaElqWjBiX0hkMVlfZzZkT2JFamV0UFBqUHpfTldWckFyZw?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "10 nov. 2026",
-    "topic": "Logement étudiant",
-    "title": "Plus de 200 logements pour les étudiants et les jeunes actifs : une nouvelle résidence ouvre aux portes d’Angers",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNMzdsdUZ4a0pVUkk1d1N4TjMwMTZTb2lXNzNlQi1fem8tc0I5U3ZKVFNvR3U0d3pNQURLd1hwWGh4QUtKQnpoYjV6bWVWNGhVQjE4YUhpd0U1UWo1cml0UDZVQkMtUEwwOTVELW9oQ0RhTGZ1RGw0WFcxNEwyVEFQN1RXSV9ZS1E4UWVWTjNCRFo2ekRBbFV5b3lZS2VyV2NYV1A0VTFUNmR2dXJGZGcxWkhCaWRlXzN4YjFzZ09EZ0JkWC05c3BOWkVWUUkzVm5ZM2ZVNlBxQUYtVnhObDhoTjV1NWtvMkVlZC1yRUtBTk9CdEhLZW9yNTBWMnVoSUhidHI3ZGNOdXV3dDFsVEl3Z0Q4aEJJSXVOLUJR?oc=5"
-  },
-  {
-    "source": "Le Monde",
     "date": "10 nov. 2026",
     "topic": "Formations et admissions",
-    "title": "Mobilisation lycéenne et étudiante : l’intersyndicale claque la porte du comité de réforme de Parcoursup à Matignon",
+    "title": "6000 euros/an de frais d'inscription, restriction de la liberté d'installation : la grogne des \"étudiants kinés\" du privé - France 3 Régions",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQWVNQWHZIQUhtdEw1ckFBbmtobmR0S2U0VEVuUFV3d2V2OFppVWxKWkdsTzRqZUtRVGxqYmE5S1dTeFNIV003MHN4X3dOZG9QckpUcnl1TUpiTkVoSk96TnRRM1N5MnI4a08xWl9DeWI2Si1fNVNqWG04NUQ5T1VGMUpOcmhPWFUyUzBwcUc5UHFzeUthNUhqUUpuNTdpeW5sLUJra0NpUTl0ZDZFZ21RYTdMSEZiRERYZndWZzAwR0VGMjBpMEdkZjJyeU9LcTVBcHAyOU5RZzEydnJtSnp3MENfUm9wQmdfQTZEQXdhbk5TNFVIY3VFWVY5RW5LTHk0OVVUd1BmYjNrWmVoOS10bQ?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQR1djMXVNeXF4U3k5eGtFQjVSMkxHVTI4NXRlMjU0bWNxcEY5dl9NTUd2aUdWYjdEUUktcjF5S3FhbHo3d1BsVTN3M3dXdzVrODRkckZ1blRiLWtMOHlRTkpFeExFaDlkcmdRbDZ1aW1FaXNKd083YnBMUDFiTnAwY2V1NS1paF9RdVJ0aWc4NG9MNThrZ1phamw1VUM5Ylk4V19tMEtUUlVUOXM0anhEVTVaNXZfZF9feGZ0RzFTdWNOaVlvakU1U3dRenR5Z2NBVjdNNGMyWkZEOFJBZnpIaFFGTml3SDFrSk5ZN29ZdWtmNGtWQ0tVWjBiUE1pcThvaUxiVVNIbUZaRDVHdU1zV2Z6NnA3V21MaW16a0xhNU8yZnFydW94YUFsXzNlLTJU?oc=5"
   }
 ];
