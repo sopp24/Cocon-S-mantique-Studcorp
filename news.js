@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-11T18:10:47.016Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-12T03:28:20.188Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Sud Ouest",
@@ -17,20 +17,20 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQX3dsUUt0dEhOb3lFeTE2ZlhEUDhubWpoUkFGWGY1Wnh0bGNwNGI2WnhRVWtoYXpTUklRdDhxdkZ6OUhXSFhnUklEcXF2Z2NFVllQTG0xSmZXZkluVDU2VkVCSGdQTU4xRFgxZWo0d2dobklSMUJJeW9oNHNtTklBdmlQSmVkRWhoeU1lZ0pEdlBxdnFNSUpqOGdpRGRibHVHWFNwbzJKbXRsd2cyRUVzSUd3aHlrSGFPSl92QV9taVpYR1M1TDNYZG1qMW41RV9BRkhuZG9QTVNmUEhYTUYxSUNB?oc=5"
   },
   {
+    "source": "Ouest-France",
+    "date": "11 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "Mobilisation lycéenne et étudiante : Sébastien Lecornu formalise la création de 5 000 places supplémentaires en licence",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxOMTFJOEwzdVpxWmJtNG0tX1FvR0t4ZVpNWnpBSXViaXB6S1RhcWpBcGVLdWs3SFBaaGY1bk9xWmp1N1NRbkZEaVJFQzdFb3p2VWtSdEVXYnZwY2RYc3FhdG05R0M3TXdfZnpsY3NWQ2ozTDRBdEVzN003eGttM01Lc3M5QndOMXlzd1ZMTjNUMkZUelBSWUl4TE90UHpSODZ4eWlyYkJVMjJnUGVad2NXNU95WURTQzJ6Vko2Z2xJeDIzOGxUeHhRZ2ZueDlBbXlpSEtmXzd0RC05SHRHVjFPUmpwZFNLYmNmLWZhblBRYnhqT0g0TkRXRnJkX3FLUGlxZVdiY3MtN3I0eU5aeHdwV05Qdk1EbDVPcXhRdw?oc=5"
+  },
+  {
     "source": "franceinfo",
     "date": "9 nov. 2026",
     "topic": "Santé et études",
     "title": "\"Mes journées ne ressemblent plus à grand-chose\" : deux étudiants racontent l'impact des blocus universitaires sur leur santé mentale",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQTnVzblA4LS1lM2puQUp3X3RFcnFOZWpXS0gxLXh4VTJ5U0o4Ym5vQlNwaU1QalFEcktvLUJsZ2diRFJrQWZaMC14UWNtbjZPYTZXeEFhcFE0VEZUY0FySWVBamhZbGdWeWZjUEIxZnpmSjIyM0QwNFM5eEpIZE00ejFRc2dweUFuMmVDNF9mNGh1MUhDMWk3WHFsYUhqUnlJU3gzSHRLX09XUVphQWVmaVRLdFNuZjVMSWstTmd3TGN1WGc3OEREQlJVb0dBdTl1NXhQdkVsSlcwemFLRXl3NDZ4S1BCbUpBTWpkckNadHZNMlluWGJNWW5DLU9qTmp4YWZsd0NmMkF2NjJzeHI4d0ZRbS1felQtV3BqNW5NSkpqNDNqTnhiZGtFOG90ZHpoMXNlTGtUd0JSN2FSMUE?oc=5"
-  },
-  {
-    "source": "L'Étudiant",
-    "date": "10 nov. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "L'annuaire des formations en alternance : explorez, comparez, choisissez votre avenir pour : Licence professionnelle métiers du BTP : génie civil et construction",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNSnlZWHdpbXFpc21HYVhBTVZFNUZ6OFg0akFEQ1VITGtsdTV4SU1sNGZPeVk0V0ltQjRtTi10dlFrU3VfTWh1TUlHemhTREZwS2FaMFB2UjlyMUVWeWZ5dzgxc2gyaWhpaV9hVHRaLWNqM3BaMVQ5T2tqeXVkdk9BZnkwWEgxSjhRUGkwSlo3djk0VXp5LWFLYm5KUDBxZE05SEhiTGkxN3FkRXhaSTl6UHlMVHVkQVdXbTJuTTNGcU1qX3NvSFFaeFpRMWZueWFubkI4c2FINHdDbWVYeE1lOWk4b2NCUVlBb2xZ?oc=5"
   },
   {
     "source": "Le Figaro Étudiant",
@@ -41,20 +41,12 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPNk5hR2s1WndodThDQnRnYjJmTkRJcHdXbDRrWGtQSzRTWDV6cXU3eGI1bnh6WW8taVRsemUteVBtdmxES0hZak9zZVNoNktCblREZU1XMW9iQmpxZXpnX1VtdWYtNEpvVkpzWWxBTE1obWFRSzQ5NjkzR3gwU2hQVTVWckhHMGg3VzVZdE1adzNhdlBnMmcxMldXakdUdUNrTVJFNzFMcXFyMVk5X041VzQya0hXNjZfaGxzTFF0aTFsVFVFX3Z4WkhLYkk2ZkxrQ3lGdmNPZkpjbnFyeElOWFBaenY?oc=5"
   },
   {
-    "source": "Ouest-France",
-    "date": "10 nov. 2026",
-    "topic": "Logement étudiant",
-    "title": "Plus de 200 logements pour les étudiants et les jeunes actifs : une nouvelle résidence ouvre aux portes d’Angers",
+    "source": "L'Étudiant",
+    "date": "11 nov. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "CAP EQUIPIER POLYVALENT DU COMMERCE EN CONTRAT D'APPRENTISSAGE - Amiens, Hauts-de-France, FRA - CHAMBRE DE METIERS ET DE L'ARTISANAT DE REGION HAUTS-DE-FRANCE",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNMzdsdUZ4a0pVUkk1d1N4TjMwMTZTb2lXNzNlQi1fem8tc0I5U3ZKVFNvR3U0d3pNQURLd1hwWGh4QUtKQnpoYjV6bWVWNGhVQjE4YUhpd0U1UWo1cml0UDZVQkMtUEwwOTVELW9oQ0RhTGZ1RGw0WFcxNEwyVEFQN1RXSV9ZS1E4UWVWTjNCRFo2ekRBbFV5b3lZS2VyV2NYV1A0VTFUNmR2dXJGZGcxWkhCaWRlXzN4YjFzZ09EZ0JkWC05c3BOWkVWUUkzVm5ZM2ZVNlBxQUYtVnhObDhoTjV1NWtvMkVlZC1yRUtBTk9CdEhLZW9yNTBWMnVoSUhidHI3ZGNOdXV3dDFsVEl3Z0Q4aEJJSXVOLUJR?oc=5"
-  },
-  {
-    "source": "Les Échos",
-    "date": "9 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Derrière le remplacement de Parcoursup, la question de la sélection à l'entrée à l'université relancée",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOQnNnTUxKTlBkWEZHdXFYdll1YkpkY2RpeVFnWko1blpJWFNXUDE2RkNIaXVLbWNJVGJnbkJ6MmtHUm5rRUFWaVVraHZFbDdCYnR1eld4WHl3djVaNlZTRUlnWnprOWY0QzZoYU52cXhnZmhqaG5ScTV1bFVJWmRMbzJITDN3MnlsMkw3eTM5aTQxbk9feEJRVjJVWHBZd2E5dDM2cGlGU21VVDluUG5QSEVDN1dYUHdVdjFGd3VpbW0zREU4a1MwcE9ZWFBKR083QjVIQlNlYw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPTkZNaFVnT2tUOUUzakliY21pQ0JYRVpMSm53N180VHV0Tm1BOTBTMWs0ZHlQVWk3a3c3TVlLWlZIdlJJQWppSl85aEU4TmRZZ05PUWg5bVVieTVGSlFVaEtnOWZrWUhDbm41LW5UbGpCMHlQQzBTN1c3MDJHNFIzWURNNGlLRklNdkhzeTJIbThhNVlrb215TzktclZMeE5aNDBtZzIwQ0lYdHltclNnLXVqcEI3YUNQd3R6cFlrcXk4N3pZR0FrVDFFNkQ5VTA5QkZpaG9ST0dIR0gtX0tZN2NSVjB3ZVFwbDg1c2NFRW9FdVZDdFFCOEhiMTM2OHFRYlhZYkhNazRNaVAtUzdBcEln?oc=5"
   },
   {
     "source": "Ouest-France",
@@ -73,11 +65,19 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSU9uSG5keDlzbWQydmg0NU16ZXZEZTltQXVsM3hLNV9nbGVXXzh6Q21XcE5QUF93VFJ0aXJYNlg0RVNXT1hqYjFJako4UlNMUFBGdFBkMDNVcFBOZG5Ua1ZrZFFzM1FtbGltOVdNbXROLU9MZXFiRnRZTzF4azBfbjF1dTdPLVB2aFhYQnFJR3VCWGdQUkkzOFF2VjlTQUM0RUZJQkVEZlFnVVJOWFdjRmR2V2xqZEVPdmVlbnl4aUFqY1ZHUFR2ZXlCYUptVW13R1VDOUh5VWtiOHpPREo0WHhzYU5WV296NVVfU2JSVFF5UVlQ?oc=5"
   },
   {
-    "source": "franceinfo",
-    "date": "10 nov. 2026",
+    "source": "Le Monde",
+    "date": "11 nov. 2026",
     "topic": "Formations et admissions",
-    "title": "6000 euros/an de frais d'inscription, restriction de la liberté d'installation : la grogne des \"étudiants kinés\" du privé - France 3 Régions",
+    "title": "Sébastien Lecornu promet 5 000 places supplémentaires en licence en réponse à la mobilisation étudiante",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxQR1djMXVNeXF4U3k5eGtFQjVSMkxHVTI4NXRlMjU0bWNxcEY5dl9NTUd2aUdWYjdEUUktcjF5S3FhbHo3d1BsVTN3M3dXdzVrODRkckZ1blRiLWtMOHlRTkpFeExFaDlkcmdRbDZ1aW1FaXNKd083YnBMUDFiTnAwY2V1NS1paF9RdVJ0aWc4NG9MNThrZ1phamw1VUM5Ylk4V19tMEtUUlVUOXM0anhEVTVaNXZfZF9feGZ0RzFTdWNOaVlvakU1U3dRenR5Z2NBVjdNNGMyWkZEOFJBZnpIaFFGTml3SDFrSk5ZN29ZdWtmNGtWQ0tVWjBiUE1pcThvaUxiVVNIbUZaRDVHdU1zV2Z6NnA3V21MaW16a0xhNU8yZnFydW94YUFsXzNlLTJU?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOVlM5Wm5oc0piWkZYTGM0TUlGYW5abXhQbmdFZWZBcjJWWDlFRmhCYzZWUGNvTWtpNXNtVXRHdXd1d2kybDZMSDRjZzIxWnhNYmg5OVZCMW9SVGFpOXVDeGljSUpGNHJOOElySC1hWE02T01jd2JPWndXUGcyazZMRXdEay1xNTlHcll5WEVWQVlyUnQzdVFhTnBFdU9sWG9SeURnak5tZTU5UENKZ1pFVzgtcEt2Y1VCMy1tVEt5THBvRHNqZHU4R0xhLXAwUFV3VzJWSmt3dV93OFZoZG9falFjZHNKd2JLRjRPY0laY3BleUs4RTF1Z3B1cFRGZXVmMVlNTUgyM0s3MDg?oc=5"
+  },
+  {
+    "source": "Le Figaro Étudiant",
+    "date": "11 nov. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "Stage Découverte - Campus Ynov Montpellier",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOc1VJQkJ1ME5NSWl5Mm0za2pfNHgtOTMyUzBfVktnLXB6cUMwbngydjBhMnZPNTRpQWw1QnFySHl4eWtjNTJPUTVPdjhvLTA3WTIxbkV6MFVNOUNVVTZDdktfcXhnUTEyZXhhUFY5NnJXMVB4Q2QzWlBzS0xWamMxX3NlUnEyS3VEUFp2cGYxdHFmXzFJMm1RUA?oc=5"
   }
 ];
