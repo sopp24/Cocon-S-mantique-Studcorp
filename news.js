@@ -1,52 +1,12 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-12T03:28:20.188Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-12T18:38:17.319Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Sud Ouest",
-    "date": "11 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "« On ne s’attendait pas à être délogés après seulement une nuit d’occupation » : une trentaine d’étudiants de l’Université de Bordeaux évacués par les gendarmes",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPWGd6bHhYbENNV2xsSXJ5Ql9RdEticzZiVlNGd19aTldYTUV3NVcyZUY1QXplVGdHaExZWHhLVFI1T0NrNTEycElTbS1HUzAxOGt3N21Jd0pWYVZTQWRuY25ENFNpZ3k4N2lKckZHNU9BQ2ViNDhIbUNJV2U1WUpBUzBRWVcya2o2bWM1Q2NtcWoyUjBiUnBSS3lPSFMxTzAzMVB2TGhaNXVvZFdtTVJOV1pGRzlHVmpXeExiUy1IRmdkTXl1VHlqQUFuRjl3TnBHTHpiMC1mVG9NOEVfWV9pTlhWNWMzelpZa2lCNVFYLVUzUTFNaVJGWlpIVm1ERUxFRkU3SnNZUG5yZDRGT2R2c24tbmR0MkM4b1lqVUx5MlNnRzQ4UjlZVmNvdUlLbk5KODRROGln?oc=5"
-  },
-  {
-    "source": "Le Point",
-    "date": "11 nov. 2026",
+    "date": "12 nov. 2026",
     "topic": "Vie étudiante et campus",
-    "title": "Universités bloquées, intimidation, cours empêchés… Dans les coulisses du mouvement étudiant",
+    "title": "Bayonne : le campus universitaire de la Nive inaugure un foyer qui permette de « créer du lien entre les étudiants »",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQX3dsUUt0dEhOb3lFeTE2ZlhEUDhubWpoUkFGWGY1Wnh0bGNwNGI2WnhRVWtoYXpTUklRdDhxdkZ6OUhXSFhnUklEcXF2Z2NFVllQTG0xSmZXZkluVDU2VkVCSGdQTU4xRFgxZWo0d2dobklSMUJJeW9oNHNtTklBdmlQSmVkRWhoeU1lZ0pEdlBxdnFNSUpqOGdpRGRibHVHWFNwbzJKbXRsd2cyRUVzSUd3aHlrSGFPSl92QV9taVpYR1M1TDNYZG1qMW41RV9BRkhuZG9QTVNmUEhYTUYxSUNB?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "11 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Mobilisation lycéenne et étudiante : Sébastien Lecornu formalise la création de 5 000 places supplémentaires en licence",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxOMTFJOEwzdVpxWmJtNG0tX1FvR0t4ZVpNWnpBSXViaXB6S1RhcWpBcGVLdWs3SFBaaGY1bk9xWmp1N1NRbkZEaVJFQzdFb3p2VWtSdEVXYnZwY2RYc3FhdG05R0M3TXdfZnpsY3NWQ2ozTDRBdEVzN003eGttM01Lc3M5QndOMXlzd1ZMTjNUMkZUelBSWUl4TE90UHpSODZ4eWlyYkJVMjJnUGVad2NXNU95WURTQzJ6Vko2Z2xJeDIzOGxUeHhRZ2ZueDlBbXlpSEtmXzd0RC05SHRHVjFPUmpwZFNLYmNmLWZhblBRYnhqT0g0TkRXRnJkX3FLUGlxZVdiY3MtN3I0eU5aeHdwV05Qdk1EbDVPcXhRdw?oc=5"
-  },
-  {
-    "source": "franceinfo",
-    "date": "9 nov. 2026",
-    "topic": "Santé et études",
-    "title": "\"Mes journées ne ressemblent plus à grand-chose\" : deux étudiants racontent l'impact des blocus universitaires sur leur santé mentale",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQTnVzblA4LS1lM2puQUp3X3RFcnFOZWpXS0gxLXh4VTJ5U0o4Ym5vQlNwaU1QalFEcktvLUJsZ2diRFJrQWZaMC14UWNtbjZPYTZXeEFhcFE0VEZUY0FySWVBamhZbGdWeWZjUEIxZnpmSjIyM0QwNFM5eEpIZE00ejFRc2dweUFuMmVDNF9mNGh1MUhDMWk3WHFsYUhqUnlJU3gzSHRLX09XUVphQWVmaVRLdFNuZjVMSWstTmd3TGN1WGc3OEREQlJVb0dBdTl1NXhQdkVsSlcwemFLRXl3NDZ4S1BCbUpBTWpkckNadHZNMlluWGJNWW5DLU9qTmp4YWZsd0NmMkF2NjJzeHI4d0ZRbS1felQtV3BqNW5NSkpqNDNqTnhiZGtFOG90ZHpoMXNlTGtUd0JSN2FSMUE?oc=5"
-  },
-  {
-    "source": "Le Figaro Étudiant",
-    "date": "5 nov. 2026",
-    "topic": "Stages et premier emploi",
-    "title": "Blocages des universités : les étudiants peuvent-ils avoir leur diplôme sans passer leurs partiels ?",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPNk5hR2s1WndodThDQnRnYjJmTkRJcHdXbDRrWGtQSzRTWDV6cXU3eGI1bnh6WW8taVRsemUteVBtdmxES0hZak9zZVNoNktCblREZU1XMW9iQmpxZXpnX1VtdWYtNEpvVkpzWWxBTE1obWFRSzQ5NjkzR3gwU2hQVTVWckhHMGg3VzVZdE1adzNhdlBnMmcxMldXakdUdUNrTVJFNzFMcXFyMVk5X041VzQya0hXNjZfaGxzTFF0aTFsVFVFX3Z4WkhLYkk2ZkxrQ3lGdmNPZkpjbnFyeElOWFBaenY?oc=5"
-  },
-  {
-    "source": "L'Étudiant",
-    "date": "11 nov. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "CAP EQUIPIER POLYVALENT DU COMMERCE EN CONTRAT D'APPRENTISSAGE - Amiens, Hauts-de-France, FRA - CHAMBRE DE METIERS ET DE L'ARTISANAT DE REGION HAUTS-DE-FRANCE",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPTkZNaFVnT2tUOUUzakliY21pQ0JYRVpMSm53N180VHV0Tm1BOTBTMWs0ZHlQVWk3a3c3TVlLWlZIdlJJQWppSl85aEU4TmRZZ05PUWg5bVVieTVGSlFVaEtnOWZrWUhDbm41LW5UbGpCMHlQQzBTN1c3MDJHNFIzWURNNGlLRklNdkhzeTJIbThhNVlrb215TzktclZMeE5aNDBtZzIwQ0lYdHltclNnLXVqcEI3YUNQd3R6cFlrcXk4N3pZR0FrVDFFNkQ5VTA5QkZpaG9ST0dIR0gtX0tZN2NSVjB3ZVFwbDg1c2NFRW9FdVZDdFFCOEhiMTM2OHFRYlhZYkhNazRNaVAtUzdBcEln?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPZE9qbnlaS3BaajJSeU5sdDZJTzEzRkRMMzFaQjJ1NE13OXhEbklqZmlYM3VLeE5kVGJjeUswMXhEX2MyUE85MjdJZURmMDhkME5rallJMDJ1UlhmODNEWlZkS2tBcDhzUXo3Y3pXLW9mLVJ2OXFObVNlVkRsNHVURDhCX3U2SmJVT3duNG84U1BJTTBVaHUyRC1YT1hYSkk0Tm1XQy1VdU91SE9EZGlxQ0NBRkRlQkIzSEJ1MHdiZWR1YkxGM3RuenR3T1dIbDl1VjBFNmd4a1VLeEZNckktcmM5Z2gtZUJXN2pJYzkxYU56NGM3MUtCaFFpQk02dE5nSXF1bjZNcw?oc=5"
   },
   {
     "source": "Ouest-France",
@@ -58,14 +18,6 @@ window.STUDCORP_WEEKLY_NEWS = [
   },
   {
     "source": "Le Monde",
-    "date": "10 nov. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Mobilisation étudiante : la tension monte d’un cran entre bloqueurs et présidents d’université",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSU9uSG5keDlzbWQydmg0NU16ZXZEZTltQXVsM3hLNV9nbGVXXzh6Q21XcE5QUF93VFJ0aXJYNlg0RVNXT1hqYjFJako4UlNMUFBGdFBkMDNVcFBOZG5Ua1ZrZFFzM1FtbGltOVdNbXROLU9MZXFiRnRZTzF4azBfbjF1dTdPLVB2aFhYQnFJR3VCWGdQUkkzOFF2VjlTQUM0RUZJQkVEZlFnVVJOWFdjRmR2V2xqZEVPdmVlbnl4aUFqY1ZHUFR2ZXlCYUptVW13R1VDOUh5VWtiOHpPREo0WHhzYU5WV296NVVfU2JSVFF5UVlQ?oc=5"
-  },
-  {
-    "source": "Le Monde",
     "date": "11 nov. 2026",
     "topic": "Formations et admissions",
     "title": "Sébastien Lecornu promet 5 000 places supplémentaires en licence en réponse à la mobilisation étudiante",
@@ -73,11 +25,59 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxOVlM5Wm5oc0piWkZYTGM0TUlGYW5abXhQbmdFZWZBcjJWWDlFRmhCYzZWUGNvTWtpNXNtVXRHdXd1d2kybDZMSDRjZzIxWnhNYmg5OVZCMW9SVGFpOXVDeGljSUpGNHJOOElySC1hWE02T01jd2JPWndXUGcyazZMRXdEay1xNTlHcll5WEVWQVlyUnQzdVFhTnBFdU9sWG9SeURnak5tZTU5UENKZ1pFVzgtcEt2Y1VCMy1tVEt5THBvRHNqZHU4R0xhLXAwUFV3VzJWSmt3dV93OFZoZG9falFjZHNKd2JLRjRPY0laY3BleUs4RTF1Z3B1cFRGZXVmMVlNTUgyM0s3MDg?oc=5"
   },
   {
+    "source": "franceinfo",
+    "date": "9 nov. 2026",
+    "topic": "Santé et études",
+    "title": "\"Mes journées ne ressemblent plus à grand-chose\" : deux étudiants racontent l'impact des blocus universitaires sur leur santé mentale",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQTnVzblA4LS1lM2puQUp3X3RFcnFOZWpXS0gxLXh4VTJ5U0o4Ym5vQlNwaU1QalFEcktvLUJsZ2diRFJrQWZaMC14UWNtbjZPYTZXeEFhcFE0VEZUY0FySWVBamhZbGdWeWZjUEIxZnpmSjIyM0QwNFM5eEpIZE00ejFRc2dweUFuMmVDNF9mNGh1MUhDMWk3WHFsYUhqUnlJU3gzSHRLX09XUVphQWVmaVRLdFNuZjVMSWstTmd3TGN1WGc3OEREQlJVb0dBdTl1NXhQdkVsSlcwemFLRXl3NDZ4S1BCbUpBTWpkckNadHZNMlluWGJNWW5DLU9qTmp4YWZsd0NmMkF2NjJzeHI4d0ZRbS1felQtV3BqNW5NSkpqNDNqTnhiZGtFOG90ZHpoMXNlTGtUd0JSN2FSMUE?oc=5"
+  },
+  {
+    "source": "Le Parisien Étudiant",
+    "date": "12 nov. 2026",
+    "topic": "Logement étudiant",
+    "title": "« 8 euros l’assiette à la cantine » : ces étudiants Erasmus racontent leurs galères de budget et de logement",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOeE9QSEs2eXRoSlZKejNXTFRtbjU3Q0hPUkFJY2pUQThZeXBEU3dBdFRsWXlHLUdUV2JfbXNhREV0T1hRY01mWXplLWRUSTRibDlpWnBEQUU4NHRVV0w3ZjJiT1haNmotRVZNRHh1blozMkotNkV2bXNzUEk0WDlfRFJFMWNKU2lFdEMyUTN5cTZYeFBIZ2h3bXdnOXlMYlN2VURrQjYzdDVHbW1tc21kZ2plUHB5RWpaN0U0eXk4TEV2MGZPVWZ5Ym9CRHpLYXJTRlBfV2xFTTNfcjNZdUE3RXlTVkJnTzNKY3MwWUVreGU5R1lBTDdDalVvRVBDNmNXT2YtTkJjaU5jaDZielUxUQ?oc=5"
+  },
+  {
     "source": "Le Figaro Étudiant",
     "date": "11 nov. 2026",
     "topic": "Stages et premier emploi",
-    "title": "Stage Découverte - Campus Ynov Montpellier",
+    "title": "Stage Découverte - Campus Ynov Rouen",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOc1VJQkJ1ME5NSWl5Mm0za2pfNHgtOTMyUzBfVktnLXB6cUMwbngydjBhMnZPNTRpQWw1QnFySHl4eWtjNTJPUTVPdjhvLTA3WTIxbkV6MFVNOUNVVTZDdktfcXhnUTEyZXhhUFY5NnJXMVB4Q2QzWlBzS0xWamMxX3NlUnEyS3VEUFp2cGYxdHFmXzFJMm1RUA?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPd0dfcnFaNnM4akswSjBmV3JUYnFHckM5VzNpVVk5MFBWTXNPREVqazdReDZhdU9iVzVDYWh2MTVYYlFNLVE0NnBNblljczJLcEJGOGNrNDFnTXk4cVIwSVAzcno1NGN3Nm5GTGYzZk9xZnYwTm52dUVNdnFBT2w4UE9lZDFncklKSVdjbXlFOUg?oc=5"
+  },
+  {
+    "source": "L'Étudiant",
+    "date": "12 nov. 2026",
+    "topic": "Mobilité internationale",
+    "title": "La mobilité durable s’invite sur les campus avec le kit \"Mon trajet vert\"",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOcVhsNkpFM1hyNDViajhFYURJZDBUMmh6T3M0cUJPZzBTUXh1ZEc0d2RlR0hvLUJVZXZRckVzeU4xSkE5czFlX3NOenZ1V1FzM24wQmc0UVp3X1d3aFc2NVpmeGlFOEwwbXhoSFFGNW81ZkpydEh5b1NyWm5MaHpUV1d4MlA1MTBMRWdaZmxxVVUwVlQ4UTZCbXhDUzUtemd5V1EtTmF5d3E3YTZVOUdVWlRHY0RZZGJ6V0s3dzQzUS1sMU16ak9qS20zR0g0Z014REE?oc=5"
+  },
+  {
+    "source": "franceinfo",
+    "date": "10 nov. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "\"Certains étudiants sont très inquiets et désemparés\", la présidente de l'Université de Strasbourg s'exprime sur les blocages du campus - France 3 Régions",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQWkp6MFBxVGJ5cHFNbVd3R1Z3ekZqZG5IdkVDamJYc1dTSGc0UnNQMTJVTmZKelRfWGhjV2I2eDhlLVN3U2FKVUtPS3FJemRoTkowVGYtTG5ZTEx2MFQ3Z3M1czZvZGFuekNpR29FdTMxVktYYUN2ak1fZVVic1lCQ2VFaFBpd0JBNG1wc2p3VkM1UFVERUctZWNSVDRhaVhJRC1tTXpaZ2E1YUNlMTRDWVdKUzRXdnlYZlRvSWxTa0MxU3I0NWRpdG9NYldDdThiQTBDN1lnX3BhNEZGM24xSThfa3RQMVN2c05tVVIxZ0c1R3NiRUpscWtBbVlKZmEyUzJnWlFOMjZGVnY2d203dFU4R19OdHNKTzhfSHFVYmg5ZkdhbTNKQ2U2MVAtczJLcHZ6S2gyV3BiaTA?oc=5"
+  },
+  {
+    "source": "Sud Ouest",
+    "date": "11 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "« On ne s’attendait pas à être délogés après seulement une nuit d’occupation » : une trentaine d’étudiants de l’Université de Bordeaux évacués par les gendarmes",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxPWGd6bHhYbENNV2xsSXJ5Ql9RdEticzZiVlNGd19aTldYTUV3NVcyZUY1QXplVGdHaExZWHhLVFI1T0NrNTEycElTbS1HUzAxOGt3N21Jd0pWYVZTQWRuY25ENFNpZ3k4N2lKckZHNU9BQ2ViNDhIbUNJV2U1WUpBUzBRWVcya2o2bWM1Q2NtcWoyUjBiUnBSS3lPSFMxTzAzMVB2TGhaNXVvZFdtTVJOV1pGRzlHVmpXeExiUy1IRmdkTXl1VHlqQUFuRjl3TnBHTHpiMC1mVG9NOEVfWV9pTlhWNWMzelpZa2lCNVFYLVUzUTFNaVJGWlpIVm1ERUxFRkU3SnNZUG5yZDRGT2R2c24tbmR0MkM4b1lqVUx5MlNnRzQ4UjlZVmNvdUlLbk5KODRROGln?oc=5"
+  },
+  {
+    "source": "Ouest-France",
+    "date": "11 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "Mobilisation lycéenne et étudiante : Sébastien Lecornu formalise la création de 5 000 places supplémentaires en licence",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxOMTFJOEwzdVpxWmJtNG0tX1FvR0t4ZVpNWnpBSXViaXB6S1RhcWpBcGVLdWs3SFBaaGY1bk9xWmp1N1NRbkZEaVJFQzdFb3p2VWtSdEVXYnZwY2RYc3FhdG05R0M3TXdfZnpsY3NWQ2ozTDRBdEVzN003eGttM01Lc3M5QndOMXlzd1ZMTjNUMkZUelBSWUl4TE90UHpSODZ4eWlyYkJVMjJnUGVad2NXNU95WURTQzJ6Vko2Z2xJeDIzOGxUeHhRZ2ZueDlBbXlpSEtmXzd0RC05SHRHVjFPUmpwZFNLYmNmLWZhblBRYnhqT0g0TkRXRnJkX3FLUGlxZVdiY3MtN3I0eU5aeHdwV05Qdk1EbDVPcXhRdw?oc=5"
   }
 ];
