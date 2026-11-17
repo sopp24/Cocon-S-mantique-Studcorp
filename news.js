@@ -1,12 +1,12 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-17T04:50:28.135Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-17T19:27:54.191Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
-    "source": "Sud Ouest",
-    "date": "16 nov. 2026",
+    "source": "Ouest-France",
+    "date": "17 nov. 2026",
     "topic": "Enseignement supérieur",
-    "title": "Universités bloquées, mobilisations : « Nous serons bienveillants, mais sans vendre du rêve aux étudiants »",
+    "title": "TÉMOIGNAGE. Cet Espagnol de 20 ans découvre Brest et veut « motiver des étudiants à faire des échanges universitaires »",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNeFdYaDlDT3FUVXJxeGhkQ2c4eGY1R01mQ29WQU8tTnJXS3Vjbi1kcE4tNjBacFBuV1FOeXlvTjh1dzFYV29FZ3NpQjlieDBEb1FJX0RMa3ctZUlIUVJ5UVZ4Vkt3RGM0T0VrWGI2TzdHaDBQSnJQOWh5emhid09wMnQ4RkxlV09YR1NRTHluVjBvQ3ZEa3BmTVJFdmFuNmlFa1BKOG5ZSTdxdmVBc205dXVRQWJ0emhpSVdaNGtJWVJLb2F2NW0zQkNOcEEtMDdfQ2Z6TjExdEt2dkJCblZIcnlMY3lNa3p3Tm00?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPeUh5NGt1bkhuMVMzenF1X2pXSTQxaUF2WF9sRmh5NzBYRTlSbUZBRTdGek5wdk5ZcXkyNWdkSlRPOUFYSThFYVYzMC12VEh0QVVQakdBNTZUcTdlMlM1Y3MwZHBwaGRDdTF2WjR2UnQtdEVUSHJ3dFkyUkNvQWdjNTdWVU83RnVnMElwbldoTklqODhUSUd6aS1WckgxZ1pBdDNqejl0eWlpQXQ0eTVkZXJ5S3dfVGNIcWFTdVdMOVFkOGMwTFNjaURtMFFIUTEySUlWcThFVFhydll5YlZ3dHBEUm8xc2dSNU5KNFZkQjFXd1pxWkZOdlR4Y1AybUQybDNaZDJTdUwzbGtpWWprWXJDZWRHSmUyeUxEMk5YTTdrUHh3QlRUWEtMRmYtQ2xrOVczbg?oc=5"
   },
   {
     "source": "Mediapart",
@@ -17,12 +17,52 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPY3dnR0NsMngyN3NTTVFKcTJ6NUNnd09EWG93c19Tc1REVTRpam5jbFcwVVpWMUxTNTgxSkgwNVNFM25tQWJuRlE2Tmx0eUZ6aWktYTFRVlVrZHBVNGxxQndtaEozWGVrSThzYzJIQjRjcXdZdFJjRThNaVdOdDBIbWNyUXhVNEFFdXJtQU41VFBlalVjRzNFUEtvM05LU09Pd3BkRUx5NzlFc094YnV1VUk0R0poTTdxNEliT3VUQjRUeDVfNERrOFJfeFhIUjlXWXcxNnRPckNzS0diVm9IUnlTc0M?oc=5"
   },
   {
-    "source": "Le Parisien Étudiant",
-    "date": "16 nov. 2026",
-    "topic": "Santé et études",
-    "title": "Déserts médicaux : passionné de Formule 1 et youtubeur, cet étudiant renforce l’offre de soins en Eure-et-Loir",
+    "source": "Le Nouvel Obs",
+    "date": "17 nov. 2026",
+    "topic": "Aides et pouvoir d'achat",
+    "title": "Précarité : “La figure de l’étudiant en galère est si banalisée que certains trouvent normal de sauter un repas”",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPaFhpM2F3ME5ZdGQ4V0lYOGxUVmxjMXFKYlo5VkhaTlhIU05VR3FTcVF0UUtyOEgzRWJOZEsxRi1UaGdxalZIOGYwalpMQ3p2WEY0NmJLTlp5RW5icG1wVlUzdW9ON0FwY0RBT2VZdk9JeG11V0w2T2FBbFdTbjRRcTEzeGJvQTZYcklIZVRDZVJBbFFHYlEwT2YtUkMzQmV6VnI3dy1tcGJBR3VQNlFJb19Kc3pVX1V6NXhVakhKbXVubjhjTzBBelhHYjMtTlE5d3h2Z2dTRGxyd1NsLXJFSkNuSXNiYkNPcWtpX2tIekl5REFxZVpMWExkUEc1NXJTbmJoaUJKWFhObkJMWWJWWlp0dDVSRTVHSkE?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOWFdCTVZQNVlnZk03TEIwS1ZQYTdaZGhvdHFrZzNuNkE2bExQZjF4VFFidWVodmoxNVlXeFJJN2w2MjNnVVVQbmN6djhYNFJrRERwMl91OG0zSUlqa01pTkZmZDNGN24xYVdBQ2xnT2k5Z3luUnVkaFA2bGxvTVVXVURXVEFTb2Fuel9CTV8zWG04YjdvdGFJeW1Ya0ZGeTRHbjZ2X1MzZXY4dGxNUGthckJhaWtpUkNObUZ2QWV5aERTVmtqNHdTa1VEMVhlenR0a2ZvQzV5bTA3dmk4VWJ3U0hmWFpRbWtScTdWYnBlaXl1dEF4ZGlnTXV3?oc=5"
+  },
+  {
+    "source": "Sud Ouest",
+    "date": "17 nov. 2026",
+    "topic": "Santé et études",
+    "title": "Santé Mentale Étudiant, le site pour savoir vers qui se tourner",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRUx0RFdFSjNGRHhBLXprVGlzZUpVRlFNUVRjbWc3V3h6aFMzOWdseFkyY3FIZWFHd3B0OXg1TzVuM2dUWFVVTzdMYlh2X0tZYmlXeXA4M3VxT1pjMHRKdVlyY29WMGtrWmQzRjQyM1lKUHMtZ3VlV0cyYzM5MFEtd0lyUm1nZ3V5anlwZlNIMnFjNDZMSk1SZkxhUTc0N2ZDbS1ZdklUWkx5UUZPNzE1b0FSNzBJLWdmenMtMVc3NjM?oc=5"
+  },
+  {
+    "source": "franceinfo",
+    "date": "16 nov. 2026",
+    "topic": "Logement étudiant",
+    "title": "\"Ça peut être compliqué\", le repas à 1 euro du Crous pris d'assaut au campus de La Garde dans le Var - France 3 Régions",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQakhfdHAwamk2T3FhdUljOHlSQ1Zrb0hrUUo4bTJZVTBTN0c1b0tmTUFfZHl4U3ZLQXVzLWJaQTRfOVpEX2ZaZHZDUWtYeWtzbXBnTkVwQUQ1d0MtdUQ3dUxiTkVmTElLRFp0M0NMeld6ODNlc0tMSjJyNUxHdHliU290RFlzSE5hYmFGQ0ZXZ1lCMlg3NXE4MFBFVHdaM1hTaUx4SFdKZzhjUGRjYXF2YnlEUXp6clR6RF9OVWh4U05Cc2VIdllQV0xrWjdiMUFlbTA5LWNpZ3lHUDNTU0dQVHFlNWpoRlJEdDBUQ2pTM0lHZVRwYUJld3ItY1o5TldsWkN1ZTlZRl9WT0ZvOExaVmh5Y0s?oc=5"
+  },
+  {
+    "source": "France 24",
+    "date": "17 nov. 2026",
+    "topic": "Mobilité internationale",
+    "title": "Aux États-Unis, un juge fédéral annule les limites de visa pour étudiants et journalistes",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNaE5CZDlEb3hVejBWMy1JTWhRX2pBX0pIdl9id3AwcExkeXo3MXlmUmtYMEpvNGZsNXpSalhqQXBYekE5ZUs5aTB3VHQtNC1zU2hyZlBERnp5dVltWXB2YkUydEoyMGdzUTVHTXZleVN6MjhiczZEOXcwWldoNGxMaEtQZ3MwWC1oLUVYS2JnZmN5YWNnMUwwYUQxd1JUVTNTRHBiaGpnblRfSDF5c0VFVl9Dd0VBaDdfVjdyWlRvUjJJdlgtelNRYzM1ZE40ZmI5ZFZKa2RVNnVZaWJFMzNJ?oc=5"
+  },
+  {
+    "source": "L'Étudiant",
+    "date": "17 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "Prépa, BUT, admission post-bac ou réorientation : des étudiants en écoles de commerce retracent leur parcours",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMllGcVdTeE1zTjhJMGNlNDVyTmxjUnp6OG1YTEZUbjBPa2VEYmMwWjJYcjNTYTdNdUV0Z0h5ckFwZk04ck9tY0JCU3FjMFhXY2JYaEhXdk1feXp1YUxOMzBmZW5LZnpNOGNVSXB2OC1KR1pRdFRNeXVlUVVJcTFnRnJTLVdBUEZGYll2VDRQd1hfZzRoS2tXV0FnQmZfbi1CUXJCajRhMW5Oa1hUT05jRGhmMk1UYzFKNENrdjI2SkxMZTZOSl9na2lmWTFqbGVfbExrcmYxQ3BYQQ?oc=5"
+  },
+  {
+    "source": "Le Figaro Étudiant",
+    "date": "17 nov. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "Stage Découverte - Campus Ynov Nantes",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMzJaYWFJeEp3bDBUNkpQX2hfSkR2OHRjVVY3NzF1LXQ3dW5yalR6T0p4MUllVkY0Z1pPS1c3SzdPMDVKYXlYSll2R2lYdmYxc3EwRzkydlk1V3ZrSzlXRi1pYUJPQUFpWGVONzZNbjQ1WjVCa1Y5a3czT21ZZDFhcGRGUW9QU0JHSVJMdm5uNHhyUQ?oc=5"
   },
   {
     "source": "Le Point",
@@ -33,51 +73,11 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOdFpFYmJVeEdfeWtRRDFiWGZselIwNXhMV0Z1V2JvUDBPVDhWb01jeU41MlRXZVptdUJ0LXEwaUwyeWVvM0dCYnoyVTRaMEpiWHJjblhWbGVVOE5UZ0tSUFJxekpFdUs1QjlzRVNITWRJMHlIeEtQd09wS3RzLTdDNmJEUktYQTNrTHdyTEszQ0ZrSFpYX2o3VUNQcU9ZVnFsOV9uaGp3dUZtSGliRFh3V0loTTBlajl2aUdjRTR5ZHFXdW9IZXZnNFhqX0NtbzdyX1dQYVU5NFpKNUV1RU5YY2d0YTdnNS1RaE5r?oc=5"
   },
   {
-    "source": "L'Étudiant",
-    "date": "15 nov. 2026",
-    "topic": "Stages et premier emploi",
-    "title": "Stage Master 2 – Mutualisation et valorisation des initiatives des lycées en faveur de l’égalité",
+    "source": "Le Parisien Étudiant",
+    "date": "12 nov. 2026",
+    "topic": "Numérique et intelligence artificielle",
+    "title": "Nouvelle polémique autour de Nvidia : une université chinoise liée à l’armée a pu acheter des puces IA malgré les restrictions américaines",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPZFhJaW5TcXAwRHFlRTdVZnFTWV9SclJYNWdzdmZsYmQ5aDVlY1QtRW1XWTNpTVVIRmFLMHoxenFERWtldUh4VmprQVlaRW5OczctZUlVR0c1bEZ0UzNYMDNBTl9kRlJkRXBLOWtmSFJFWjRCQmVtdXh4UUIwcE1tTGNieFVtQUtNd05sRUkwc0dlOWJlbkJqWFVYSU5CVVVqcEZnYWNjWGw3VWpiQmd1OTM4SHhSMEo4cGlNNkpRaVNSblJLdEtadEk0QkduSXVocHdfM0FValF5X29Tamk5bms5RTlnV2hvMUVLTVF1dDhXcDIxQ2N2MHIxdE1vZ1kza0t0SHQ5ZlgxQQ?oc=5"
-  },
-  {
-    "source": "Le Nouvel Obs",
-    "date": "13 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Abroger Parcoursup et ouvrir l’université à tous : la grande promesse faite à la jeunesse par LFI est-elle crédible ?",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQVFhUN2x1REZEWHU3V1lBQW9JN01VV2JFR2NhSjBiRXZhLXFKZ3AxV2ItWFZZZ1pZUE9VMWxrWjNacDd6ekRqenp4MERDLXMyTlRQZ0s2dG1iVlJwb2t4UTQ1eWd4TjBGQmFiSkRZLVo3R0pGV0RvZ1NnTGI2ejhRYVlHLVhBRVlONkVrLTVwaHFrVVdIWHVXQ1Faek5aeXZyS0E3Z1BtME15Z0Z0T2FJRFQ2eHEwcVp3VGhIdmJVNFl4RklxZ205eTdvbG5tblk2T3k2ZEgxTnpBcWFkRUtNNUktdFhsamhoa0ZaTk9BMVB0UUY2bjY5Wm93c3YtWXBhWjQ0?oc=5"
-  },
-  {
-    "source": "Sud Ouest",
-    "date": "15 nov. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Université de Pau : un étudiant affirme avoir été giflé par un professeur et reçu des coups de poing d’un étudiant",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNb0xJbWZRVnpocXJEVWZRQUVZcnRhMzlyTFpqWjk5TVAtaVlNSEsxalFyWGxaczdEejFoS2pVRjI2SVhBZS1WV1RSa1B2SjFJcG0tN0hDVkFfa0k3dWtuem9tb01keTRuWkJlTUdWWUJNdkxFdkU0bk4zMkdZMk1RZzd1VkFNU2dCVklfRVhGRjRzRWluRVB2ZEMyanlTNG5zT0pEREczc0tWSkRMMkVxLThFYmN5N3gya2s4d1VZemJ4b2twdUNTbTNOeF9XQkxkMVZiZTlDbDFRd1lnQUI1UUxqWURUcll0aG9kZVlLekE4dGhITGFnbWdfWGtGV0V1QTRtYQ?oc=5"
-  },
-  {
-    "source": "Le Figaro Étudiant",
-    "date": "16 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "Insultes, menaces, intimidations… Les présidents d’université sous pression des militants étudiants",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPemkyUENqY205ZDA4cG1uTko0YWc4X3FyMDduczlGMFZHVGVBbGpEVTdwcFJJVW5QSEk4aHdKU0M3RUg5WGRzWDZNNVpWSGJpbTA1TGZqaVZ4REc2aFVNSS05eG93WElWTEVoejUwUHdDbkZzRTZqNHlzYnpqQUs2U0o2SGRCOTQ5ZUx3TkVOMVdqRlZnY1g0VGltYmcybUVQVEZtaTI5c2pmZTBGZEdaSm1CazdGSDRJdUU3NWJhTGEzRnhlcmp3MEdkSUV1eGVrZm1mWnBiYUdMU1l4OVV3ZDFWVWE?oc=5"
-  },
-  {
-    "source": "Mediapart",
-    "date": "16 nov. 2026",
-    "topic": "Stages et premier emploi",
-    "title": "Le blog de Étudiant·es et diplômé·es de l’ESSEC Business School - Le Club de Mediapart",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNU2hEOGtqU2VGVlVzaFQ0Q05rN2RVNmQydTFmMWxFWW5kWnZSeVhvUG82aXRKQ1d6aFRheGcwQ0NpczJjLXZhSmNjQk9kMGZlZEl0TGtDNUp2cjFCSS1LMG0zUlQwOGlKZkhoQ3dGVEdLNlp0YTVrLU5Sc3RSQzJtVjBacUNyaGpUUDZ2V2dKTU5mbFRmUFg3dF9FaXZGZw?oc=5"
-  },
-  {
-    "source": "L'Étudiant",
-    "date": "16 nov. 2026",
-    "topic": "Santé et études",
-    "title": "Internat de médecine : le parcours semé d'embûches des étudiants en situation de handicap",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNTjN1UFYwelhfWGZ5eEo4UHRjUHBmNFYwU1Q4TFZzMWRxN1MxaVN3WUF0OEtxR0lPYXpCT0k4NXNsbHpDSGgxT0ttTGktaGx5bUZla0VMbklHTlNtZEZJLXZJWHdZY245MHB4dXUtTnAtZlZBdXhPNXE4YVRVTGw1TnR2VlVjWDNjVFZEdDVsVkctVGp5SGI0ZjJ2U0JuTVZWRWJFRVhiU2ZPcDNRQUR1WDFmVXN2M3oxZTBLckgtUC0xYWdudnJHVjZvRncxYjBIUVdFYlRB?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQMmhoTnY2QS1rNTBKTkN3WTJ3NXBqLUsxcmVmV19ZRHAwVnFJamwzb01mQ3h5REVucXJzWW5RaDBsNk5CU3FnVGFzdU1kaEp2b3RjQ1BVMklxRjlLRk9MQ0tDUnlYMDhNOC05aHI1Q1N2UEpKeTR1TjJ5RS1oTW9QejJIOElqd1ktaGNyUkhILTUzc2xkeWNjX1BWWjQtdU02QnJEbE16M0NvSWxSOHBXWXBwcUNFODJrWnZmYjFJcnd6Z3dFOGtwUXoxUGZlVVJwRWZkQVpvNG1SdzJ0akFmVDB3Sko0Qkhta0pvWERUazFvMzZSOG5Ka3pTbFpISmVJT1BLZFNPMnpuSXM4emFzZk84SGVSSjJXM3N3Zi1xOFFodUNNT3J3ZGM0ZmxkUkV6cXFiLUJ1VG1rM2FPNTJhTUdvekZSOFYycE1DdA?oc=5"
   }
 ];
