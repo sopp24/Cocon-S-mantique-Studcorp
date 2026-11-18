@@ -1,12 +1,12 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-18T03:55:41.127Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-18T19:10:13.923Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
-    "source": "Ouest-France",
-    "date": "17 nov. 2026",
+    "source": "franceinfo",
+    "date": "18 nov. 2026",
     "topic": "Enseignement supérieur",
-    "title": "TÉMOIGNAGE. Cet Espagnol de 20 ans découvre Brest et veut « motiver des étudiants à faire des échanges universitaires »",
+    "title": "Nouveau blocage de la faculté de lettres à Besançon : pour certains étudiants, le président de l'université n'a pas respecté ses engagements - France 3 Régions",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPeUh5NGt1bkhuMVMzenF1X2pXSTQxaUF2WF9sRmh5NzBYRTlSbUZBRTdGek5wdk5ZcXkyNWdkSlRPOUFYSThFYVYzMC12VEh0QVVQakdBNTZUcTdlMlM1Y3MwZHBwaGRDdTF2WjR2UnQtdEVUSHJ3dFkyUkNvQWdjNTdWVU83RnVnMElwbldoTklqODhUSUd6aS1WckgxZ1pBdDNqejl0eWlpQXQ0eTVkZXJ5S3dfVGNIcWFTdVdMOVFkOGMwTFNjaURtMFFIUTEySUlWcThFVFhydll5YlZ3dHBEUm8xc2dSNU5KNFZkQjFXd1pxWkZOdlR4Y1AybUQybDNaZDJTdUwzbGtpWWprWXJDZWRHSmUyeUxEMk5YTTdrUHh3QlRUWEtMRmYtQ2xrOVczbg?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxQV1hIbDc4dndwREtsVTRib3pjVXpOSk5lcUhfaTRCMkVMWWFjTFQ0MnpRWV9HS0RXNEZPM2xMdXVsdFFQUUtuMmQ0THV1TV9kZ1VVRGRQM1JYSDI0eFZfZm84ZHdVZ0pxbmk3U0tIUzRkVVhFUm5EcjF1aXRrTEdaSEJsQm42YWNsdGhNRXdWTEJSY1JydllPeVpoYTBCWnRJQ3NNd1RrLUZZMlRvRWV2dUFrRUFtUXhrcnp4cGs3VUI2bS1OelExcTQyQXRYZkM0UnVHS2plM215elRRaHlKTkJUR1hNOXRTbFkxc2tBZDkzdVpobFRrZndZLXlRa0tHZkdmV29TSWZ3RWpVLXg2YjlheUtPSG9MUzFkMi0xemlPX2RkV3YtTjFuVFM1S2R1bzRheGhxNFdBZll3ZzdxN25CclNYQmg0QUE0?oc=5"
   },
   {
     "source": "Mediapart",
@@ -33,12 +33,20 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRUx0RFdFSjNGRHhBLXprVGlzZUpVRlFNUVRjbWc3V3h6aFMzOWdseFkyY3FIZWFHd3B0OXg1TzVuM2dUWFVVTzdMYlh2X0tZYmlXeXA4M3VxT1pjMHRKdVlyY29WMGtrWmQzRjQyM1lKUHMtZ3VlV0cyYzM5MFEtd0lyUm1nZ3V5anlwZlNIMnFjNDZMSk1SZkxhUTc0N2ZDbS1ZdklUWkx5UUZPNzE1b0FSNzBJLWdmenMtMVc3NjM?oc=5"
   },
   {
-    "source": "franceinfo",
-    "date": "16 nov. 2026",
-    "topic": "Logement étudiant",
-    "title": "\"Ça peut être compliqué\", le repas à 1 euro du Crous pris d'assaut au campus de La Garde dans le Var - France 3 Régions",
+    "source": "L'Étudiant",
+    "date": "18 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "Master informatique parcours données, connaissance et intelligence, CFA Cerfal - Campus Montsouris, Paris (75)",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQakhfdHAwamk2T3FhdUljOHlSQ1Zrb0hrUUo4bTJZVTBTN0c1b0tmTUFfZHl4U3ZLQXVzLWJaQTRfOVpEX2ZaZHZDUWtYeWtzbXBnTkVwQUQ1d0MtdUQ3dUxiTkVmTElLRFp0M0NMeld6ODNlc0tMSjJyNUxHdHliU290RFlzSE5hYmFGQ0ZXZ1lCMlg3NXE4MFBFVHdaM1hTaUx4SFdKZzhjUGRjYXF2YnlEUXp6clR6RF9OVWh4U05Cc2VIdllQV0xrWjdiMUFlbTA5LWNpZ3lHUDNTU0dQVHFlNWpoRlJEdDBUQ2pTM0lHZVRwYUJld3ItY1o5TldsWkN1ZTlZRl9WT0ZvOExaVmh5Y0s?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNVmxmeU94VldoNU14RmZyM0FqNFFFUVF6cGpMRjQ0VWlLU01wU00xTGgzWnEzSTRLLWVZUHRFMGlFQzlKZnRHSk94NHZkWnRvWFNYTnJaRE1yQ20xRGp1UVZZNHlmWV8wZW10UHRFbFhuQmlLa1I4QVZ0cHppSGxOM3hzOG5YTW5EeWF2QTdLSE55UC15NXdxOUozX3ZLMWROeG1IWEMzb0NYTTdOTkM4YnJVSXZLdnc4bVJmWjhjbE1xMGlmbnA3N1VR?oc=5"
+  },
+  {
+    "source": "Ouest-France",
+    "date": "16 nov. 2026",
+    "topic": "Examens et droits étudiants",
+    "title": "Un blocage « historique » de la fac de droit de Rennes reconduit, les étudiants dans le flou",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOT29rRFFBTkF5T3M1RXB2V0NPNDNzVE01SFRTSzEzMXNoWElPcXJrN21laUQyTlg3TFU5S1gzRkRrejlEMmtJak5TcEZjU2NZbWZ6cVVyYWtIYjZNMWpNX1AyUllQMkwya1lKcFZVUExHbEV6Rmlha0Q3Q2RRajNVXzRnSGhydUJNdVFTMVZqdmczb19scEp2UVl1MmxPZ19WbEtwT0VMV3pqMTZjc0VBdjQ4WExIT29uVmRtR0Nsa0hnQUR0cDJUbXNoQ0lVVTRiZmd2UlN4S2IzbTdMaUh2bUNtTjA0ejVxbWNGNF83cWg0VGZGNDR4WFo5aVA3NFFiemJUNw?oc=5"
   },
   {
     "source": "France 24",
@@ -49,20 +57,12 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNaE5CZDlEb3hVejBWMy1JTWhRX2pBX0pIdl9id3AwcExkeXo3MXlmUmtYMEpvNGZsNXpSalhqQXBYekE5ZUs5aTB3VHQtNC1zU2hyZlBERnp5dVltWXB2YkUydEoyMGdzUTVHTXZleVN6MjhiczZEOXcwWldoNGxMaEtQZ3MwWC1oLUVYS2JnZmN5YWNnMUwwYUQxd1JUVTNTRHBiaGpnblRfSDF5c0VFVl9Dd0VBaDdfVjdyWlRvUjJJdlgtelNRYzM1ZE40ZmI5ZFZKa2RVNnVZaWJFMzNJ?oc=5"
   },
   {
-    "source": "L'Étudiant",
-    "date": "17 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Prépa, BUT, admission post-bac ou réorientation : des étudiants en écoles de commerce retracent leur parcours",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQMllGcVdTeE1zTjhJMGNlNDVyTmxjUnp6OG1YTEZUbjBPa2VEYmMwWjJYcjNTYTdNdUV0Z0h5ckFwZk04ck9tY0JCU3FjMFhXY2JYaEhXdk1feXp1YUxOMzBmZW5LZnpNOGNVSXB2OC1KR1pRdFRNeXVlUVVJcTFnRnJTLVdBUEZGYll2VDRQd1hfZzRoS2tXV0FnQmZfbi1CUXJCajRhMW5Oa1hUT05jRGhmMk1UYzFKNENrdjI2SkxMZTZOSl9na2lmWTFqbGVfbExrcmYxQ3BYQQ?oc=5"
-  },
-  {
     "source": "Le Figaro Étudiant",
-    "date": "17 nov. 2026",
+    "date": "18 nov. 2026",
     "topic": "Stages et premier emploi",
-    "title": "Stage Découverte - Campus Ynov Nantes",
+    "title": "Stage Découverte - Campus Ynov Aix-en-Provence",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMzJaYWFJeEp3bDBUNkpQX2hfSkR2OHRjVVY3NzF1LXQ3dW5yalR6T0p4MUllVkY0Z1pPS1c3SzdPMDVKYXlYSll2R2lYdmYxc3EwRzkydlk1V3ZrSzlXRi1pYUJPQUFpWGVONzZNbjQ1WjVCa1Y5a3czT21ZZDFhcGRGUW9QU0JHSVJMdm5uNHhyUQ?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbG52bXVGX1I4VFI1dDVrdUh3dzlBMkhuaFk0YzQ5eEhyV0c2VmJLYk4tenZsWUI5d1djUlRVZlc2b1FUcm5FUHVySzlpaGh2VGtDR192V2RLWEhRc2NtV1ltNE9vQmk5aXF6R3U1bXhsZnF2YnhtWDFvWVZIQ1pxSjFDeVFCV3BUS1h2M3IzMlhoNXpaYTJmLTJqU1Q2QQ?oc=5"
   },
   {
     "source": "Le Point",
@@ -75,9 +75,9 @@ window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Le Parisien Étudiant",
     "date": "12 nov. 2026",
-    "topic": "Numérique et intelligence artificielle",
-    "title": "Nouvelle polémique autour de Nvidia : une université chinoise liée à l’armée a pu acheter des puces IA malgré les restrictions américaines",
+    "topic": "Logement étudiant",
+    "title": "« 8 euros l’assiette à la cantine » : ces étudiants Erasmus racontent leurs galères de budget et de logement",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQMmhoTnY2QS1rNTBKTkN3WTJ3NXBqLUsxcmVmV19ZRHAwVnFJamwzb01mQ3h5REVucXJzWW5RaDBsNk5CU3FnVGFzdU1kaEp2b3RjQ1BVMklxRjlLRk9MQ0tDUnlYMDhNOC05aHI1Q1N2UEpKeTR1TjJ5RS1oTW9QejJIOElqd1ktaGNyUkhILTUzc2xkeWNjX1BWWjQtdU02QnJEbE16M0NvSWxSOHBXWXBwcUNFODJrWnZmYjFJcnd6Z3dFOGtwUXoxUGZlVVJwRWZkQVpvNG1SdzJ0akFmVDB3Sko0Qkhta0pvWERUazFvMzZSOG5Ka3pTbFpISmVJT1BLZFNPMnpuSXM4emFzZk84SGVSSjJXM3N3Zi1xOFFodUNNT3J3ZGM0ZmxkUkV6cXFiLUJ1VG1rM2FPNTJhTUdvekZSOFYycE1DdA?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOeE9QSEs2eXRoSlZKejNXTFRtbjU3Q0hPUkFJY2pUQThZeXBEU3dBdFRsWXlHLUdUV2JfbXNhREV0T1hRY01mWXplLWRUSTRibDlpWnBEQUU4NHRVV0w3ZjJiT1haNmotRVZNRHh1blozMkotNkV2bXNzUEk0WDlfRFJFMWNKU2lFdEMyUTN5cTZYeFBIZ2h3bXdnOXlMYlN2VURrQjYzdDVHbW1tc21kZ2plUHB5RWpaN0U0eXk4TEV2MGZPVWZ5Ym9CRHpLYXJTRlBfV2xFTTNfcjNZdUE3RXlTVkJnTzNKY3MwWUVreGU5R1lBTDdDalVvRVBDNmNXT2YtTkJjaU5jaDZielUxUQ?oc=5"
   }
 ];
