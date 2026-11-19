@@ -1,20 +1,44 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-19T03:53:49.704Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-19T19:13:09.059Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "franceinfo",
-    "date": "18 nov. 2026",
+    "date": "19 nov. 2026",
     "topic": "Enseignement supérieur",
-    "title": "Nouveau blocage de la faculté de lettres à Besançon : pour certains étudiants, le président de l'université n'a pas respecté ses engagements - France 3 Régions",
+    "title": "\"J'ai peur de ne pas avoir mon année\" : le blocage des universités et la désorganisation des cours inquiètent les étudiants - France 3 Régions",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxQV1hIbDc4dndwREtsVTRib3pjVXpOSk5lcUhfaTRCMkVMWWFjTFQ0MnpRWV9HS0RXNEZPM2xMdXVsdFFQUUtuMmQ0THV1TV9kZ1VVRGRQM1JYSDI0eFZfZm84ZHdVZ0pxbmk3U0tIUzRkVVhFUm5EcjF1aXRrTEdaSEJsQm42YWNsdGhNRXdWTEJSY1JydllPeVpoYTBCWnRJQ3NNd1RrLUZZMlRvRWV2dUFrRUFtUXhrcnp4cGs3VUI2bS1OelExcTQyQXRYZkM0UnVHS2plM215elRRaHlKTkJUR1hNOXRTbFkxc2tBZDkzdVpobFRrZndZLXlRa0tHZkdmV29TSWZ3RWpVLXg2YjlheUtPSG9MUzFkMi0xemlPX2RkV3YtTjFuVFM1S2R1bzRheGhxNFdBZll3ZzdxN25CclNYQmg0QUE0?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQWUtjcXlQYnFJZEM2Z3Z4LTV4VHNyaWFpb3NLUnBMQVh0RDM4NmxydDRIN3NHcUljTlNMVV96NGFld3AxQlRkLUJhRWl6OWliLTd3UGlGRUZFRzdUTTdzVW5rMmhzcHpDQWo3MTRlWC1mUU1WN1hPTTZIYjBDNDVJRnUtenJFdzlVMkU4ZHZTbXlNa0ZQWFRWa0ZtMmlnaW4wVmdkZkFGbDBwd1ZkRWN6RkNyaFdreENDMVI0Y0NTV2tTTW5iR3JxU3hWUHBUNnFtYk5kX1JTem9EQlJXLWx0bExxLWt1Nm1OdFpvZFc5cjZTWmhHaDZBSGlTX180QXlsWUxKN3Ayb25PMUpxWS1sSEJoemtCR2YzQlh5Ukp3ampnbzhwOFJoZjlEbXZfb3JwbVZqX3htSFQ0M0lk?oc=5"
   },
   {
-    "source": "Mediapart",
-    "date": "16 nov. 2026",
+    "source": "Sud Ouest",
+    "date": "19 nov. 2026",
     "topic": "Vie étudiante et campus",
-    "title": "« Face, elle gagne, pile, nous perdons » : lettre ouverte d’étudiant·es mobilisé·es de l’Université Sorbonne Nouvelle - Le Club de Mediapart",
+    "title": "« Il y a un sentiment de désespoir et d’impuissance » : sur le campus bordelais, la galère du distanciel pour plus de 30 000 étudiants et professeurs",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPY3dnR0NsMngyN3NTTVFKcTJ6NUNnd09EWG93c19Tc1REVTRpam5jbFcwVVpWMUxTNTgxSkgwNVNFM25tQWJuRlE2Tmx0eUZ6aWktYTFRVlVrZHBVNGxxQndtaEozWGVrSThzYzJIQjRjcXdZdFJjRThNaVdOdDBIbWNyUXhVNEFFdXJtQU41VFBlalVjRzNFUEtvM05LU09Pd3BkRUx5NzlFc094YnV1VUk0R0poTTdxNEliT3VUQjRUeDVfNERrOFJfeFhIUjlXWXcxNnRPckNzS0diVm9IUnlTc0M?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxORHgtNFdxS2FGMzh6UUFMVHIzWHgxQ2lxc0NWZ0N1bFVCWFp5N0Z4TGJINmhtMmhrNEp2RzRPTzFUTWpJTFhSVmJ2dHJXMTFsbXFTV0ZPVXg4dkJrYTlOc0lnbG5qNHhpbm95R1FsR3VqODlaUmpaXzRHV1lyMXJCc3NLU1VjWEd1LUdZcUZacDhpdjRhMjBFQW53TzJjTXZGSGREV3VRSWpoV0U4cHlFck9vZGhYcUYwQTFuTjdCclRuTGR1blU3Vkt5d1pfYnR6VVhQdVJPcDhCbndtUUNFc1Y2Y2tjVlVpVWUzSVNiZFhJM0pEWTRRVTlxQ2E3ZXhqXzF0b1FjelROMU95dmNwYmlZRHBaajZVRHp6Ym9KMjRNSTlFeUE?oc=5"
+  },
+  {
+    "source": "Ouest-France",
+    "date": "19 nov. 2026",
+    "topic": "Logement étudiant",
+    "title": "Une prime de 600 € bruts sera versée en décembre aux agents des Crous, annonce le ministre de l’Enseignement supérieur",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPM21FRmRqSXpYOWhzMjlkWnJndXV4dE5iMFFMTlBBcjRtaXZWWlk1WmpMbmNIcWplVFVsSjR6VklweW5vX09NdWxDYzFkWElQbnVIVW9XOFRnZzVlVE55dHVQRWNlVklkSlIxRlBac2xfMjRvU3RQNm9DMTd4ekxxSkJycXBPVG4tc0NILVpxSVV1djY3a1FqWHNYcUIwZ0k1MUhCZVNDak9JdzlGV2g4MFQ4ZmFZVUlzUzJVekJBRmZFZUtqX3BTSDMzTUZXcmNySkVlLXBGdGNwM2tVNUpwTUNvT2FrUktLY01nS2xVbUMwQmthQmZXQm5fU1dWRl9Lckp4QU9PZDFza09PR0NhaDlMMkJtaEljNDFNVi1FTlVEbkduU09TbQ?oc=5"
+  },
+  {
+    "source": "Le Parisien Étudiant",
+    "date": "19 nov. 2026",
+    "topic": "Numérique et intelligence artificielle",
+    "title": "Accusé de triche avec l’IA, un étudiant sud-coréen retrouvé mort suite à un « arrêt cardiaque » le jour où il devait repasser les épreuves",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQSExfVEZlQ1o2YmkyMzJTRjRHMWJjRWZ3Z3FYZDlQcDVwN00xd2h3SFdPd2sxT21mY0daakdjZmlEbHNheVpmZFVXWU00TzVVRE54SGw2eTl6ZjFBSUlaT2dhZldEUVJCZzlvY0lSN2EwSmRuLXdWUFNTbkNwc0dTYkVmZUFUbkozZi1VNHhuOVNVbkJMYnVTRUJ3dzhGZDhfZ3A1QTI4ME1SeWNsYlM3TG5abmNwTkQxV3QxNHlzZ1pqNk9Ya3BaQ09rdWxYaU5MTi1mTWRKVVpaajM1SFMyWEhUMVozcUJSYUw4THJYZFBGend0WHM0YnRfVFNaSnNGWGpoc2pXVFBYNW9XcTRxa00tc3ZDZ0ptd1dENWowTkl4cTc5cDZJbjRxTDdObkNFakktNlNLRVE?oc=5"
+  },
+  {
+    "source": "L'Étudiant",
+    "date": "19 nov. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "Assistant(e) dentaire débutant(e) en alternance - Campus d'Aix Académie Art Dentaire Isabelle Dutel",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQWklMUUlRX3dRMzk2UEJtUWtqS3poT2Z0VGRfWWpzRHNXWGEyMUdyTlp0SjRrSXp2SFVDV0NkU1ZzV1NDZXpkV3I0V3lNc3B6d1V4N3Z5S0w0WnRPdjJSSXZtQThzM2hzTDhWM1ZSUzRGVTI3TFItTGl4NjdNSHAzemNPWmJIOFR0TkFuaFNBNm1IRHhXWGZfX2NDZUNJRmhsOThxdkhpLVNfNHpTRVR3V3B1SXZCMFJYNF9TSk9IODdFa01fTE1GNUJxcHFIdEtaTW1CTDVWWmIwUm9peFY1OHNIWHJHdG9jZUNoM2tmbGZVSVZVdG1OWW42Zw?oc=5"
   },
   {
     "source": "Le Nouvel Obs",
@@ -25,28 +49,12 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOWFdCTVZQNVlnZk03TEIwS1ZQYTdaZGhvdHFrZzNuNkE2bExQZjF4VFFidWVodmoxNVlXeFJJN2w2MjNnVVVQbmN6djhYNFJrRERwMl91OG0zSUlqa01pTkZmZDNGN24xYVdBQ2xnT2k5Z3luUnVkaFA2bGxvTVVXVURXVEFTb2Fuel9CTV8zWG04YjdvdGFJeW1Ya0ZGeTRHbjZ2X1MzZXY4dGxNUGthckJhaWtpUkNObUZ2QWV5aERTVmtqNHdTa1VEMVhlenR0a2ZvQzV5bTA3dmk4VWJ3U0hmWFpRbWtScTdWYnBlaXl1dEF4ZGlnTXV3?oc=5"
   },
   {
-    "source": "Sud Ouest",
-    "date": "17 nov. 2026",
-    "topic": "Santé et études",
-    "title": "Santé Mentale Étudiant, le site pour savoir vers qui se tourner",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRUx0RFdFSjNGRHhBLXprVGlzZUpVRlFNUVRjbWc3V3h6aFMzOWdseFkyY3FIZWFHd3B0OXg1TzVuM2dUWFVVTzdMYlh2X0tZYmlXeXA4M3VxT1pjMHRKdVlyY29WMGtrWmQzRjQyM1lKUHMtZ3VlV0cyYzM5MFEtd0lyUm1nZ3V5anlwZlNIMnFjNDZMSk1SZkxhUTc0N2ZDbS1ZdklUWkx5UUZPNzE1b0FSNzBJLWdmenMtMVc3NjM?oc=5"
-  },
-  {
-    "source": "L'Étudiant",
-    "date": "18 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Master informatique parcours données, connaissance et intelligence, CFA Cerfal - Campus Montsouris, Paris (75)",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNVmxmeU94VldoNU14RmZyM0FqNFFFUVF6cGpMRjQ0VWlLU01wU00xTGgzWnEzSTRLLWVZUHRFMGlFQzlKZnRHSk94NHZkWnRvWFNYTnJaRE1yQ20xRGp1UVZZNHlmWV8wZW10UHRFbFhuQmlLa1I4QVZ0cHppSGxOM3hzOG5YTW5EeWF2QTdLSE55UC15NXdxOUozX3ZLMWROeG1IWEMzb0NYTTdOTkM4YnJVSXZLdnc4bVJmWjhjbE1xMGlmbnA3N1VR?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "16 nov. 2026",
+    "source": "Mediapart",
+    "date": "19 nov. 2026",
     "topic": "Examens et droits étudiants",
-    "title": "Un blocage « historique » de la fac de droit de Rennes reconduit, les étudiants dans le flou",
+    "title": "Corée du Sud : l’examen d’entrée à l’université s’ouvre en plein scandale de triche à l’IA",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOT29rRFFBTkF5T3M1RXB2V0NPNDNzVE01SFRTSzEzMXNoWElPcXJrN21laUQyTlg3TFU5S1gzRkRrejlEMmtJak5TcEZjU2NZbWZ6cVVyYWtIYjZNMWpNX1AyUllQMkwya1lKcFZVUExHbEV6Rmlha0Q3Q2RRajNVXzRnSGhydUJNdVFTMVZqdmczb19scEp2UVl1MmxPZ19WbEtwT0VMV3pqMTZjc0VBdjQ4WExIT29uVmRtR0Nsa0hnQUR0cDJUbXNoQ0lVVTRiZmd2UlN4S2IzbTdMaUh2bUNtTjA0ejVxbWNGNF83cWg0VGZGNDR4WFo5aVA3NFFiemJUNw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNGktYzZtVlBNLUZwbkZjRWpyWUJYTzBZT1NiZGdCbmEteU5kYVBnTGxOMmpJMlVIZDBwNEp6V1NpcWtmVEE2bUZaYkpPcUVfZkdGZ09FN0NOa2RCeHcyQjJhQm9mZEdKb2dtUVdBcmhkNnd5aWJnc3NqSzBnSExiaGpyZHd4cDFBcWp0N2lPeWs1VmZ1RXpPXzliUzh5OXdaTl9ZQlJPRXFTMHUzT1lvVVQ4SHJYRzBDS2FYMlp1ckt5T2UxTEJjODRfUVdlTTNGRUNxdU5Ddw?oc=5"
   },
   {
     "source": "France 24",
@@ -58,26 +66,18 @@ window.STUDCORP_WEEKLY_NEWS = [
   },
   {
     "source": "Le Figaro Étudiant",
-    "date": "18 nov. 2026",
-    "topic": "Stages et premier emploi",
-    "title": "Stage Découverte - Campus Ynov Aix-en-Provence",
+    "date": "17 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "Erreurs de dosage, confusion de médicaments : exclue de sa formation, cette étudiante infirmière a perdu en justice",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbG52bXVGX1I4VFI1dDVrdUh3dzlBMkhuaFk0YzQ5eEhyV0c2VmJLYk4tenZsWUI5d1djUlRVZlc2b1FUcm5FUHVySzlpaGh2VGtDR192V2RLWEhRc2NtV1ltNE9vQmk5aXF6R3U1bXhsZnF2YnhtWDFvWVZIQ1pxSjFDeVFCV3BUS1h2M3IzMlhoNXpaYTJmLTJqU1Q2QQ?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPX09UM3l6OHI3ck9IeEFpOFJzZl9JeG9WeU1DVUQyMXVBWGplTzdzVnNNRVVwWlBIeEx6ZWRvMjFTYXp4NUFjd3BDY0pyYWRYNXVYTEo0ZFZudjBOTzN5el9WMHlPb0VfTTZxdGhPQkRCd19kVkJvNHJKMnBCQWNKcGl0Yw?oc=5"
   },
   {
-    "source": "Le Point",
-    "date": "16 nov. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "« Nous sommes tous en apprentissage accéléré » : en Serbie, le pari risqué de la démocratie directe après Vucic",
+    "source": "Ouest-France",
+    "date": "19 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "« En nous empêchant d’aller à l’université, certains étudiants nous empêchent de vivre »",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOdFpFYmJVeEdfeWtRRDFiWGZselIwNXhMV0Z1V2JvUDBPVDhWb01jeU41MlRXZVptdUJ0LXEwaUwyeWVvM0dCYnoyVTRaMEpiWHJjblhWbGVVOE5UZ0tSUFJxekpFdUs1QjlzRVNITWRJMHlIeEtQd09wS3RzLTdDNmJEUktYQTNrTHdyTEszQ0ZrSFpYX2o3VUNQcU9ZVnFsOV9uaGp3dUZtSGliRFh3V0loTTBlajl2aUdjRTR5ZHFXdW9IZXZnNFhqX0NtbzdyX1dQYVU5NFpKNUV1RU5YY2d0YTdnNS1RaE5r?oc=5"
-  },
-  {
-    "source": "Le Parisien Étudiant",
-    "date": "12 nov. 2026",
-    "topic": "Logement étudiant",
-    "title": "« 8 euros l’assiette à la cantine » : ces étudiants Erasmus racontent leurs galères de budget et de logement",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOeE9QSEs2eXRoSlZKejNXTFRtbjU3Q0hPUkFJY2pUQThZeXBEU3dBdFRsWXlHLUdUV2JfbXNhREV0T1hRY01mWXplLWRUSTRibDlpWnBEQUU4NHRVV0w3ZjJiT1haNmotRVZNRHh1blozMkotNkV2bXNzUEk0WDlfRFJFMWNKU2lFdEMyUTN5cTZYeFBIZ2h3bXdnOXlMYlN2VURrQjYzdDVHbW1tc21kZ2plUHB5RWpaN0U0eXk4TEV2MGZPVWZ5Ym9CRHpLYXJTRlBfV2xFTTNfcjNZdUE3RXlTVkJnTzNKY3MwWUVreGU5R1lBTDdDalVvRVBDNmNXT2YtTkJjaU5jaDZielUxUQ?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNmNZeHQ3RzJvRms3MUx1OGhBTVZmNWMySGpUTVMzWVdmT1JnU3RGNERCVUJmN1otRi14cVg1bnU3a05BaW9GMFhmaXdpcTUteU5ITkZpRFFuNzdzbGJQdUxpYlVZa0NDWkFOYWhoUnA2LTFXRVRPMzFfTkdxb2hiSi0wSjlaUWtOVHdrWFhzNkFjbVV6RUpNZ3dOMWFqOXVhZi1mazBuOXNvSjhmcmhMX195cmxmVnFlSHBZMEZBQTdmb1ZQNThsMXNWQm1xelY2MHQwRVRyREszR01wR3F6aXhiUDRCN2Rfb1BLamtCVWZxRE1jeWtFdQ?oc=5"
   }
 ];
