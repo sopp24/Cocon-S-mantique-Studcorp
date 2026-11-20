@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-19T19:13:09.059Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-20T03:46:32.201Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "franceinfo",
@@ -57,20 +57,20 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNGktYzZtVlBNLUZwbkZjRWpyWUJYTzBZT1NiZGdCbmEteU5kYVBnTGxOMmpJMlVIZDBwNEp6V1NpcWtmVEE2bUZaYkpPcUVfZkdGZ09FN0NOa2RCeHcyQjJhQm9mZEdKb2dtUVdBcmhkNnd5aWJnc3NqSzBnSExiaGpyZHd4cDFBcWp0N2lPeWs1VmZ1RXpPXzliUzh5OXdaTl9ZQlJPRXFTMHUzT1lvVVQ4SHJYRzBDS2FYMlp1ckt5T2UxTEJjODRfUVdlTTNGRUNxdU5Ddw?oc=5"
   },
   {
+    "source": "Le Figaro Étudiant",
+    "date": "18 nov. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "Stage Découverte - Campus Ynov Aix-en-Provence",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbG52bXVGX1I4VFI1dDVrdUh3dzlBMkhuaFk0YzQ5eEhyV0c2VmJLYk4tenZsWUI5d1djUlRVZlc2b1FUcm5FUHVySzlpaGh2VGtDR192V2RLWEhRc2NtV1ltNE9vQmk5aXF6R3U1bXhsZnF2YnhtWDFvWVZIQ1pxSjFDeVFCV3BUS1h2M3IzMlhoNXpaYTJmLTJqU1Q2QQ?oc=5"
+  },
+  {
     "source": "France 24",
     "date": "17 nov. 2026",
     "topic": "Mobilité internationale",
     "title": "Aux États-Unis, un juge fédéral annule les limites de visa pour étudiants et journalistes",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNaE5CZDlEb3hVejBWMy1JTWhRX2pBX0pIdl9id3AwcExkeXo3MXlmUmtYMEpvNGZsNXpSalhqQXBYekE5ZUs5aTB3VHQtNC1zU2hyZlBERnp5dVltWXB2YkUydEoyMGdzUTVHTXZleVN6MjhiczZEOXcwWldoNGxMaEtQZ3MwWC1oLUVYS2JnZmN5YWNnMUwwYUQxd1JUVTNTRHBiaGpnblRfSDF5c0VFVl9Dd0VBaDdfVjdyWlRvUjJJdlgtelNRYzM1ZE40ZmI5ZFZKa2RVNnVZaWJFMzNJ?oc=5"
-  },
-  {
-    "source": "Le Figaro Étudiant",
-    "date": "17 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Erreurs de dosage, confusion de médicaments : exclue de sa formation, cette étudiante infirmière a perdu en justice",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPX09UM3l6OHI3ck9IeEFpOFJzZl9JeG9WeU1DVUQyMXVBWGplTzdzVnNNRVVwWlBIeEx6ZWRvMjFTYXp4NUFjd3BDY0pyYWRYNXVYTEo0ZFZudjBOTzN5el9WMHlPb0VfTTZxdGhPQkRCd19kVkJvNHJKMnBCQWNKcGl0Yw?oc=5"
   },
   {
     "source": "Ouest-France",
