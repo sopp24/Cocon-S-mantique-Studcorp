@@ -1,12 +1,20 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-20T03:46:32.201Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-20T18:53:47.761Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
-    "source": "franceinfo",
-    "date": "19 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "\"J'ai peur de ne pas avoir mon année\" : le blocage des universités et la désorganisation des cours inquiètent les étudiants - France 3 Régions",
+    "source": "Ouest-France",
+    "date": "20 nov. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "Les étudiants en recherche de stage invités à venir rencontrer les entreprises à l’Université du Mans",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQWUtjcXlQYnFJZEM2Z3Z4LTV4VHNyaWFpb3NLUnBMQVh0RDM4NmxydDRIN3NHcUljTlNMVV96NGFld3AxQlRkLUJhRWl6OWliLTd3UGlGRUZFRzdUTTdzVW5rMmhzcHpDQWo3MTRlWC1mUU1WN1hPTTZIYjBDNDVJRnUtenJFdzlVMkU4ZHZTbXlNa0ZQWFRWa0ZtMmlnaW4wVmdkZkFGbDBwd1ZkRWN6RkNyaFdreENDMVI0Y0NTV2tTTW5iR3JxU3hWUHBUNnFtYk5kX1JTem9EQlJXLWx0bExxLWt1Nm1OdFpvZFc5cjZTWmhHaDZBSGlTX180QXlsWUxKN3Ayb25PMUpxWS1sSEJoemtCR2YzQlh5Ukp3ampnbzhwOFJoZjlEbXZfb3JwbVZqX3htSFQ0M0lk?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNcFFUMm5fbkprSTdFNGd3WUhEREVQWW92OURsS3IwZ2xMRWVtcjhpZWc0OFlWMEtlMld3d2M1Mkl2MlhnZUxlT3NYY2N0dTBGQWEyTGd2S0txdzNJSU1Kd0FNYWdRaWlLS1NJbHRnZ1M2amFZZ3FYbS1lbUZnVHlFeEtjeWl1M28wTERQMVpqWFl4bFBmYUxROHpmVE8yTElNRmVpa19DTUs3U3JKR0pNdWt1WHhzSzZ4MFRVOE4wTmFoMll1VDF5RmsyX3RKdkRuaVFIX0liSHNLMDFxOGp0VlMxSG0xYlJ3UklSRGNvRHRtNVUybHZkOW9xeEhRY19MZERHZWR0WkJVWUllRkp3V2FR?oc=5"
+  },
+  {
+    "source": "franceinfo",
+    "date": "20 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "Les étudiants étrangers désertent les universités américaines à cause de la politique de Donald Trump",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNdXp5TjhXOHA2SWpKUEtpZkc3eFRKMjN4ZENoRmFDQlllSVZnR1lQU2RLVWNLcTRtbGZHMzV5V3hGaEFFeW52TTVHWWZpM1lIdmlXSGdHNUltWHRuQThuYnFqX3VaV1NrMWJlUTZhME5UYW96ZnhGV3pwUXlLVFJSek52VFBYWUNJS1E0cTVPMHF2ZTd1S0RXa01DZFgzY19QaXRnZHUzSFlMb3NDblBPZmpoSGhMSzdqOTBMdFNHNUZ2VHljdzBXa3ZPOVBSd1ZaTTc3Z0MzX3dhcExKRHBHd3E3QjJxM1d3cjB1cnNvcUpXYlRGWWlFeDFHb19QVFU?oc=5"
   },
   {
     "source": "Sud Ouest",
@@ -17,12 +25,12 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxORHgtNFdxS2FGMzh6UUFMVHIzWHgxQ2lxc0NWZ0N1bFVCWFp5N0Z4TGJINmhtMmhrNEp2RzRPTzFUTWpJTFhSVmJ2dHJXMTFsbXFTV0ZPVXg4dkJrYTlOc0lnbG5qNHhpbm95R1FsR3VqODlaUmpaXzRHV1lyMXJCc3NLU1VjWEd1LUdZcUZacDhpdjRhMjBFQW53TzJjTXZGSGREV3VRSWpoV0U4cHlFck9vZGhYcUYwQTFuTjdCclRuTGR1blU3Vkt5d1pfYnR6VVhQdVJPcDhCbndtUUNFc1Y2Y2tjVlVpVWUzSVNiZFhJM0pEWTRRVTlxQ2E3ZXhqXzF0b1FjelROMU95dmNwYmlZRHBaajZVRHp6Ym9KMjRNSTlFeUE?oc=5"
   },
   {
-    "source": "Ouest-France",
-    "date": "19 nov. 2026",
-    "topic": "Logement étudiant",
-    "title": "Une prime de 600 € bruts sera versée en décembre aux agents des Crous, annonce le ministre de l’Enseignement supérieur",
+    "source": "L'Étudiant",
+    "date": "20 nov. 2026",
+    "topic": "Santé et études",
+    "title": "Santé mentale : les établissements renforcent leur soutien aux étudiants",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxPM21FRmRqSXpYOWhzMjlkWnJndXV4dE5iMFFMTlBBcjRtaXZWWlk1WmpMbmNIcWplVFVsSjR6VklweW5vX09NdWxDYzFkWElQbnVIVW9XOFRnZzVlVE55dHVQRWNlVklkSlIxRlBac2xfMjRvU3RQNm9DMTd4ekxxSkJycXBPVG4tc0NILVpxSVV1djY3a1FqWHNYcUIwZ0k1MUhCZVNDak9JdzlGV2g4MFQ4ZmFZVUlzUzJVekJBRmZFZUtqX3BTSDMzTUZXcmNySkVlLXBGdGNwM2tVNUpwTUNvT2FrUktLY01nS2xVbUMwQmthQmZXQm5fU1dWRl9Lckp4QU9PZDFza09PR0NhaDlMMkJtaEljNDFNVi1FTlVEbkduU09TbQ?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOQzlobVZhb1lITGdaVjVPbGgyQlhnTnhPNDE5dmRLTzJjX0hPSUtxNU9LWEo4V3JrQk5sSThsT1E1T3NUZDg5YVZxUVhiTm4zaUtYUEczemNmOTZSSktZb0J1eld2SXF4S0xuTWU4WWxPWVhiZV9taXIzTHR2V3lxWFdLb015MVBxYXJ2ZXNsMzVyZWFjWXN2WmVIMkJMODI4amJvd3J2bWlraEdQTXZMNTh6VjBBNWQ5bGc?oc=5"
   },
   {
     "source": "Le Parisien Étudiant",
@@ -33,12 +41,12 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQSExfVEZlQ1o2YmkyMzJTRjRHMWJjRWZ3Z3FYZDlQcDVwN00xd2h3SFdPd2sxT21mY0daakdjZmlEbHNheVpmZFVXWU00TzVVRE54SGw2eTl6ZjFBSUlaT2dhZldEUVJCZzlvY0lSN2EwSmRuLXdWUFNTbkNwc0dTYkVmZUFUbkozZi1VNHhuOVNVbkJMYnVTRUJ3dzhGZDhfZ3A1QTI4ME1SeWNsYlM3TG5abmNwTkQxV3QxNHlzZ1pqNk9Ya3BaQ09rdWxYaU5MTi1mTWRKVVpaajM1SFMyWEhUMVozcUJSYUw4THJYZFBGend0WHM0YnRfVFNaSnNGWGpoc2pXVFBYNW9XcTRxa00tc3ZDZ0ptd1dENWowTkl4cTc5cDZJbjRxTDdObkNFakktNlNLRVE?oc=5"
   },
   {
-    "source": "L'Étudiant",
-    "date": "19 nov. 2026",
+    "source": "Le Figaro Étudiant",
+    "date": "20 nov. 2026",
     "topic": "Alternance et apprentissage",
-    "title": "Assistant(e) dentaire débutant(e) en alternance - Campus d'Aix Académie Art Dentaire Isabelle Dutel",
+    "title": "DSCG - Diplôme Supérieur de Comptabilité et Gestion en alternance",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQWklMUUlRX3dRMzk2UEJtUWtqS3poT2Z0VGRfWWpzRHNXWGEyMUdyTlp0SjRrSXp2SFVDV0NkU1ZzV1NDZXpkV3I0V3lNc3B6d1V4N3Z5S0w0WnRPdjJSSXZtQThzM2hzTDhWM1ZSUzRGVTI3TFItTGl4NjdNSHAzemNPWmJIOFR0TkFuaFNBNm1IRHhXWGZfX2NDZUNJRmhsOThxdkhpLVNfNHpTRVR3V3B1SXZCMFJYNF9TSk9IODdFa01fTE1GNUJxcHFIdEtaTW1CTDVWWmIwUm9peFY1OHNIWHJHdG9jZUNoM2tmbGZVSVZVdG1OWW42Zw?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOS1h5amVIc05wZkdHRGp6U0VBcUU4VHdyb3ZGY25lMjhRdzJpLXVWSzFQLWxOSmxtUlczdEwzTTE1RXVFRk1GT2FGMEozSEg2aE96aWltczRwX1pITG01VnRCZkJ6TzZrUm1iTkw3ZEE5Z09KYi1PeDNQbEEyZjQxa0czMW5OLWgwR3Z2ZktaU3FLeGVOVzZlSE8xalJhMzRLdFVsZkRwdWhMTkQ3ZlVBTFd3?oc=5"
   },
   {
     "source": "Le Nouvel Obs",
@@ -57,14 +65,6 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNGktYzZtVlBNLUZwbkZjRWpyWUJYTzBZT1NiZGdCbmEteU5kYVBnTGxOMmpJMlVIZDBwNEp6V1NpcWtmVEE2bUZaYkpPcUVfZkdGZ09FN0NOa2RCeHcyQjJhQm9mZEdKb2dtUVdBcmhkNnd5aWJnc3NqSzBnSExiaGpyZHd4cDFBcWp0N2lPeWs1VmZ1RXpPXzliUzh5OXdaTl9ZQlJPRXFTMHUzT1lvVVQ4SHJYRzBDS2FYMlp1ckt5T2UxTEJjODRfUVdlTTNGRUNxdU5Ddw?oc=5"
   },
   {
-    "source": "Le Figaro Étudiant",
-    "date": "18 nov. 2026",
-    "topic": "Stages et premier emploi",
-    "title": "Stage Découverte - Campus Ynov Aix-en-Provence",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbG52bXVGX1I4VFI1dDVrdUh3dzlBMkhuaFk0YzQ5eEhyV0c2VmJLYk4tenZsWUI5d1djUlRVZlc2b1FUcm5FUHVySzlpaGh2VGtDR192V2RLWEhRc2NtV1ltNE9vQmk5aXF6R3U1bXhsZnF2YnhtWDFvWVZIQ1pxSjFDeVFCV3BUS1h2M3IzMlhoNXpaYTJmLTJqU1Q2QQ?oc=5"
-  },
-  {
     "source": "France 24",
     "date": "17 nov. 2026",
     "topic": "Mobilité internationale",
@@ -73,11 +73,11 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNaE5CZDlEb3hVejBWMy1JTWhRX2pBX0pIdl9id3AwcExkeXo3MXlmUmtYMEpvNGZsNXpSalhqQXBYekE5ZUs5aTB3VHQtNC1zU2hyZlBERnp5dVltWXB2YkUydEoyMGdzUTVHTXZleVN6MjhiczZEOXcwWldoNGxMaEtQZ3MwWC1oLUVYS2JnZmN5YWNnMUwwYUQxd1JUVTNTRHBiaGpnblRfSDF5c0VFVl9Dd0VBaDdfVjdyWlRvUjJJdlgtelNRYzM1ZE40ZmI5ZFZKa2RVNnVZaWJFMzNJ?oc=5"
   },
   {
-    "source": "Ouest-France",
+    "source": "franceinfo",
     "date": "19 nov. 2026",
     "topic": "Enseignement supérieur",
-    "title": "« En nous empêchant d’aller à l’université, certains étudiants nous empêchent de vivre »",
+    "title": "Bras de fer à l'Université Clermont Auvergne : l'Union étudiante appelle au blocage des sites d'examens - France 3 Régions",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNmNZeHQ3RzJvRms3MUx1OGhBTVZmNWMySGpUTVMzWVdmT1JnU3RGNERCVUJmN1otRi14cVg1bnU3a05BaW9GMFhmaXdpcTUteU5ITkZpRFFuNzdzbGJQdUxpYlVZa0NDWkFOYWhoUnA2LTFXRVRPMzFfTkdxb2hiSi0wSjlaUWtOVHdrWFhzNkFjbVV6RUpNZ3dOMWFqOXVhZi1mazBuOXNvSjhmcmhMX195cmxmVnFlSHBZMEZBQTdmb1ZQNThsMXNWQm1xelY2MHQwRVRyREszR01wR3F6aXhiUDRCN2Rfb1BLamtCVWZxRE1jeWtFdQ?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQQXdVcGhQQmlJaDRSODZDVVNtb1ltaE84bjl4a1F1T2ptVzJ3aHd2YktROGdIWjhfVHhNazdOTFhOYlV4QTJmMmdjMUxaaWhSZUZ3V3JQdDVZZzNHNGlSdTB1ZzNsSXFzSUVIX1JrX2hmN3dMcUJjSld4emtoOERqVGw5eHJTRjhralFBV3dHdUh2bUVMS1NwVGJuYWpHaWl2UnZ1U1Y5LUFyakFFWFJLWVJrNkljUzA2NHZPamhnNXlFV3ZCb2loTE9yX2d2M3YzXzQ4YmlQMGZUSi12dDF3WnpnS08tT2t5SkQwUHpCNHVXMU1xejFYN2E3SjJiWkUxVEVHdDA3V2VhcElsZFo1aGdZS05EaGkyRl9obWhHMWJUVkdOQXJoRXBn?oc=5"
   }
 ];
