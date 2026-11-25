@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-24T20:55:09.149Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-25T05:08:11.424Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Sud Ouest",
@@ -42,11 +42,27 @@ window.STUDCORP_WEEKLY_NEWS = [
   },
   {
     "source": "Le Parisien Étudiant",
-    "date": "19 nov. 2026",
-    "topic": "Numérique et intelligence artificielle",
-    "title": "Accusé de triche avec l’IA, un étudiant sud-coréen retrouvé mort suite à un « arrêt cardiaque » le jour où il devait repasser les épreuves",
+    "date": "25 nov. 2026",
+    "topic": "Aides et pouvoir d'achat",
+    "title": "BOUDCHART - Bourse du Travail - Lyon, 69003 - Sortir à Lyon - Le Parisien Etudiant",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQSExfVEZlQ1o2YmkyMzJTRjRHMWJjRWZ3Z3FYZDlQcDVwN00xd2h3SFdPd2sxT21mY0daakdjZmlEbHNheVpmZFVXWU00TzVVRE54SGw2eTl6ZjFBSUlaT2dhZldEUVJCZzlvY0lSN2EwSmRuLXdWUFNTbkNwc0dTYkVmZUFUbkozZi1VNHhuOVNVbkJMYnVTRUJ3dzhGZDhfZ3A1QTI4ME1SeWNsYlM3TG5abmNwTkQxV3QxNHlzZ1pqNk9Ya3BaQ09rdWxYaU5MTi1mTWRKVVpaajM1SFMyWEhUMVozcUJSYUw4THJYZFBGend0WHM0YnRfVFNaSnNGWGpoc2pXVFBYNW9XcTRxa00tc3ZDZ0ptd1dENWowTkl4cTc5cDZJbjRxTDdObkNFakktNlNLRVE?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWWh3bzRpZ0RNcllGa01DdUw4MXBiSjIzUmR6YTRmc29tbVVFQTFfTVVzd1BvZWxFelRZVnVzcHZwSmg5VEFzZmluMVRwOW4yMmxWWUVtelJHS29tdzIxVzZ6QmwzOU1yeHlFa2RuRXJINUEtbTlQSHo0R0EzY1ZXMFg5eUUzUQ?oc=5"
+  },
+  {
+    "source": "Le Figaro Étudiant",
+    "date": "20 nov. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "Master Marketing et Vente en alternance",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPdmUtMUxrWHlrS2h2bmlrOEExZDVENWUtc0hYeF8yQVRhOEQyR3BOanY0WGFnTkVuOGVoWExXQWRPWmhYRlh4R1ZwTGh6SVc1SUtOVjhVdXdIWWdYcGpJYU1CV2ZxNVV2bUdDQUVtMmZyRjZnXzBqUzJzM096S1ktejNXNUVTdzFOVExldTROZll1UQ?oc=5"
+  },
+  {
+    "source": "Les Échos",
+    "date": "20 nov. 2026",
+    "topic": "Numérique et intelligence artificielle",
+    "title": "CY Cergy Paris Université régule l'IA dans ses enseignements",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaEY3VHBYT2oyNlhqanhENlQ2N2UwTVlGQU5IZzNId01oZ1JWYmJmQkdYT3lwOWVHMFM1a0pXX2lQLW5SUkY5M1ZtTDZ0cDk4dGt4Mjd2aV9JWDhKajdBNkJibEJKbXFVdWZjZmNITE8wMGxwS0pfVFdMYXh6SldnaDNxQ05aaERBY0stRTNtUElqSzh1V0NoSG5pUnR0TE9NRjhpUDRscm9MeG1IVkVuZWJZa0hia3BB?oc=5"
   },
   {
     "source": "franceinfo",
@@ -63,21 +79,5 @@ window.STUDCORP_WEEKLY_NEWS = [
     "title": "« Respecter les étudiants qui souhaitent étudier normalement » : la présidente de l’Université d’Angers s’explique",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxOZUdKNjRGOGg0S3VYUmcyckczekd1eXJXWjBmUDU0WVAyZjZ1YnFNdW9tem5TdkFmV0R0YkVVeWZfR09Ram5nV2hMc1EtSGF2T3ZwYXdKd2RwN2QtRE14eEd3aTg3bHVPTU9RYjJHZDU2OEpEZEFPOGlqLU5LNUZPYWZWckNaTWg4UFpPeWx1WUtfWl9VUTFYRF9Hbl9nQUtBWUdJZ3ZSNHliVDJqYU1Xa3hnZHNmRFVjZlRjNE1nV1ZfQ1pzem16MV9MNGdBQlRiZGt4UllkeDBsSTVPc1UxUFctWFpTZlJoeDlKeFFKSGl1VDdMV2JmWEhsTFFFOFJFRmNPVFl0d2xkV3BjdWZMWWs3Yzd1dEF4alRRcXF0NG9EWkYyM2h1bg?oc=5"
-  },
-  {
-    "source": "L'Express",
-    "date": "23 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Parcoursup à bout de souffle : les pistes de l’enseignement supérieur pour changer de modèle",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPWE9QVmc1OFE1T0tLZ1lGZGZVTXl0ekp6XzRVQU53U0hvbl9INjhLTUVXOHA3VmdrUl9uSGU1RWF2U0V6SVg4aWgyTm9PYVBWM2h3QWRabDE2NnlkY2pmc2NLLWFCMmVDRUwxVjl5OGlrdEgxOG5aWkUxVnJQLWZPNWI3Z1BrYkNpeEhCMk9XeXlqRG5mdTc0LXRvdUNMSFN6cnQxSTA3S0lEcGViTUs5WjFtemQ0R0ZCQVlzUkpCYndfVVpuZ1MxVEhCUDNHOU9lVXNmS3U4c3B5c3hiRkQ1VFlR?oc=5"
-  },
-  {
-    "source": "L'Étudiant",
-    "date": "24 nov. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "Diplôme en ligne en alternance : pourquoi choisir ISEFAC Online ?",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNSGdRbk5wMmRGUmdGZkZtZzZReXQ2eER5X1dTUFB6WHVCb01jQUFBUVlySW9IWkJFR2kwX3pyaGRybURjaU5weTR0bUh6QlpRWlJkY3JtMkFaTHlISUViQzk3OGxwUGlrMHpOSzVwQmFfWC13UTZwamJwaEFpRVR3LTV1Y1lKVXZleV9tUVpCSS1IcjVkRWkyU0NGazFiWmtHeXpXYkZB?oc=5"
   }
 ];
