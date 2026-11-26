@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-26T04:34:17.916Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-26T19:55:03.547Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Sud Ouest",
@@ -7,6 +7,62 @@ window.STUDCORP_WEEKLY_NEWS = [
     "title": "« Ils portent le nom de collabos » : sur le campus Montesquieu de l’Université de Bordeaux, une offensive étudiante pour débaptiser deux amphithéâtres",
     "summary": "",
     "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOVGllNUxLLU04cjN0a3lELWJ6OFZleGUxUW1FSXJuVnRJdHVxeHpWQk5TaGRnMW5PaFNmb0tTX0lYSE5Hc1o5RnFpcVdlV09MQzNqNG9uOGN3eVZXSnQ3ejU4a3lUM2thckRqUlpVR3h2bjV3ZXV4bFI3RVllaFBTVTM1VmEtem5iaTZPRGhUdWw5dy1xYUV4ZDFNdnJtVnk1NXk3VksySEY4R184QkNKcG5jU1dpTXlTblFmcFVENmRFTkdJd2Z3SDVQV2dpdDZzMjFLMTdEeEVIOE5qZl9LWVRMMGZUY2ZVbTRMZXZycWFNVGc1VnhkUURhU0dFT2J4NXJ1UzlzSWctSWdQeDFDQ0kxZUZ0anB5bjNaVllNZWM?oc=5"
+  },
+  {
+    "source": "Ouest-France",
+    "date": "26 nov. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "« Aucun diplôme ne sera délivré sans examen » : avec les blocus à l’université de Nantes, que va-t-il se passer pour les étudiants ?",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPSS1PVm5UUFNDSTAwdGVXbWItSWc2eXhEeWtNcUFSaEhva2Vvbnp1c19rNUtsSUJ1YnBGZVFnQURXRWdLTGl4Qk5rYmpmeFVIbEZYY19nTFFpeHRadHo0MnhiVDRNVEotcjZHTktmYjNvX3lSdVhhdTNXaGZLWGNZWmExWkh4T09NbDhHN0dpTllleG5aUFlnQXIxNVBIVkNzaWxLZU1GRHpKcjE4S3ROVlM3NElFRkg4UUluTFhsU2ZlQUJ1ODF5VTNIWkFoUXBvbFpzRV9ESEVheENtemVKTkpFMnZXY09hY2dkSEFZUXdmdENpTDVqTEJMOWRta1IwZEFnUHJLV3FFZnJEWlhtN2dHc2FabnNHUEZTcTNKaHFOVjg?oc=5"
+  },
+  {
+    "source": "franceinfo",
+    "date": "25 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "Affiche \"escort à 50 euros\" et soupçons de proxénétisme à l'université du Mirail : le parquet enquête, les étudiants mobilisés crient à la \"fabulation\" - France 3 Régions",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxOUWZ4RlNWc3RxSV9mcmdLbnp0a3RQb0xRX3g5S1d1dHNoSHUtT0lPLUhjd21uS2EtZDNXX3cyOHBJOHVBSzFrZkpGM2o5c3pkaXAzbTJKemdVWm90ZWNuNkJzcS1keGdlNGhUS1IzOUJDU1RGb0JCR1N1QnBSR01nNFdvaWc3aHlaOUpUbDQzdDJzTm9lWHVyMmhfZTNhSU9PYTMwejE5VTU1YnJVaHlONDNlREx4QXJmTXZSdU93M1NWWHRXQVJhQVN4TXNDVjQyX1lEa0FXaElsVlRiZUt5YUZVSkptb25wbTlTc09NdDZ2TGZzV2R4LXJ5eTdqTHFKYllqQUZzN1p1Qmw5UXdVU0gya2l0Q0UtazkzSnVHMExtQXRWcEs2UlVVSmZDLWJ4c0dFMzFLMWZWZVNlU29rV0N2amtCQUJhY2NFQg?oc=5"
+  },
+  {
+    "source": "Le Monde",
+    "date": "24 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "« J’ai perdu quasiment la moitié de mes étudiants de première année » : près de deux mois après le début des mobilisations, le risque de décrochage en licence",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxPRjNDdlNpVzlBWm9PSlE2YkQwcnV2dFppbEJsLURrWUxKbTQzaDloVHRFS3dGeTNEY25WbkRqWFJrR1NWaFVPVE9fb1E5ZHpid0pGcHQ0TXVqSUlqMU1rcVh0Q2FmSUZ3X1AxVWUzbHJ0V0VWSEpIbGZjX3c3UWZHZktqUHBVOV90NjB5c1VROEhiZy1OUzN3V1JYd3RtUUR4RG95NjRhQWIzR1kzeUV6VkJjdjg2enZIcjRyam9uMWZ4NUZNMDk1OHBOSFVId05kYXhQbk1WbDNvRlZzeEhnWGhPbFVhSmxXNE1pSHJRd0p2M2xVak9ESkJ1WllFc1NNc1JmQ3MxaTBkNUhEclVOTlhsRDdBM012SUpBRE96T0lWLWFJT2FLRW1DRFBfWFhYTUxzMkp4Y29FMnhmQ3dDVUsydw?oc=5"
+  },
+  {
+    "source": "L'Étudiant",
+    "date": "25 nov. 2026",
+    "topic": "Alternance et apprentissage",
+    "title": "Aides à l’apprentissage : la Cour des comptes pointe des fraudes et abus importants",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZy16a19NZkkweE5sS1pQdFRJbnNfcTNoWk5XQ1Z0X3hIVHNNdExscDlzUVRKQlBtOG5OaU1WcG5NaU5GTVBsX29KRnFRLU0ycnYwX01rOHFwbm1NYURjZnZJZndFVjFMQmZDMjVNMXlfWGkteHhtaDFVSVRUbjRBU296dE1mSjRDSm9fNUwxYXo0eGtTd01UcmU1aVJfeXhCYS1fTVM4N01WM255cWRFZzAzOF9XcVlLLWZSX3RXeTBLbThXVDNsMjV3?oc=5"
+  },
+  {
+    "source": "Le Figaro Étudiant",
+    "date": "24 nov. 2026",
+    "topic": "Numérique et intelligence artificielle",
+    "title": "Iéseg et CentraleSupélec lancent un master pour conduire le changement à l’ère de l’IA",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNSW8ycXVJeld4eGdlVGZfdERiUTlycHlHZWFseDFUMkZtUkJZWHlzdnpJczRnTkx6MjdMV2ZJS1V3ZU4zMUJLdVJBdEpYdzNwY1Y3b3YwbFY5VWsxVC13LTgxa29xcjFyaEJ5VDJuQkVYanZXdTVzMzNnelVvSTY1blJXZW14dDIyU3FFS283YkU5ejFRTk9qOXd0X3V5YUZXdGRLbEtxNmk2T3FCTkJBVHhJaU1LV2U2OUhqdHdZOE9ZNUV3dWtEQ3p0VUxsQ0RPT3QwbUVsNA?oc=5"
+  },
+  {
+    "source": "Le Parisien Étudiant",
+    "date": "20 nov. 2026",
+    "topic": "Examens et droits étudiants",
+    "title": "Pillages du 17 octobre : deux nouvelles interpellations dans les Bouches-du-Rhône, dont une étudiante en droit",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOUm1OTEtIUEJtalFGMW1lWFI5THZIa3FXMzZLQzc0WDdPMTN0SjBLX2U4TC04MVg5TDFWdUltYUNVUUVmSFdWUHhNc2dwRU1RUU95UWlfVUtmQVpwQnRwX09VRF92SjZLQmtEd0VoTUdMWHlDU2xCTG9vQU1BYWgyeDRJVUpYcnRjckdCbk9fLVRFVXJjdlVNUFdMT2NGbm81LUlhVU9UU3J6by1adlAxaVJPb0xFQ3pQR3B1VUFiTkNFTjJKVV9nUHJiZUhRLVBFZ3doQndpUm5rNWpPOUJ1LS05ekRhMGdjSTR2NUpUVUhBTEExR2RhV0lSc0NqOTFFV2Q0S3kxbnhFbjMtWEFTOWhYUGlVaWs?oc=5"
+  },
+  {
+    "source": "Mediapart",
+    "date": "26 nov. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "Lettre d'une enseignante de l'Université du Mirail aux étudiant·es mobilisé·es - Le Club de Mediapart",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNGE1MmppUW9DMXpFSnRMSGtfdllabkNHRmV5bDZVc24xMEsyM3A2MFA3YzRGWUE5b0ttSjUtYjdQbTZ4ejVkTnpwZmxqdmxJVnprVTNyX080djlTbmx5Q2NSZDQtZlQ3MnkycTRvQlEtcWY5UGVQeDlQZzV3U1UyTF93VU9GUC1wdDJIZXZvZnhCQ1VLY0ktTHRZWVB1N2J4WWJXSEZQRjBRcmV2bk9Eci0xc2poNHYyNE9wc3BtUWphNTVwbmRj?oc=5"
   },
   {
     "source": "franceinfo",
@@ -20,64 +76,8 @@ window.STUDCORP_WEEKLY_NEWS = [
     "source": "Le Monde",
     "date": "24 nov. 2026",
     "topic": "Formations et admissions",
-    "title": "« J’ai perdu quasiment la moitié de mes étudiants de première année » : près de deux mois après le début des mobilisations, le risque de décrochage en licence",
+    "title": "Plateforme Mon master : seuls six étudiants sur dix ont reçu une proposition d’admission en 2026",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxPRjNDdlNpVzlBWm9PSlE2YkQwcnV2dFppbEJsLURrWUxKbTQzaDloVHRFS3dGeTNEY25WbkRqWFJrR1NWaFVPVE9fb1E5ZHpid0pGcHQ0TXVqSUlqMU1rcVh0Q2FmSUZ3X1AxVWUzbHJ0V0VWSEpIbGZjX3c3UWZHZktqUHBVOV90NjB5c1VROEhiZy1OUzN3V1JYd3RtUUR4RG95NjRhQWIzR1kzeUV6VkJjdjg2enZIcjRyam9uMWZ4NUZNMDk1OHBOSFVId05kYXhQbk1WbDNvRlZzeEhnWGhPbFVhSmxXNE1pSHJRd0p2M2xVak9ESkJ1WllFc1NNc1JmQ3MxaTBkNUhEclVOTlhsRDdBM012SUpBRE96T0lWLWFJT2FLRW1DRFBfWFhYTUxzMkp4Y29FMnhmQ3dDVUsydw?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "25 nov. 2026",
-    "topic": "Aides et pouvoir d'achat",
-    "title": "« Je ne mange pas à tous les repas » : Une distribution gratuite de produits contre la précarité étudiante à Vannes",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPLVVEeU1CSzhrUk42ejlFYW5ha1REWG5mTEk3TjdNcUJBcHNEaWhjd0FfWlRqLWthaERsbTZGT251a3N3YW44QVZLVnoxeVdQTTVLVVlzX3E2SzZCSVVIaDRNLXFWWTJLU0haTDRHb015NnlsdzZyQnRBTDhUOUV6MG9xVVdoWGhiQ1doQm5LWlRzb1hFY1dRczJiMXRlZEhPSV9xZ0R2RjdvTTY5ZTdiN0lmOHdaSkhzRktWaUtfdFJkcHFseHJXUncxU3Jzc1RKUnROX1ZxZVl2dEFtM29vREpFR0dzVXo1UkJUWExyUW1LdnFLc3FLeUppU1A5a2FDeFJSeTFYR1I3ejc4M0p6dDBzMW1udmw2NjJyU1JR?oc=5"
-  },
-  {
-    "source": "L'Étudiant",
-    "date": "23 nov. 2026",
-    "topic": "Stages et premier emploi",
-    "title": "Faustine, étudiante en orthophonie : \"Lors de mon premier stage, je me suis sentie réellement à ma place\"",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPLXlPdGtPb1NQTlUwWFJ6dTF4cTdRNnp0Y1dlQS1QMFU1S2RIS0IyUHdIZFpSUTNwc1pKbXFfX2o1Z000cHowOFQxNUZoRTM1OE0wcUU4OExIY2dydF9wNy1qczFEQmJ5bDVjeV9sX21DS3lha2QxTjZDM3lnRHBFNUlyWXNpMVVZTV9nOC1JNEFvRWlZb0JxR2ozVmhPWGJyMnNRQzMwaWtmSlI5ckJSMkM4dmY2Ymlab1h5blNWM2hVT3FINzR1ZExkdnJpOWlwVEJxdlRWUldYOFNNQkpKRzg1eU1zdw?oc=5"
-  },
-  {
-    "source": "Le Figaro Étudiant",
-    "date": "20 nov. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "Master Marketing et Vente en alternance",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPdmUtMUxrWHlrS2h2bmlrOEExZDVENWUtc0hYeF8yQVRhOEQyR3BOanY0WGFnTkVuOGVoWExXQWRPWmhYRlh4R1ZwTGh6SVc1SUtOVjhVdXdIWWdYcGpJYU1CV2ZxNVV2bUdDQUVtMmZyRjZnXzBqUzJzM096S1ktejNXNUVTdzFOVExldTROZll1UQ?oc=5"
-  },
-  {
-    "source": "Le Parisien Étudiant",
-    "date": "19 nov. 2026",
-    "topic": "Numérique et intelligence artificielle",
-    "title": "Accusé de triche avec l’IA, un étudiant sud-coréen retrouvé mort suite à un « arrêt cardiaque » le jour où il devait repasser les épreuves",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxQSExfVEZlQ1o2YmkyMzJTRjRHMWJjRWZ3Z3FYZDlQcDVwN00xd2h3SFdPd2sxT21mY0daakdjZmlEbHNheVpmZFVXWU00TzVVRE54SGw2eTl6ZjFBSUlaT2dhZldEUVJCZzlvY0lSN2EwSmRuLXdWUFNTbkNwc0dTYkVmZUFUbkozZi1VNHhuOVNVbkJMYnVTRUJ3dzhGZDhfZ3A1QTI4ME1SeWNsYlM3TG5abmNwTkQxV3QxNHlzZ1pqNk9Ya3BaQ09rdWxYaU5MTi1mTWRKVVpaajM1SFMyWEhUMVozcUJSYUw4THJYZFBGend0WHM0YnRfVFNaSnNGWGpoc2pXVFBYNW9XcTRxa00tc3ZDZ0ptd1dENWowTkl4cTc5cDZJbjRxTDdObkNFakktNlNLRVE?oc=5"
-  },
-  {
-    "source": "Ouest-France",
-    "date": "25 nov. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Mobilisation étudiante : pas de validation automatique ou de note améliorable, mais des partiels adaptés à l’université",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxNTnhGSGdJVkNzV2VENDlzN3pGTW9vM1lHN0UyYUR6aTRlVjN3SUt1Z0txS3lLeTZLOHBhRUw5OERNNjdoSjNKS004TXZDNmhnT2pkUTdpV2c0NjVSUWFLWFFXQkdtSXpDR2ZDNWdKd1B0WVB1eV9FSEZaSWZyMElLSElMendwdXZfRjJhYXNSOGRvdU42YXlXYkFmZWZhMHc5ZTk3Uk9nZjYtamdYTkZhYjFRUms0d3dXM294OUJfdnZEQzlVQTlCMVlESjA1QllOVnJpbGxqYzRKQl9nMWY2dGFUdDBud2dEbTlZV29FRFgweTRMSUdpTjlKUHd6UHhIUHVTZDZrcDFpRkdYVkNhUDUyajB4SFk?oc=5"
-  },
-  {
-    "source": "franceinfo",
-    "date": "24 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "\"Trouver une issue pour les étudiants dont le semestre est en péril\" : le président de l'université de Franche-Comté dénonce le blocage de la fac de lettres de Besançon - France 3 Régions",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxQXzNreHJuVmxJWGpYbm1QbFFOTEU0YzVCWlY2cXV5TFFoTDV6RExuaGZRTHE4UTB1OWM3R1ZIMnpuT1AtWkFKMEJES3NRanRaV1o1Q0tEaVIzeXBRb0RlbURWTDVYUmFRUWN6aTM4MXdSOElvNWV2QUlLTi1ZYUVLR0xtQ3ZYSnVfR2dEeHhHaThfT3VzQjlZMnAzVl9LTE5MRnQ0TVZnX3BCN0VYRXNFelBBYzRvZFJSY1lPUDlhdGVYNDlPLUJ0MXJxRUY2RlRmNW1NVzZ0WGZEVllLY0Vtek44ODJsTC1TTXl5WjJKZWoxZXpDU1o2RWxwN3c1N2lzS3dqajk4alkwQVRUVnhhdGdiYzFrNXRNUVNHVlRTY1c3SkItU1pXcUFyOE85SGtoVFgzM19BUmhERkNIVFl3S2RFUQ?oc=5"
-  },
-  {
-    "source": "Le Monde",
-    "date": "25 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Parcoursup : publier les algorithmes locaux, une gageure pour les universités",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNUy1adUhmRlU3cW5MVFhJbnFPSDFqamJoUE5XOHV3enhMWUR3a3FmRWp3OC1oSlI0VHFhdExDVVZINmNNbklCZ0xOYTJqb1JoMnFTdll6ZDdLcDFOajh5TmdYMTQ4dkR4Z2U3ajVoc2tUVnV3WV82cmVTckVRWGVzbEtOZklOU005U25uZmY1Q2c0eDA4cnE3R0dDVERLTE4tTXA1NEFuN08tWW53YkxDTV85eFl6SHd3cUJYX1h3OHNTazZzenVnU3huN29lQ3pQUFVmblVIOERadEY2?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOUVVmejd5WGJtUnEyYnlKM1Y1Sl9yZ3BJV0NJeW96d3MwZGJ3MFdfcldKVUdNSjBlR1hTcUozc2g1bVJEODZWS2VkRzhkUHpOWFJOdWpYaWc5NXdIRWVtbFNscGF5QkZuQUp5OEFWWjIzVVdZc2xuLVNlSHRLVlppOE9FN0c0eXNFc19MMWRUeEI0MDRMaWlxQ0dpUnhpRFFaRUJueS13ZXZhOTRXTHVXbC1wR2c4UEU2SmxEVmtMS3pYa1VNTGRBQ3V0OXRKcWFqUzRVR1VRN2JidjlXRDk1X1ZkVGdXalF4VmNOeUxnY1JSSzFRRTVV?oc=5"
   }
 ];
