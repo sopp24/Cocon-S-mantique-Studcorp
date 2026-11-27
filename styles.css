@@ -718,3 +718,8 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
   .inspector-panel .inspector-body{padding-bottom:calc(20px + env(safe-area-inset-bottom))}
   .ai-form textarea{font-size:16px}
 }
+
+
+/* Cocon sémantique — cibles tactiles iOS */
+.button,.button-small,.icon-button,.map-control-button{min-height:44px}
+.icon-button,.map-control-button{min-width:44px}
