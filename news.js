@@ -1,4 +1,4 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-26T19:55:03.547Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-27T04:38:21.451Z";
 window.STUDCORP_WEEKLY_NEWS = [
   {
     "source": "Sud Ouest",
@@ -73,11 +73,11 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxOLTNkME5qWmtJRzZrUEVRSlhWeC0zYmUyWEdPNFZpa3I1bWt5THJqTC1veTNKVEpTU19IVnh2LW9yTkhjdEZZbENDMDFDWGlEVzlRRXp6NkUyU3R5X1BHdl94d0NkRmRvWDU5WHlYc3FYRFhNd0I0Nm8yWTRVeldPMF9xWG1NREVWTkFfVHlYbzRLdWdZeURVcEdlQ01ZT3dhQjRLQS1oQlJrWEFSSkZudm5FVmo2TWRfRy1jTXdsR25Ca0xaMnpCejM0dGRUcFRxcEg3Skx3X1FkVmhRV0k2bXJBZE4xU0lCNThKaVpHd0FibTFONTdnaW1neklXMmU2bzFLXzJBeGVVUkY0MWZDUFg2MjRyNFE4VXJQTEowMjlWQVM0WlByYXE2SzRONFY5?oc=5"
   },
   {
-    "source": "Le Monde",
-    "date": "24 nov. 2026",
-    "topic": "Formations et admissions",
-    "title": "Plateforme Mon master : seuls six étudiants sur dix ont reçu une proposition d’admission en 2026",
+    "source": "Ouest-France",
+    "date": "20 nov. 2026",
+    "topic": "Stages et premier emploi",
+    "title": "Les étudiants en recherche de stage invités à venir rencontrer les entreprises à l’Université du Mans",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOUVVmejd5WGJtUnEyYnlKM1Y1Sl9yZ3BJV0NJeW96d3MwZGJ3MFdfcldKVUdNSjBlR1hTcUozc2g1bVJEODZWS2VkRzhkUHpOWFJOdWpYaWc5NXdIRWVtbFNscGF5QkZuQUp5OEFWWjIzVVdZc2xuLVNlSHRLVlppOE9FN0c0eXNFc19MMWRUeEI0MDRMaWlxQ0dpUnhpRFFaRUJueS13ZXZhOTRXTHVXbC1wR2c4UEU2SmxEVmtMS3pYa1VNTGRBQ3V0OXRKcWFqUzRVR1VRN2JidjlXRDk1X1ZkVGdXalF4VmNOeUxnY1JSSzFRRTVV?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNcFFUMm5fbkprSTdFNGd3WUhEREVQWW92OURsS3IwZ2xMRWVtcjhpZWc0OFlWMEtlMld3d2M1Mkl2MlhnZUxlT3NYY2N0dTBGQWEyTGd2S0txdzNJSU1Kd0FNYWdRaWlLS1NJbHRnZ1M2amFZZ3FYbS1lbUZnVHlFeEtjeWl1M28wTERQMVpqWFl4bFBmYUxROHpmVE8yTElNRmVpa19DTUs3U3JKR0pNdWt1WHhzSzZ4MFRVOE4wTmFoMll1VDF5RmsyX3RKdkRuaVFIX0liSHNLMDFxOGp0VlMxSG0xYlJ3UklSRGNvRHRtNVUybHZkOW9xeEhRY19MZERHZWR0WkJVWUllRkp3V2FR?oc=5"
   }
 ];
