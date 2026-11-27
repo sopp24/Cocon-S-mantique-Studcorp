@@ -1,5 +1,13 @@
-window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-27T04:38:21.451Z";
+window.STUDCORP_WEEKLY_NEWS_UPDATED_AT = "2026-11-27T19:42:54.415Z";
 window.STUDCORP_WEEKLY_NEWS = [
+  {
+    "source": "Mediapart",
+    "date": "27 nov. 2026",
+    "topic": "Enseignement supérieur",
+    "title": "À Lille, les fermetures de l’université à répétition crispent, isolent et inquiètent les étudiants",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNV0R1ZWZVNGt3M0tSS0VhR2w4YUszMjVxN2Q4Nm9CM2pPZHkzSUdoclpSdnF3aWRNZll0SmV4Y203NmU2OEliZklvbjRYemRQdy1ZQnZJdUdSV3pTVzY0c053Z3hXdzdfdmtYRHE4Q0NOa1hoWjJmQmhLeWlJN3Q4WUs4b3NYNG9oZ3FXMlBVZlIzUi0zdmZSYWdVaXNWM2hjWU56bFVZZGVUNTlHbkUwQXRmOF9kZk5Yd0VZS0dLeXUxT1NjVzMyM3FVOTFCZVRXQk5MSl9n?oc=5"
+  },
   {
     "source": "Sud Ouest",
     "date": "24 nov. 2026",
@@ -18,11 +26,11 @@ window.STUDCORP_WEEKLY_NEWS = [
   },
   {
     "source": "franceinfo",
-    "date": "25 nov. 2026",
-    "topic": "Enseignement supérieur",
-    "title": "Affiche \"escort à 50 euros\" et soupçons de proxénétisme à l'université du Mirail : le parquet enquête, les étudiants mobilisés crient à la \"fabulation\" - France 3 Régions",
+    "date": "26 nov. 2026",
+    "topic": "Logement étudiant",
+    "title": "Des \"désordres structurels\" identifiés sur une résidence du Crous Dijon : \"on n'a eu aucune information\", s'inquiètent les étudiants - France 3 Régions",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxOUWZ4RlNWc3RxSV9mcmdLbnp0a3RQb0xRX3g5S1d1dHNoSHUtT0lPLUhjd21uS2EtZDNXX3cyOHBJOHVBSzFrZkpGM2o5c3pkaXAzbTJKemdVWm90ZWNuNkJzcS1keGdlNGhUS1IzOUJDU1RGb0JCR1N1QnBSR01nNFdvaWc3aHlaOUpUbDQzdDJzTm9lWHVyMmhfZTNhSU9PYTMwejE5VTU1YnJVaHlONDNlREx4QXJmTXZSdU93M1NWWHRXQVJhQVN4TXNDVjQyX1lEa0FXaElsVlRiZUt5YUZVSkptb25wbTlTc09NdDZ2TGZzV2R4LXJ5eTdqTHFKYllqQUZzN1p1Qmw5UXdVU0gya2l0Q0UtazkzSnVHMExtQXRWcEs2UlVVSmZDLWJ4c0dFMzFLMWZWZVNlU29rV0N2amtCQUJhY2NFQg?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMivAJBVV95cUxQU0p3Q3B6WndxNWNjZ2d2cUU4LTNTQklrUksxclJkYllTR2toOEwycjN2cUxyZDU4bHpMRWVXNG1pN1h2ZWpHWWNESDUxNnYtTW9td2JaSTNHRFhZVmc2NV91WkdRVHlyM0h4UHpQV0gtbVNRYm0tTmp5UlNaWEJKVldMQjlIcEd6VFlTYlNid0gzNHpuSzFIZkVtVzI4V29VRlRkSTRPNnN3TTdpMk9GZ3JONEhhNHBiV3pyTEZhMGs0NUNLVUJFNnRmeUhYcERRWU5VMmNiSlV6UWFIOF9OWXhIQ2JuYkhWSl9kLVJXOU5kTktESWdNVExqeHZXWHE0VWJ3blV4bFg1WGRGWldHbUd0RzZtZ1NSaUdmWktyaFhLSlZiTnZfeHZhMEEtUGtQSnZoZUN2QTVOX1da?oc=5"
   },
   {
     "source": "Le Monde",
@@ -34,11 +42,11 @@ window.STUDCORP_WEEKLY_NEWS = [
   },
   {
     "source": "L'Étudiant",
-    "date": "25 nov. 2026",
-    "topic": "Alternance et apprentissage",
-    "title": "Aides à l’apprentissage : la Cour des comptes pointe des fraudes et abus importants",
+    "date": "27 nov. 2026",
+    "topic": "Mobilité internationale",
+    "title": "Étudier en école d’ingénieur à l’étranger : quel pays choisir ?",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZy16a19NZkkweE5sS1pQdFRJbnNfcTNoWk5XQ1Z0X3hIVHNNdExscDlzUVRKQlBtOG5OaU1WcG5NaU5GTVBsX29KRnFRLU0ycnYwX01rOHFwbm1NYURjZnZJZndFVjFMQmZDMjVNMXlfWGkteHhtaDFVSVRUbjRBU296dE1mSjRDSm9fNUwxYXo0eGtTd01UcmU1aVJfeXhCYS1fTVM4N01WM255cWRFZzAzOF9XcVlLLWZSX3RXeTBLbThXVDNsMjV3?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSTNOTk1vUnNWTk5yd3lhUmhJWjJDUG1MMWgyV2ZsanEzWHJPWWZRSzJpMnNPT3F2Z1hvYkxYem1INkxEZ3oxRmV0eTZQemNJTm91LWxHVGFEZ1BDNkRReGx2RHExWTNobU9oMDhjeGFFd2I3ZnFDWEh4V01CZkVROEdTWkNncy1YR2JGRkFfNUhWdmZTQ2JGZWt2TU53bUtKbmtjTHhva2RQUmw1bzJ3?oc=5"
   },
   {
     "source": "Le Figaro Étudiant",
@@ -49,35 +57,27 @@ window.STUDCORP_WEEKLY_NEWS = [
     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNSW8ycXVJeld4eGdlVGZfdERiUTlycHlHZWFseDFUMkZtUkJZWHlzdnpJczRnTkx6MjdMV2ZJS1V3ZU4zMUJLdVJBdEpYdzNwY1Y3b3YwbFY5VWsxVC13LTgxa29xcjFyaEJ5VDJuQkVYanZXdTVzMzNnelVvSTY1blJXZW14dDIyU3FFS283YkU5ejFRTk9qOXd0X3V5YUZXdGRLbEtxNmk2T3FCTkJBVHhJaU1LV2U2OUhqdHdZOE9ZNUV3dWtEQ3p0VUxsQ0RPT3QwbUVsNA?oc=5"
   },
   {
-    "source": "Le Parisien Étudiant",
-    "date": "20 nov. 2026",
-    "topic": "Examens et droits étudiants",
-    "title": "Pillages du 17 octobre : deux nouvelles interpellations dans les Bouches-du-Rhône, dont une étudiante en droit",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOUm1OTEtIUEJtalFGMW1lWFI5THZIa3FXMzZLQzc0WDdPMTN0SjBLX2U4TC04MVg5TDFWdUltYUNVUUVmSFdWUHhNc2dwRU1RUU95UWlfVUtmQVpwQnRwX09VRF92SjZLQmtEd0VoTUdMWHlDU2xCTG9vQU1BYWgyeDRJVUpYcnRjckdCbk9fLVRFVXJjdlVNUFdMT2NGbm81LUlhVU9UU3J6by1adlAxaVJPb0xFQ3pQR3B1VUFiTkNFTjJKVV9nUHJiZUhRLVBFZ3doQndpUm5rNWpPOUJ1LS05ekRhMGdjSTR2NUpUVUhBTEExR2RhV0lSc0NqOTFFV2Q0S3kxbnhFbjMtWEFTOWhYUGlVaWs?oc=5"
-  },
-  {
-    "source": "Mediapart",
-    "date": "26 nov. 2026",
-    "topic": "Vie étudiante et campus",
-    "title": "Lettre d'une enseignante de l'Université du Mirail aux étudiant·es mobilisé·es - Le Club de Mediapart",
-    "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNNGE1MmppUW9DMXpFSnRMSGtfdllabkNHRmV5bDZVc24xMEsyM3A2MFA3YzRGWUE5b0ttSjUtYjdQbTZ4ejVkTnpwZmxqdmxJVnprVTNyX080djlTbmx5Q2NSZDQtZlQ3MnkycTRvQlEtcWY5UGVQeDlQZzV3U1UyTF93VU9GUC1wdDJIZXZvZnhCQ1VLY0ktTHRZWVB1N2J4WWJXSEZQRjBRcmV2bk9Eci0xc2poNHYyNE9wc3BtUWphNTVwbmRj?oc=5"
-  },
-  {
-    "source": "franceinfo",
-    "date": "25 nov. 2026",
+    "source": "France 24",
+    "date": "27 nov. 2026",
     "topic": "Enseignement supérieur",
-    "title": "\"Les visios, ce n'est pas viable\" : le désarroi d'étudiants en première année après la fermeture administrative de l'université de Lille",
+    "title": "Serbie : un universitaire, novice en politique, candidat des étudiants à la présidentielle",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxOLTNkME5qWmtJRzZrUEVRSlhWeC0zYmUyWEdPNFZpa3I1bWt5THJqTC1veTNKVEpTU19IVnh2LW9yTkhjdEZZbENDMDFDWGlEVzlRRXp6NkUyU3R5X1BHdl94d0NkRmRvWDU5WHlYc3FYRFhNd0I0Nm8yWTRVeldPMF9xWG1NREVWTkFfVHlYbzRLdWdZeURVcEdlQ01ZT3dhQjRLQS1oQlJrWEFSSkZudm5FVmo2TWRfRy1jTXdsR25Ca0xaMnpCejM0dGRUcFRxcEg3Skx3X1FkVmhRV0k2bXJBZE4xU0lCNThKaVpHd0FibTFONTdnaW1neklXMmU2bzFLXzJBeGVVUkY0MWZDUFg2MjRyNFE4VXJQTEowMjlWQVM0WlByYXE2SzRONFY5?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOMS1FSUZ5YXU4ajRkNndUdklRRkZHb1BsbUdYOEV1ZkZlRWFnZWFlQUJVamtFSHVJaWU2NWpPSEZNLUQ3cTdjMEstbFBRWWVzOUh2RkhpbngxQWVWUTV4SDJ4eTZRTU9KaTBTR3BkZzR3Zk9KOHBIenlKNVh6a2JnX0xra3lXLUlnaS1INTQ2R0lIYnVmYllHazRjdVR0UmFpdzB0RmU0bWp0OGtmSG5jNXk2VG9fQVdqa0VpQy0zU0Izd2h3NEo5S1ItX0taN1dTU2tORlZKMW0wTVhhd25xZFNYakNYemV5Q1E?oc=5"
   },
   {
     "source": "Ouest-France",
-    "date": "20 nov. 2026",
-    "topic": "Stages et premier emploi",
-    "title": "Les étudiants en recherche de stage invités à venir rencontrer les entreprises à l’Université du Mans",
+    "date": "27 nov. 2026",
+    "topic": "Vie étudiante et campus",
+    "title": "Mobilisation étudiante : la présidence de l’Université de Nantes lance une consultation en ligne de trois jours à destination des étudiants",
     "summary": "",
-    "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNcFFUMm5fbkprSTdFNGd3WUhEREVQWW92OURsS3IwZ2xMRWVtcjhpZWc0OFlWMEtlMld3d2M1Mkl2MlhnZUxlT3NYY2N0dTBGQWEyTGd2S0txdzNJSU1Kd0FNYWdRaWlLS1NJbHRnZ1M2amFZZ3FYbS1lbUZnVHlFeEtjeWl1M28wTERQMVpqWFl4bFBmYUxROHpmVE8yTElNRmVpa19DTUs3U3JKR0pNdWt1WHhzSzZ4MFRVOE4wTmFoMll1VDF5RmsyX3RKdkRuaVFIX0liSHNLMDFxOGp0VlMxSG0xYlJ3UklSRGNvRHRtNVUybHZkOW9xeEhRY19MZERHZWR0WkJVWUllRkp3V2FR?oc=5"
+    "url": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxPcFpxSWlaZS1iSUQ2QmNrTlZLcUhIZ1B2dlFPZWtBbWpwQkxfTmtsZjJabnFRRmZHWGxIZ2k1aTFVdUtERUdCVmZXVnh6aTQ4U1RXRWhfelJadzcxdXZ3Skx5bkhvaFYxb256MEFhUTdWV1NHU0N3UnZTdEpGenctM1VpLUF0OTY5dVZkaEZwZkpNWnY5Y0RVUWJjdHNQRmFfSDRqaVo2MFdoX0tPUXNrUDdKUjVvTExwYmlyM3o2cmpXcFJEX21IM0htMkxRWVNBMUF3aDlqRFB4WGIzc0MwWkViNVpzRGZxUldsXy0zcE42M25oOF9tcjlpSXh4SjNXVUhiUUFLRGhEWHc4ZW8zYzNmMnllZGJYajF2NnZwOTVoak53aEVvcEVaSXJXaXYwWjRJODRNbnBQU3UxcVRNVEFpSEpxOG5PQ21zSDNQY0c?oc=5"
+  },
+  {
+    "source": "France 24",
+    "date": "27 nov. 2026",
+    "topic": "Formations et admissions",
+    "title": "Suppression de Parcoursup, durcissement de la sélection : Retailleau dévoile son programme pour l'enseignement supérieur",
+    "summary": "",
+    "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQTTZuS21oa1lidGhBemRjLXFtc3pVRlJCT2xac3E0dUhoanFOUlVmNXF0MG5uVjJWZ2F2ejJMYXhQY3ZfS2lDOEs2S3Z4Wkw4dzgtbVBqVzZmSTB2aF8zdTZFeWV0YV96NnFocHpaazNORnRiZHViaU1LVVBTX296TU1tZC1iNzBIeExrNGhNVE5wUnNOcWUyLXM1em9PYVd0dVZmNlRmZHN3Q1JsSzNLemdLUjFwZ20zeFdaMW9tMmNfTUZNY0J6dnhvNW9vOEpPeVNhVFlFeUk1Wl9PVXpqRHAzWmZXR20tLXE4YUlGTElxeE9ac3hlNTl4RUJqa2lsR05Dd1hHVTNCbFUzZnd0MmNiaw?oc=5"
   }
 ];
