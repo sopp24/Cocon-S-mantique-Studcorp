@@ -684,3 +684,37 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 }
 
 
+
+/* Cocon sémantique — espace de travail desktop + ergonomie tactile */
+.workspace{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(330px,.86fr);align-items:start;gap:18px;max-width:1920px}
+.map-column{min-width:0;max-width:none;position:sticky;top:146px}
+.map-stage{width:100%;height:min(68dvh,860px);min-height:540px;max-width:none}
+.side-column{width:100%;max-width:none;min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:14px;max-height:calc(100dvh - 150px);overflow:auto;overscroll-behavior:contain}
+.side-column>.news-panel,.side-column>.ai-panel,.side-column>.storage-note{grid-column:1;min-width:0}
+.panel{min-width:0}
+.panel-help,.field-note,.storage-note p,.news-method{font-size:12px;line-height:1.6;color:#536b71}
+.field label{font-size:12px;color:#4f6970}
+.field input,.field select,.field textarea,.ai-form textarea{min-height:44px;font-size:16px}
+.button,.button-small,.icon-button,.map-control-button{min-height:42px;touch-action:manipulation}
+.map-control-button{min-width:44px}
+.mobile-hint{font-size:12px;color:#536f75}
+@media(min-width:741px) and (max-width:1100px){
+  .workspace{display:flex;flex-direction:column;gap:16px}
+  .map-column{position:static;width:100%}
+  .map-stage{height:clamp(520px,66vh,720px);min-height:500px}
+  .side-column{max-height:none;overflow:visible;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .side-column>.news-panel,.side-column>.ai-panel{grid-column:auto}
+  .side-column>.storage-note{grid-column:1/-1}
+}
+@media(max-width:740px){
+  .workspace{display:flex;flex-direction:column;padding-inline:12px}
+  .map-column{position:static;width:100%}
+  .map-stage{height:clamp(420px,64svh,620px);min-height:400px}
+  .side-column{display:grid;grid-template-columns:minmax(0,1fr);max-height:none;overflow:visible}
+  .side-column>.news-panel,.side-column>.ai-panel,.side-column>.storage-note{grid-column:1}
+  .toolbar-actions .button{min-height:44px;font-size:11px}
+  .map-controls{gap:7px}
+  .map-controls button{min-width:44px;min-height:44px}
+  .inspector-panel .inspector-body{padding-bottom:calc(20px + env(safe-area-inset-bottom))}
+  .ai-form textarea{font-size:16px}
+}
