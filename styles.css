@@ -723,3 +723,13 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-
 /* Cocon sémantique — cibles tactiles iOS */
 .button,.button-small,.icon-button,.map-control-button{min-height:44px}
 .icon-button,.map-control-button{min-width:44px}
+
+
+/* Cocon sémantique — champs iOS : saisie et recherche sans zoom automatique */
+@media(max-width:740px){
+  .search-box{min-height:44px}
+  .search-box input,.field input:not([type=checkbox]),.field select,.field textarea,.ai-form textarea{
+    min-height:44px;
+    font-size:16px!important;
+  }
+}
